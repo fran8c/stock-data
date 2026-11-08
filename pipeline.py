@@ -471,9 +471,52 @@ def stock_figures(item, tk, hist, prices, divs):
 # ----------------------------------------------------------------------------
 # Rates and macro (official sources)
 # ----------------------------------------------------------------------------
+def get_retry(url, tries=3, timeout=60, **kw):
+    last = None
+    for i in range(tries):
+        try:
+            return get(url, timeout=timeout, **kw)
+        except Exception as e:  # noqa: BLE001
+            last = e
+            time.sleep(10 * (i + 1))
+    raise RuntimeError(f"no response after {tries} tries ({last.__class__.__name__})")
+
+
+def treasury_1y():
+    """Latest 1-year par yield from the US Treasury's own daily yield-curve file."""
+    page = "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve"
+    for year in (TODAY.year, TODAY.year - 1):
+        url = ("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/"
+               f"daily-treasury-rates.csv/{year}/all?type=daily_treasury_yield_curve"
+               f"&field_tdr_date_value={year}&page&_format=csv")
+        df = pd.read_csv(io.StringIO(get_retry(url).text))
+        if "1 Yr" in df.columns and not df.empty:
+            df["Date"] = pd.to_datetime(df["Date"])
+            df = df.dropna(subset=["1 Yr"]).sort_values("Date")
+            if not df.empty:
+                return float(df["1 Yr"].iloc[-1]), df["Date"].iloc[-1].date().isoformat(), page
+    raise RuntimeError("no 1-year column in the Treasury file")
+
+
+def bls_series(series_id):
+    """Monthly series from the BLS public API (no key needed) as a pandas Series."""
+    url = f"https://api.bls.gov/publicAPI/v1/timeseries/data/{series_id}"
+    js = get_retry(url).json()
+    if js.get("status") != "REQUEST_SUCCEEDED":
+        raise RuntimeError("; ".join(js.get("message") or ["BLS request refused"]))
+    pts = {}
+    for d in js["Results"]["series"][0]["data"]:
+        if d["period"].startswith("M") and d["period"] != "M13" and num(d["value"]) is not None:
+            pts[pd.Timestamp(int(d["year"]), int(d["period"][1:]), 1)] = float(d["value"])
+    s = pd.Series(pts).sort_index()
+    if len(s) < 14:
+        raise RuntimeError(f"only {len(s)} months returned")
+    return s
+
+
 def fred(series_id):
     """Daily/monthly/quarterly series from FRED (St. Louis Fed) as a pandas Series."""
-    r = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
+    r = get_retry(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
     df = pd.read_csv(io.StringIO(r.text))
     s = pd.Series(pd.to_numeric(df.iloc[:, 1], errors="coerce").values,
                   index=pd.to_datetime(df.iloc[:, 0])).dropna()
@@ -540,14 +583,22 @@ def market_figures():
         add(fig, NR, why, source, url, TODAY_S)
         (R.crit if critical else R.warn)(f"{fig}: {why}")
 
-    # Risk-free rates (critical)
+    # Risk-free rates (critical). US: Treasury first, FRED as back-up.
     try:
-        s = fred("DGS1")
-        add("US 1-year Treasury yield", f"{s.iloc[-1]:.2f}%",
-            "1-year constant-maturity Treasury yield (Federal Reserve H.15, from US Treasury data)",
-            "FRED, Federal Reserve Bank of St. Louis", fred_url("DGS1"), s.index[-1].date().isoformat())
-    except Exception as e:  # noqa: BLE001
-        missing("US 1-year Treasury yield", f"fetch failed ({e})", "FRED", fred_url("DGS1"), critical=True)
+        v, d, url = treasury_1y()
+        add("US 1-year Treasury yield", f"{v:.2f}%",
+            "1-year par yield (constant maturity), daily Treasury par yield curve",
+            "U.S. Department of the Treasury", url, d)
+    except Exception as e1:  # noqa: BLE001
+        try:
+            s = fred("DGS1")
+            add("US 1-year Treasury yield", f"{s.iloc[-1]:.2f}%",
+                "1-year constant-maturity Treasury yield (Federal Reserve H.15)",
+                "FRED, Federal Reserve Bank of St. Louis", fred_url("DGS1"), s.index[-1].date().isoformat())
+            R.warn(f"US 1-year yield: Treasury file failed ({e1}); used FRED instead")
+        except Exception as e2:  # noqa: BLE001
+            missing("US 1-year Treasury yield", f"Treasury ({e1}) and FRED ({e2}) both failed",
+                    "U.S. Department of the Treasury", "https://home.treasury.gov/", critical=True)
 
     try:
         rec, url = mas_tbill_1y()
@@ -569,13 +620,16 @@ def market_figures():
     except Exception as e:  # noqa: BLE001
         missing("US real GDP growth", f"fetch failed ({e})", "BEA via FRED", fred_url("A191RL1Q225SBEA"))
 
-    for sid, label in (("CPIAUCSL", "US headline CPI"), ("CPILFESL", "US core CPI")):
+    # US CPI straight from BLS (not seasonally adjusted, the basis of the headline y/y figure)
+    for sid, label, what in (("CUUR0000SA0", "US headline CPI", "CPI-U all items"),
+                             ("CUUR0000SA0L1E", "US core CPI", "CPI-U all items less food and energy")):
+        url = f"https://data.bls.gov/timeseries/{sid}"
         try:
-            v1, d1, v0, d0 = yoy_last_two(fred(sid))
-            add(f"{label} (latest)", f"{v1:.1f}%", f"Year-on-year change, {d1:%b %Y}", "BLS via FRED", fred_url(sid), d1.date().isoformat())
-            add(f"{label} (prior)", f"{v0:.1f}%", f"Year-on-year change, {d0:%b %Y}", "BLS via FRED", fred_url(sid), d0.date().isoformat())
+            v1, d1, v0, d0 = yoy_last_two(bls_series(sid))
+            add(f"{label} (latest)", f"{v1:.1f}%", f"{what}, year-on-year, {d1:%b %Y}", "U.S. Bureau of Labor Statistics", url, d1.date().isoformat())
+            add(f"{label} (prior)", f"{v0:.1f}%", f"{what}, year-on-year, {d0:%b %Y}", "U.S. Bureau of Labor Statistics", url, d0.date().isoformat())
         except Exception as e:  # noqa: BLE001
-            missing(label, f"fetch failed ({e})", "BLS via FRED", fred_url(sid))
+            missing(label, f"fetch failed ({e})", "U.S. Bureau of Labor Statistics", url)
 
     missing("US manufacturing PMI (ISM)", "ISM data is licensed and not on a free feed; add from the ISM release",
             "ISM", "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/")
@@ -643,6 +697,42 @@ def google_news(item):
     return found[:NEWS_PER_TICKER]
 
 
+def bing_news(item):
+    """
+    Bing News RSS: gives the article's own link and a short description written
+    from the article, so most items arrive with a summary already.
+    """
+    from urllib.parse import urlparse, parse_qs
+    sg = item["symbol"].endswith(".SI")
+    mkt = "en-SG" if sg else "en-US"
+    url = f"https://www.bing.com/news/search?q={quote_plus(item['query'])}&format=rss&mkt={mkt}&setlang=en"
+    root = ET.fromstring(get(url).content)
+    cutoff = (TODAY - timedelta(days=NEWS_DAYS)).isoformat()
+    found = []
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        link = (it.findtext("link") or "").strip()
+        q = parse_qs(urlparse(link).query)
+        if "url" in q:                      # Bing wraps the real link in a redirect
+            link = q["url"][0]
+        source = ""
+        for child in it:
+            if child.tag.split("}")[-1].lower() == "source" and child.text:
+                source = child.text.strip()
+        if not source:
+            source = urlparse(link).netloc.replace("www.", "") or "Unknown"
+        try:
+            pub = parsedate_to_datetime(it.findtext("pubDate")).astimezone(SGT).date().isoformat()
+        except Exception:  # noqa: BLE001
+            continue
+        if not title or pub < cutoff:
+            continue
+        desc = re.sub(r"<[^>]+>", " ", it.findtext("description") or "")
+        found.append({"ticker": item["symbol"], "date": pub, "title": title, "source": source,
+                      "url": link, "summary": cap_words(desc) if len(desc.split()) >= 6 else None, "via": "bing"})
+    return found[:NEWS_PER_TICKER]
+
+
 def yahoo_news(item, tk):
     found = []
     try:
@@ -698,14 +788,40 @@ def update_news(store, fresh):
         old = store.get(k)
         if old is None:
             store[k] = n
-        elif not old.get("summary") and n.get("summary"):
+            continue
+        if not old.get("summary") and n.get("summary"):
             old["summary"] = n["summary"]
+        if "news.google.com" in old.get("url", "") and n.get("url") and "news.google.com" not in n["url"]:
+            old["url"] = n["url"]          # prefer the outlet's own link
+    borrow_summaries(store)
     for k in [k for k, v in store.items() if v["date"] < cutoff]:
         del store[k]
     return store
 
 
+def borrow_summaries(store):
+    """
+    An item with no summary takes one from another item about the same story
+    (same stock, very similar headline, within 2 days), and says where from.
+    """
+    by_t = {}
+    for n in store.values():
+        by_t.setdefault(n["ticker"], []).append(n)
+    for items in by_t.values():
+        donors = [m for m in items if m.get("summary") and not m.get("borrowed")]
+        for n in items:
+            if n.get("summary"):
+                continue
+            d = datetime.fromisoformat(n["date"]).date()
+            best = max(donors, default=None, key=lambda m: similar(m["title"], n["title"]))
+            if (best is not None and similar(best["title"], n["title"]) >= 0.6
+                    and abs((datetime.fromisoformat(best["date"]).date() - d).days) <= 2):
+                n["summary"] = f"{best['summary']} [summary from {best['source']}]"
+                n["borrowed"] = True
+
+
 def fill_summaries(store):
+    # only items never tried; earlier failures ("") are not retried
     todo = [n for n in store.values() if n.get("summary") is None]
     todo.sort(key=lambda n: n["date"], reverse=True)
     done = 0
@@ -862,6 +978,10 @@ def main():
             fresh_news += google_news(item)
         except Exception as e:  # noqa: BLE001
             R.warn(f"{sym}: Google News feed failed ({e.__class__.__name__})")
+        try:
+            fresh_news += bing_news(item)
+        except Exception as e:  # noqa: BLE001
+            R.warn(f"{sym}: Bing News feed failed ({e.__class__.__name__})")
         fresh_news += yahoo_news(item, tk)
 
         closes = prices["Close"].tolist()
@@ -910,7 +1030,8 @@ def main():
     data_pack = "\n\n".join([header, "# MARKET-WIDE", "\n".join(macro), *stock_blocks])
     news_header = (f"NEWS PACK - last {NEWS_DAYS} days, generated {RUN_STAMP}\n"
                    "Format: <ticker> | <date> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | <facts>\n"
-                   "Facts = the outlet's own preview text (max 50 words), not the full article. "
+                   "Facts = the outlet's own preview text or the news feed's description (max 50 words), not the full article; "
+                   "'[summary from X]' means it was taken from outlet X's report of the same story. "
                    "Trust tags are rule-based: PRIMARY = press wire or official filing; "
                    "CORROBORATED = similar headline from another outlet within 2 days.")
     news_pack = news_header + "\n\n" + ("\n".join(nlines) if nlines else "No news items found.")
