@@ -399,11 +399,21 @@ def stock_figures(item, tk, hist, prices, divs):
         label, rr, note = ("P/E" if kind == "company" else "P/B"), None, f"calculation error ({e.__class__.__name__})"
     if rr:
         span = f"{rr['months']} month-ends, {rr['from']} to {rr['to']}"
+        why = []
+        if rr["months"] < 36:
+            why.append(f"covers only {rr['months']} months")
+        if rr["low"] > 0 and rr["high"] / rr["low"] > 4:
+            why.append(f"high is {rr['high'] / rr['low']:.0f}x the low, so earnings or book value changed sharply")
+        if label == "P/E" and rr["high"] > 100:
+            why.append("high above 100 means earnings were near zero in part of the period")
+        flag = f"UNRELIABLE ({'; '.join(why)}). " if why else ""
         for k in ("high", "median", "low"):
             add(f"5-year {label} {k}", f"{rr[k]:.2f}",
-                f"Approximate: month-end close / {rr['basis']}; covers {span}",
+                f"{flag}Approximate: month-end close / {rr['basis']}; covers {span}",
                 yurl(sym, "financials/"), retrieved)
-        if rr["months"] < 54:
+        if why:
+            R.warn(f"{sym}: 5-year {label} range marked UNRELIABLE ({'; '.join(why)})")
+        elif rr["months"] < 54:
             R.warn(f"{sym}: {label} range covers only {rr['months']} months, not 5 years")
     else:
         for k in ("high", "median", "low"):
@@ -454,9 +464,17 @@ def stock_figures(item, tk, hist, prices, divs):
     ed = cal.get("Earnings Date")
     ed = ed[0] if isinstance(ed, (list, tuple)) and ed else ed
     ed_s = to_date(ed)
-    add("next results date", ed_s or NR,
-        "Next earnings date per Yahoo (estimated if the company hasn't confirmed)", yurl(sym), retrieved)
-    if not ed_s:
+    if ed_s and ed_s >= TODAY_S:
+        add("next results date", ed_s,
+            "Next earnings date per Yahoo (estimated if the company hasn't confirmed)", yurl(sym), retrieved)
+    elif ed_s:
+        # Yahoo keeps showing the last date until the next one is announced
+        add("next results date", NR,
+            f"Not yet announced; Yahoo still shows the most recent results date ({ed_s})", yurl(sym), retrieved)
+        add("most recent results date", ed_s, "Last earnings release per Yahoo", yurl(sym), retrieved)
+        R.warn(f"{sym}: next results date not yet announced (last was {ed_s})")
+    else:
+        add("next results date", NR, "No earnings date reported by Yahoo", yurl(sym), retrieved)
         R.warn(f"{sym}: next results date not available")
     xd = to_date(cal.get("Ex-Dividend Date")) or to_date(info.get("exDividendDate"))
     if xd:
