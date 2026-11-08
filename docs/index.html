@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock Data Desk</title>
+<style>
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --ink:#1c1d1f; --muted:#6b6e73; --line:#e3e1db;
+  --up:#1f7a4d; --down:#b3261e; --accent:#2d4f8a; --warn-bg:#fff4dc; --warn-ink:#7a5200;
+  --bad-bg:#fde8e6; --bad-ink:#8c1d18; --ok-bg:#e6f3ec; --ok-ink:#1f5c3d; --chip:#efede7;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#141517; --panel:#1d1f22; --ink:#ecebe7; --muted:#9b9ea4; --line:#2e3135;
+    --up:#5cc590; --down:#f2867c; --accent:#8fb0ea; --warn-bg:#3a2d10; --warn-ink:#f3cd7b;
+    --bad-bg:#3d1916; --bad-ink:#f6aaa3; --ok-bg:#16301f; --ok-ink:#9ad9b4; --chip:#2a2c30;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 64px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:16px}
+h1{font-size:24px;margin:0;letter-spacing:-.01em}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:32px 0 10px;font-weight:600}
+.muted{color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+.banner{border-radius:10px;padding:12px 14px;margin-bottom:8px}
+.banner.ok{background:var(--ok-bg);color:var(--ok-ink)}
+.banner.warn{background:var(--warn-bg);color:var(--warn-ink)}
+.banner.bad{background:var(--bad-bg);color:var(--bad-ink)}
+.banner summary{cursor:pointer;font-weight:600}
+.banner ul{margin:8px 0 0;padding-left:20px;font-size:14px}
+.ai{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;display:grid;gap:10px}
+.ai p{margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button,.btn{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--chip);color:var(--ink);
+  padding:7px 12px;border-radius:8px;cursor:pointer;text-decoration:none}
+button.primary{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+button:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+.card .top{display:flex;justify-content:space-between;gap:8px}
+.sym{font-weight:650}
+.price{font-size:20px;font-weight:600;margin-top:4px}
+.chg{font-size:13px}
+.up{color:var(--up)} .down{color:var(--down)}
+svg.spark{width:100%;height:46px;display:block;margin-top:8px}
+.filters{display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.filters{align-items:center}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stock{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:16px}
+@media (max-width:760px){.stock{grid-template-columns:1fr}}
+.list{display:grid;gap:12px}
+.news{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.news li{border-top:1px solid var(--line);padding-top:8px;font-size:14px}
+.news li:first-child{border-top:0;padding-top:0}
+.news a{color:var(--ink);font-weight:550;text-decoration:none}
+.news a:hover{text-decoration:underline}
+.news .meta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:2px}
+.news .sum{margin:4px 0 0;color:var(--muted)}
+.tag{font-size:11px;padding:1px 7px;border-radius:99px;background:var(--chip);font-weight:600;letter-spacing:.02em}
+.tag.PRIMARY{background:var(--ok-bg);color:var(--ok-ink)}
+.tag.CORROBORATED{background:var(--chip);color:var(--accent)}
+.tag.SINGLE-SOURCE{background:var(--warn-bg);color:var(--warn-ink)}
+.nosum{font-style:italic}
+table{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14px}
+th,td{text-align:left;padding:9px 12px;border-top:1px solid var(--line);vertical-align:top}
+th{border-top:0;font-size:12px;color:var(--muted);font-weight:600}
+td.nr{color:var(--muted);font-style:italic}
+.tablewrap{overflow-x:auto}
+.toast{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);
+  padding:8px 14px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+.empty{padding:40px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stock Data Desk</h1>
+    <span class="muted" id="gen">Loading…</span>
+  </header>
+
+  <div id="status"></div>
+
+  <h2>For your AI</h2>
+  <div class="ai">
+    <p>Paste a link into the AI, or copy the full text if the AI can't open links. The bundle has the status, the data pack, the news pack and links to every price file.</p>
+    <div class="btns">
+      <button class="primary" data-copytext="bundle">Copy full bundle text</button>
+      <button data-copylink="bundle">Copy bundle link</button>
+      <button data-copylink="data_pack">Copy data pack link</button>
+      <button data-copylink="news_pack">Copy news pack link</button>
+      <a class="btn" id="openbundle" href="data/ai_bundle.txt" target="_blank" rel="noopener">Open bundle</a>
+    </div>
+  </div>
+
+  <h2>Benchmarks</h2>
+  <div class="grid" id="bench"></div>
+
+  <h2>Watchlist</h2>
+  <div class="filters" style="justify-content:space-between">
+    <div class="filters" role="group" aria-label="Filter by market" style="margin:0">
+      <button data-f="all" aria-pressed="true">All</button>
+      <button data-f="sg" aria-pressed="false">SGX</button>
+      <button data-f="us" aria-pressed="false">US</button>
+    </div>
+    <a class="btn" id="editlist" href="#" target="_blank" rel="noopener" hidden>Edit watchlist</a>
+  </div>
+  <p class="muted" id="edithint" style="font-size:13px;margin:-2px 0 10px" hidden>Saving the watchlist starts a fresh run. New data appears here about 10 minutes later.</p>
+  <div class="list" id="stocks"></div>
+
+  <h2>Rates and macro</h2>
+  <div class="tablewrap"><table id="macro"><thead><tr><th>Figure</th><th>Value</th><th>Date</th><th>Source</th></tr></thead><tbody></tbody></table></div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+let DATA = null, FILTER = "all";
+
+function esc(s){return String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function fmt(n,dp=2){return n==null||isNaN(n)?"–":Number(n).toLocaleString(undefined,{minimumFractionDigits:dp,maximumFractionDigits:dp})}
+function pct(n){if(n==null||isNaN(n))return '<span class="muted">–</span>';const c=n>=0?"up":"down";return `<span class="${c}">${n>=0?"+":""}${n.toFixed(2)}%</span>`}
+function toast(msg){const t=$("#toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),1800)}
+
+function spark(vals){
+  if(!vals||vals.length<2)return "";
+  const w=300,h=46,p=3,min=Math.min(...vals),max=Math.max(...vals),r=max-min||1;
+  const pts=vals.map((v,i)=>`${(i/(vals.length-1)*w).toFixed(1)},${(h-p-(v-min)/r*(h-2*p)).toFixed(1)}`).join(" ");
+  const up=vals[vals.length-1]>=vals[0];
+  return `<svg class="spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="var(${up?"--up":"--down"})" stroke-width="1.6" vector-effect="non-scaling-stroke"/></svg>`;
+}
+
+function statusBanner(st){
+  const c=st.critical||[], w=st.warnings||[];
+  let cls="ok", head="All data collected.";
+  if(c.length){cls="bad";head=`${c.length} critical gap${c.length>1?"s":""}: prices or rates missing. Don't rely on the affected names today.`}
+  else if(w.length){cls="warn";head=`Data collected, with ${w.length} expected gap${w.length>1?"s":""} (marked NOT RETRIEVED).`}
+  const list=[...c.map(x=>`<li><strong>${esc(x)}</strong></li>`),...w.map(x=>`<li>${esc(x)}</li>`)].join("");
+  $("#status").innerHTML=list?`<details class="banner ${cls}"><summary>${head}</summary><ul>${list}</ul></details>`:`<div class="banner ok">${head}</div>`;
+}
+
+function benchCard(b){
+  return `<div class="card"><div class="top"><div><div class="sym">${esc(b.name)}</div><div class="muted" style="font-size:12px">${esc(b.symbol)} · ${esc(b.last_date)}</div></div></div>
+  <div class="price num">${fmt(b.last_close)}</div>
+  <div class="chg num">${pct(b.chg_1d)} today · ${pct(b.chg_1y)} 1 yr</div>${spark(b.closes)}</div>`;
+}
+
+function newsItem(n){
+  const sum=n.summary?`<p class="sum">${esc(n.summary)}</p>`:`<p class="sum nosum">No summary available. Open the article before relying on the headline.</p>`;
+  return `<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a>
+  <div class="meta"><span>${esc(n.date)}</span><span>${esc(n.source)}</span>${n.tag?`<span class="tag ${esc(n.tag)}">${esc(n.tag)}</span>`:""}</div>${sum}</li>`;
+}
+
+function stockCard(s){
+  const news=(s.news||[]).slice(0,4).map(newsItem).join("")||'<li class="muted">No news in the last 30 days.</li>';
+  return `<div class="card stock"><div>
+    <div class="top"><div><div class="sym">${esc(s.name)}</div><div class="muted" style="font-size:12px">${esc(s.symbol)} · ${esc(s.sector||s.kind)}</div></div>
+    <a class="btn" style="padding:3px 9px;font-size:12px;align-self:start" href="data/prices/${esc(s.symbol.replace("^",""))}.csv" target="_blank" rel="noopener">CSV</a></div>
+    <div class="price num">${fmt(s.last_close,s.last_close<10?3:2)} <span class="muted" style="font-size:13px">${esc(s.currency)}</span></div>
+    <div class="chg num">${pct(s.chg_1d)} on ${esc(s.last_date)} · ${pct(s.chg_1y)} since ${esc(s.first_date)}</div>${spark(s.closes)}
+  </div><ul class="news">${news}</ul></div>`;
+}
+
+function renderStocks(){
+  const list=DATA.stocks.filter(s=>FILTER==="all"||(FILTER==="sg")===s.symbol.endsWith(".SI"));
+  $("#stocks").innerHTML=list.map(stockCard).join("")||'<div class="card empty muted">No names in this filter.</div>';
+}
+
+function renderMacro(rows){
+  $("#macro tbody").innerHTML=rows.map(r=>{
+    const nr=r[1]==="NOT RETRIEVED";
+    return `<tr><td>${esc(r[0])}<div class="muted" style="font-size:12px">${esc(r[2])}</div></td><td class="num ${nr?"nr":""}">${esc(r[1])}</td><td class="num">${esc(r[5])}</td><td><a href="${esc(r[4])}" target="_blank" rel="noopener" style="color:var(--accent)">${esc(r[3])}</a></td></tr>`;
+  }).join("");
+}
+
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  FILTER=b.dataset.f;document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));renderStocks();
+}));
+document.querySelectorAll("[data-copylink]").forEach(b=>b.addEventListener("click",async()=>{
+  const url=new URL(DATA.files[b.dataset.copylink],location.href).href;
+  try{await navigator.clipboard.writeText(url);toast("Link copied")}catch{prompt("Copy this link:",url)}
+}));
+document.querySelectorAll("[data-copytext]").forEach(b=>b.addEventListener("click",async()=>{
+  try{const t=await (await fetch(DATA.files[b.dataset.copytext],{cache:"no-store"})).text();await navigator.clipboard.writeText(t);toast("Bundle copied, ready to paste")}
+  catch{toast("Couldn't copy. Use Open bundle instead.")}
+}));
+
+fetch("data/dashboard.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>{
+  DATA=d;
+  $("#gen").textContent=`Updated ${d.generated} · ${d.news_count} news items`;
+  statusBanner(d.status||{});
+  if(d.edit_url){const a=$("#editlist");a.href=d.edit_url;a.hidden=false;$("#edithint").hidden=false}
+  $("#bench").innerHTML=(d.benchmarks||[]).map(benchCard).join("")||'<div class="card muted">No benchmark data on this run.</div>';
+  renderStocks();renderMacro(d.macro||[]);
+}).catch(()=>{
+  $("#gen").textContent="No data yet";
+  $("#status").innerHTML='<div class="banner warn">No data has been collected yet. Run the workflow once from the Actions tab, then refresh this page.</div>';
+});
+</script>
+</body>
+</html>

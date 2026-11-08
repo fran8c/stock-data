@@ -1,0 +1,27 @@
+# WATCHLIST — one stock per line. Edit this file to add or remove names.
+#
+# Format:   SYMBOL | Company name | Type | News search words (optional)
+#
+#   SYMBOL       Yahoo Finance symbol. SGX names end in .SI (e.g. D05.SI).
+#   Company name Used on the dashboard and as the default news search.
+#   Type         One of: company, bank, insurer, reit
+#                (decides which balance-sheet figures go in the data pack)
+#   News words   Optional. What to search Google News for. Use quotes for
+#                exact phrases and OR between alternatives. If left blank,
+#                the company name is searched.
+#
+# Lines starting with # are ignored. Keep it to 15 names or fewer
+# (the Stock Selection Harness takes at most 15).
+
+D05.SI | DBS Group | bank | "DBS Group" OR "DBS Bank"
+O39.SI | OCBC | bank | "OCBC"
+U11.SI | UOB | bank | "United Overseas Bank" OR "UOB bank"
+BN4.SI | Keppel Ltd | company | "Keppel Ltd" OR "Keppel Corp"
+BS6.SI | Yangzijiang Shipbuilding | company | "Yangzijiang Shipbuilding"
+U96.SI | Sembcorp Industries | company | "Sembcorp"
+Z74.SI | Singtel | company | "Singtel"
+SPCX | SpaceX | company | "SpaceX" stock OR SPCX
+MRVL | Marvell Technology | company | "Marvell Technology" OR MRVL
+MU | Micron Technology | company | "Micron Technology" OR "Micron stock"
+NVDA | Nvidia | company | "Nvidia"
+PLTR | Palantir | company | "Palantir"
