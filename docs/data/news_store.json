@@ -1827,9 +1827,10 @@
   "title": "KKR, Singtel and Tata Communications put data centre company STT GDC India up for sale at over $5.5 billio",
   "source": "The Economic Times",
   "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQeWJvaWwtYXhZZDNCczEwblcyTW1UQWp4aE9kN2Z3MEFmQ0pXdjlKUnRtQnY5bEszdFpYZDNpR19MM3FyUncycFVXSVVSYWlXT3VDd2ZXZ0x5SmVoM0JBZjl3UWFYa2pUUWR6OXNLcTBxUHBWVVZIdnNyVURMakI2MUFEbXdwemllY2t0SjcyaUU3WERzcDBGSG9XSDM4QWlQRGpuUFJnZkZsSFBPNURXczZ3VnlkZmIzSHZGUV9pNFVlVVZMV3F1R3JFY21OTURZakk4T0tyeklzNkZsS0NrRkpvdXdKTHN3M3dfZDBTaFlBMjB1WFFxNEpfa3ItcmtzOFJ2R2lsZ09GZTl4SkhNRzRldnpXUdIBmwJBVV95cUxPT2JBSXJDUHdOMWVOck5sU01qNUl1LUFzUzVmb0oyNEViNkNOTllvanBhMTN0YkEzNXB4Qm56U2pvM2N0XzZxWEl3V0lSTkVJMUlLbHVHVVB5U0s5b2YwUE04SFpvam1UbW9SM1BrdTRVdWdWU3NtTkYxekpZMWIxX3V0enF5UXEwZXFyVkFLSkdWem05N2g2QjdoakJLaXYtaGxrdXBpbkFzWFY2aVJsQWlEc2UtRXVBd3p0d2VlR0hQeU1md1JMQ1o4ajktMGdERGcwWGs5XzhoSmllOTRWWFNwUmtPem9VSFl3WFFJV1ZTQk9nNF9XY3NtNjdBeEF3aElrQUxPUHoxZk9WQ1RsLWFVSUEwUFp3ampr?oc=5",
-  "summary": "",
+  "summary": "Key Takeaways KKR, Singtel and Tata Communications are exploring a sale of STT Global Data Centres India at a valuation exceeding $5.5 billion. The company operates 34 data centres across ... [summary from lapaasvoice.com]",
   "via": "google",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED",
+  "borrowed": true
  },
  "Z74.SI::singtelsncstomorethantripleaispecialistworkforcetoover300intwoyears": {
   "ticker": "Z74.SI",
@@ -3549,7 +3550,7 @@
   "url": "https://theinvestor.vn/sembcorp-wins-conditional-approval-to-import-13-gw-of-renewable-power-from-vietnam-malaysia-d20302.html",
   "summary": "Singapore’s Energy Market Authority (EMA) has granted conditional approval to Sembcorp Utilities, a wholly owned subsidiary of Sembcorp Industries, to import up to 1.3 gigawatts (GW) of renewable ...",
   "via": "bing",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "U96.SI::sembcorpgrantedconditionalapprovaltoimport13gwofelectricityfrommalaysia": {
   "ticker": "U96.SI",
@@ -3919,6 +3920,86 @@
   "url": "https://www.msn.com/en-us/money/technology/hiding-inside-palantir-s-skyrocketing-quarter-is-a-foreboding-signal/ar-AA2gGZH1",
   "summary": "Palantir delivered such a huge third-quarter earnings report on Monday that its press release even bragged that the numbers were “crushing consensus expectations.” Yet, retail investors were lukewarm ...",
   "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::ocbckeepsbuyonyangzijiangshipbuildingwithsgd610fairvalue": {
+  "ticker": "BS6.SI",
+  "date": "2026-10-13",
+  "title": "OCBC Keeps BUY on Yangzijiang Shipbuilding With SGD6.10 Fair Value",
+  "source": "Minichart",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONTY3SFpGc2NRQTlpbG9QV2pKRGdKYWM1YWc2THZrc3paQlk3WXVDOUNxT3hzc3ppTEZwNWoxM1hETXVqczN5YkZyZlRidVBXSXdZR1lISG16Sjh1Q0RiZ1VjX1hQYkhQQ1FwR09lcmpSdkFWM2ZuZU1YaF9ZaUYtcUVubFZnbTlFT1hNd2I3alZfZUN6SHV0TWRNOTRaSUFnRTQ5TWJCakFJUnM?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorpwinsconditionalapprovalfor13gwpowerimports": {
+  "ticker": "U96.SI",
+  "date": "2026-10-26",
+  "title": "Sembcorp Wins Conditional Approval for 1.3 GW Power Imports",
+  "source": "mvapulse",
+  "url": "https://www.mvapulse.com/sembcorp-wins-conditional-approval-for-1-3-gw-power-imports/",
+  "summary": "Singapore's EMA grants Sembcorp conditional approval for a 1.3 GW cross-border renewable electricity import project connecting Vietnam and Malaysia.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::kkrsingtelandtatacommunicationsputsttgdcindiaupforsaleatover55billion": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-02",
+  "title": "KKR, Singtel and Tata Communications Put STT GDC India Up for Sale at Over $5.5 Billion",
+  "source": "lapaasvoice.com",
+  "url": "https://lapaasvoice.com/kkr-singtel-and-tata-communications-put-stt-gdc-india-up-for-sale-at-over-5-5-billion/",
+  "summary": "Key Takeaways KKR, Singtel and Tata Communications are exploring a sale of STT Global Data Centres India at a valuation exceeding $5.5 billion. The company operates 34 data centres across ...",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "SPCX::whyattstockslumpedinoctober": {
+  "ticker": "SPCX",
+  "date": "2026-11-08",
+  "title": "Why AT&T Stock Slumped in October",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/08/why-at-and-t-stock-slumped-in-october/",
+  "summary": "A large, well-known company continues to push into the consumer telecom space.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::ismicronstockabuyrightnow": {
+  "ticker": "MU",
+  "date": "2026-11-08",
+  "title": "Is Micron Stock a Buy Right Now?",
+  "source": "Yahoo Finance",
+  "url": "https://www.fool.com/investing/2026/11/08/is-micron-stock-a-buy-right-now/",
+  "summary": "Micron shares are down 34% from their high, yet its memory chips are sold out years ahead, and its profits keep climbing.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::theusletnvidiasellchipstoanemptyofficeinchina": {
+  "ticker": "NVDA",
+  "date": "2026-11-07",
+  "title": "The US let Nvidia sell chips to an empty office in China",
+  "source": "The Verge",
+  "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRWY3V3lvSXNva3FsVmVuN3p0WndDSjhJSE5hMWhrSWUtajR3dmNtY2FrNWViNkNRUXAxOXVsLVJ4WnJyMFpjamM2MTlqcFU0Y3ljNjZiam5NWU5oSWFaeTF0TXFUOGtGSUkwOFk0MG5sZ3dKNWE4UFNKZFA0eWVaZVJQbk9vWGFXWmdQN1l6dERzVkdOMEJvc3Z2WHY3UEJKUmFGaw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::ismicronstockabuyrightnow": {
+  "ticker": "NVDA",
+  "date": "2026-11-08",
+  "title": "Is Micron Stock a Buy Right Now?",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/08/is-micron-stock-a-buy-right-now/",
+  "summary": "Micron shares are down 34% from their high, yet its memory chips are sold out years ahead, and its profits keep climbing.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::whyattstockslumpedinoctober": {
+  "ticker": "NVDA",
+  "date": "2026-11-08",
+  "title": "Why AT&T Stock Slumped in October",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/08/why-at-and-t-stock-slumped-in-october/",
+  "summary": "A large, well-known company continues to push into the consumer telecom space.",
+  "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  }
 }
