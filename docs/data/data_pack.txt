@@ -1,10 +1,10 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-08 15:19 SGT
+Run time: 2026-11-08 15:57 SGT
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (23): expected, marked NOT RETRIEVED in the files
+GAPS (22): expected, marked NOT RETRIEVED in the files
   - D05.SI: P/B range covers only 45 months, not 5 years
   - D05.SI: CET1 and its minimum need the bank's own disclosure
   - O39.SI: P/B range covers only 45 months, not 5 years
@@ -22,14 +22,13 @@ GAPS (23): expected, marked NOT RETRIEVED in the files
   - MU: P/E range covers only 26 months, not 5 years
   - NVDA: P/E range covers only 44 months, not 5 years
   - PLTR: P/E range covers only 34 months, not 5 years
-  - US real GDP growth: fetch failed (no response after 3 tries (ReadTimeout))
   - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 256 items have no summary (paywall or site blocks automated visits)
+  - News: 265 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-08 15:19 SGT
+DATA PACK - generated 2026-11-08 15:57 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 
@@ -37,7 +36,10 @@ Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it i
 
 US 1-year Treasury yield | 4.33% | 1-year par yield (constant maturity), daily Treasury par yield curve | U.S. Department of the Treasury | https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve | 2026-11-06
 Singapore 1-year SGS T-bill yield | 1.92% | Cut-off yield at the latest 1-year T-bill auction (issue BY26103X) | Monetary Authority of Singapore | https://eservices.mas.gov.sg/statistics/api/v1/bondsandbills/m/listbondsandbills | 2026-10-15
-US real GDP growth | NOT RETRIEVED | fetch failed (no response after 3 tries (ReadTimeout)) | BEA via FRED | https://fred.stlouisfed.org/series/A191RL1Q225SBEA | 2026-11-08
+US real GDP growth y/y (latest) | 2.1% | Change from the same quarter a year earlier, Q3 2026; BEA table 1.1.11 | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10111/A191RO-Q | 2026-07-01
+US real GDP growth y/y (prior) | 2.2% | Change from the same quarter a year earlier, Q2 2026; BEA table 1.1.11 | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10111/A191RO-Q | 2026-04-01
+US real GDP growth q/q annualised (latest) | 3.4% | Change from the preceding quarter at an annual rate, seasonally adjusted, Q3 2026; BEA table 1.1.1 (the headline figure) | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10101/A191RL-Q | 2026-07-01
+US real GDP growth q/q annualised (prior) | 2.2% | Change from the preceding quarter at an annual rate, seasonally adjusted, Q2 2026; BEA table 1.1.1 (the headline figure) | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10101/A191RL-Q | 2026-04-01
 US headline CPI (latest) | 4.0% | CPI-U all items, year-on-year, Sep 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0 | 2026-09-01
 US headline CPI (prior) | 3.7% | CPI-U all items, year-on-year, Aug 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0 | 2026-08-01
 US core CPI (latest) | 2.8% | CPI-U all items less food and energy, year-on-year, Sep 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0L1E | 2026-09-01
@@ -88,7 +90,7 @@ U11.SI latest close | 36.8800 SGD | Closing price of the latest daily bar (not a
 U11.SI 3-month average daily volume | 3,656,149 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/history/ | 2026-11-06
 U11.SI sector | Financial Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/profile/ | retrieved 2026-11-08
 U11.SI trailing EPS | 5.6200 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-08
-U11.SI forward EPS | 3.5173 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-08
+U11.SI forward EPS | 3.5189 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-08
 U11.SI book value per share | 29.9860 SGD | Shareholders' equity per share, latest reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-08
 U11.SI P/B | 1.23 | Price / book value per share | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-08
 U11.SI 5-year P/B high | 1.40 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-06 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/financials/ | retrieved 2026-11-08
