@@ -1,10 +1,10 @@
-RUN STATUS: FAILED - see CRITICAL below
-Run time: 2026-11-08 14:57 SGT
+RUN STATUS: OK with gaps
+Run time: 2026-11-08 15:19 SGT
 
-CRITICAL (1): these gaps break the harnesses
-  - US 1-year Treasury yield: fetch failed (HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=25))
+CRITICAL (0): these gaps break the harnesses
+  - none
 
-GAPS (26): expected, marked NOT RETRIEVED in the files
+GAPS (23): expected, marked NOT RETRIEVED in the files
   - D05.SI: P/B range covers only 45 months, not 5 years
   - D05.SI: CET1 and its minimum need the bank's own disclosure
   - O39.SI: P/B range covers only 45 months, not 5 years
@@ -22,12 +22,9 @@ GAPS (26): expected, marked NOT RETRIEVED in the files
   - MU: P/E range covers only 26 months, not 5 years
   - NVDA: P/E range covers only 44 months, not 5 years
   - PLTR: P/E range covers only 34 months, not 5 years
-  - US real GDP growth: fetch failed (HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=25))
-  - US headline CPI: fetch failed (HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=25))
-  - US core CPI: fetch failed (HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=25))
+  - US real GDP growth: fetch failed (no response after 3 tries (ReadTimeout))
   - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 126 summaries still to fetch; they'll be picked up on the next run
-  - News: 150 items have no summary (paywall or site blocks automated visits)
+  - News: 256 items have no summary (paywall or site blocks automated visits)
