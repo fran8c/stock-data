@@ -514,9 +514,9 @@ def bls_series(series_id):
     return s
 
 
-def fred(series_id):
+def fred(series_id, tries=3):
     """Daily/monthly/quarterly series from FRED (St. Louis Fed) as a pandas Series."""
-    r = get_retry(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
+    r = get_retry(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}", tries=tries)
     df = pd.read_csv(io.StringIO(r.text))
     s = pd.Series(pd.to_numeric(df.iloc[:, 1], errors="coerce").values,
                   index=pd.to_datetime(df.iloc[:, 0])).dropna()
@@ -533,6 +533,71 @@ def yoy_last_two(s):
     y = (s / s.shift(12) - 1) * 100
     y = y.dropna()
     return y.iloc[-1], y.index[-1], y.iloc[-2], y.index[-2]
+
+
+def dbnomics(series_path):
+    """
+    One series from DBnomics (a free public mirror of official statistics, no key).
+    series_path like "BEA/NIPA-T10101/A191RL-Q". Returns (pandas Series, web page URL).
+    """
+    api = f"https://api.db.nomics.world/v22/series/{series_path}?observations=1&format=json"
+    js = get_retry(api, tries=2, timeout=40).json()
+    docs = (js.get("series") or {}).get("docs") or []
+    if not docs:
+        raise RuntimeError(f"series {series_path} not found")
+    d = docs[0]
+    pts = {}
+    for p, v in zip(d.get("period", []), d.get("value", [])):
+        f = num(v)
+        if f is None:
+            continue
+        m = re.match(r"^(\d{4})-Q([1-4])$", str(p))
+        if m:   # quarter -> first day of the quarter
+            pts[pd.Timestamp(int(m.group(1)), 3 * int(m.group(2)) - 2, 1)] = f
+    s = pd.Series(pts).sort_index()
+    if len(s) < 6:
+        raise RuntimeError(f"only {len(s)} quarters in {series_path}")
+    return s, f"https://db.nomics.world/{series_path}"
+
+
+def qlabel(ts):
+    return f"Q{(ts.month - 1) // 3 + 1} {ts.year}"
+
+
+def us_gdp():
+    """
+    US real GDP growth from BEA tables, read through DBnomics.
+    Returns a list of (figure, value, definition, source, url, date).
+    """
+    out = []
+    src = "U.S. Bureau of Economic Analysis (BEA), via DBnomics"
+
+    # Year-on-year: BEA table 1.1.11 directly; otherwise compute it from the
+    # real GDP level in table 1.1.6, which is how BEA itself calculates it.
+    yoy, how = None, ""
+    try:
+        yoy, url = dbnomics("BEA/NIPA-T10111/A191RO-Q")
+        how = "BEA table 1.1.11"
+    except Exception:  # noqa: BLE001
+        lvl, url = dbnomics("BEA/NIPA-T10106/A191RX-Q")
+        yoy = ((lvl / lvl.shift(4) - 1) * 100).dropna()
+        how = "computed from BEA table 1.1.6 (real GDP, chained dollars): this quarter / same quarter a year earlier - 1"
+    for i, tag in ((-1, "latest"), (-2, "prior")):
+        q = yoy.index[i]
+        out.append((f"US real GDP growth y/y ({tag})", f"{yoy.iloc[i]:.1f}%",
+                    f"Change from the same quarter a year earlier, {qlabel(q)}; {how}", src, url, q.date().isoformat()))
+
+    # Headline figure BEA announces: annualised quarter-on-quarter (table 1.1.1)
+    try:
+        qoq, url = dbnomics("BEA/NIPA-T10101/A191RL-Q")
+        for i, tag in ((-1, "latest"), (-2, "prior")):
+            q = qoq.index[i]
+            out.append((f"US real GDP growth q/q annualised ({tag})", f"{qoq.iloc[i]:.1f}%",
+                        f"Change from the preceding quarter at an annual rate, seasonally adjusted, {qlabel(q)}; BEA table 1.1.1 (the headline figure)",
+                        src, url, q.date().isoformat()))
+    except Exception as e:  # noqa: BLE001
+        R.warn(f"US GDP q/q annualised: {e}")
+    return out
 
 
 def mas_tbill_1y():
@@ -611,14 +676,11 @@ def market_figures():
 
     # US macro
     try:
-        s = fred("A191RL1Q225SBEA")
-        for i, tag in ((-1, "latest"), (-2, "prior")):
-            q = s.index[i]
-            add(f"US real GDP growth ({tag})", f"{s.iloc[i]:.1f}%",
-                f"Quarter-on-quarter, seasonally adjusted annual rate, {q.year}Q{(q.month - 1) // 3 + 1}",
-                "BEA via FRED", fred_url("A191RL1Q225SBEA"), q.date().isoformat())
+        for row in us_gdp():
+            add(*row)
     except Exception as e:  # noqa: BLE001
-        missing("US real GDP growth", f"fetch failed ({e})", "BEA via FRED", fred_url("A191RL1Q225SBEA"))
+        missing("US real GDP growth y/y", f"fetch failed ({e})", "BEA via DBnomics",
+                "https://db.nomics.world/BEA/NIPA-T10106/A191RX-Q")
 
     # US CPI straight from BLS (not seasonally adjusted, the basis of the headline y/y figure)
     for sid, label, what in (("CUUR0000SA0", "US headline CPI", "CPI-U all items"),
@@ -697,7 +759,27 @@ def google_news(item):
     return found[:NEWS_PER_TICKER]
 
 
+def bing_queries(item):
+    """Three angles per stock, so more items arrive with a summary."""
+    name = item["name"]
+    return [item["query"], f'"{name}" shares OR stock', f'"{name}" results OR earnings OR dividend OR guidance']
+
+
 def bing_news(item):
+    """Run every Bing angle for one stock; one failing angle doesn't stop the others."""
+    found, errors = [], []
+    for q in bing_queries(item):
+        try:
+            found += bing_feed(item, q)
+        except Exception as e:  # noqa: BLE001
+            errors.append(e.__class__.__name__)
+        time.sleep(1)
+    if errors and not found:
+        raise RuntimeError(", ".join(errors))
+    return found
+
+
+def bing_feed(item, query):
     """
     Bing News RSS: gives the article's own link and a short description written
     from the article, so most items arrive with a summary already.
@@ -705,7 +787,7 @@ def bing_news(item):
     from urllib.parse import urlparse, parse_qs
     sg = item["symbol"].endswith(".SI")
     mkt = "en-SG" if sg else "en-US"
-    url = f"https://www.bing.com/news/search?q={quote_plus(item['query'])}&format=rss&mkt={mkt}&setlang=en"
+    url = f"https://www.bing.com/news/search?q={quote_plus(query)}&format=rss&mkt={mkt}&setlang=en"
     root = ET.fromstring(get(url).content)
     cutoff = (TODAY - timedelta(days=NEWS_DAYS)).isoformat()
     found = []
@@ -856,17 +938,20 @@ def trust_tag(n, same_ticker):
 
 
 def news_lines(store):
+    """Returns (items with a summary, headline-only items), each grouped by ticker, newest first."""
     by_t = {}
     for n in store.values():
         by_t.setdefault(n["ticker"], []).append(n)
-    lines = []
+    with_sum, headline_only = [], []
     for t in sorted(by_t):
         items = sorted(by_t[t], key=lambda n: n["date"], reverse=True)
         for n in items:
             n["tag"] = trust_tag(n, items)
-            facts = n["summary"] if n.get("summary") else NO_SUMMARY
-            lines.append(line(t, n["date"], n["title"], n["source"], n["url"], n["tag"], facts))
-    return lines
+            if n.get("summary"):
+                with_sum.append(line(t, n["date"], n["title"], n["source"], n["url"], n["tag"], n["summary"]))
+            else:
+                headline_only.append(line(t, n["date"], n["title"], n["source"], n["url"], n["tag"], NO_SUMMARY))
+    return with_sum, headline_only
 
 
 # ----------------------------------------------------------------------------
@@ -1018,7 +1103,8 @@ def main():
     store = archive_news(store, watch)
     store = update_news(store, fresh_news)
     fill_summaries(store)
-    nlines = news_lines(store)
+    with_sum, headline_only = news_lines(store)
+    nlines = with_sum + headline_only
     OUT.mkdir(parents=True, exist_ok=True)
     store_path.write_text(json.dumps(store, indent=1, ensure_ascii=False), encoding="utf-8")
 
@@ -1034,7 +1120,12 @@ def main():
                    "'[summary from X]' means it was taken from outlet X's report of the same story. "
                    "Trust tags are rule-based: PRIMARY = press wire or official filing; "
                    "CORROBORATED = similar headline from another outlet within 2 days.")
-    news_pack = news_header + "\n\n" + ("\n".join(nlines) if nlines else "No news items found.")
+    news_pack = (news_header
+                 + f"\n\n# ITEMS WITH A SUMMARY ({len(with_sum)})\n"
+                 + ("\n".join(with_sum) if with_sum else "None on this run.")
+                 + f"\n\n# HEADLINES ONLY ({len(headline_only)}) - no summary could be retrieved. "
+                   "Treat each as unverified: a headline alone can mislead. Open the link before relying on it.\n"
+                 + ("\n".join(headline_only) if headline_only else "None."))
     symbols = [i["symbol"] for i in watch] + [b[0] for b in BENCHMARKS]
 
     write_text("status.txt", status)
