@@ -1,0 +1,81 @@
+# Runs the pipeline every Tuesday to Saturday at about 8am Singapore time,
+# and again within a minute or two whenever watchlist.txt is edited.
+# It saves the new files into the repo and republishes the dashboard.
+# You can also start it by hand: Actions tab -> "Daily stock data" -> Run workflow.
+
+name: Daily stock data
+
+on:
+  schedule:
+    # GitHub's clock is UTC. 00:07 UTC = 08:07 Singapore time.
+    # Days 2-6 = Tuesday to Saturday (after US Monday to Friday sessions).
+    # Minute 7, not 0, because runs set for the top of the hour queue longest.
+    - cron: "7 0 * * 2-6"
+  # Also run straight away whenever watchlist.txt is saved (edited) on GitHub.
+  push:
+    branches: [main]
+    paths: [watchlist.txt]
+  workflow_dispatch:
+
+permissions:
+  contents: write   # save the data files back into the repo
+  pages: write      # publish the dashboard
+  id-token: write   # required by GitHub Pages publishing
+
+concurrency:
+  group: daily-stock-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - name: Get the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install libraries
+        run: pip install -r requirements.txt
+
+      - name: Collect the data
+        id: collect
+        continue-on-error: true   # still save and publish whatever worked
+        run: python pipeline.py
+
+      - name: Save the data files into the repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Daily data $(TZ=Asia/Singapore date +%F)" || echo "Nothing new to save"
+          # pick up any edit you made while the job was running, then save
+          git pull --rebase origin "${{ github.ref_name }}"
+          git push origin HEAD:"${{ github.ref_name }}"
+
+      - name: Prepare the website
+        uses: actions/configure-pages@v5
+
+      - name: Package the website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Publish the website
+        id: deploy
+        uses: actions/deploy-pages@v4
+
+      - name: Mark the run as failed if prices or rates are missing
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "Critical gaps on this run. Details:"
+          cat docs/data/status.txt || true
+          exit 1
