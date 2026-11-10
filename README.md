@@ -39,7 +39,25 @@ Go to github.com/settings/notifications. Under **Actions**, tick **Email** and *
 - **Run it now:** Actions tab → Daily stock data → Run workflow.
 - **Give it to an AI:** use the buttons under "For your AI" on the dashboard.
 
-## What counts as a failure (you get an email)
+## Daily report notice
+
+After every run, good or bad, the job posts a comment on the issue **Daily stock data reports** (Issues tab). The comment mentions you, so GitHub emails you. If you use the GitHub mobile app, you also get a phone notification. Each comment has:
+
+- the status (OK, OK with gaps, or FAILED with what's missing)
+- a market summary: 1-year rates, each index and stock's last close with 1-day and 1-year change, the biggest movers, and results or ex-dividend dates in the next 14 days
+- **latest** links (dashboard, AI bundle, data pack, news pack): these always show the newest run
+- **this run's copy** links: frozen copies of that day's files, which never change
+- a link to the run log
+
+## Past days
+
+- **Past days page:** `https://<your-username>.github.io/stock-data/history.html` (also linked at the top of the dashboard). Pick a date to see that day's status and summary, with links to its data and news packs.
+- **Dated folders:** `docs/data/history/YYYY-MM-DD/` holds each day's status, summary, data pack and news pack (about 0.3 MB a day).
+- **Your inbox:** each email's "this run's copy" links open that exact day's files.
+
+Make sure github.com/settings/notifications has **Email** ticked under "Participating, @mentions and custom". Keep the issue open; if you close it, the next run starts a new one.
+
+## What counts as a failure (you also get GitHub's own failure email)
 
 - Prices missing for any watchlist name or benchmark (STI, S&P 500, Nasdaq, Dow), or a price more than 5 days old.
 - The US 1-year Treasury yield or the Singapore 1-year T-bill yield missing.
