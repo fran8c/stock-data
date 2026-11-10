@@ -1,5 +1,5 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-10 08:56 SGT
+Run time: 2026-11-10 22:22 SGT
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -32,4 +32,4 @@ GAPS (28): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 375 items have no summary (paywall or site blocks automated visits)
+  - News: 439 items have no summary (paywall or site blocks automated visits)
