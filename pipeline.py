@@ -9,6 +9,8 @@ everything into docs/data/, which GitHub Pages publishes:
   data_pack.txt           figures for the Stock Selection Harness
   news_pack.txt           last 30 days of news for both harnesses
   status.txt              what worked and what didn't on this run
+  summary.md              short market summary (used in the daily email)
+  history/<date>/         dated copy of status, summary, data pack, news pack
   ai_bundle.txt           status + data pack + news pack in one paste
   dashboard.json          what the dashboard page reads
   news_store.json         the script's own memory of news it has seen
@@ -1163,8 +1165,98 @@ def main():
                       "news_pack": "data/news_pack.txt", "status": "data/status.txt"}}
     write_text("dashboard.json", json.dumps(dash, ensure_ascii=False))
 
+    summary = market_summary(dash_stocks, dash_bench, macro, stock_blocks)
+    write_text("summary.md", summary)
+    save_history({"status.txt": status, "summary.md": summary,
+                  "data_pack.txt": status + "\n\n" + data_pack, "news_pack.txt": news_pack})
+
     print("\n" + status)
     return 1 if R.critical else 0
+
+
+# ----------------------------------------------------------------------------
+# Daily market summary and dated history
+# ----------------------------------------------------------------------------
+HISTORY = OUT / "history"
+UPCOMING_DAYS = 14
+
+
+def pct_txt(x):
+    return "n/a" if x is None else f"{x:+.1f}%"
+
+
+def market_summary(stocks, bench, macro, stock_blocks):
+    """Short plain-text summary used in the daily email and the history page."""
+    out = []
+
+    rates = {}
+    for m in macro:
+        f = m.split(" | ")
+        if f[0] in ("US 1-year Treasury yield", "Singapore 1-year SGS T-bill yield"):
+            rates[f[0]] = (f[1], f[5] if len(f) > 5 else "")
+    if rates:
+        out.append("**Rates:** " + " | ".join(
+            f"{'US' if k.startswith('US') else 'SG'} 1-year {v} ({d})" for k, (v, d) in rates.items()))
+        out.append("")
+
+    short = []   # names with less than a year of prices
+
+    def table(rows, title, ccy):
+        t = [f"**{title}**", "", "| | Last close | Date | 1 day | 1 year |", "|---|---:|---|---:|---:|"]
+        for r in rows:
+            close = f"{r['last_close']:,.2f}" + (f" {r.get('currency')}" if ccy and r.get("currency") else "")
+            yr = pct_txt(r.get("chg_1y"))
+            if r.get("first_date") and r["first_date"] > (TODAY - timedelta(days=360)).isoformat():
+                yr += " *"
+                short.append(f"{r['name']} since {r['first_date']}")
+            t.append(f"| {r['name']} | {close} | {r['last_date']} | {pct_txt(r.get('chg_1d'))} | {yr} |")
+        return t + [""]
+
+    if bench:
+        out += table(bench, "Indices", False)
+    if stocks:
+        out += table(stocks, "Watchlist", True)
+        if short:
+            out.append("\\* Less than a year of prices: " + "; ".join(short) + ".")
+            out.append("")
+        movers = sorted((s for s in stocks if s.get("chg_1d") is not None),
+                        key=lambda s: abs(s["chg_1d"]), reverse=True)[:3]
+        if movers:
+            out.append("**Biggest 1-day moves:** " + ", ".join(
+                f"{s['name']} {pct_txt(s['chg_1d'])}" for s in movers))
+            out.append("")
+
+    # Results and ex-dividend dates coming up
+    horizon = (TODAY + timedelta(days=UPCOMING_DAYS)).isoformat()
+    events = []
+    for block in stock_blocks:
+        for ln in block.splitlines():
+            f = ln.split(" | ")
+            if len(f) < 2 or not re.match(r"^\d{4}-\d{2}-\d{2}$", f[1]):
+                continue
+            sym, _, fig = f[0].partition(" ")
+            if fig in ("next results date", "ex-dividend date") and TODAY_S <= f[1] <= horizon:
+                label = "results" if fig == "next results date" else "ex-dividend"
+                events.append((f[1], f"{sym} {label}"))
+    if events:
+        out.append(f"**Coming up (next {UPCOMING_DAYS} days):** " +
+                   "; ".join(f"{d} {e}" for d, e in sorted(events)))
+    else:
+        out.append(f"**Coming up (next {UPCOMING_DAYS} days):** no results or ex-dividend dates reported.")
+    out.append("")
+    out.append("Prices are each market's latest close. SGX and US dates can differ because of time zones and holidays.")
+    return "\n".join(out)
+
+
+def save_history(files):
+    """Keep a dated copy of today's key files and update the list of dates."""
+    day = HISTORY / TODAY_S
+    day.mkdir(parents=True, exist_ok=True)
+    for name, text in files.items():
+        (day / name).write_text(text.rstrip() + "\n", encoding="utf-8")
+    dates = sorted((p.name for p in HISTORY.iterdir()
+                    if p.is_dir() and re.match(r"^\d{4}-\d{2}-\d{2}$", p.name)), reverse=True)
+    (HISTORY / "index.json").write_text(json.dumps({"dates": dates, "updated": RUN_STAMP}), encoding="utf-8")
 
 
 if __name__ == "__main__":
