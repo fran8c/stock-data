@@ -19,6 +19,7 @@ on:
 
 permissions:
   contents: write   # save the data files back into the repo
+  issues: write     # post the daily report notice (this is what emails you)
   pages: write      # publish the dashboard
   id-token: write   # required by GitHub Pages publishing
 
@@ -52,6 +53,7 @@ jobs:
         run: python pipeline.py
 
       - name: Save the data files into the repo
+        id: save
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -60,6 +62,8 @@ jobs:
           # pick up any edit you made while the job was running, then save
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin HEAD:"${{ github.ref_name }}"
+          # the saved version's ID, used for the "frozen copy" links in the email
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Prepare the website
         uses: actions/configure-pages@v5
@@ -72,6 +76,113 @@ jobs:
       - name: Publish the website
         id: deploy
         uses: actions/deploy-pages@v4
+
+      # Posts a comment on the issue "Daily stock data reports" after every run,
+      # good or bad. The comment mentions you, so GitHub emails you (and pings
+      # the GitHub mobile app if you use it) with the status and report links.
+      - name: Send the report notice
+        if: always()
+        continue-on-error: true   # a notice problem never spoils the data run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          COLLECT: ${{ steps.collect.outcome }}
+          DEPLOY: ${{ steps.deploy.outcome }}
+          TRIGGER: ${{ github.event_name }}
+          SHA: ${{ steps.save.outputs.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import os, re, subprocess, pathlib
+          from datetime import datetime, timezone, timedelta
+
+          env = os.environ
+          site = f"https://{env['OWNER'].lower()}.github.io/{env['REPO_NAME']}/"
+          d = pathlib.Path("docs/data")
+          status = (d / "status.txt").read_text(encoding="utf-8") if (d / "status.txt").exists() else ""
+          news = (d / "news_pack.txt").read_text(encoding="utf-8") if (d / "news_pack.txt").exists() else ""
+
+          def count(pattern, text):
+              m = re.search(pattern, text)
+              return int(m.group(1)) if m else None
+
+          crit = count(r"CRITICAL \((\d+)\)", status)
+          gaps = count(r"GAPS \((\d+)\)", status)
+          with_sum = count(r"# ITEMS WITH A SUMMARY \((\d+)\)", news)
+          headlines = count(r"# HEADLINES ONLY \((\d+)\)", news)
+          crit_lines = []
+          if crit:
+              block = status.split("CRITICAL", 1)[1].split("GAPS", 1)[0]
+              crit_lines = [l.strip() for l in block.splitlines() if l.strip().startswith("- ")]
+
+          if not status:
+              verdict = "FAILED - the script stopped before writing any files"
+          elif crit:
+              verdict = f"FAILED - {crit} critical gap(s): prices or rates missing"
+          elif gaps:
+              verdict = f"OK - {gaps} expected gaps (marked NOT RETRIEVED)"
+          else:
+              verdict = "OK - all data collected"
+          if env.get("DEPLOY") != "success":
+              verdict += ". Dashboard NOT updated (publishing step failed)"
+
+          when = datetime.now(timezone(timedelta(hours=8))).strftime("%a %d %b %Y, %H:%M SGT")
+          trigger = {"schedule": "daily schedule", "push": "watchlist edit",
+                     "workflow_dispatch": "started by hand"}.get(env.get("TRIGGER"), env.get("TRIGGER"))
+          lines = [
+              f"@{env['OWNER']} **{verdict}**",
+              f"Run finished {when} ({trigger}).",
+              "",
+          ]
+          if crit_lines:
+              lines += ["**Critical gaps**"] + crit_lines + [""]
+          summary = d / "summary.md"
+          if summary.exists() and status:
+              lines += [summary.read_text(encoding="utf-8").strip(), ""]
+          if with_sum is not None:
+              lines.append(f"**News:** {with_sum} items with a summary, {headlines} headline-only.")
+              lines.append("")
+          lines += [
+              "**Latest report** (these links always show the newest run)",
+              f"- Dashboard: {site}",
+              f"- For your AI (everything in one file): {site}data/ai_bundle.txt",
+              f"- Data pack: {site}data/data_pack.txt",
+              f"- News pack: {site}data/news_pack.txt",
+              f"- Full status list: {site}data/status.txt",
+              "",
+          ]
+          sha = env.get("SHA", "")
+          day = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d")
+          if sha:
+              raw = f"https://raw.githubusercontent.com/{env['REPO']}/{sha}/docs/data"
+              blob = f"https://github.com/{env['REPO']}/blob/{sha}/docs/data"
+              lines += [
+                  "**This run's copy** (frozen: these never change)",
+                  f"- For your AI, this day's bundle: {raw}/ai_bundle.txt",
+                  f"- Data pack to read: {blob}/data_pack.txt",
+                  f"- News pack to read: {blob}/news_pack.txt",
+                  f"- Dated folder: {site}data/history/{day}/data_pack.txt",
+                  f"- All past days: {site}history.html",
+                  "",
+              ]
+          lines.append(f"Run log: {env['RUN_URL']}")
+          pathlib.Path("notice.md").write_text("\n".join(lines), encoding="utf-8")
+
+          title = "Daily stock data reports"
+          def gh(*args):
+              return subprocess.run(["gh", *args], check=True, capture_output=True, text=True).stdout.strip()
+          num = gh("issue", "list", "--state", "open", "--search", f'"{title}" in:title',
+                   "--json", "number,title", "--jq", f'[.[] | select(.title == "{title}")][0].number // empty')
+          if not num:
+              url = gh("issue", "create", "--title", title, "--body",
+                       f"@{env['OWNER']} Each run of the daily stock data job posts a comment here with its "
+                       "status and links to the report. Keep this issue open; closing it starts a new one.")
+              num = url.rstrip("/").split("/")[-1]
+          gh("issue", "comment", num, "--body-file", "notice.md")
+          print(pathlib.Path("notice.md").read_text(encoding="utf-8"))
+          PY
 
       - name: Mark the run as failed if prices or rates are missing
         if: steps.collect.outcome == 'failure'
