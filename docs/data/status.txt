@@ -1,5 +1,5 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-10 22:22 SGT
+Run time: 2026-11-11 08:57 SGT
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -21,15 +21,15 @@ GAPS (28): expected, marked NOT RETRIEVED in the files
   - U96.SI: P/E range covers only 45 months, not 5 years
   - U96.SI: next results date not yet announced (last was 2026-08-13)
   - Z74.SI: 5-year P/E range marked UNRELIABLE (high is 7x the low, so earnings or book value changed sharply)
-  - SPCX: only 104 daily bars (less than a year of history)
+  - SPCX: only 105 daily bars (less than a year of history)
   - SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - SPCX: next results date not yet announced (last was 2026-10-20)
   - MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
-  - MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 24x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
-  - NVDA: 5-year P/E range marked UNRELIABLE (high is 14x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 25x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - NVDA: 5-year P/E range marked UNRELIABLE (high is 15x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 439 items have no summary (paywall or site blocks automated visits)
+  - News: 485 items have no summary (paywall or site blocks automated visits)
