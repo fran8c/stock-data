@@ -259,16 +259,6 @@
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  },
- "D05.SI::dbsceomarketrepricingrisksonaifinancing": {
-  "ticker": "D05.SI",
-  "date": "2026-10-12",
-  "title": "DBS CEO: Market Repricing Risks on AI Financing",
-  "source": "Bloomberg",
-  "url": "https://finance.yahoo.com/video/dbs-ceo-market-repricing-risks-021755410.html",
-  "summary": "Tan Su Shan, CEO at DBS Group, says the market is repricing the risks around investments related to the buildup of artificial intelligence that could lead to more discipline in financing. She speaks with Haidi Stroud-Watts from the DBS Asia Future Forward Conference ion Singapore.",
-  "via": "yahoo",
-  "tag": "SINGLE-SOURCE"
- },
  "O39.SI::dbsocbcuobsharesdropafterq3resultssatshitbyworkpassconcernsmarketsthisweek": {
   "ticker": "O39.SI",
   "date": "2026-11-08",
@@ -4242,26 +4232,6 @@
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
- "U11.SI::uobtoofferchinesebusinessesbroaderaccesstofinancialsolutions": {
-  "ticker": "U11.SI",
-  "date": "2026-10-12",
-  "title": "UOB To Offer Chinese Businesses Broader Access To Financial Solutions",
-  "source": "BusinessToday Malaysia",
-  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUVRoaHJqaUl2UTB5SzBuTnBESndvVVgyYXRLeGNzTFZJRFpPR09Rc3E4eXItMjFBcm5vUEVrdUxoam9wdTN0ZmJ2SHhKdkhXQWNqOVpfZHp4SHVGeEdsTUhJLWN2NGtHNERWZWlQQU04RWR6NXhRQjdoRzVRSnpISjg4UDRsd010N1c4M3dXVzFJOXhYNFRJbjVMdWlTc2pfeU9acWV6TkpocVljMlRuRE9YNGU?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
- "U11.SI::singaporebankselloffteststhecitystatessafehavenstatus": {
-  "ticker": "U11.SI",
-  "date": "2026-10-12",
-  "title": "Singapore Bank Selloff Tests the City-State’s Safe Haven Status",
-  "source": "Bloomberg",
-  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNOUVINEpIVUg2QVcxN2hqSUt4Z3pHLTE1Mzh6Rld4ZTVJSjBTbDBRdlhBZ1VwOUNHZ1ZOMTlQWVVlTmd3dzVTU25lT0Z1YWVQcnJJald0UENIM2F6Wk16VVZQZUtleEc3ajhtbXpqWjRXSllYb2dwSTU1dGNlZXdLbXhYeDh0RlhITzg0YmRZdWJhS2JSa2VaVjY5Mkl6aE9zZWNnZUtxZ1VDWUwwMV9nbW5LOXA?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
  "BN4.SI::keppelstockweekaheadtechnicaloutlookfornovember913": {
   "ticker": "BN4.SI",
   "date": "2026-11-08",
@@ -5010,7 +4980,7 @@
   "url": "https://www.fool.com/investing/2026/11/09/why-micron-technology-stock-gained-on-monday/",
   "summary": "Micron stock is bouncing back as chip stocks recover from last week's midterm-driven sell-off, but I think the drop showed how much of the share price rests on perception. With data center opposition growing, especially at the local level, I think there's a good chance construction slows enough to matter.",
   "via": "google",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "MU::micronstockgetssomereliefasthisbigthreatgotkickedintothelonggrass": {
   "ticker": "MU",
@@ -6201,7 +6171,7 @@
   "url": "https://www.theedgesingapore.com/news/results/yangzijiang-shipbuildings-order-wins-exceed-target-55",
   "summary": "Shipbuilding has announced a strong year for orderbook wins in its 3QFY2026 business update. At the ten-month mark, the company has secured US$6.98 ($8.92) billion in year-to-date order wins. This is ...",
   "via": "google",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "BS6.SI::yangzijiangshipbuildingreportsus698billionin10monthorders": {
   "ticker": "BS6.SI",
@@ -7552,7 +7522,7 @@
   "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-2-other-growth-001813988.html",
   "summary": "Anthropic’s plan to list at a valuation that reaches into the trillions has thrown a spotlight on companies that are geared for strong earnings growth and have the balance sheets to handle faster change in areas like AI, trade and interest rates. That kind of backdrop can reward businesses that ...",
   "via": "google",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "MRVL::couldmarvelltechnologymrvlredefineitsaiambitionswithanopticsdeal": {
   "ticker": "MRVL",
@@ -8333,6 +8303,1732 @@
   "source": "Barrons.com",
   "url": "https://www.barrons.com/articles/billionaire-tax-california-proposal-f125b061?siteid=yhoof2&yptr=yahoo",
   "summary": "The wealth tax proposal in California offers a lesson about the mobility of billionaires and could push advocates to find a different, more conciliatory approach.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsbankadjustspricetargetonalphabetto400from460": {
+  "ticker": "D05.SI",
+  "date": "2026-11-11",
+  "title": "DBS Bank Adjusts Price Target on Alphabet to $400 From $460",
+  "source": "marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQRFVoQ2JNODFNVWE3cmRkT0xUUEVTYU5VLXlXSHZBdjNqMV9VbjUwXzJJSkRRQkpOSVhudGprdDZfMzdsb0dmNl8tMDBjQ1IyakkzZ0UzZzhIemxmeXRDbDZORTd1amdfc0JPVklYMWwyWkk5UC16blNqbGhXbzFZTTRwZGx0SWNtanZXLUo4RWUyN2V3T29Wb01tYXBVUDhDVFdJa2Y0NVVZcjBzNXF3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsgroupstockfacesearningstestastradingincomeplunges": {
+  "ticker": "D05.SI",
+  "date": "2026-11-11",
+  "title": "DBS Group stock faces earnings test as trading income plunges",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdkl5Z1NQbmNFdVJYNDVNUEcydnlfUFE5VVJUd3RsenpfblowV0pqekFRRmxXUlg0NmFjOUM1TmpIcU9Vd0wtNEEzdnpIZUxrNXdyaDB5a3lyWWtYbUNJQkpzTUtPbmpjdUhyTlNBYV9rbGVUb1lOcXBUclc3MXRVYm5NR3o3X2poX25yYXlkb2c2YUVORXl5bDNkRDdNOFBhZ0doN1VtdDJ2cTc5am91WWNXei1kYW5rNEJZcGo4eV9GZw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::learnwhythebullcaseforocbcbanksharescouldchangefollowingq3earningsresults": {
+  "ticker": "O39.SI",
+  "date": "2026-11-12",
+  "title": "Learn Why The Bull Case For OCBC Bank Shares Could Change Following Q3 Earnings Results",
+  "source": "Yahoo Finance Singapore",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/learn-why-bull-case-ocbc-191708686.html",
+  "summary": "Oversea-Chinese Banking reported Q3 2026 net interest income of SGD 2,313 million and net income of SGD 2,042 million, with basic earnings per share from continuing operations of SGD 1.78. Across the first nine months of 2026, Oversea-Chinese Banking recorded SGD 6,798 million in net interest income and SGD 6,237 ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::earningsbeatcouldbeagamechangerforocbcstock": {
+  "ticker": "O39.SI",
+  "date": "2026-11-12",
+  "title": "Earnings Beat Could Be A Game Changer For OCBC Stock",
+  "source": "Simply Wall St",
+  "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxONkc0Q2plLVI0amxDLUI2U05VRkRQNEdIN3VCNWM2UXFHRUNHMnFEbTVlY1pVc0JBd0FrWGtnS3JrYzZDb0ZieEtBd2s3MVZPT0h2ekU0OVRpUFZJelFCTW5qWXBvTGd3WG5QUVBTdnRicUdxeUtlYnlYUGxZZVp5aE03ZVRmX0ZLcVQtTFIxY0pOWTVvdmg0WER2eDVxLWdYaHQwVGFieE1BRVlJcUlwYVVxWDFUS2RWSEJSdjVIaVo2YzhpaHRMa2c0cUwxaUXSAdQBQVVfeXFMTmdHWkFEMmJaWVRwdmE0VE9kWTRibkdpVkJjbG8zdVVpZjctd2dXTHRTb2pZclRYN0dCZmtGVEVxVDZ0LU5DQ0xoR3pVTXRLT0FyZXdqc3hGYXF2cnBULVo1dU5VY2tlMms2dW5oVnBkeWt4WlNDcVdaYWlSTEwzQXBPTTFGR0M3QmpRWGVpNThoWjE4TTd0aWVVWnQxU3NzTkVTeUlxV25jS2FfMjJ0V1VRTU9oT0xQdllOMEVaMm1jMF92ajg3Q3k0Z2VKTHQ1TTJpMHc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::dbsocbcoruobinvestorsurgedtobeselectiveasq3revealswideningperformancegap": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "DBS, OCBC or UOB? Investors urged to be selective as Q3 reveals widening performance gap",
+  "source": "The Business Times",
+  "url": "https://www.businesstimes.com.sg/companies-markets/dbs-ocbc-or-uob-investors-urged-be-selective-q3-reveals-widening-performance-gap",
+  "summary": "Singapore banking trio face a growing earnings divide as funding costs cloud their 2027 outlook Read more at The Business Times.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::dbsvsocbcvsuobwhichsingaporebankstandsoutforincomeafterthepullbackand3q2026results": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "DBS vs OCBC vs UOB: Which Singapore bank stands out for income after the pullback and 3Q 2026 results",
+  "source": "Beansprout - Singapore’s Leading Financial Insights Platform - Growbeansprout.com",
+  "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xd1hhTmdkOUNEQU5reVZYZW42RGVvMGRiQ3Y2czFWYWJ4M2dlVDlHTFNZa2tFTmtNWkVMZGdlM2xTNm9rZFhhTlBQVTBLVWN3Y0hDV2xNOGpTbFVMN3dyb0RlWVh0ekNmeTJGZTl3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcrevises2027crudeoiloutlookamideasinggeopoliticaltensionsinmiddleeast": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "OCBC Revises 2027 Crude Oil Outlook Amid Easing Geopolitical Tensions In Middle East",
+  "source": "BusinessToday Malaysia",
+  "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNNHh1c0trVUh6a1E3LWRrMDFSYUZBMzZLWndvajdNcUx4WXVEa3lQWl82VllzckxmTUViUlpLMXNWZHlXT0xWOVRBWVVPdkRCMV9hSzhxbThBa0VvbWJoOXdLWkdyWExuQU9lc0RCU0ZzUVByUWxfOC1YWjVTbG5UMzZyZUVqS1IxNk15Sk1fWkFfWFZEZkp2R2I1UjNhY0puLVN4OHg0aGFLbTFDTFk4emZZX2pEUm5uWmNpNGQ2TVpaaTVCSnJ0Sg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbckeepsholdratingascgsinternationalliftstargetpricetos2820": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "OCBC Keeps HOLD Rating as CGS International Lifts Target Price to S$28.20",
+  "source": "Minichart",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaUpkRFNWeHFMc05ScERyZ084WmtPZFJxcWJaMGFGZnE5ZDdOYXF4bXpsWmt6SE5tR00yVWhlUG9hbEhac1MwWFZvaFdNODJJajRZMklEZjdENWpsMHBib0lvT3ZLRWFrTXJKOXc4TnpTZ3lGSzdYcURoU0Ewc3U2bnZ5cmtKcWtPYlU0WmxpRWFDdHBHdUlNWTMyNm0wMmhfQUpYTXk3dTZseF8yWVRXQ0JUTQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcsaysbuyfraserslogisticscommercialtrustwithsgd100fairvalue": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "OCBC Says BUY Frasers Logistics & Commercial Trust With SGD1.00 Fair Value",
+  "source": "Minichart",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOVjJDeVVmRVNaNUY3MGZxNGl3ZVcyVHpHd0k0VHhkcVVDSlVRUW9aaEwtVzdZVlF3RWdRQ2pBTjZzakFuQk9wS0VMbXYwSXl6c3ViRmhuYUIxZHpNM2lFdk80RWNrb3FqdFVIQlJTYzd4eW9Wd0hLNTJyLTIzTDFiakpCQXRVRVUtNUd6SXRPcEphR3BOaGxMaDZMSEdLYjdWVjU4QXlCMDBhQ21mZ2xnaUswUQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbckeepsholdratingascgsinternationallowerstargetpricetos2820": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "OCBC Keeps HOLD Rating as CGS International Lowers Target Price to S$28.20",
+  "source": "Minichart",
+  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcHNsajFEczdoNXpJbXdpdUdfV19Hdl85eFhvNkJWZ3ZzOEdXRzlaRmk3NVZLTHU1Yks4bHhJVmlEMDZoWDQ4QlNZUlhlX0RvSXFPbFM1UmEteVNJbkJLVVY5R1dpbnNpcnBSeTdzUzRZaVdqUm55Z3hOWTBGT0xKbFpKZjVoYXhXUlpzXy00TXVYSkFJVkwzbk1kdURkd1h1TVNJYUVZRUFLZnhDYVBvMmp6UVQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbckeepsbuyonbousteadsingaporewithsgd233fairvalue": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "OCBC Keeps BUY on Boustead Singapore With SGD2.33 Fair Value",
+  "source": "Minichart",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOWHdHZVJNbl96LWp1TktCWUI5aXpLZ09wU0psNXlZcTJYdF9EZUJ2OGRsaTZ3U1lQNlhLd2ZYRFZWdGJOeG8wLVhxVF9RaTA3Ty10SjJidmZsaThhajA2YmZRdVRZVWx3MkFwak5idEs0dUtSUGhTLV9jTGMtRXhsTVREclRhYWw5dmhvWWM4UnVTT29XWER1ZlVwNHAwZE84RGE0?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::lionocbcsecuritieshangsengtechetfprospectusregisteredbymonetaryauthorityofsingapore": {
+  "ticker": "O39.SI",
+  "date": "2026-11-11",
+  "title": "Lion-OCBC Securities Hang Seng TECH ETF Prospectus Registered by Monetary Authority of Singapore",
+  "source": "TipRanks",
+  "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNbGlDOEctV1YxUXpoRkdhSjFlQTlNTGtDQWtGbk9OMmNXZm9yWWFJY3VKMlFiQVU4OW1OQVlwY3gzc0kwcUVtakpXQ0VGdF9vaEdCdHhBMG5yYWlDYy0zb05iT3JRQmpBWVo4dkViclk0ZkV1RnRHbHVZaHkxWk5QVG1PLUpIbmxrVUVhQnBpM2lDM1gxYjFKNFBuWmNZVW44TUVMZVFaazVIR1Nxd0d4c3hHcDQ4M2hYSGhhNjVUMTZYN2IxZU8xaU5MTkJnOHZnNGdZcXlZYXlWdFAzX0ZOSnN3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::unitedoverseasbanklimiteduovefseasonalreturnschart": {
+  "ticker": "U11.SI",
+  "date": "2026-11-11",
+  "title": "United Overseas Bank Limited (UOVEF) Seasonal returns chart",
+  "source": "Yahoo Finance UK",
+  "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBiaExtdzQtT3hDRjQ5TkRyVmFERy0yX3hnc3Y1MWJoUTE3TjlmdlV2WGhnS3RDYXpUY2tGQzlhZGI4ZkV4X2pabnowMmQtMDZ1dHZRSXUxTVo1dmFMOEw2TkZ6cw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::alphabeteyesus3bilhongkongsingaporebondsalesourcessay": {
+  "ticker": "U11.SI",
+  "date": "2026-11-11",
+  "title": "Alphabet eyes US$3bil Hong Kong, Singapore bond sale, sources say",
+  "source": "KLSE Screener",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTzRDQlh0NGQxMEJvVEpNWWRsRHNINlFSY3hQOU1FTDlzbkZGdGxROEtVS3czMDNlOXBNcWVhTi1fVkkyajhwZ01WN3ItWmxvUWpTLUliUjUwa0Y4MDU5TkQxTXYyVE9yOUtIVE9mRWtuYmxRY1FoQXVZbHROMElXZEozRjFQaC03c3REQXhfRjJDejUzMWd5d3JFNm1VaHhYZlFyaGhrNUdxTktkdmJzSEpxYw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::s900milliontermandrevolvingcreditfacilitiesto9prpteltdsponsoredbysinghaiyigrouppteltdandhaiyiholdingspteltd": {
+  "ticker": "U11.SI",
+  "date": "2026-11-10",
+  "title": "S$900 million term and revolving credit facilities to 9PR Pte. Ltd. (sponsored by SingHaiyi Group Pte. Ltd and Haiyi Holdings Pte. Ltd.)",
+  "source": "Allen & Gledhill",
+  "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPYUczUVE2ck9ITmpmaWlsRXpKd1gydVphOFZGT0dveERjVXNVMVJNVlAxdEstQnZPWXZZM1QxczZBTWhUUTBZQ1ZfVWs3Z0lGU0hpUEt6LUNvZVJyTE5qSFBGV0JIYTBfeEZXY2tfLTRoa043N3Zqa1V6Z2VyaHlYVVN6SUc3WlQ0aW90QldIVTM2X1p2Q0kwa1JVbmNUaUROWXV4R0gzRFRTQW92ZkwtTWItU2liSDFCVnNGX1V1REJHWTFyajl5SVlhZnEzdFVPbjlBejJLYjFfOUhXaWFzYURxQ2FubXkzSmF6UUtQeW5SNmRlM0dNYWtRRFNFeTVaTFRjTkVFZklPSm8zZG45Ym1oM2R5Zzlsanc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::about3millionsporeanstoreceive100250assurancepackagecashpayoutsindecember": {
+  "ticker": "U11.SI",
+  "date": "2026-11-10",
+  "title": "About 3 million S’poreans to receive $100-$250 Assurance Package cash payouts in December",
+  "source": "The Straits Times",
+  "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQU5JR3dza2hQM2JDQnVCdkc0NGpwV1FFNU5NUUtYRW5YeVJfZHdxY2VqaG1kOHdvdTZNUFFYZWpwaTNtQmNYVjRKUm1Tb0RuWTNzMGZzRm4xcFhDcEtrcExyZExJSGZNekpsRWJxVG45c05yUl9nWE52d3ZiNTM3bGVGZ0ltUzN3cUlveTQ1TmVET0ROM3pMcGw4eDdkVktXVVZPcVpFNmlDLXdnQWNReVFObVp6b3JFUkxBSjloRFRQQXM?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::shangrilaissuesfirstoffshoreyuandimsumbondraising102billionyuan": {
+  "ticker": "U11.SI",
+  "date": "2026-11-10",
+  "title": "Shangri-La issues first offshore yuan dim sum bond, raising 1.02 billion yuan",
+  "source": "The Standard (HK)",
+  "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQS1VRd0FfWW5rSURFN3VsSzRXT1QyYklRQ3BMdUg2YVhHM2pCTk1hLXRUY0FuODhhdEtpU1BqQ09hTVkzMUpqVkd0LThzVjc5V2Mwc2NkeDVHU0FDd3VkdEI0REFmdWJlZDRWZnpDT3E4OTNoNm5weU5qSkFiWGNZbUZidXBFakM0cGwzRXVFNnFNTC1FcVpHbUs4dXFHVEpvUUpLMkVOZXFTRkFjQi1rT0EyTzZtSzhnNG05M0pyOWRKUk1iRUpIMA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::s2605millionrightsissueofsubordinatedperpetualconvertiblecapitalsecuritiesbyfirstsponsorgrouplimited": {
+  "ticker": "U11.SI",
+  "date": "2026-11-02",
+  "title": "S$260.5 million rights issue of subordinated perpetual convertible capital securities by First Sponsor Group Limited",
+  "source": "Allen & Gledhill",
+  "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPV3JaZndEZEZNTlhQV3ZlVFpvNjA5MnV4ak5nSVhsRlhBdGRkTXhnRW5uSHBSR0NGc2dnUmlpME1jQ1R1STJsOWxTbFRscndnYTJnOTNQUm1aUVZYQjFEYk9pYTMwQ1pZazNJZlpwNm83dmI0SlpXcV90YzBBdlEzam1PR1ZoT2VWaHdTbDlIOXNaVG5xNERrenNNN3prcGVGV1h2elVMNFdWQTR4MGN5VFFJRFgyWHdLcmlpNzE2dHBEdlNrdVpZLXlCN0RXbVB6UU5lNzVrNldrV0w1NlZRcVhMaXMwTXMwZU43eWNvenBwTFU3MVJaLWVqSi1fblpLUXpCSWN1OW5wNmc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::s229billiontermandrevolvingcreditfacilitiestogeminiresidentialpteltdandgeminitrusteepteltdinitscapacityastrusteemanagero": {
+  "ticker": "U11.SI",
+  "date": "2026-10-27",
+  "title": "S$2.29 billion term and revolving credit facilities to Gemini Residential Pte. Ltd. and Gemini Trustee Pte. Ltd. (in its capacity as trustee manager of Gemini Mall Trust)",
+  "source": "Allen & Gledhill",
+  "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxPX2UtaE1pSlJTbWlpMVcxX0VibDZpX0hpb052X3BxM2cySm0zbEY5a3NNRmhCSkU0a280X3ZaZmhsZ1VWcWlYbjVnblFCWGVWTzhBdVVpeklIemJ3eHJBSV9wWlRDRmFwU0k0bl8tNUdCc19NSk9pYmhIMi1GUjFJRnN4YWZqaGVENm1pbHg2bTRUbk4zTDhFWjVWNk1ESlplZzFudWRMcnRMS3MtWGVVaUpQNEpybjVZc0hBYWhBSTFESGVqeEhWWkhWY3BzdHpJbnBCR2xFZFloSXJHZFVVRi02bVZXY3dGOFFqSzUxMmZtbGF5SG12eW0zUlBuN25WYm5GLTF2WjZHVXVUOGJLaHV0cW9TbDYzYVEwLXRjdnlkenQxU1dlRURfY3VtMnZ4YTlJSDRaUVFRMGdmYmFrWGZtR2NQbEJmWjFr?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::3temaseklinkedsgxstocksrewardinginvestorswithspecialdividends": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-11",
+  "title": "3 Temasek-Linked SGX Stocks Rewarding Investors With Special Dividends",
+  "source": "The Smart Investor",
+  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPa1hDZUotQTdRY244RkNVbTZ0eGQ2T1JPYTlidEtUQkZzQnVVZ2YwaHRlRnBQcUdieUFSYndZZDdfT2xlczN2b2ZFRG9jUk43V0lIMWlIMDZqTmZ0UkNQcm96eEl0RXlhcXNYa1JmXzgycWJ4c3luYV9tbE1mNkdXN29xNHpLR3JRS3JROElnTXlYdjhzMjdxc1RveFdDam9QWFgzVWRB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::yangzijiangshipbuildingsecures698bin2026ordersexceedingannualtarget": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-12",
+  "title": "Yangzijiang Shipbuilding secures $6.98b in 2026 orders, exceeding annual target",
+  "source": "Baird Maritime",
+  "url": "https://www.bairdmaritime.com/shipbuilding/yangzijiang-shipbuilding-secures-2026-orders",
+  "summary": "The Chinese shipbuilder's orderbook reached $26.3 billion at the end of October, with deliveries scheduled through 2030 and around two-thirds of contract value in clean-energy vessels.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::yangzijiangshipbuildingexceedsnewbuildingordertargetby55": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-11",
+  "title": "Yangzijiang Shipbuilding exceeds newbuilding order target by 55%",
+  "source": "TradeWinds News",
+  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOTHBVVXVxTWNCRzVIdVNnYXRZOEtlZ2N4dUVFWXhsNXRNWlEtbWFKSjNTLTVJWHFTeURDWV9TX0ZzUW4zSlhKSjVnUlB0OWx6cjk5Qm1NVlZhVllXdWRDS0liQWxHMUc1dkVpamN6S1ZnWkFhbV9LSGEzeTZJeVlWQ1hkalE1d2pKcm55cmVlMDBMcHNjRHZuOWVsTzFOZDFrMU5NbXZ4Q0VmMkxrWEI1RFczODUybVAx?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "BS6.SI::yangzijiangshipbuildinghits155ofannualordertargetwith698billioninneworders": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-11",
+  "title": "Yangzijiang Shipbuilding Hits 155% of Annual Order Target with $6.98 Billion in New Orders",
+  "source": "iMarine",
+  "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9kdEFjTzgtNmdIeXhuTHF5UHZwOXJGRGtPamRSX3UtRWM3NkJzUFB1UjZMUGFaR0h4X1JJMnByTkllT3pvTFFCdHlrODJ6am8?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::dailymarketsbriefingstiup153topstockisyangzijiangshipbuilding": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-11",
+  "title": "Daily Markets Briefing: STI up 1.53%; Top stock is Yangzijiang Shipbuilding",
+  "source": "Singapore Business Review",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOTlQ3XzdYcW5nQ0tDcDVhNDJKdnkxQTNyM3BEMnRLX3hFRFdGZGttOC1uOGhsU3Yyb1I3ZkxIYm5UNmpnbXItbEtOZkxGZzVCYkprRFNuOVoyVHhFa3V0dmhHbHZNOGR2OU9Hci1JalVya2hHR2tVWGV2Y2tYenEzNjdreFRrR0UybHRhOUxBdDFjTE9rRUxv?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::stockstowatchyzjshipbuildingjmseakitumscdlhtbousteadsingapore": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-11",
+  "title": "Stocks to watch: YZJ Shipbuilding, JMSEA, KIT, UMS, CDLHT, Boustead Singapore",
+  "source": "The Business Times",
+  "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPYUF6Wk1xMF9hZjBhSkg5WU5pOFRpdXM3T0RaUVM5VDRVSno1MUt5V3dBSERjc2ZObmJmT1lxU3R4SEpvSldRaVIzZTh2OXNHWHFNUk4xMUhlZUlpNVlKOEh4T2xIUl91cUtqRXpmRW9HWjVHZXVTX3Ywd1ZIekZCVmRrRHhfQ1I4OHNUbTduZ2ZORi1aNDZXVWdUWE1pcThOT2NaOVVEY1hsQzhOVVkyLUZtbFJldEk1NnBfM1J5RlFYN08ySXlV?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::yangzijiangus698bordersrecordbacklogdbsseesbuyingopportunity": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-11",
+  "title": "YANGZIJIANG: US$6.98B Orders, Record Backlog. DBS Sees Buying Opportunity",
+  "source": "NextInsight",
+  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUFVBSFRNOV9raEg5MThnbW81QjhrOElfcGRKMVY4OW8zNHBfN2Z6X2IwZXZQdC1KUk5WeXZNX2xyNUdYWDJaSmJUbzVoSERzZDFRVllxMlpJOUs4cU0zeER2MlppamozNTJCQXh2OGNHSTNjamx2bkNFMF9LcXFDY1dHNktGVDIybXgyYzduUWhxcEU1UVF5d0xNak5wcWhVbGtTV3duOWQ4WVV5Y01OSUN6dFpiRHBia1BwRUdpQ05SVVI0Q0xoLVZ0V3RfMndK?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::yangzijiangshipbuildingholdingsltdbs6sistockpricenewsquoteandhistory": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-10",
+  "title": "Yangzijiang Shipbuilding (Holdings) Ltd. (BS6.SI) stock price, news, quote and history",
+  "source": "Yahoo Finance Singapore",
+  "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9Ua3haUkNrUFZBTVMxeUc2WF9fWkRIdmM0SHNsRVlXbUF2VWNkT1NFZjBLTW9zcnZnekYyM1RmZnB4VXdienBTZEtqZi13b1ZwZnE4TQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorpgrantedconditionalapprovaltoimport13gwofelectricityfrommalaysiasingaporenews": {
+  "ticker": "U96.SI",
+  "date": "2026-10-26",
+  "title": "Sembcorp granted conditional approval to import 1.3GW of electricity from Malaysia, Singapore News",
+  "source": "AsiaOne.com",
+  "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOUVc5THJQZG5YcEU2UFpjWDVWdV9LSzJPTnFydkxfS1lOM1BjdEtSRXFfYXF4a2hkb3VjTC0tTEVEQXRZYzJuT0VhazNsUnEwUmVnaDlqNXNZRzlrYXJDOU4tUWZtVkI4U0RWU2JrSDFSSDItZk5kT3c3Vm9zbDJQZ0tR?oc=5",
+  "summary": "The Energy Market Authority (EMA) has granted conditional approval to Sembcorp Utilities to import 1.3 gigawatt (GW) of electricity to Singapore.Sembcorp Utilities is working with its consortium ... [summary from AsiaOne]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::ericssonstockgainsainative5ganglefromsingtelpact": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-12",
+  "title": "Ericsson stock gains AI-native 5G angle from Singtel pact",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcGNMYVdJUFZLZlEwa3NHRUVYYzA3Q082Y0NmQTVzTTVZeFNZV1dablFSem8wTUlKc2JLMmhDWl9Ua0txaFFEd3pEdTdjS2NrVmtTSUJZNkZZcUJIU3ZSLXBvbWNFVXB1a0MxbXN6RW5YODZoLVNOc29XblZodmxiS2o5MlBYbXF2QzFuTERRUkVrMkRnUERFMHdMdEI5Qk9icmpyQTMxd2pSUEttMHJLRWFpaHIxMXBsX2xZQw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelstockfacesnewcapitalallocationfocusafterfareastonesale": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-11",
+  "title": "Singtel stock faces new capital-allocation focus after Far EasTone sale",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcWpRMldEUVk0VGRGaDU4cmxTNGg2Qy0tVkNjRWJyRWpTM3BtYklKNXdkRnRYLXV2V0lDSzlRbzJjQ3RHOFN3QlpxWWJXRkVGaUEweElRd3E1X0J0RmptdlRTYnU3TEZhMDV3REJoRzZfNWJqbkRCYnhXWHR2MUhJY0pUbzhJWU9tcFZuUFVpS294b01BdzRheW1HaFBFVmR5bHp3RHpta1czNWpmM2dHOEpWVi0zVmY3eHFwTWNhbVQ2ZVZpUU1sdmduVzJRT3c?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::ericssonstockgetsfiveyearainative5gpact": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-11",
+  "title": "Ericsson stock gets five-year AI-native 5G pact",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTUUwRjRXeG9IR2JuTkpTSjBOZU5QYUdBb1NidTdpLURVWVZlbzJSSVJ0Zk4tOXBtbUV3M1BYODhvU0YwSFoxQXpGaXhKMTlxYUlWQlo3V0g1M3FZSkZVb3F0Y2dmMGg0ZkFqS1d5a2p1anV2dTZaMG9LNzg3RWpaelNOTTJTYzU1TDBJSEpRc2ZrVlFFNUpBa0tqRUxMcFk0V3VPa2hPZ2h1NUJZM2RR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelsstockpricecontinuestorecover": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-05",
+  "title": "Singtel's stock price continues to recover",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOExERGptMUw5S1VIUnJxQlhvTU9QWGhsN0FzSVlFYVJSOWhYN2NTcGtxdVRQN0hCeWh0cEJQQ1JxajRoMHVwY3IwSDYzZXp6U2hEbkFrVjAzNDd1U1hZSks5YlQtVEJsRkVsM0xGX0FyZVpPVDl5a05kX01vT2k5ZlhZVFZWYVpNRDZCZmd4VkFYLXpxMlVUTVZQcDA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelseespremiumserviceopportunityinsovereignai": {
+  "ticker": "Z74.SI",
+  "date": "2026-10-28",
+  "title": "Singtel sees premium-service opportunity in sovereign AI",
+  "source": "Light Reading",
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNSnU1WnVmRGlTMGxsWWM4bE9vN3JrS0RacjNibUtFT2xsRWViS0REX29FTnpCRjVCVUtBNE50YlVMdkFRdFZXR0N2QkF3ajQ0RGhpZjc4LTdWNWtBNUZFcFoxN0I4ZGhCVmVyX0Z0d2hsU1U3eXNHeWd0aFhJNm5xVFoxUWxRZHk3UnI2Vlp0TV9TZDV6MkFhREFuWWMzWW1Ha0hDVkI3eFg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singaporessingtelfineds1milforthreedayoutageinmarchcausedbychillersystemfailuresoftwarebugs": {
+  "ticker": "Z74.SI",
+  "date": "2026-10-20",
+  "title": "Singapore's Singtel fined S$1mil for three-day outage in March caused by chiller system failure, software bugs",
+  "source": "The Star",
+  "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/20/singapore039s-singtel-fined-s1mil-for-three-day-outage-in-march-caused-by-chiller-system-failure-software-bugs",
+  "summary": "SINGAPORE: Singtel has been fined S$1 million for a massive mobile network outage that affected 720,000 customers over three days in March.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::ericssonomericbunveils6ghealthcarehubandisacsystem": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-11",
+  "title": "Ericsson (OM:ERIC B) Unveils 6G Healthcare Hub And ISAC System",
+  "source": "Simply Wall St.",
+  "url": "https://finance.yahoo.com/technology/ai/articles/ericsson-om-eric-b-unveils-131734131.html",
+  "summary": "Telefonaktiebolaget LM Ericsson (OM:ERIC B) announced new 6G healthcare work with Singtel and Singapore's National University Health System, including what the partners describe as the world's first 6G AI centre in healthcare. The group reported satellite to ground network handoff trials with AT&T, alongside AI driven autonomous network deployments with ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::isspacexstockabuyrightnow": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Is SpaceX Stock a Buy Right Now?",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1uQ29XNmdSbkVQRFVMbHVFZ0x5UHh2b3ViTGxITU1HMnc2ZHRnZi1oNUI3cFp5NTVzY0ExajF2dGJFelZVelRnSE5YSnlySWg0bEFobzZZc2d0aXAwZHNYT0xsSm9RREhvbVpDZ1A4TW12U1ZZUWREeHhiVWNpcEk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::isspacexamillionairemakerstock": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Is SpaceX a Millionaire-Maker Stock?",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaTBKaVRkMUtMUklJQTcxNHByMVJnRGJrVG9BTFJDSXBlWjFlWm9jRnBYWDRZTlYwVWhlQVN3QTJDNjBMcTdKTXhvRFluQjZLUWVUSTYzUGRyOGlwSzdTQmZHbW9wdW03eDhONmVRVWhyZUlGZGlSQ0sxZFVZNDZYQ1dUVEk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::stockmarkettodaynov11spacexsharesslipamidupcomingstarshiptestflightjitters": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Stock Market Today, Nov. 11: SpaceX Shares Slip Amid Upcoming Starship Test Flight Jitters",
+  "source": "Yahoo Finance",
+  "url": "https://www.fool.com/coverage/stock-market-today/2026/11/11/stock-market-today-nov-11-spacex-shares-slip-amid-upcoming-starship-test-flight-jitters/",
+  "summary": "Today, Nov. 11, 2026, SpaceX's stock finished lower ahead of Friday's planned Starship launch.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::nov13couldbeahugedayforspacexstock": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Nov. 13 Could Be a Huge Day for SpaceX Stock",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQcjNBTGQ1dWVJUF96ZFdiVm1MeFNFT0VEaGJidENyM1Fxb3ZUSG5nWEs4M2oxRGZVc3MxTVpWbDZNT290Mnh2RFVfY05XREJhUHBTdVVNb0d3VnJTLU9IREI0TGpEYURHRWlDVXlMWXFqZU5lUmMzempvV3dHQ3IyNC1ldVRJMmRvMGE2SDJiRQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::teslatslaformsspecialcommitteetoreviewpossibleallstockmerger": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Tesla (TSLA) Forms Special Committee To Review Possible All Stock Merger",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOR0pCbEVyVzFNbnk0RWxvcGFxdzJZWkx5LV92RExheFFQanptV25HWW1VWWtEbkdIT211WXRoZHp2QnR0NWYxSUw1bWtTbGtfS3hMQmZWcmptYzlYT2RUWEZ1YlFjeWpZMTYwZEgxTG1EVmlvNndGR0JWV0MwMm5hN2ZrYUFBVWMzNm9QZWdVdU1OQmotQ1VjREZDNU9tTjR6?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::jimcramerwontbuyspacexstockyetcallingitscostsastronomicalcathiewoodjustbought49millionofspcx": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Jim Cramer Won’t Buy SpaceX Stock Yet, Calling Its Costs ‘Astronomical.’ Cathie Wood Just Bought $49 Million of SPCX.",
+  "source": "Barchart.com",
+  "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxORUJKcFRpYUVVM25fdkFXdjBudTVlTUZKVUZ2TF91YnloRURiMldMZ05OYXhnUGJMSUZvTXJjcUZiaFQwbDV2YUhZRU5iaWlJNm5DeTVza0VZSUhSWWZnQWxrWXdTSGgxanB2ZUNUWm5MU0dfeFJOZWVCRkFCUlZVbmlTWmlUNTNnSTBkQVJ6ZE5KLVRKOHZMaDEtOUhkamRLLVVud09qenBFdFY4ejlPbHBNZkNVeUFldjNOTjZ1WDdJVEtkbWJ0TEdEZlRTVFhiZDRGQVdoWXF6cDVCSVdUQXRmQTBzNTNMd1E?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::spacexstockshrugsoffaiworriesaheadofstarshiplaunch": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "SpaceX Stock Shrugs Off AI Worries Ahead of Starship Launch",
+  "source": "Barron's",
+  "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNVHEyb0JJTS0wMzZoTG1VbUNmZC01cU5lc19zLTVDYnpTX3h6ZVdFOEtGY0REVVptb2x1YmNUMWRNZUYyemVOMmpBaWNNU29lNzRpbVR1dnpoSDVSSkhhSXQtRnFIVk9QQVNteDRKbHhLZHM2ekRKVFVCdkZLQjMxQW9B?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::spacexsupplierappliedaerospacedefenseisdoingjustfinethestockisnt": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "SpaceX Supplier Applied Aerospace & Defense Is Doing Just Fine. The Stock Isn’t.",
+  "source": "Barron's",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQQjZzYTZjNGR2b0hQcjlNTk1SbjgtbURqeWhyVnhtOWlvdmdhRzVmTzRPbjRzMXUwSFpwSmRXLTZ1OEVKVVVIZ0ZsT2VjcG9NTWNDWEFxRl9HVm1hZWM0MkFoN0pGN3lEM0Fhck5ueldUSWpTcTRjV0kyTzdLMzZGUHo2UWZ3VDRjWUxtdHd5bnFSa1JJWi1CNlZyMA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::elonmuskaimsforhistoricdoublecatchfriday": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "Elon Musk Aims for Historic 'Double Catch' Friday",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQYndSRURMYUxyMHJ3QmdiamkzbTRSZ0NHTFpYMmV1ZnFpb3g0eHVkUmFmbHZnUHFSY096R0w4R1Z3ek1vVWFTaTRCUjdpMkxFaGFrN2RuWkRZWnNYVDdvOHktaEJ1eWd4LVlfb2tjQVRkT0dSSzJVYVRNV1dJUjRjZ2lJZUFSMWxOYXZQaEgtMF9keVQ0Rnc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::isspacexstockabargainattodaysprices": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "Is SpaceX Stock a Bargain at Today’s Prices?",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNd19sSkdXTm9rY2lKcVRnSjkxMVh2Z3Axbmg4aVIxaUplc0hXX0xhVzVDbHNUNmxqbzNBWjNlaUptSUVwRTlKUlBZSTA2M3FWXzVYT0MzRW01QW9TdmVlQlBjTGE1cGFvNnk2MmlyZ3JsaTJDV1o1T08zS1N4OXROdVkydy1tTVp4UXFUM3JCOA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::elonmuskjustwarnedspacexrevenuewilldropifcomputegetscheapdeutschebankraisedits2028forecast18billiontwodayslater": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "Elon Musk Just Warned SpaceX Revenue 'Will Drop' If Compute Gets Cheap. Deutsche Bank Raised Its 2028 Forecast $18 Billion Two Days Later",
+  "source": "24/7 Wall St.",
+  "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNOEhHN0kwbEhkdmZkdXlod1ZJU1lUNkpzSVNGbG8yNnVWN2ZsOWx5SlFuMlpmLWhNdEVfUXk0SmVQREZFajVZbWVrRGlmb0dZZ2hidXd0N2RIbjJGQkJWMHRlMDdlQS1TWXlFdHhaamYxN0dUcTFoTEdRbklCTV9DcXp4d2ZSdkxqUm16Wl9nV1ZodUdPYl9JYUdQMDNadm9SR0xPVWxfNlpBdk55VDlqN0xxUTFyaFdSXzdPNFN3UDVseXM2dkhOd1YwTklYb0ZBLVdicU0wY2F0RDktd2dEMGZHZERYZ1dNTUpqR0tNMndsSFFzUEFTc1c0TmxlVklPcFd3SmZsb1k?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::1unstoppableartificialintelligenceaistockpoisedtojointhe5trillionclubby2029": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "1 Unstoppable Artificial Intelligence (AI) Stock Poised to Join the $5 Trillion Club by 2029",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPanpmNDFVRk1oSXdjbGV6TTdadXdYdUNTX3k5cmV3TVR2bnFDOEhPRTdSSTZFQzBWS3V6UWVoS2F4SDZ0U3g5cU10UnJnX3QycHVLY1BDam84QnNDSzNqTXU2R29McEgxMnB5LVloNUhjb3ZYc2FocDlZc3ZxY2pEQThtZUVod25pTkJ1UDk0UG1xd25QdkFNRg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::hereswhat1000investedinspacexcouldbeworthbytheendof2027": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "Here's What $1,000 Invested in SpaceX Could Be Worth by the End of 2027",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNX3NwT3l2Wi1SLWdIeVVyUEViRXBZOFdQOHJnTXUwc3k2YTN3bmZmS3U3R0w0MVJSRklmUUJnQldhTkYzZGhaNDJBTVY1RWhSTzVDTU5vcjVWOWVRRXphSlNTM3Q1c1M3WmpiSWRmNzh0MlQyZHVWb29Oa1ZBcGdBSDJ3eUxucW9Sdi1ISnkyV3c0SXNESUtV?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::bigtechsexpectedbigpaydaywithanthropicipoandnintendosbigweekwithzelda": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Big Tech's expected big payday with Anthropic IPO, and Nintendo's big week with Zelda",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/big-techs-expected-big-payday-with-anthropic-ipo-and-nintendos-big-week-with-zelda-222911332.html",
+  "summary": "Deirdre Bosa discusses Anthropic's (ANTH.PVT) oversubscribed IPO, how Jensen Huang's stance on China has evolved over the years, and Nintendo's (NTDOY) The Legend of Zelda: Ocarina of Time, which has sold over 5 million copies. Deirdre Bosa then sits down with Hugging Face Co-Founder Thomas Wolf to talk about the ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::anthropicipoeyeshighervaluationasstrongerdemandpushespriceup": {
+  "ticker": "SPCX",
+  "date": "2026-11-11",
+  "title": "Anthropic IPO eyes higher valuation as stronger demand pushes price up",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/anthropic-ipo-eyes-higher-valuation-as-stronger-demand-pushes-price-up-145520633.html",
+  "summary": "The 8:30 hosts, Julie Hyman, Pras Subramanian, and Jake Conley, discuss Anthropic's (ANTH.PVT) IPO, which is drawing heavier demand, with bankers weighing a higher share price and valuation than initially announced.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::spacexceoelonmusksays100gwofsolarpowerinspacecouldmatch800gwonearthforstarmind": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "SpaceX CEO Elon Musk Says 100GW Of Solar Power In Space Could Match 800GW On Earth For Starmind",
+  "source": "Stocktwits",
+  "url": "https://stocktwits.com/news-articles/markets/equity/space-x-ceo-elon-musk-says-100-gw-of-solar-power-in-space-could-match-800-gw-on-earth-for-starmind/cNGzQ7yR99e",
+  "summary": "“100GW in space is roughly equal to 800GW on Earth,” Musk said in a post on X.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::spacexspcxorderedequipmentfora100gwsolarmanufacturingline": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "SpaceX (SPCX) Ordered Equipment For A 100 GW Solar Manufacturing Line",
+  "source": "Simply Wall St.",
+  "url": "https://finance.yahoo.com/energy/articles/spacex-spcx-ordered-equipment-100-231946867.html",
+  "summary": "Space Exploration Technologies (NasdaqGS:SPCX) has ordered equipment for a 100 GW solar manufacturing line to support energy and satellite output. The group is planning a US$24b AI data center and gas fired power plant at its Starbase complex in Texas. SpaceX is one of eight companies selected for NASA contracts ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::jimcramersendsastrongsignalonattandspacextoinvestors": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Jim Cramer sends a strong signal on AT&T and SpaceX to investors",
+  "source": "TheStreet",
+  "url": "https://www.thestreet.com/investing/stocks/jim-cramer-sends-a-strong-signal-on-att-and-spacex-to-investors",
+  "summary": "Jim Cramer sent a signal. Not everyone is hearing it the same way.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::verizonattandtmobileshutoutelonmusksphoneservicenowthefccisreviewingspacexsplantobuilditsown": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Verizon, AT&T and T-Mobile shut out Elon Musk’s phone service. Now the FCC is reviewing SpaceX’s plan to build its own",
+  "source": "Moneywise",
+  "url": "https://finance.yahoo.com/technology/articles/verizon-t-t-mobile-shut-223000207.html",
+  "summary": "SpaceX could spend billions to take on Verizon, AT&T and T-Mobile, as Elon Musk’s push into wireless aims to reshape America’s mobile market.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::cathiewoodsarkparesamazonaddstheseaerospacestocks": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Cathie Wood's ARK Pares Amazon, Adds These Aerospace Stocks",
+  "source": "Investor's Business Daily",
+  "url": "https://www.investors.com/news/cathie-wood-ark-buys-aerospace-space-stocks-rocket-lab-archer-mercury/?src=A00220&yptr=yahoo",
+  "summary": "The ARK leader's purchases followed robust sales for the rocket launch company.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::anthropicsipoprospectusbytheheadspinningnumbers": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "Anthropic’s IPO Prospectus by the Head-Spinning Numbers",
+  "source": "Barrons.com",
+  "url": "https://www.barrons.com/articles/anthropic-ipo-prospectus-stock-0495422d?siteid=yhoof2&yptr=yahoo",
+  "summary": "The AI lab’s initial public offering documents are packed with fantastic figures.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::calpersdoubles500millionbetthankstoelonmusksspacexdeal": {
+  "ticker": "SPCX",
+  "date": "2026-11-12",
+  "title": "CalPERS Doubles $500 Million Bet Thanks to Elon Musk’s SpaceX Deal",
+  "source": "Benzinga Private Markets",
+  "url": "https://www.benzinga.com/markets/private-markets/26/11/63165904/calpers-doubles-500-million-bet-thanks-to-elon-musks-spacex-deal?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
+  "summary": "California Public Employee’s Retirement System has nearly doubled its investment in just over a year through a bet on radio spectrum that is now part of a major deal with SpaceX (NASDAQ:SPCX). CalPERS, the largest public pension fund in the...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologystockssurge1222asaiopticsrallyeaseslumentumdealdoubts": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Marvell Technology Stocks Surge 12.22% as AI Optics Rally Eases Lumentum Deal Doubts",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/marvell-technology-stocks-surge-12-190144170.html",
+  "summary": "Marvell shares recover part of their post-deal slide as investors revisit the $115 billion AI connectivity bet.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologyincstockmrvlmovedupby1187onnov11factsbehindthemovement": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Marvell Technology Inc Stock (MRVL) Moved Up by 11.87% on Nov 11: Facts Behind the Movement",
+  "source": "TradingKey",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYVBGcEhrQjVrbE91M3AzMlRRS3JNV0Q4bUh3Y180R3g3empOeGFqWTMzSEFmUHVLcmoyazF5Y1NPb2dsVy1OUm90MTl3azJFVU1UTnZyYlFlam1YVUNXQmJjS3J2MTNQT1dpd2VJV0MwV2U3VkVOd2huTENmMjk5RUhmSVluYmJrNU5N?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologystockrisesnearly10as115billionlumentumdealtargetsaiconnectivity": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Marvell Technology stock rises nearly 10% as $115 billion Lumentum deal targets AI connectivity",
+  "source": "Traders Union",
+  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNb1k4ZkYwRGE4bWNNQkRNMm9CM1BVeGplT1ladTQ2blJNZ09mUnctbEhITUZJemNwOXNZWllYb0x6NlZSYkpWdUotX2xXSzRKTUxsQWNJbTdVMGFEZE92dld5Q3dRcHJVQkJyNGdXWnNfMVctbmcwcU1ucExjZHNQSFZjWmtUNW15Z1BuT2lFRzRMVE1OOVZZTzRB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvellmrvlstocklooksinlineafterthe115baideal": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Marvell (MRVL) Stock Looks In Line After The $115b AI Deal",
+  "source": "Simply Wall St",
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOTHRwWkpHTlNFbW9FYmRFalRabEM1aXpnd0xqamIyVFVxQXRzTG5BTXFmQjdZMEJ5dkxJclVGWmNuQ2xlSEcwX0dOaXBXdVBOX3JhamM0ank4Y0padV8yb2I1ZGNhNS12ZTBlZHRudEZJdkYxTzdiTFdCTk54V2o3QXRVMGhRVkNPVHFzdXFJZjJsc3ZnNjNzR3dxTUZvX1JCcnNVWU5qbEZ5UGdQaTBmcGVQVUl2Y2ZyV2ZCd1k0X1hMeGNWQU5GaU43ZVZKWWFhTE1aNtIB2gFBVV95cUxQeTVHckVWM1QwWXd5NmVacV94QVBTQklnRE83bEZ1YnFHdk9wMEhqZnFzRnJGWmFvRnBjV2EzVGtNVWtRMVB3NUFFUlBkb1kzd2FkVXZpNW1MMDlUTUxrU2cxd3ZuUVp4eVVOSUM2OExtWDJOS2VoOHExSmZpaFFZbV9WUzRWQzRGOWVyb2xiNGthdjBET0VRZUQ0N3dWMEpHUU4tR1hmeDNlOXYydTg4TzRaeHhUTXdadU82SUN3OGpHRXVSWGZzOWFjdlUwVnUtSm5hQnpnckdpQQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::vooisup11todayonmrvlstockpricemovement": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "VOO is up 1.1% today, on MRVL stock price movement",
+  "source": "Quiver Quantitative",
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNa3NFYTVxOHZ4N1A5MzMxZzNmcGZVRTNNZ1RKRVhZSWdiMG5uSHN5OUtoV0hVbU92bHpSVlRUOEpJY0FUTGVUYnluTDNpYWRhaXRNNnB6VFBuY2FpWTRQelNLZzNZM0tFYzNyU0Zjc3g4TFNmWE1abHExck8wRmNDbWoxdU5xemIwQ1RCWmF2NFg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvellmrvlsees2226millioninnetetfbuyingonmonday": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell (MRVL) Sees $222.6 Million in Net ETF Buying on Monday",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNVpkNTdTdmhtc09lRFlnR1BwTnJyUGg2LVgxUWt3NFFZeV9sMnAyM2pvVWlROVFjZ3hkM1IyNjIxUGxNWHlRZkdDcFJmRWVoUU1EeXRUMVJXRGFhM2VDeTFZOXFTUU52aTV4bUpzLTlCQTlwR04tRi1EOU1sT05aeXRlWTVSU2ppX2RncHRZN3o1Zw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::whatsgoingonwithmarvelltechnologystockwednesday": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "What's Going On With Marvell Technology Stock Wednesday?",
+  "source": "Benzinga",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQc1BFOGNEYzFQQ0NXV1B0OEN0bXpTRDA0b2hMa3hWOE8yR095NENZZEdONHJnalBNeTZlenk3MDQyVExnT19XMTJQODkyd0NGUTV1MjNxTW54Yk5DNmVTN0FhYThVQUdRWm5WMnUzMjdxYXFQMTczWkJMLVAyajZHZ19NdkdJTkFUeGMwcHFSeFl2cE0zdG9JdDlvZWRpS1lreVBCWmxBVDhCUjFqZ1E?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologymrvlinstitutionalflowattheclosetuesdaynov1065oftheoptionsmoneyincalls": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell Technology (MRVL) Institutional Flow at the Close, Tuesday Nov. 10: 65% of the Options Money in Calls",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQbFZrM1VuQ2FqRm9SZlJCTVEwZEo2ZWtUYmlCamZ2MTZLWm14VmdWNEhGbkFieFBFa3BCRFRmS2l3QUtreVFuaTZibjRpNXhUQk5Tek5MWWpCLUctZDhqUTNOclpaVm9XTHJJLVl0TTBrRVEzOHhITTVud2RmUE4tdlNQUG15aHdxS1Y0WFU3NDhTdXFXUGNrZTJ4blRra1NoSFF2LVpISGdfejM1MnpRWGR6Y0M5X2hlMkNaN09n?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::amdbroadcomintelmarvelltechnologyandmicronstockstradeupwhatyouneedtoknow": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "AMD, Broadcom, Intel, Marvell Technology, and Micron stocks trade up, what you need to know",
+  "source": "The Globe and Mail",
+  "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxON1diZ0FFZTRzeGtxcTRjdHhGWDNFLWhqT19sUEtwa3hraXJ5NlRNYk5FblFDdmd1c1dtRzNtdFJVQjZnOHZWcjRfVTdkNjZqY283LUItNEw1X2VSN1RJOE5DSERrSVpoNjItQzBPOXZXU2FURDVxZ3Y2Umd2UHNGcmNnc0J6Z213SzgzMXk5bjc1NUoyZzAyQXluMDdsTE8wNzVSYWJWQVhaMklCeGlPdGJmclZvWC02ckd4b1RQZjZCdUE5dXExUTNwWmFpZ1V1NG1BMjlrakRNSXB3dktDUVR6V2JqXzFxOVF4azFzaTZzc2ZQenptYWg2Q3FuWFZS?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::whyismarvellstockcrashingandisitabuyingopportunity": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Why Is Marvell Stock Crashing, and is it a Buying Opportunity?",
+  "source": "The Globe and Mail",
+  "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPOEVaRXloeW11aHN0RW1KNlJrN1lSczBBWFcyd2tMakx4ZjZzZUl5dk4zVHhYaXgtMWtINU9Jb2NRdDBILVpfRzNtbGxBaG5Ea2dVSDQ0YURfRnc2eU91ZnV5X3RrOWYxWVNGM053YWE3WFYyZnItbXk3ZmhBb2tiWmxteFRZVVZ6SERBV3lETnVVT25Mcnk4cWh4UE4xc1BidXRxbUxqTjU4aEtyZ0hFMWh2LTJydGxXZ2s3RUFrLTFKaVRsZ2VGMG9jclQxczNvTW1rWmJ3akwxMm1faXc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::peoplepanicandibuyymarvelltechnologymrvlus": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "People Panic and I buyy $Marvell Technology (MRVL.US)$",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPa3ByTHJBWGJpeGtHNDBCaWJMaGlRc1N3M2lHc0laTjVaUlpzd2xjdjczTl9uZEc5Tlk5NHBZWkFpQnlQRmllamRyQUhibUpvczVIYzhVZmNnTTF4WEdxSDFUb3NvSkJZUzN2SjVLN1BUYUl1Y0VuQ2NQbmNuZGpaTzBTN1BHRFFlampCcFFhWnE3TTcwN0NaVTZwUU10bVBEWmlzMVV5RQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologymrvlonlumentumdealquestionswhetherthestockisabargain": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell Technology (MRVL) On Lumentum Deal Questions Whether The Stock Is A Bargain",
+  "source": "Simply Wall St",
+  "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPODVYM3NEbEpOSDltM3FYX1FnOUJkQmw1S3ZPaVB4bUhwV1RON3EzVEFoTm1hdVowY0ZkeThVbHFKNmxTcjBuc194a2tYaE5mcEhLdElVUTBNdWpJc1VsTkwzSWtWa0RMU1lqa1RNd3pUbGdMYTBEWUk0YUVUMHZwTnZjRmNCNmU1ZWdwNWVXUEduTFhXMzlGeGJ1U2NiUEZLLWtheWVCM2wzOHlLQmswWnpIbXNOOWp4RUVXcTJJZVhmQzJlcWlIc0swQnNIMVBJLThKMmxyTnRndUnSAeABQVVfeXFMUDl5cmRGV2ZkMW1WNXdUcGUtZndKQUljRWVxV3VSX1ZaeFNiaXdUUWR4MmQ2ZmVLQW10bndnSEQ2cV9DTXNHeUxFWTNPUF9TaTAyUXR2RGpoNllGdTAzcUxXSGtqdGxEWkQ5V2Nwc3N6NEtrRGl5ZTNFTy1jcDJ5THNBZXhsUWxMTHZJZWRMb05qU181bDFWX3VIZXd3aWVPS1didVU4N3B4VVRRVF8xclpKVURSbHNXUXFIbnZjVUVIVERwZ0NsMUxldEMzckx1YmxMOERIa2NCdDgyOVhoclk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvelltechnologyand2topgrowthstockstowatch": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell Technology And 2 Top Growth Stocks To Watch",
+  "source": "Simply Wall St",
+  "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNZFU5U2szRE9TdnZaX3hVVS1WcXljczNlMlZSM05aMWNvTHhtZE01dFRRM0hTRmNEa25xSUJ5Z1NRakNPSURjY2VZeXlnQWdhZjROdC1saGEyNDRDelctZElGNlNLNk51VDFSbml6Y3UyWlJaV2xZbWkyRlExOF9CZHY5ZlpqR04xRDFSbndhdVZzLXNNQkJyazZCQnduSnFUVnZaQlE5bzRTWWIyTG9QYkJNZVY4bG5pVkZIMW5QWFh6NW5mUlRYdDNBT3VZWm53c2fSAdcBQVVfeXFMUGxuSW5NZ1QtOFVpT0F6MF9yZm5pU0N1UUJiRm1MVzNrU0U5UFNZM21EUEdKMzJaMjA1RE5EeGtQdUJyd3E3ZkVGX1dCNUVmbTU5amhCZnVNcjBiS0JNdjIzRzVQNFVsUTlLU0RkWHptRnBpX0VPaVpJaEEySW5hci0wSkEyZUFoeFRSOWZod200MVBZdlFjSlFJOFd4QmdmS2JSdXNva0ZIVkJpRDZWbHVaaWNiSTZZWjRvUm80RlpwSmZDYnB1UHZvUzBGUmt0UUZIZE13MnM?oc=5",
+  "summary": "Anthropic’s plan to list at a valuation that reaches into the trillions has thrown a spotlight on companies that are geared for strong earnings growth and have the balance sheets to handle faster change in areas like AI, trade and interest rates. That kind of backdrop can reward businesses that ... [summary from Yahoo Finance]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "MRVL::marvelljumpsasaichiprallyreturnsandlumentumdealstaysinfocus": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell Jumps as AI Chip Rally Returns and Lumentum Deal Stays in Focus",
+  "source": "Quiver Quantitative",
+  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPT1AzLTdhRW9VN1lRQVZPcnZFMWEwOXJBQVNYVDhYLThHQi1VM3VhTXh5Vk1UZXNsUm9oZlpLalJIX1hicFMyajB0S2hIcjJ3ZmV1cVc5N2tNMDk5ZjFNb3VlRGoxdTZSblQ2TG9wUWQtVkh4c0ttNHpGSDJadldFZXpMdGFSTXNLYWdPNmR4OFZpak1sOTNVYWRVNjZpamduRXpkcHNHbw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::ismarvellnasdaqmrvlmergingintoaiconnectivity": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Is Marvell (NASDAQ:MRVL) Merging Into AI Connectivity?",
+  "source": "Kalkine Media",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPTXkyWnhHalVVMnlmQU53bF9tQVhHMTZWcURMdVZTdVZ3Q1ctUTlNUjVFdmVOUUl4c2FMVnZCZEVodGk0c1pNX1d6WjVJQ2MxSDZGemZIR0l0OXBReG9JeHBXSUM5MUp4enlYT3MzNkYzTXlmVnVfUy1xdFBjUUx4SHFsOHBFbXlpcnFmN1NNUVdFamZaSXRrNkhCWXQ3SzhiT255QWpzLUMtYVdveXc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::jensenhuangsshatteredcredibility": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Jensen Huang’s Shattered Credibility",
+  "source": "Barrons.com",
+  "url": "https://www.barrons.com/articles/jensen-huangs-nvidia-shattered-credibility-460e1448?siteid=yhoof2&yptr=yahoo",
+  "summary": "The Nvidia chief has lost his most powerful weapon: his word.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvellacquireslumentuminblockbuster80billiondeal": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Marvell Acquires Lumentum in Blockbuster $80 Billion Deal",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/videos/marvell-acquires-lumentum-in-blockbuster-80-billion-deal/",
+  "summary": "There has been no shortage of news these last few weeks coming out of the memory and optics sectors in regards to AI investing. Eric Bleeker and Austin Smith are here to break down just a few of them, including Marvell's purchase of Lumentum in a huge $80 billion deal. ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::lumentumstocksjump1485asaiopticsreboundnarrowsmarvelldealgap": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Lumentum Stocks Jump 14.85% as AI Optics Rebound Narrows Marvell Deal Gap",
+  "source": "GuruFocus.com",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/lumentum-stocks-jump-14-85-190300667.html",
+  "summary": "Each Lumentum share converts into 4.5 Marvell shares, and Wednesday's rally reshapes the arbitrage spread.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::analystsjustslashedtheirpricetargetsonthese5stocks": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Analysts Just Slashed Their Price Targets on These 5 Stocks",
+  "source": "Insider Monkey",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/analysts-just-slashed-price-targets-175854284.html",
+  "summary": "Wall Street had its worst day in 19 months last Thursday, with chip stocks leading the selloff. The Nasdaq Composite fell 5.52% to 24,315.00, its biggest one-day drop since the April 2025 tariff announcement. The S&P 500 fell 4.36% to 7,353.73, erasing about $3 trillion in market value and marking ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::whyislumentumstocksoaringtoday": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Why Is Lumentum Stock Soaring Today?",
+  "source": "Benzinga",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/why-lumentum-stock-soaring-today-165821556.html",
+  "summary": "Lumentum Holdings Inc. (NASDAQ:LITE) shares climbed more than 14% on Wednesday trading as fresh analyst price-target changes coincided with strength across technology stocks.S&P 500 futures rose 1.20%, with Nasdaq-linked benchmarks also trading higher by 2.63%.Analysts Recalibrate Lumentum TargetsWall Street’s latest moves on Lumentum point to a mixed view on valuation ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::oppenheimerseesmajorstockrallybackstwotechstocks": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Oppenheimer Sees Major Stock Rally, Backs Two Tech Stocks",
+  "source": "GuruFocus.com",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/oppenheimer-sees-major-stock-rally-164704545.html",
+  "summary": "Wall Street's latest bullish forecast challenges growing market uncertainty.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::lumentumslipsondealreactionfossilgroupralliesonoutlookstockmovers": {
+  "ticker": "MRVL",
+  "date": "2026-11-12",
+  "title": "Lumentum Slips on Deal Reaction; Fossil Group Rallies on Outlook | Stock Movers",
+  "source": "Bloomberg",
+  "url": "https://finance.yahoo.com/video/lumentum-slips-deal-reaction-fossil-161603595.html",
+  "summary": "On this episode of Stock Movers: - Shares of CoreWeave (CRWV) rallied in premarket trading after the compay eased fears about its debt-laden business during a high-stakes quarterly report, indicating that sales growth remains strong despite challenges facing the data center industry. The AI computing provider projected revenue of $13 ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::micronsoars10skhynixup9ascoreweaveraisesoutlookonabreakoutquarter": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Micron Soars 10%, SK hynix Up 9% as CoreWeave Raises Outlook on “A Breakout Quarter”",
+  "source": "TIKR",
+  "url": "https://www.tikr.com/blog/micron-soars-10-sk-hynix-up-9-as-coreweave-raises-outlook-on-a-breakout-quarter?ref=yahoofinance&tlnk=yf-261111-xpq8jwjp",
+  "summary": "Key TakeawaysMicron shares jumped 10% today, along with SK hynix, Sandisk, Nebius and Marvell, after CoreWeave raised its 2026 revenue outlook. CoreWeave’s $132.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::marvellandintelrally7ascoreweavesresultsreignitetheaichiptradetaiwansemiconductorclimbs4": {
+  "ticker": "MRVL",
+  "date": "2026-11-11",
+  "title": "Marvell and Intel Rally 7% as CoreWeave’s Results Reignite the AI Chip Trade; Taiwan Semiconductor Climbs 4%",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/investing/2026/11/11/marvell-and-intel-rally-7-as-coreweaves-results-reignite-the-ai-chip-trade-taiwan-semiconductor-climbs-4/",
+  "summary": "After a brutal month that wiped roughly 40% off some of the biggest names in AI silicon, one cloud provider's earnings and a quiet funding shift just sparked a rebound. Can it survive the Fed and the next AI financing scare?",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::microntechnologymucouldbe42undervalueddespiteboardretirementnews": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Technology (MU) Could Be 42% Undervalued Despite Board Retirement News",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQd0FwdWhPal9UUHpiMk44MFFyUlpwbzBaZFl5VEFLTm5uZjRuTndoRkFZYmZtMm41M0x2SEVaNVdMcVpHdHBndVByeFpDTk1xOTVGcGkzY2Q2UXozRWtiWVZpY3pDNlVBd3p2aHR4VHVoSzF5ZlkzVWlDQ0FKNXFpMWk0eUJVMDRFa1FGQXAwaDAwMDhSYUJwejBR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronstockisdown40fromitspeakaftertheselloffhistorysaysthisiswhathappensnext": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Stock Is Down 40% From Its Peak After the Sell-Off. History Says This Is What Happens Next.",
+  "source": "Yahoo Finance",
+  "url": "https://www.fool.com/investing/2026/11/11/micron-stock-is-down-40-from-its-peak-after-the-sell-off-history-says-this-is-what-happens-next/",
+  "summary": "Micron can go on a terrific bull run once again amid favorable conditions in the memory market.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronstocksurgesaftercoreweavesaiearningssurprise": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Stock Surges After CoreWeave's AI Earnings Surprise",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQekdVRXpLajdRZVA3aWlYNklNWlhVRTJnOElDTDFHUGI3UVg3UTZkUnp4SnBKTkMyV2tvck9nWVpVR0lVMGpCNHpQQjM1Zjd5TFhVNDdySjN2WFhhbTRQVzlmVWJTUm9UbVQ3ZWR6bC1VQnpxQTBNazVKUlRNZGpmUHIxeGRHWnQxekNoSFM5MVdRUHhkdGNTZ0NCOEJVeHc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "MU::microntechnologymucommits1billiontolandmarkaiinfrastructureipo": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Technology (MU) Commits $1 Billion To Landmark AI Infrastructure IPO",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/technology/ai/articles/micron-technology-mu-commits-1-221041537.html",
+  "summary": "Micron Technology (NasdaqGS:MU) is committing US$1b to Anthropic’s private placement as part of the AI lab’s upcoming IPO. Anthropic is targeting more than US$90b from a public share sale and a US$26b private placement, according to the deal outline. The transaction positions Micron alongside major chip, cloud, and data firms ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronisreboundinggoldmanprefersthesememorystocks": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Is Rebounding. Goldman Prefers These Memory Stocks.",
+  "source": "Barron's",
+  "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB2bWhjUktMQU1qZzVGbWF5ZE9XNmdGVmtUVU5EMUozbl9pNlJRZnJjOWl6N2ZLLUEwQVMyWEZpa19RT1NLMXZzbVZxTTlGd2lKMDNLa3FKSUUwQi1EQllKbndwY20zMUF3Q0tkeHFXSnUwQllJdGhiRjJKY3I2dw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronstockjumps13ascoreweaveoutlookeasesaispendingfears": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Stock Jumps 13% as CoreWeave Outlook Eases AI Spending Fears",
+  "source": "Benzinga",
+  "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOUTBCRFNQZE5uSktxRUtJZHFfc1h4Nmc5NFhFUENRa1FGTEdzcFFnNDVjUlF5amgyRVNmYmJUZ1hTb2lfM19ZMmVNRXBLR0EzNXMtejZBQk9JMVVaVmVMR1lOOW52RzZpNVdEVEhhcDJKejRrRS1YM3hSUDg0eDQ2ZEg4dGxrVFdZQzZZNHV6aHV3NzNERGo3Rm1IWDdQOHhjVXk5WDVXaE13LWJ4WnhfbVM1dndXMUNqcFdpclZQNmF4VXhFQUE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::microntechnologyclimbs13asonemonthslidereversesmunasdaq": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Technology climbs 13% as one-month slide reverses (MU:NASDAQ)",
+  "source": "Seeking Alpha",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPSExVYU1oeW91UFFKa2VQNUx1ekRnOGFlVThvR3lGTmtxZnhQSXRsaHl4eG1YV2VGTkdxN0pZOWJmQnl5WTVXWDBaYy1IYjc4cTJ1MDZHVXAtbnZtRF96eXZfSnFVNWVwNl9iYlo1bXBjeV9XcHZmNGotRlJNNEt4al9wSWw0bTFGQXZUMGFfQXprVHhyeFNWM0lEdWJvUUFTRTM0?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronstocksurgesnearly12ascoreweaveearningsreviveaichiprally": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron Stock Surges Nearly 12% as CoreWeave Earnings Revive AI Chip Rally",
+  "source": "Coinpaper",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNRWU4TmJZbUlWckhaMEp5YnJLeXNVb0Q2dlEyVGRKMl9PSWNYTVRNeW9rTGM2ckliNVM4SDRhNkxnUzZNaGtyT1Z6VGxhSl9YNElUVlhSOXFUdWRnd2hYdVJ2SVkzbU9GUWs0OS1WVmg4Nml3LXc3WjRZcG12ZUxZUW9PWG43b2ZDQ2pVTXRudTk3NUFLT3pzV3c3eXZoVDdOS0dJ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "MU::micronstocksurges13asexpertflagshugecashflowpotential": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron stock surges 13% as expert flags huge cash flow potential",
+  "source": "Fox Business",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1WSmViQ1E3alRCQkg5QlQ2Tng0WDhoV29sVzMwZ0NvZXhqUU9HaDRidWxISE9teFpLQlZNaFA3Q3JveTNhbEdsTDBhLW91QUpQakJ2Q1dNM1J2MXc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::whymicronstockpoppedtoday": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Why Micron Stock Popped Today",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAyOUM1OGJlREtsc0h4T2phU0UyamlOdnRSUXRMdzFJWVhzRm9ZMDJTeUo3VXBlZVo1YXdBazFzeWgyRUNpRFRIaHhvOXBGeVdqMWZqby15LXZMZVNZTlhYaW1MSUtWZlhYdGwwRzRELU96RXR4Vk8zZmRRb2s?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "MU::micronstockbuyorsellat766areviewof12wallstreetanalystsandthenext30days": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Micron Stock: Buy or Sell at $766? A Review of 12 Wall Street Analysts and the Next 30 Days",
+  "source": "finchannel",
+  "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOMVBNbTJxYXk1SkdNbVJYblhsTnhvQmUwdDJrYm43WWZGcWlJTFZfSzhfV1RlQzJ5SVRlQzNIa21XMUVOTmtzTGwybE5XN0dyYWJfUTJKd1JPd1lNV0lnRXZiSzNybXRWMTdQT09faTY1QkFWYWhHeEZBdHMteVViZ1BNSmVTRWJfWDkyajRhTmxNaGp2SjBBMVlpWE5adU1wcFNMVVhMQkVQNmd4Wmw2ZXpxZ1ZWNE5VWENKaXZXZkwzOEIySFBJcU5BMjBGMmMwN0hyUWgyRjA5Y1pLejF5cFZ2ajVYN2M?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::whyismicrontechnologystocksurgingtoday": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Why is Micron Technology stock surging today?",
+  "source": "Investing.com",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOelhCb0hSZTNtSGxjdE1QRTNYMkJPMUNfRWx0dl9GQ2lNTDVCeFB2VTlZTndLM2hHSEowRUNmNHBpcWJ4dzN0ZHJGT3lRUFI3MWxkX09pZmdfcU84bWhRYndmdlJxX2d4TEhCcG5LTUNCMkNKc29fM0N6R2pIb19ycTRnMm9IWGdaa1l1bklldVdENW9YdHJDajgtQUw0andlaXBDRU9HWFg4dw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "MU::trendingindustrytodaymicrontechnologyleadsgainspremarketinsemiconductorsstocks": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Trending Industry Today: Micron Technology Leads Gains Pre-Market In Semiconductors Stocks",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOa1ZjcTRqTWNzM1E3cFp0aGtWNnd2NVAwbzJZcGljYktZLXI1bXljbWJ5TG92Q25rdy03TDl2SXVsSDNaeXZBRTlDV25La3RDOFItRjRqbGt5U2xocW91TzdXMHhxWWNVLUVwV3BHNzFnMUdKZDFFVGJYMmZTVkltNnZHWTZ0M2owb3E2ZjVFNmJKMHU5VXpQRHByNHpXR1ZHd1RFZkNyb2d4Nzh5dGhrcQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronbuythepanicnottheaidoomsdaystory": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Micron: Buy The Panic, Not The AI Doomsday Story",
+  "source": "Seeking Alpha",
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPWDlaR1RRb0hFQ3BxNzV5aHpUaEdpdkI5cEhfcmhINVVDSmpzdGlLbWk3UFlIcEtlSVFCWXhDV2ZBbEdKai0tNE8wM3JieDZJcUlETWZwdVltbF8zc0JSMkk1bEQwSzhOSllQaktucEYyOEVPaG1iWU12Z08wWnJLdUtQN3N4RUs3a1JVVWZxVC0?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::ifyouinvested100inmicrontechnologystock10yearsagoyouwouldhavethismuchtoday": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "If You Invested $100 In Micron Technology Stock 10 Years Ago, You Would Have This Much Today",
+  "source": "Benzinga",
+  "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQc29ROWotSHdFckxUSzhpeVFBa3FHVU9lNU5SUEhPa1F0dWRRdjhGSDR5NTFlNkR5WHYxUEpSU1BHZDcyaW9fSmxMbnRQTEhpRU8yeUxfQUFXOWtSUzVMUkNMNGw1c3pvVmt0a050TlVocVFWQWYxdkR3NHdSbkxnZE9ndl9MYUI5RWVsTGxZbEQweC1hQ0I2UVl5V29tbWdfQVJQVFVHd2xyangxZGFwY1JBQS10MkNkQ0tHWXlQQ2RYdmJLbXc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronsstockplummeted22inaweekopeningawindowtobuythedipinmemorychipsbankofamericabetsthatthesupercyclewillextendto2028": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "Micron's stock plummeted 22% in a week, opening a window to buy the dip in memory chips? Bank of America bets that the supercycle will extend to 2028.",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQS203Mnc5VkhZMG00SXRaZ3hqYlVLdWZLTFdsVmRqeHUxRFotd2l6a25aWFd3UUxCVWpMa2cyTHY1QUlHQWQyYTdlYmsyeVJCc281ZjExTzBPT20yMHdUOHNnRjJQc1dEWXVRaEtiMDRhTkkwdnZ2QnVoTXVqS0dseGZ1b0hTVmNiaFJtMVpxLWhmeHhoSkE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::aitradebouncesbackkalshipossiblyfacingchargesopenaicontinuestoseeheavylosses": {
+  "ticker": "MU",
+  "date": "2026-11-11",
+  "title": "AI Trade bounces back, Kalshi possibly facing charges, OpenAI continues to see heavy losses",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/ai-trade-bounces-back-kalshi-possibly-facing-charges-openai-continues-to-see-heavy-losses-144418293.html",
+  "summary": "The 8:30 hosts, Julie Hyman, Pras Subramanian, and Jake Conley, discuss the biggest stories of the trading day, including the AI trade bouncing back as bonds face a post-CPI sell-off, OpenAI continuing to face heavy losses even as revenue rises, and Kalshi being warned it may soon face charges from ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::q3earningsresultsreconfirmbroadbasedstrengthasoutlookimproves": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Q3 Earnings Results Reconfirm Broad-Based Strength as Outlook Improves",
+  "source": "Zacks",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/q3-earnings-results-reconfirm-broad-233700093.html",
+  "summary": "The Q3 earnings season has reconfirmed the broad-based strength that we have been seeing in recent reporting cycles. The revisions trend remains positive, with estimates for 2026 Q4 and full-year 2027 continuing to rise and overall painting a strong earnings picture.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::stockmarkettodaynov11stockmarkettodaynov11nasdaqsurgesascoreweaves25rallyreignitestheaitrade": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Stock Market Today, Nov. 11: Stock Market Today, Nov. 11: Nasdaq Surges as CoreWeave's 25% Rally Reignites the AI Trade",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/coverage/stock-market-today/2026/11/11/stock-market-today-nov-11-stock-market-today-nov-11-nasdaq-surges-as-coreweave-s-25-rally-reignites-the-ai-trade/",
+  "summary": "Wall Street staged a strong recovery Wednesday as enthusiasm for AI infrastructure returned, lifting semiconductor and technology stocks despite persistent concerns about inflation.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::howmuchtaxdoesa66yearoldoweselling600000inmicronandoraclegains": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "How Much Tax Does a 66-Year-Old Owe Selling $600,000 in Micron and Oracle Gains?",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/investing/2026/11/11/how-much-tax-does-a-66-year-old-owe-selling-600000-in-micron-and-oracle-gains/",
+  "summary": "A retired couple sitting on $600,000 of Micron and Oracle gains can take it all now or stretch it out. One path cuts the tax bill but triggers a surprise Medicare cost, and plunging share prices complicate the choice.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::jimcramersaysmicronisntgoingawayhereswhyhepicksitoversandisk": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Jim Cramer Says Micron Isn’t Going Away. Here’s Why He Picks It Over Sandisk",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/investing/2026/11/11/jim-cramer-says-micron-isnt-going-away-heres-why-he-picks-it-over-sandisk/",
+  "summary": "Memory stocks just ripped higher, yet both names remain deep in the red for the month. Cramer sees one clear winner in the group, but the bull case for its rival is stronger than his pick suggests.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::stockstowatchrecapcoreweavenvidiatsmc": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Stocks to Watch Recap: CoreWeave, Nvidia, TSMC",
+  "source": "The Wall Street Journal",
+  "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-11-11-2026/card/stocks-to-watch-coreweave-nvidia-tsmc-EbakJv4ZyAl7obXOSamP?siteid=yhoof2&yptr=yahoo",
+  "summary": "↗️ CoreWeave (CRWV): Shares surged 25% as the AI cloud provider soothed investor jitters by beating Wall Street expectations for its third-quarter revenue.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::chipstocksrallyafterslidethesenamesareleadingthechargehigher": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Chip Stocks Rally After Slide. These Names Are Leading The Charge Higher.",
+  "source": "Investor's Business Daily",
+  "url": "https://www.investors.com/news/technology/chip-stocks-rally-amd-txn-arm-mtsi-mu/?src=A00220&yptr=yahoo",
+  "summary": "Chip stocks broadly rallied on Wednesday as investors went bargain-hunting.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MU::micronsandisksoarascoreweaveceosaysaidemandoutpacesworldscapacity": {
+  "ticker": "MU",
+  "date": "2026-11-12",
+  "title": "Micron, Sandisk Soar as CoreWeave CEO Says AI Demand Outpaces World's Capacity",
+  "source": "Benzinga Prediction Markets",
+  "url": "https://www.benzinga.com/markets/prediction-markets/26/11/63169587/ai-memory-stocks?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral",
+  "summary": "Memory and storage stocks surged Wednesday after CoreWeave (NASDAQ:CRWV) reported blockbuster earnings, with CEO Michael Intrator dismissing fears that the artificial intelligence infrastructure boom was slowing. Sandisk (NASDAQ:SNDK) jumped nearly 17%, while Micron Technology (NASDAQ:MU) gained almost 14%. Seagate Technology...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::jensenhuangsaidtohavehadrelationshipwithnvidiaexecutivewhoreportstohim": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Jensen Huang Said to Have Had Relationship With Nvidia Executive Who Reports to Him",
+  "source": "The New York Times",
+  "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPV0NCNjVPR0M2THpMdkhiTW5jZUlmVXJzNHk4YjZYeWtGZHc3Vk81V3czUXBBVjktcXlSLWs3MFdyWkRtcmRpV1BmY1hKckhyU3RYWEdsTWlGcnhFVFVNakRLLWZvREpURHJnRVVSdmZEcHJWU2p5YWJZX1pEWGRWRDB1aw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::exclusivenvidiaispreparingtooustceojensenhuang": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Exclusive | Nvidia Is Preparing to Oust CEO Jensen Huang",
+  "source": "WSJ",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxON2VaZ01EcWdXc1ZGb3plNUNMM294WGZlT0tTbWw2SFNPOHZ3ZERtQlR6RkhLRWF2cHExRnNfWGZINm1NWVoxVjRSUDRTVXRFb1RaRGcyMXFUdEd0LWtlME5SVHJETVdzOHR6eHhyNXJLVXF6cldFbnhHMXcydFMzTGhzVnhWN2RQX2d0X1N4QVZvdUU?oc=5",
+  "summary": "Move follows company investigation into an affair with a Chinese woman alleged to be a spy. [summary from The Wall Street Journal]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "NVDA::analysisisnvidiatoobigtofailitsaifinancingwebraisesthestakes": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Analysis: Is Nvidia too big to fail? Its AI financing web raises the stakes",
+  "source": "CNBC",
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSXhKWElWbF84SlAwVHhHTjBZQ044MTBtVFZJVjFqR3czZFB4RVRGZ1lmcGJjWGZfZTl3T3lUNk5Ucy1CRDhmREpBN1E4OGpHWlhHN2ZEZFhSV0E1ekZubEtEVmVMTjRZamRtREdPeDhtWHNmaUU2d3YyaGxqa19HSERTVERTV3Nr?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiacorporationnvdastockpricenewsquotehistory": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "NVIDIA Corporation (NVDA) Stock Price, News, Quote & History",
+  "source": "Yahoo! Finance Canada",
+  "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE51M3YyYUhDNzU1Y2Rjb1RZakJNc2s1NWlnbHBYS1RWTTJyNnpzNUFiUEVJQmRoSElldkd0Z3Bva0s1UURoUFpJcDVxZnRJZXdDcGc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::whatcomesnextfornvidia": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "What Comes Next for NVIDIA",
+  "source": "Time Magazine",
+  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1ERS1WSHJCbUJ1MXdXbzBRVE5UME1iMThBclhWemdNeWFCalZkUGJWTkRFMDZfXzc4anhHdThLclpQbkpuN0xhSWxMeWxpc09MUDg5aG44ZVlKa1BwbTloLU1wOFRtM2J3Z08teVBPQU4?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::bairdmorganstanleysouronnvidiaasceoaffaircontroversydeepens": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Baird, Morgan Stanley sour on Nvidia as CEO affair controversy deepens",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNVVFZRkRxczJkVHdhU0pCMUlmd0tpdGFjdFBkRjhPY3NiLXJtMmYwX1hfNkM1MEdCd2hjalRhWFhYOUtRanJUcHhyY2RXeFJYbGpZRWZIVVRGSml5cFN0MnkyWkFuaUppMGp6b3l0YmRWWTNGVHkwOV9LaFVOdkFxMjJXSmpzQmZkRU5ad1Zob0tvYkgzd1Bkb2VfT0RWQ0lrZWNR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiastockslidesafternytreportallegesjensenhuanghadasecondaffairwithanemployee": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia stock slides after NYT report alleges Jensen Huang had a second affair — with an employee",
+  "source": "CNBC",
+  "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9NaFFJVUxuMG1NR25FakxCNU9rUnpXUEl0UVE4ZTJUS0VUN2lEWjlsQVVJRTdMUWt1Vkd1RUsxcjZKa3JCaWFWN0JYbXk0TWpUM3M4SVQ1OGlJaTNQYWJsRnZVczF4NVpyeUZIQTVUQnRYVS0xX2RSQWhGWGs?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::hownvidiaceojensenhuangsextramaritalaffaircouldcausecollateraldamageinwashington": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "How Nvidia CEO Jensen Huang's extramarital affair could cause collateral damage in Washington",
+  "source": "AP News",
+  "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOHhUdHFXb3pRd05pMHh1LWcxVldiZEQ4ZWhnaDdPMnFuTk9DUU9iWENpZ2ZaUUZ1cnZNNDU1cDJtNTRVeG5wMVpDdFlmQU9SRWJnYmhWZzVMQjlvdi12c1Y5NlRDZWZhVFF3MUFpaGlpOWtzbVA5ZEx0NV82T3Uxeng4bzlEX3F4bTllU25GVDdkWGZGNjhUaXZCRzdVam5ZUTZVYVhFQlY?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::jensenhuangaffairindcresignationcallsandmovestotightennvidiachinaexports": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Jensen Huang affair in D.C.: Resignation calls and moves to tighten Nvidia China exports",
+  "source": "CNBC",
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWjJRY2daaGR0MlE5NzU0bndocWZPVF9qODRlRlBzUUVLN1dyNkE2VXlJeUdGanF2NkQ5OGVZMmJTYk9xY244NU9sUHppeFU2dVlHcVRwWFptNG9CSUN6ay1Ic3NVdFJRZTNkY05nQzJJUFJsSVp1N21LRElnSHotZmZyYVR2a25v?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::houserepublicanspushfornvidiashuangtotestifyfloatsubpoenaoverspyallegations": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "House Republicans push for Nvidia's Huang to testify, float subpoena over spy allegations",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOZElHZGtpdHlnaUtyZUVXbDctdmJqZXlGcnhQaDA1ZXBBbXMzQ20zcHRjR3kyR1ZxTGZEbUNXRzIwQ1NKX1NVMDlxaXc1SDQyVGhqSWo0MjlidzlBdkZNMXJ6MGk0Q2k5ZnotSjVJQ0N4RHc3VDROc1owaGJYX1pWcnA3dGtZeXpGbHdUTGg5Y0s3bkNQWFZ6TDV2Qm96NUkwUHJib3NXa0h5amN6cUEwMlhSVjZiSWNFZm9RMlFiOG1HRXAzM2RwVEZTTFJNUQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiaispreparingtooustceojensenhuangwsjreports": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia is preparing to oust CEO Jensen Huang, WSJ reports",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPTlA5REZDN0pJYkxyUXM4YjE1Q1BLN0tKNENxM3NsV3RKblNhbWpsdEFUUVRieUtNckY4S3YwdkFUdjhvZVk4Nm1Ga1JNUmZkRzMtaEhHazhHNmZDX3Z1WUNzZnJmdEpLeVRmcngzdEMwM2N3b1I1ckQ1Q2N2a2NRNWtfa0ZTTkhYaXlqc1NqbklwWUxIdktqdzZvS0M2cGhSYkE?oc=5",
+  "summary": "Move follows company investigation into an affair with a Chinese woman alleged to be a spy. [summary from The Wall Street Journal]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "NVDA::nvidiastockdropsasboardreportedlyweighsjensenhuangsfuture": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia stock drops as board reportedly weighs Jensen Huang’s future",
+  "source": "CNN",
+  "url": "https://www.msn.com/en-us/news/other/nvidia-stock-drops-as-board-reportedly-weighs-jensen-huang-s-future/ar-AA2hfk4Y",
+  "summary": "Nvidia shares dropped sharply in after-hours trading on Wednesday after reports that CEO Jensen Huang had an extramarital relationship with a company executive and that the board is meeting to discuss ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiastocktanksafterreportofsecondhuangaffair": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia stock tanks after report of second Huang affair",
+  "source": "The Hill",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9kX3UxTTg4VEtSSmFIc0JiYlJzcGw0M003bURNbWZmalEzSmJ5dmM0UHZhNS1kd3VpZG9lTnJQS0hYanFQTm1xVFMxdmJzVUItMVpxVFAzdk00NlU3SnRRU3NQdmphRVF4QjlUOHlyc3h2anpVMVHSAXtBVV95cUxQWnRHZUN0ZTZmS29IcDFqWnNzYVJsZUg2emZ1MHpZX1pkWm11RktzN0U0TTNSQzhfdjlENVFkMElZTUw5MWdHQ0l5aGJrWGlSakdodmh6LU84TnZiZklhWE40b2RzT2k0dEdvenR2aVNZcGs3VlFGUmdOUzA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::lutnickstalledtrumpcrackdownondiversionofnvidiachipstochinaaxiosreports": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Lutnick stalled Trump crackdown on diversion of Nvidia chips to China, Axios reports",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeDk3Z2kxT2NlVkxtZ3FMbksyU0ZlT2JzcERTTVBkeGFzUk5kaHhpazg4Mk5GSnZGTmNmbVVZakFyUHZOeGx5ZEt1N0pVZFRBcDlzMFU0dDc0RFh1ak1ndzZBVWNsN3NCVmliX040XzZHXzc3TFlCUWNTeXdyUkZ1S3B4WUhLSnNCWDVzeGd2NDZUZzBaTUNwemdVRWtqWGlzUnczR09yU09qaWwxZGRKaFBOUDdiR2lLa0VSa0tiWQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::couldhuangnvidiaandcompanysboardbeheldliableoveraffairscandal": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Could Huang, Nvidia and company's board be held liable over affair scandal?",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPMjZKSmVVbEFma0huZUVIajB2eVUzdUdEd2owTjNLbTZTbFQ5Z2F5OEs4WVp0QVdhZEpDU2xXQnhnTlJpQjlkMnREdGZEbkRyVW1hLXBsWklELTUxMU52bzVXMXJkeVRrVkx5aXV0YTMwcE1BVmJfTXJ2aTg3WGNkSnZRRTFLUllxTkVVVnZCc2JicjJmWGo0T08zRThvTmNQUHVfZkp2WUJwdXhIZGxNY2xFQ1ZZbVZsajJ0YWdB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasstockdivesaschipmakersboardweighsmovetooustceojensenhuang": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia's stock dives as chipmaker's board weighs move to oust CEO Jensen Huang",
+  "source": "CBS News",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQV0ppMjd4Z0pxWkJVRnlaSXNZWUd6Nmd3TC0tWEVLYmp1Z3hmWVFhY2VnRS1Da0U5eXJTdnhtRHNkdTR4bFlDc21UTzctUTNodll1NlJITU81WG1jSVNmV1FVVllJZGlJcWVaSl9LS1A4N3FZeGZ6THVPbTZCOWRaSUFyMzJoaTdZNEh0Vmt3eTd0Zw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::hownvidiaceojensenhuanggotentangledinachinachipandspyscandal": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "How Nvidia CEO Jensen Huang got entangled in a China chip and spy scandal",
+  "source": "Reuters",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTVJmZ25HVWdCdEZubWhDTWI1WnM3TzAwc2JObjJlMVBENUZTOElPYUJXUXUxQjAwN3VoaHlkcENWYk9GbGJudDBGQmNnRWNMU0Y4Mmx1cmxxSGxjc1hhQ0g2dkFPYkNjTXIyYkNydVN0QzdrRnNUdHF0UEhyMV8xWTlMMGlVcjgzVkFQdGFzZWRjaUljQTI3VU1xcGF4WktRQllTbEwwMlVwN2JNeDlOZTFn?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::huangcouldcausefurtherdamagetonvidiaitshardtorecoverfromthatsaysdanives": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Huang could cause further damage to Nvidia, 'it's hard to recover from that,' says Dan Ives",
+  "source": "CNBC",
+  "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObEJhd0d3dTEydU8yRDg1bDc1OV93RlZuOVpWemlwcVhxTHpTX0tYYnJWelk2aDhhenJtUzRHekpfNU1MbTUtQWFNd0hXcGF3Z2lVSVFOeEJNZV9DUWk1QmVmcDhNRTlEaUxPQ01wRzJ3MURKNmZZS3hFSmhqX3NTSVBIWGphdS1SSU5kdDQxVGxfcXRDdTM5Z3JNeWxfUU0ycmU3WWNXdWlCQjF0WUlOVnh1VVNEUXFaRFVkemVWdlZvZUhNWDZCeg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasboardismeetingtodiscussjensenhuangsfuture": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia’s Board Is Meeting to Discuss Jensen Huang’s Future",
+  "source": "The New York Times",
+  "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9SV0s4M3NYaTUtT2tIVWpBRHdfTk51cUIxcE0tLU9LV3M1akRWMTRheE9qY3BCa0pRVDR0MGhxaGVIcERRakZ0LWxJUWtpeFk4aW50TlRLVWt0NUEwSzVBVWFoZGNMQ0NEUWl4eUZyR3h0YmpHRjNfVk1n?oc=5",
+  "summary": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an executive at his A.I. chip company. [summary from The New York Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::kudlowcallsonnvidiaceotostepdown": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Kudlow calls on Nvidia CEO to step down",
+  "source": "The Hill",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWm1WYUl0czRQUDZ5T1ByMkphU3Y2V1hTem1zMTFYejJaYlNJRlhoNV93RDl1NEp2WW5VYUZMX3o0VXVoQTlUamY4UXV5STNFbDZtSE1JdnQyMkJESEc2TkE3cVdXWDJfVGR1MU1DSHhLTkN3Wk42MHozb3EzS1BROGQwblh0NXcxQndv0gGQAUFVX3lxTFBacGFkOU85WDFtWno4NWN1cnlSSEFORVM0MzlQNkhISDJKQkdQOXRHUTBqRFdxVC1OVTF0MTA0OVFfbm8zU1ZCUnM2U1pibkhSSC0tSUgwRVI3dHVOUEl1RTB1dC1TTThaWUh4SlNrY05WcUdMZUxCejBxR0pkMmlDWlVtVzV6bG9sckJuVjVlVw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasharesslipinafterhourstradingonfreshallegationsofceorelationship": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia shares slip in after-hours trading on fresh allegations of CEO relationship",
+  "source": "Yahoo Finance",
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZFpBZGI4RmF5X3M4OTFNOUc3U3pWZzRjMmhrcmRLWjdSWmhUSEV0dUdjZXl3YTBWVHhfbHk2Y0hkM2VPbXR6SkVLRVp3dDhYbl9Yc1drS1pWMEI0S1hsNFFfRG5LYVAwV1JmSEwtRHg3Y3ZkbkhHTHBwOGF1RkFyRFpCRmRYMEpUWTNOSDZmUzdORk9ya185WHhtQlJZQQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiareportedlypreparingtooustceohuangafterallegedaffairswithspynvidiaexec": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia reportedly preparing to oust CEO Huang after alleged affairs with spy, Nvidia exec",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/technology/article/nvidia-reportedly-preparing-to-oust-ceo-huang-after-alleged-affairs-with-spy-nvidia-exec-231315876.html",
+  "summary": "Embattled Nvidia (NVDA) CEO Jensen Huang was allegedly involved in a second extramarital affair.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiastocktumblesjensenhuangcouldbeoutsoon": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia Stock Tumbles. Jensen Huang Could Be Out Soon.",
+  "source": "Barron's",
+  "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQOFdBZ3c4MHN6VndFa1FXODBzUlYtaVM3cmJKMmxEWERoU1A3SlJzMUxyZ1A3OEJrR3lQY1dXSHNmN2c5Q3JhVXlQaU5KcDhoZllMN2poWlp6SlRfMkJ0R2x3X1dnR1BRc0lTWnVLWHduOUw1Y01xNTV4ek5qYVAycnlB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiastockispricingin2majorrisksasceojensenhuangsaffairfalloutplaysout": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia stock is pricing in 2 major risks as CEO Jensen Huang's affair fallout plays out",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/article/nvidia-stock-is-pricing-in-2-major-risks-as-ceo-jensen-huangs-affair-fallout-plays-out-190743109.html",
+  "summary": "Nvidia is having a rough week, to say the very least.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiassharesplungeasustechgiantsboardreportedlyweighsoustingceojensenhuang": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia's shares plunge as US tech giant's board reportedly weighs ousting CEO Jensen Huang",
+  "source": "BBC on MSN",
+  "url": "https://www.msn.com/en-xl/news/other/nvidias-shares-plunge-as-us-tech-giants-board-reportedly-weighs-ousting-ceo-jensen-huang/ar-AA2hf2Vt",
+  "summary": "Board members are set to meet after US media reported that Huang allegedly had a second affair with an executive at his tech company.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasboardisreportedlypreparingtooustjensenhuangtheaffairisnttheonlyproblem": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia’s Board Is Reportedly Preparing to Oust Jensen Huang. The Affair Isn’t the Only Problem",
+  "source": "Inc.com",
+  "url": "https://www.inc.com/amaya-nichole/nvidia-board-reportedly-planning-oust-jensen-huang/91435360",
+  "summary": "Huang co-founded the company in 1993. Now he may be forced to give up his role as CEO in the wake of new allegations.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiastockfalls7afterreportboardispreparingtooustjensenhuangaftersecondaffair": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia stock falls 7% after report board is preparing to oust Jensen Huang after second affair",
+  "source": "Insider on MSN",
+  "url": "https://www.msn.com/en-us/news/other/nvidia-stock-falls-7-after-report-board-is-preparing-to-oust-jensen-huang-after-second-affair/ar-AA2heXyt",
+  "summary": "Nvidia stock was down 7% after hours following two new reports about Jensen Huang dropped, including one that said its board was preparing to remove him.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::nvidiatooustceojensenhuangamidallegationofaffairreport": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia to oust CEO Jensen Huang amid allegation of affair: report",
+  "source": "The Independent on MSN",
+  "url": "https://www.msn.com/en-ca/money/executive-leadership-and-management/nvidia-to-oust-ceo-jensen-huang-amid-allegation-of-affair-report/ar-AA2hf9YY",
+  "summary": "Nvidia moves to oust spy-tainted CEO Jensen Huang after word of affair with subordinate: report - The company's stock fell roughly 8 percent in after-hours trading following Wednesday's reports, exten ...",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::nvidiaispreparingtooustceojensenhuang": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia Is Preparing to Oust CEO Jensen Huang",
+  "source": "The Wall Street Journal",
+  "url": "https://www.wsj.com/business/nvidia-is-preparing-to-oust-nvidia-ceo-jensen-huang-30f421ad",
+  "summary": "Move follows company investigation into an affair with a Chinese woman alleged to be a spy.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::nvidiasharesdiveafterreportthatboardpreparingtooustjensenhuang": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia shares dive after report that board preparing to oust Jensen Huang",
+  "source": "CBS News on MSN",
+  "url": "https://www.msn.com/en-us/news/other/nvidia-shares-dive-after-report-that-board-preparing-to-oust-jensen-huang/ar-AA2hfINh",
+  "summary": "Nvidia shares fall sharply in after-hours trading after The Wall Street Journal reports the company's board plans to remove Jensen Huang as CEO ...",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::nvidiasboardisexpectedtomeettodiscussjensenhuangsfuture": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia’s Board Is Expected to Meet to Discuss Jensen Huang’s Future",
+  "source": "The New York Times",
+  "url": "https://www.nytimes.com/2026/11/11/technology/nvidia-jensen-huang.html",
+  "summary": "Mr. Huang has been under scrutiny for an affair with a woman said to be a Chinese spy, as well as a relationship with an executive at his A.I. chip company.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasjensenhuangbelievessufferingbuildscharacterthespyscandalcouldtesthisphilosophy": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "Nvidia’s Jensen Huang believes suffering builds character. The spy scandal could test his philosophy.",
+  "source": "CNN on MSN",
+  "url": "https://www.msn.com/en-us/news/other/nvidia-s-jensen-huang-believes-suffering-builds-character-the-spy-scandal-could-test-his-philosophy/ar-AA2hf5NZ",
+  "summary": "The scandal threatens to taint Huang’s largely positive personal brand — one that transformed him into an icon for individual and professional investors alike.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiapreparingtoreplaceceojensenhuangassecondallegedaffairemergesreport": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Nvidia preparing to replace CEO Jensen Huang as second alleged affair emerges: report",
+  "source": "Fox Business on MSN",
+  "url": "https://www.msn.com/en-us/news/other/nvidia-preparing-to-replace-ceo-jensen-huang-as-second-alleged-affair-emerges-report/ar-AA2hfYmD",
+  "summary": "Nvidia CEO Jensen Huang faces a reported push to remove him from the company as allegations of a second extramarital affair emerge, adding to an ongoing board investigation and investor concerns.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::asecondjensenhuangaffairhashitnvidiaasthecompanypreparestothrowhimoverboard": {
+  "ticker": "NVDA",
+  "date": "2026-11-11",
+  "title": "A Second Jensen Huang Affair Has Hit Nvidia As The Company Prepares To Throw Him Overboard",
+  "source": "Kotaku",
+  "url": "https://kotaku.com/a-second-jensen-huang-affair-has-hit-nvidia-as-company-considers-throwing-him-overboard-2000756033",
+  "summary": "The second affair was allegedly with Kimberly Powell, Nvidia’s vice president of health care, who is 15 years his junior. The two were allegedly caught on camera “being affectionate” during an Nvidia ...",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::whoisnvidiaexecutivekimberlypowell": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Who is Nvidia executive Kimberly Powell?",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/article/who-is-nvidia-executive-kimberly-powell-231652963.html",
+  "summary": "Here's what we know about Kimberly Powell.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::anthropicsmythosclaimmayputnvidiascudamoatinavulnerablespot": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Anthropic's Mythos claim may put Nvidia’s CUDA moat in a vulnerable spot",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/anthropics-mythos-claim-may-put-nvidias-cuda-moat-in-a-vulnerable-spot-214346380.html",
+  "summary": "Yahoo Finance's Deirdre Bosa discusses an Anthropic (ANTH.PVT) claim that its Mythos model got Claude running on AMD (AMD) chips in about three days, raising questions about whether AI can erode the value of Nvidia's (NVDA) CUDA moat.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::techroundupacloserlookatanthropicnvidiacoreweaveandnextweek": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Tech round-up: A closer look at Anthropic, Nvidia, CoreWeave, and next week",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/tech-round-up-a-closer-look-at-anthropic-nvidia-coreweave-and-next-week-211955539.html",
+  "summary": "Deirdre Bosa summarizes what's been going on in tech this week: CoreWeave's (CRWV) third quarter earnings and the associated concerns with circular AI financing, Nvidia's (NVDA) Jensen Huang controversy and upcoming earnings results, Anthropic's (ANTH.PVT) IPO buzz, and more.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::marketrallyoffersamuchneededboostforinvestorscoreweavebeatsthirdquarterestimates": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Market rally offers a much-needed boost for investors, CoreWeave beats third-quarter estimates",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/market-rally-offers-a-much-needed-boost-for-investors-coreweave-beats-third-quarter-estimates-184231615.html",
+  "summary": "Host Kevin Kelly, Kelly Intelligence Founder, CEO, and CCO, and his panel of experts weigh in on today's market relief, including CoreWeave (CRWV) jumping 24% in morning trading. Plus, a comparison of Anthropic (ANTH.PVT) and OpenAI (OPAI.PVT) in terms of revenue and leadership.Today's panel includes EP Wealth Advisors Managing Director ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::coreweavesurgesbutbiggertestsloomfortheaitrade": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "CoreWeave surges, but bigger tests loom for the AI trade",
+  "source": "Yahoo Finance Video",
+  "url": "https://finance.yahoo.com/video/coreweave-surges-but-bigger-tests-loom-for-the-ai-trade-181434925.html",
+  "summary": "CoreWeave (CRWV) jumped 24% in morning trading as the company beat on third quarter sales estimates. The rally offers a much-needed boost to AI investors, but bigger tests lie ahead, with Nvidia (NVDA) earnings next week and Anthropic (ANTH.PVT) preparing for a potential IPO. Host Kevin Kelly, Kelly Intelligence Founder, ...",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::jensenhuangespionagecontroversywillcastalongshadowovernvidiaveterantechstrategistwarns": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Jensen Huang espionage controversy will cast a long shadow over Nvidia, veteran tech strategist warns",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/article/jensen-huang-espionage-controversy-will-cast-a-long-shadow-over-nvidia-veteran-tech-strategist-warns-173844118.html",
+  "summary": "The rough road for Nvidia and CEO Jensen Huang is only just beginning.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::whybgfoodsstocksoaredtoday": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Why B&G Foods Stock Soared Today",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/11/why-b-and-g-foods-stock-soared-today/",
+  "summary": "Profits are up sharply.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::dowjonesfuturestechstumbleasnvidiamayoustceohuangaistocksslidebutnotamd": {
+  "ticker": "NVDA",
+  "date": "2026-11-12",
+  "title": "Dow Jones Futures: Techs Tumble As Nvidia May Oust CEO Huang; AI Stocks Slide, But Not AMD",
+  "source": "Investor's Business Daily",
+  "url": "https://www.investors.com/market-trend/stock-market-today/dow-jones-futures-coreweave-sandisk-nvidia-amd-nebius-bloom/?src=A00220&yptr=yahoo",
+  "summary": "Techs fell as Nvidia dived on news that it may oust CEO Jensen Huang. AMD extended gains. Will that spoil Wednesday's rally?",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::afterdemocratsmidtermwinspalantirceoalexkarpnowsayshesaprogressive": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "After Democrats’ midterm wins, Palantir CEO Alex Karp now says he’s a ‘progressive’",
+  "source": "The Washington Post",
+  "url": "https://www.washingtonpost.com/technology/2026/11/11/after-democrats-midterm-wins-palantir-ceo-alex-karp-now-says-hes-progressive/",
+  "summary": "Alex Karp, the chief executive of Palantir, said Wednesday he's a staunch liberal, a seeming departure from his position during the Trump administration.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "PLTR::helsingdebutsclaritymilitaryaitochallengepalantirineurope": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "Helsing debuts Clarity military AI to challenge Palantir in Europe",
+  "source": "Yahoo Finance Singapore",
+  "url": "https://finance.yahoo.com/technology/ai/articles/helsing-debuts-clarity-military-ai-161625762.html",
+  "summary": "Investing.com -- Helsing GmbH has unveiled an artificial intelligence platform designed to process battlefield data in seconds, positioning the German defense contractor as a sovereign European challenger to U.S. analytics provider Palantir Technologies Inc (NASDAQ:PLTR).",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirskarpsayshesbeencriticizingtrumponimmigrationinprivate": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "Palantir’s Karp says he’s been criticizing Trump on immigration ‘in private’",
+  "source": "The Hill",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONDVmYnN3aERMa0ZYamQ2QURBVy1aM1V4VDY4WVBUM1ZTbURBXzNydE4xazhhY1RJemtaZHhDM3RRNDJKWko5VHlwaGhrZXFPaGZmZk9xbjNKUDFSRkZDLUFNS3JNQjgwUFU4b2pCVnB2V3BhS1hVdTlnZGJnNC1XaGJiVl85dzRiNWdBcnBfY0U2d9IBlwFBVV95cUxPM2FiR1BieGNYOTVwR3RyNXdDSk1fRFFNSkl3aTc0S2w2SHVwYzkzWUtYYmkwYkhNSG9YZlZzMi03QmhHWU5oQ25TNTRtNW5uYU1qYjZXLVRoci1KTXczYmo0ZWhvSllPdUtGUmMwdnlyT2FSZDlHMWxHc1Bta0RUMVdUSjRlTWhXYXJsTVVuTWoybjI0cHM4?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::germandefensestartuphelsingisunveilingaimilitarysoftwaretorivalpalantir": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "German defense startup Helsing is unveiling AI military software to rival Palantir",
+  "source": "Quartz",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE16QlFSZnM0dk1JZHBQYU9aNmVEUzJ4SlZDbFFmYnhtX1RhQVdIb0RMUlB4NVVwSHNQbmlkbGhxa2ZhV0RHVFRtdTBuY3NqOEwyOHMxa1ZKaFIxOTRKMWxMRjkxQl93WXIxdENHeEE3OUpMcl9oQmc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirceokarpopentobackingdemocratsin2028": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "Palantir CEO Karp open to backing democrats in 2028",
+  "source": "The American Bazaar",
+  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPeHRtNGhJSk1VbTNEdFFaUGU2bWoyTmJEanVHY1gtLW1ISmFqd2dnUWJMZGJMQTlwRHV4cGFRSnllSWZrZXdUUG9fNk5tVHBDTFpndjlUaFlWOUViTTdvTFhjZXdaUm5raXZUTWVIcE94TGE5d2FQdEwyREZqZVozTkJSb1YwR3ZUNFRid0pITmphbmJwNmxLaVVB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::whitehousenominatespalantirsecuritychieftoleadcisa": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "White House Nominates Palantir Security Chief to Lead CISA",
+  "source": "The National CIO Review",
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNQ3hyXzlqWWR4UlFzV2s3eFYyODVCVnhqX1JzS0tDMWhvVHR1YXNGOTR0d280WjdMUlJwQ0xNZHJFTzZ0aUZzOUFpZHFfVTg5VWFzNnpkc3JYTFRlV0FVcnFxNU9QN2p4Y2t2Z051bHZVclp5OTAxTUxlYnpUR3JlTm1YQ2twYjRPVEJPOEl2QzdFNGdEdElCX21kWHJ0eVprRTVfMFBmQ01QaWl3Tk41QmloRVhCU09sOVlV?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "PLTR::billionairealexkarpsignalssupportfordemocratsin2028": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Billionaire Alex Karp Signals Support For Democrats In 2028",
+  "source": "Forbes",
+  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPbkZzdzY4MWRhWWNwUmpiblItN3RCRE82aWMwMk5jQVN2LWNKS19iMUR2NDNWODVteVVZYV9YYmU0bWtBcVh2SlJlUnhKZGo5NGVGck93a2tvS3ZnVXpnWk1COFBpUmhnYk9QeVp6QnV6T2x3YlBodGZCeEpfRXNwZDJaVWRHanVkZEtUdTNMSjZOVk5zbDN5QnV5Y0MwV2VqR3JoRFhvaE1NMjhaQ3Rzam4xb3ZlUnFreXlmTHBVb0pVTGllbGF2TGRUaXREaHlt?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirceoalexkarpsaysitsproductsareessentiallyprogressive": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir CEO Alex Karp Says Its Products Are ‘Essentially Progressive’",
+  "source": "Yahoo News Singapore",
+  "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RZGI5aEs2OUk3Q3VUYU56SHB5WXR6NzBIRDlZSEgyYi14N3hfc0ZqLXpKNTU3djl1T19IQ0VkTnV2a0o5Vjg1SDAxN1JhdlpPU09IR3ZBWS1YR25tSEJfOVBZSTkzTGJtM3BmaThXbl9Ha3NCYjBV?oc=5",
+  "summary": "Palantir CEO Alex Karp told Politico that he's a lifelong Democrat, and that President Donald Trump mishandled immigration. [summary from Insider on MSN]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "PLTR::helsingunveilseuropeanrivaltopalantirmilitarytargetingsystem": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Helsing unveils European rival to Palantir military targeting system",
+  "source": "Financial Times",
+  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQM3hCb09DYWJEVW1TX1BBVmFJWFZpR0IwRC1FeFQ3Um5yeUZsMGRfX0ZfZEE4cDNrY2I4eXRqbnRmOVlRTDNvdFFKQkRlUmN3TDdZU19ua3lOQ1YyRGFHbXNkQ3I0T2N2ZnJpNkRCN29zMk5Eb2pvX3ZfLXk5Mk9OZTB1ZVE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirsalexkarpsuddenlyclaimshesaprogressiveafterelection": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir’s Alex Karp Suddenly Claims He’s a Progressive After Election",
+  "source": "The New Republic",
+  "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxON2RUckVqMVA4VHZEWG1IbHhjSGN2R3psWlk1c3g4SHFOaE5qd3pVWTk1NG9xUUtzZDdid09tamhJVXhKci1ZanpYYjJPNHlfT3BHU18xY1NpSEJUYXQxNF84QTBBb2pacHpkTWFKVHU4VTE2VDI1YmZtZl9wbllGal8yQWFfaHp0YU9QZUlmektNRHZZd3ZYYk9n?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::helsingunveilsaimilitarysoftwaretochallengepalantir": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Helsing Unveils AI Military Software to Challenge Palantir",
+  "source": "Bloomberg",
+  "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQQzIwNWVsZVA3UHJ2bmkwSDY4UXFIdnJvMDlaQTZTRzJZSlVlZ25HV0M1eU11aDFJcHBVWFFFNzJNVlkxX3dyUzVtVXd6LThJVlNsenZYVEtRZ1g5TDhlaFItSFVRLXhmRWpoMm1iVXMzN3dOam9HcWpwcTRPX0dvbmxPUTZTb3BCc0JXZ0VZVUdoTGpfdWJDU0JOcVR0bWp1NFB3QV95cGszUFRzWlE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::predictionpalantirsharescoulddeliveroutsizedreturnsoverthenext5years": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Prediction: Palantir Shares Could Deliver Outsized Returns Over the Next 5 Years",
+  "source": "Yahoo Finance",
+  "url": "https://247wallst.com/investing/2026/11/11/prediction-palantir-shares-could-deliver-outsized-returns-over-the-next-5-years/",
+  "summary": "Palantir just reported the best quarter in its history, and investors sold it off anyway. Behind the 11-quarter beat streak, a few quiet warning signs may explain why the market stopped cheering, and ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirstockthe1numberthatcouldfuelitsnextrally": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir Stock: The 1 Number That Could Fuel Its Next Rally",
+  "source": "The Motley Fool",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOa0FYdzZHSkwxcFpFRmVUUF9WTDhwM1RGb0J4V1hnV3J0YTRYTW9lbmhqM21zb05GU2oyZjlZWXJFalBOUzZhMkZBRExkazFqRVJFR0VzU080cGhkVl9mQzBQcU8waDhvRUFQVERWZGZrSFh6eHVMbFd5eU5abFFPbzNRNmNpLXJtVFFEU0ZpWDFFY3dOUE92U3BmRXVVRnpwZUtn?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::canpalantirtechnologiespltrstillmatchitspricewithcashflow": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Can Palantir Technologies (PLTR) Still Match Its Price With Cash Flow?",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-technologies-pltr-still-match-061306878.html",
+  "summary": "Palantir Technologies has delivered a very large 3 year share price gain. After a choppy few months the core question for investors is whether the current valuation can be explained by the cash the business is expected to generate. With the stock up roughly 7x over three years, a lot ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::trumpnominatespalantirexecutivetoheadcybersecurityagency": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Trump Nominates Palantir Executive to Head Cybersecurity Agency",
+  "source": "Common Dreams",
+  "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBBQ2h3QlVjWXZtMldJRS1zMmtETGg0ZEJfT3lzZVJ2NHc5OThRMWQ1THhTYmRjWDUwTkd2UTBIdzJabzRoU0hnLUdIY2RtbEdRc0pVTXAyc2l6aEMt?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirsmagaceoafterthemidtermsivebeenademocratmywholelife": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir’s MAGA CEO After the Midterms: ‘I’ve Been a Democrat My Whole Life’",
+  "source": "Gizmodo",
+  "url": "https://gizmodo.com/palantirs-maga-ceo-after-the-midterms-ive-been-a-democrat-my-whole-life-2000838338",
+  "summary": "Palantir has donated millions to Donald Trump since 2024, with the company’s CEO personally donating roughly $1.9 million to the president’s super PAC and inaugural fund. But now that the Democrats ...",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::alexkarpsayshesalifelongdemocratandpalantirsproductsareessentiallyprogressive": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Alex Karp says he's a lifelong Democrat — and Palantir's products are essentially progressive",
+  "source": "Insider on MSN",
+  "url": "https://www.msn.com/en-us/news/other/alex-karp-says-hes-a-lifelong-democrat-and-palantirs-products-are-essentially-progressive/ar-AA2heomc",
+  "summary": "Palantir CEO Alex Karp told Politico that he's a lifelong Democrat, and that President Donald Trump mishandled immigration.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "PLTR::palantirsnewaidealcouldchangehowyoubuyinsurance": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir's new AI deal could change how you buy insurance",
+  "source": "TheStreet on MSN",
+  "url": "https://www.msn.com/tr-tr/finans/genel/palantir-s-new-ai-deal-could-change-how-you-buy-insurance/ar-AA2hefcU",
+  "summary": "A new partnership could make insurance paperwork easier, but the real benefits remain uncertain.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::ivebeenademocratmywholelifealexkarpsuddenlywantsyoutoknowthatpalantirisprogressive": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "‘I’ve been a Democrat my whole life’: Alex Karp suddenly wants you to know that Palantir is progressive",
+  "source": "Fast Company",
+  "url": "https://www.fastcompany.com/91640402/alex-karp-ceo-democrat-palantir-progressive",
+  "summary": "The billionaire tech boss, who once branded his company as 'anti-woke,' is raising eyebrows across social media with a new interview.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::helsinglaunchesclarityaeuropeanrivaltopalantirsmaven": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Helsing launches Clarity, a European rival to Palantir’s Maven",
+  "source": "The Next Web",
+  "url": "https://thenextweb.com/news/helsing-clarity-palantir-maven-rival-karp-democrat",
+  "summary": "Helsing Clarity runs hundreds of military AI agents on customers’ own servers, as Palantir prepares for a Democratic Congress in Washington.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::3possiblepathsforwardforaistocksbullcasebearcasebasecaseandhowtoinvestforeach": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "3 Possible Paths Forward for AI Stocks (Bull Case, Bear Case, Base Case) -- and How to Invest for Each",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/11/3-possible-paths-forward-for-ai-stocks-bull-case-b/",
+  "summary": "No matter how you feel about AI stocks, there is room for optimism about the future of the stock market.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::oneinvestorsaysanthropicwouldcostlessthanpalantironsalesthatsaproblemforpalantir": {
+  "ticker": "PLTR",
+  "date": "2026-11-12",
+  "title": "One Investor Says Anthropic Would Cost “Less Than Palantir on Sales.” That’s a Problem for Palantir",
+  "source": "TIKR",
+  "url": "https://www.tikr.com/blog/one-investor-says-anthropic-would-cost-less-than-palantir-on-sales-thats-a-problem-for-palantir?ref=yahoofinance&tlnk=yf-261111-pwg7jvj8",
+  "summary": "Key TakeawaysAnthropic set its IPO range at $70 to $78 a share. One investor on Reddit works that out to 35x to 39x trailing sales, compared with 53x for Palantir.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::palantirstockfalls19aswallstreetspotsawarning": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Palantir stock falls 19% as Wall Street spots a warning",
+  "source": "GuruFocus.com",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/palantir-stock-falls-19-wall-121413791.html",
+  "summary": "The software company's latest earnings were strong, but slowing contract growth and a high valuation are raising questions about its share price.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::cathiewoodtrimspalantirstakethebiggerconcernisslowingbusinessgrowth": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "Cathie Wood Trims Palantir Stake. The Bigger Concern Is Slowing Business Growth",
+  "source": "GuruFocus.com",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/cathie-wood-trims-palantir-stake-111358938.html",
+  "summary": "Palantir's Growth Story Faces New Questions After a Sharp Slowdown in Contract Wins",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "PLTR::isharesexpandedtechsoftwareigvbuys229millionmoremicrosoftonnov9": {
+  "ticker": "PLTR",
+  "date": "2026-11-11",
+  "title": "iShares Expanded Tech-Software (IGV) Buys $22.9 Million More Microsoft on Nov. 9",
+  "source": "GuruFocus.com",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/ishares-expanded-tech-software-igv-110406148.html",
+  "summary": "The fund added $242.6 million across 103 positions in Monday's session, led by a $22.9 million increase in Microsoft.",
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  }
