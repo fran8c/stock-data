@@ -1,0 +1,36 @@
+RUN STATUS: OK with gaps
+Run time: 2026-11-12 09:04 SGT
+
+CRITICAL (0): these gaps break the harnesses
+  - none
+
+GAPS (29): expected, marked NOT RETRIEVED in the files
+  - D05.SI: P/B range covers only 45 months, not 5 years
+  - D05.SI: CET1 and its minimum need the bank's own disclosure
+  - D05.SI: next results date not yet announced (last was 2026-11-05)
+  - O39.SI: P/B range covers only 45 months, not 5 years
+  - O39.SI: CET1 and its minimum need the bank's own disclosure
+  - O39.SI: next results date not yet announced (last was 2026-11-06)
+  - U11.SI: P/B range covers only 45 months, not 5 years
+  - U11.SI: CET1 and its minimum need the bank's own disclosure
+  - U11.SI: next results date not yet announced (last was 2026-11-04)
+  - BN4.SI: 5-year P/E range marked UNRELIABLE (high is 10x the low, so earnings or book value changed sharply)
+  - BN4.SI: next results date not yet announced (last was 2026-10-29)
+  - BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed
+  - BS6.SI: next results date not available
+  - U96.SI: P/E range covers only 45 months, not 5 years
+  - U96.SI: next results date not yet announced (last was 2026-08-13)
+  - Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
+  - SPCX: only 105 daily bars (less than a year of history)
+  - SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
+  - SPCX: next results date not yet announced (last was 2026-10-20)
+  - MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
+  - MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 25x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - NVDA: 5-year P/E range marked UNRELIABLE (high is 15x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
+  - Singapore headline CPI: fetch failed (HTTPSConnectionPool(host='tablebuilder.singstat.gov.sg', port=443): Read timed out. (read timeout=25))
+  - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
+  - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
+  - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
+  - News: 579 items have no summary (paywall or site blocks automated visits)
