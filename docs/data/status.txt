@@ -1,5 +1,5 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-14 08:55 SGT
+Run time: 2026-11-17 08:59 SGT
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -27,11 +27,11 @@ GAPS (30): expected, marked NOT RETRIEVED in the files
   - SPCX: next results date not yet announced (last was 2026-10-20)
   - MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
   - MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 23x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - MU: Google News feed failed (HTTPError)
   - NVDA: 5-year P/E range marked UNRELIABLE (high is 16x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
-  - Singapore headline CPI: fetch failed (502 Server Error: Bad Gateway for url: https://tablebuilder.singstat.gov.sg/api/table/tabledata/M213751)
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 762 items have no summary (paywall or site blocks automated visits)
+  - News: 858 items have no summary (paywall or site blocks automated visits)
