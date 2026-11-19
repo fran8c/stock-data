@@ -1,5 +1,5 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-18 09:07 SGT
+Run time: 2026-11-19 09:05 SGT
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -22,7 +22,7 @@ GAPS (30): expected, marked NOT RETRIEVED in the files
   - U96.SI: next results date not available
   - Z74.SI: 5-year P/E range marked UNRELIABLE (high is 7x the low, so earnings or book value changed sharply)
   - Z74.SI: next results date not yet announced (last was 2026-11-13)
-  - SPCX: only 109 daily bars (less than a year of history)
+  - SPCX: only 110 daily bars (less than a year of history)
   - SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - SPCX: next results date not yet announced (last was 2026-10-20)
   - MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
@@ -34,4 +34,4 @@ GAPS (30): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 953 items have no summary (paywall or site blocks automated visits)
+  - News: 1049 items have no summary (paywall or site blocks automated visits)

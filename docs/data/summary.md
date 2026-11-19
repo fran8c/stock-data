@@ -1,34 +1,34 @@
-**Rates:** US 1-year 4.60% (2026-11-17) | SG 1-year 1.92% (2026-10-15)
+**Rates:** US 1-year 4.62% (2026-11-18) | SG 1-year 1.92% (2026-10-15)
 
 **Indices**
 
 | | Last close | Date | 1 day | 1 year |
 |---|---:|---|---:|---:|
-| Straits Times Index | 5,183.18 | 2026-11-16 | -0.9% | +15.1% |
-| S&P 500 | 7,340.53 | 2026-11-17 | -1.0% | +10.9% |
-| Nasdaq Composite | 24,328.38 | 2026-11-17 | -0.7% | +8.4% |
-| Dow Jones Industrial Average | 50,759.42 | 2026-11-17 | -1.6% | +10.1% |
+| Straits Times Index | 5,109.13 | 2026-11-17 | -1.4% | +13.4% |
+| S&P 500 | 7,323.63 | 2026-11-18 | -0.2% | +10.3% |
+| Nasdaq Composite | 24,429.88 | 2026-11-18 | +0.4% | +8.3% |
+| Dow Jones Industrial Average | 50,198.17 | 2026-11-18 | -1.1% | +8.8% |
 
 **Watchlist**
 
 | | Last close | Date | 1 day | 1 year |
 |---|---:|---|---:|---:|
-| DBS Group | 67.70 SGD | 2026-11-17 | -2.3% | +26.1% |
-| OCBC | 27.68 SGD | 2026-11-17 | -2.2% | +51.7% |
-| UOB | 36.70 SGD | 2026-11-17 | -1.8% | +7.8% |
-| Keppel Ltd | 9.27 SGD | 2026-11-17 | -2.9% | -7.2% |
-| Yangzijiang Shipbuilding | 4.32 SGD | 2026-11-17 | -2.5% | +32.5% |
-| Sembcorp Industries | 5.63 SGD | 2026-11-17 | -0.9% | -11.6% |
-| Singtel | 4.10 SGD | 2026-11-17 | +2.5% | -15.8% |
-| SpaceX | 137.36 USD | 2026-11-16 | -1.3% | -14.7% * |
-| Marvell Technology | 145.36 USD | 2026-11-16 | -7.3% | +84.7% |
-| Micron Technology | 719.02 USD | 2026-11-16 | -7.6% | +214.7% |
-| Nvidia | 156.14 USD | 2026-11-16 | -4.1% | -13.9% |
-| Palantir | 160.39 USD | 2026-11-16 | -4.5% | -4.1% |
+| DBS Group | 66.94 SGD | 2026-11-18 | -1.1% | +24.7% |
+| OCBC | 27.40 SGD | 2026-11-18 | -1.0% | +50.9% |
+| UOB | 36.13 SGD | 2026-11-18 | -1.6% | +6.8% |
+| Keppel Ltd | 9.12 SGD | 2026-11-18 | -1.6% | -9.3% |
+| Yangzijiang Shipbuilding | 4.39 SGD | 2026-11-18 | +1.6% | +31.0% |
+| Sembcorp Industries | 5.61 SGD | 2026-11-18 | -0.4% | -10.8% |
+| Singtel | 4.04 SGD | 2026-11-18 | -1.5% | -16.9% |
+| SpaceX | 141.70 USD | 2026-11-17 | +3.2% | -12.0% * |
+| Marvell Technology | 148.74 USD | 2026-11-17 | +2.3% | +82.9% |
+| Micron Technology | 712.42 USD | 2026-11-17 | -0.9% | +215.3% |
+| Nvidia | 155.46 USD | 2026-11-17 | -0.4% | -16.7% |
+| Palantir | 156.56 USD | 2026-11-17 | -2.4% | -5.4% |
 
 \* Less than a year of prices: SpaceX since 2026-06-12.
 
-**Biggest 1-day moves:** Micron Technology -7.6%, Marvell Technology -7.3%, Palantir -4.5%
+**Biggest 1-day moves:** SpaceX +3.2%, Palantir -2.4%, Marvell Technology +2.3%
 
 **Coming up (next 14 days):** 2026-11-30 Z74.SI ex-dividend; 2026-12-01 MRVL results
 
