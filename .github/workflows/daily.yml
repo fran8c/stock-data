@@ -1,5 +1,5 @@
 # Runs the pipeline every Tuesday to Saturday at about 8am Singapore time,
-# and again within a minute or two whenever watchlist.txt is edited.
+# and again within a minute or two whenever watchlist.txt or peers.txt is edited.
 # It saves the new files into the repo and republishes the dashboard.
 # You can also start it by hand: Actions tab -> "Daily stock data" -> Run workflow.
 
@@ -11,10 +11,10 @@ on:
     # Days 2-6 = Tuesday to Saturday (after US Monday to Friday sessions).
     # Minute 7, not 0, because runs set for the top of the hour queue longest.
     - cron: "7 0 * * 2-6"
-  # Also run straight away whenever watchlist.txt is saved (edited) on GitHub.
+  # Also run straight away whenever watchlist.txt or peers.txt is saved (edited) on GitHub.
   push:
     branches: [main]
-    paths: [watchlist.txt]
+    paths: [watchlist.txt, peers.txt]
   workflow_dispatch:
 
 permissions:
