@@ -1,0 +1,16 @@
+# PEERS — the 2 closest listed peers for each watchlist stock, used by the
+# Individual Stock Harness as peer_data. Edit freely.
+#
+# Format:   SYMBOL | PEER1, PEER2        (Yahoo Finance symbols)
+#
+# Peers that are not on watchlist.txt get a one-year price file and a
+# dividend file too (no news or fundamentals). A stock with no line here is
+# fine: the harness will suggest peers and ask you to confirm them.
+# Lines starting with # are ignored.
+
+D05.SI | O39.SI, U11.SI
+O39.SI | D05.SI, U11.SI
+U11.SI | D05.SI, O39.SI
+BN4.SI | U96.SI, C07.SI
+MRVL | AVGO, NVDA
+NVDA | AMD, AVGO

@@ -6,6 +6,7 @@ everything into docs/data/, which GitHub Pages publishes:
 
   prices/<SYMBOL>.csv     one year of daily bars (real Close, not adjusted)
   dividends/<SYMBOL>.csv  dividends and splits, last two years
+                          (also written for peers listed in peers.txt)
   data_pack.txt           figures for the Stock Selection Harness
   news_pack.txt           last 30 days of news for both harnesses
   status.txt              what worked and what didn't on this run
@@ -44,6 +45,7 @@ import requests
 # ----------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent
 WATCHLIST = ROOT / "watchlist.txt"
+PEERS_FILE = ROOT / "peers.txt"   # peer lists for the Individual Stock Harness
 OUT = ROOT / "docs" / "data"
 PRICES = OUT / "prices"
 DIVS = OUT / "dividends"
@@ -203,6 +205,50 @@ def read_watchlist(path=WATCHLIST):
     if len(items) > 15:
         R.warn(f"Watchlist has {len(items)} names; the Stock Selection Harness takes 15 at most")
     return items
+
+
+def read_peers(path=PEERS_FILE):
+    """peers.txt lines: SYMBOL | PEER1, PEER2 (Yahoo symbols). Returns {symbol: [peers]}."""
+    peers = {}
+    if not path.exists():
+        return peers
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        s = raw.strip()
+        if not s or s.startswith("#") or "|" not in s:
+            continue
+        sym, rest = [p.strip() for p in s.split("|", 1)]
+        lst = [p.strip().upper() for p in rest.replace(";", ",").split(",") if p.strip()]
+        if sym:
+            peers[sym.upper()] = lst
+    return peers
+
+
+def market_of(symbol):
+    """Which benchmark a symbol's trading calendar follows."""
+    return "^STI" if symbol.endswith(".SI") or symbol == "^STI" else "^GSPC"
+
+
+def lag_check(last_dates, bench_syms):
+    """
+    Flag any price file whose last bar is behind the newest bar in its market.
+    A one-session lag is common (Yahoo publishes some bars late) and breaks
+    comparisons in the harness, so it goes in the status banner as a gap.
+    """
+    newest = {}
+    for sym, d in last_dates.items():
+        m = market_of(sym)
+        newest[m] = max(newest.get(m, d), d)
+    lagging = []
+    for sym, d in sorted(last_dates.items()):
+        m = market_of(sym)
+        if d < newest[m]:
+            kind = "benchmark" if sym in bench_syms else "price file"
+            R.warn(f"{sym}: {kind} ends {d}, behind the newest {m.replace('^GSPC', 'US').replace('^STI', 'SGX')} bar ({newest[m]}) - "
+                   "re-run later or the harness will mark that session as not in the data")
+            lagging.append(sym)
+    if not lagging:
+        R.good("Lag check: every price file is up to date with its market")
+    return lagging
 
 
 # ----------------------------------------------------------------------------
@@ -998,13 +1044,14 @@ def edit_url():
     return f"https://github.com/{repo}/edit/{branch}/watchlist.txt" if "/" in repo else ""
 
 
-def archive_removed(watch):
+def archive_removed(watch, extra_keep=()):
     """
     Names taken off the watchlist: move their price and dividend files to
     docs/data/archive/. Names put back on: delete the old archived copy,
     because a fresh full history is downloaded anyway.
     """
-    keep = {safe_name(i["symbol"]) for i in watch} | {safe_name(b) for b, _ in BENCHMARKS}
+    keep = ({safe_name(i["symbol"]) for i in watch} | {safe_name(b) for b, _ in BENCHMARKS}
+            | {safe_name(s) for s in extra_keep})
     moved = set()
     for folder in ("prices", "dividends"):
         src, dst = OUT / folder, ARCHIVE / folder
@@ -1045,8 +1092,12 @@ def archive_news(store, watch):
 def main():
     watch = read_watchlist()
     print(f"Watchlist: {len(watch)} names")
-    archive_removed(watch)
+    peers = read_peers()
+    on_list = {i["symbol"] for i in watch} | {b for b, _ in BENCHMARKS}
+    peer_only = sorted({p for lst in peers.values() for p in lst} - on_list)
+    archive_removed(watch, peer_only)
     stock_blocks, dash_stocks, dash_bench, fresh_news = [], [], [], []
+    last_dates = {}
 
     # Stocks
     for item in watch:
@@ -1098,6 +1149,7 @@ def main():
             "first_date": prices["Date"].iloc[0], "closes": [round(c, 4) for c in closes],
         })
         R.good(f"{sym}: {len(prices)} bars to {prices['Date'].iloc[-1]}")
+        last_dates[sym] = prices["Date"].iloc[-1]
         time.sleep(1.5)
 
     # Benchmarks
@@ -1110,9 +1162,32 @@ def main():
                                "chg_1d": (closes[-1] / closes[-2] - 1) * 100, "chg_1y": (closes[-1] / closes[0] - 1) * 100,
                                "first_date": prices["Date"].iloc[0], "closes": [round(c, 2) for c in closes]})
             R.good(f"{sym}: {len(prices)} bars")
+            last_dates[sym] = prices["Date"].iloc[-1]
         except Exception as e:  # noqa: BLE001
             R.crit(f"{sym} ({name}): prices failed - {e}")
         time.sleep(1.5)
+
+    # Peers (prices and dividends only; a failure is a gap, not a run failure)
+    for sym in peer_only:
+        try:
+            tk = yf_ticker(sym)
+            prices = write_prices(sym, fetch_history(tk, sym))
+            if prices.empty:
+                raise RuntimeError("no bars in the last year")
+            try:
+                write_dividends(sym, tk)
+            except Exception:  # noqa: BLE001
+                pass
+            last_dates[sym] = prices["Date"].iloc[-1]
+            R.good(f"{sym} (peer): {len(prices)} bars")
+        except Exception as e:  # noqa: BLE001
+            R.warn(f"{sym} (peer): prices {NR} - {e}")
+        time.sleep(1.5)
+    no_peers = [i["symbol"] for i in watch if not peers.get(i["symbol"])]
+    if no_peers:
+        R.warn("No peers in peers.txt for: " + ", ".join(no_peers) + " - the harness will suggest some")
+
+    lag_check(last_dates, {b for b, _ in BENCHMARKS})
 
     # Rates and macro
     macro = market_figures()
@@ -1146,12 +1221,15 @@ def main():
                  + f"\n\n# HEADLINES ONLY ({len(headline_only)}) - no summary could be retrieved. "
                    "Treat each as unverified: a headline alone can mislead. Open the link before relying on it.\n"
                  + ("\n".join(headline_only) if headline_only else "None."))
-    symbols = [i["symbol"] for i in watch] + [b[0] for b in BENCHMARKS]
+    symbols = [i["symbol"] for i in watch] + [b[0] for b in BENCHMARKS] + peer_only
 
     write_text("status.txt", status)
     write_text("data_pack.txt", status + "\n\n" + data_pack)
     write_text("news_pack.txt", news_pack)
-    write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols), data_pack, news_pack]))
+    peer_lines = ["PEERS (from peers.txt; use as peer_data in the Individual Stock Harness):"]
+    peer_lines += [f"  {s}: {', '.join(peers.get(s, [])) or 'none listed - the harness will suggest peers'}" for s in [i["symbol"] for i in watch]]
+    write_text("peers.txt", "\n".join(peer_lines))
+    write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols), "\n".join(peer_lines), data_pack, news_pack]))
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
     for s in dash_stocks:
