@@ -1141,6 +1141,20 @@ def bars_frame(hist):
     return df
 
 
+def retire_setups():
+    """GitHub provides statistics only (21 Nov 2026): remove the old trade-setup files and fields."""
+    for f in (OUT / "indicators").glob("*_setups.csv") if (OUT / "indicators").exists() else []:
+        f.unlink()
+    for f in list((OUT / "indicators").glob("*_latest.json")) + list(HISTORY.glob("*/indicators/*_latest.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+            if "setups" in d:
+                d.pop("setups")
+                f.write_text(json.dumps(d, indent=1, default=str), encoding="utf-8")
+        except Exception:  # noqa: BLE001
+            pass
+
+
 def archive_indicators(watch):
     """Indicator files of names taken off the watchlist go to archive/indicators/."""
     folder = OUT / "indicators"
@@ -1150,7 +1164,7 @@ def archive_indicators(watch):
     for f in folder.iterdir():
         if f.name == "COLUMNS.md":
             continue
-        stem = re.sub(r"(_weeks|_latest|_ledger|_setups)$", "", f.stem)
+        stem = re.sub(r"(_weeks|_latest|_ledger|_scores)$", "", f.stem)
         if stem not in live:
             dst = ARCHIVE / "indicators"
             dst.mkdir(parents=True, exist_ok=True)
@@ -1167,7 +1181,7 @@ def file_index(symbols, watch_syms=()):
         lines.append("INDICATOR LEDGERS (official pre-computed harness indicators; latest day as text, every day as CSV; "
                      f"column guide: {base}indicators/COLUMNS.md):")
         lines += [f"  {s}: {base}indicators/{safe_name(s)}_ledger.txt | daily {base}indicators/{safe_name(s)}.csv | "
-                  f"weekly {base}indicators/{safe_name(s)}_weeks.csv | setups {base}indicators/{safe_name(s)}_setups.csv"
+                  f"weekly {base}indicators/{safe_name(s)}_weeks.csv | pillar readings {base}indicators/{safe_name(s)}_scores.csv"
                   for s in watch_syms]
     return "\n".join(lines)
 
@@ -1324,6 +1338,7 @@ def main():
     blocks, dash_stocks, dash_bench, fresh_news = {}, {}, {}, []
     indicator_latest, indicator_frames = {}, {}
     archive_indicators(watch)
+    retire_setups()
     for item in run_watch:
         sym = item["symbol"]
         R.scope = market_of(sym)
@@ -1481,20 +1496,21 @@ def main():
         R.warn(f"News pack filter failed ({e.__class__.__name__}: {e}); news_pack.txt holds the unfiltered list")
         traceback.print_exc()
         sections, kept_news, ncount = None, {}, None
-    # Official pillar scores and trade levels for this run's stocks (catalyst = rating changes only)
+    # Pillar readings as neutral statistics for this run's stocks (no trade levels or labels)
     for sym, (item, d_ind, w_ind, m) in indicator_frames.items():
         R.scope = m
         try:
             ratings = pillars.rating_items(store, item)
             s_hist, s_latest = pillars.build(sym, d_ind, indicator_latest[sym], m, ratings)
             latest = indicator_latest[sym]
-            latest["setups"] = s_latest
-            latest["setups_ledger"] = pillars.ledger_lines(s_latest)
+            latest["scores"] = s_latest
+            latest["extra_ledger"] = pillars.ledger_lines(s_latest)
             indicators.write_outputs(sym, d_ind, w_ind, latest)
-            s_hist.to_csv(OUT / "indicators" / f"{safe_name(sym)}_setups.csv", index=False, float_format="%.4f")
-            R.good(f"{sym}: setups - {s_latest['action'] if s_latest else 'not computed'}")
+            s_hist.to_csv(OUT / "indicators" / f"{safe_name(sym)}_scores.csv", index=False, float_format="%.4f")
+            R.good(f"{sym}: scores - microstructure {s_latest['microstructure']['label']}, momentum {s_latest['momentum']['label']}"
+                   if s_latest else f"{sym}: scores not computed")
         except Exception as e:  # noqa: BLE001
-            R.warn(f"{sym}: pillar scores failed ({e.__class__.__name__}: {e})")
+            R.warn(f"{sym}: pillar statistics failed ({e.__class__.__name__}: {e})")
             traceback.print_exc()
 
     if sections is not None:
@@ -1528,6 +1544,17 @@ def main():
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
     for s in all_stocks:
+        # the pillar readings (statistics only), from the indicator files (this run or the market's last run)
+        try:
+            lt = json.loads((OUT / "indicators" / f"{safe_name(s['symbol'])}_latest.json").read_text(encoding="utf-8"))
+            sc = lt.get("scores") or {}
+            s["scores"] = {"confluence": (lt.get("values") or {}).get("confluence_final"),
+                           "micro": (sc.get("microstructure") or {}).get("label"),
+                           "momentum": (sc.get("momentum") or {}).get("label"),
+                           "upgrades": (sc.get("ratings_14d") or {}).get("upgrades"),
+                           "downgrades": (sc.get("ratings_14d") or {}).get("downgrades")} if sc else None
+        except Exception:  # noqa: BLE001
+            s["scores"] = None
         if s["symbol"] in kept_news:   # the filtered, price-relevant items
             s["news"] = [{**{k: n.get(k) for k in ("date", "title", "source", "url", "tag", "summary")},
                           "event": n.get("event"), "big_move": bool((n.get("rx") or {}).get("big"))}
@@ -1555,7 +1582,7 @@ def main():
         frozen.mkdir(parents=True, exist_ok=True)
         for s_, lt in indicator_latest.items():
             (frozen / f"{safe_name(s_)}_latest.json").write_text(
-                json.dumps({k: v for k, v in lt.items() if k != "setups_ledger"}, indent=1, default=str), encoding="utf-8")
+                json.dumps({k: v for k, v in lt.items() if k != "extra_ledger"}, indent=1, default=str), encoding="utf-8")
 
     # What this run did, for the report notice and the STALE alert (see daily.yml)
     write_text("run_result.json", json.dumps({

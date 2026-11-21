@@ -62,17 +62,13 @@ Every run works out all the Individual Stock Harness indicators for every tradin
 
 A frozen copy of each day's latest figures is saved in `docs/data/history/YYYY-MM-DD/indicators/`. Past rows are recalculated each run, so if Yahoo corrects an old bar, the history picks up the correction. The figures were checked against the 21 Nov 2026 harness runs for DBS, OCBC, Keppel, Marvell and Nvidia (174 of 174 match to 4 decimals).
 
-## Setups and pillar scores (official)
+## Stock pages (charts of every figure)
 
-Each run also applies the harness's trade rules (Individual Stock Harness v3.2.1) to every day of the ledger: bias, every allowed buy and short setup with entry, stop, TP1, TP2 and reward-to-risk, the fill check against the next two weeks' ranges, the time stop, and the four pillars with each reading. Files in `docs/data/indicators/`: `<SYMBOL>_setups.csv` (one row per day) and a SETUPS section in `<SYMBOL>_ledger.txt` and `<SYMBOL>_latest.json`.
+Each stock card on the dashboard has a **Charts & figures** button that opens `stock.html?s=<SYMBOL>`. The page shows the latest official figures and action, then charts with a hover readout. Charts cover: price with VWAP10, Kijun and the Ichimoku cloud; expected range and nearest levels; ATR14; 52-week position; CVD10; UDVR10; volume ratio; VT5/20; MACD; Ichimoku score; 20-day relative strength vs each benchmark and peer; the Darvas box; confluence; and the pillar reading counts. You can also pick **any** column to chart, see today's pillar readings, and see the full daily table. Period buttons: 1M, 3M, 6M, 1Y. It works in light and dark mode and needs no extra software (plain HTML, no outside libraries).
 
-The catalyst pillar counts **broker rating changes only** (upgrades, downgrades, initiations). Other news is left for the AI, which completes the pillar and flags any difference. So each setup shows one of:
+## Pillar readings (statistics, not advice)
 
-- **proposed on technicals**: all 3 price-based pillars support it (it meets the 3-of-4 minimum whatever the news);
-- **depends on catalyst**: 2 of 3 support it, so it is proposed only if the AI scores the catalyst pillar SUPPORTS;
-- **not proposed**: fewer than 2 support it, or reward-to-risk fails.
-
-Checked against the 21 Nov 2026 harness runs: entries, stops, targets, R, technical pillars and time stops match for DBS, OCBC, Keppel, Marvell and Nvidia (26 of 27; the one difference is a half-tick tie, which is now rounded half up).
+GitHub provides statistics and news only. It sets **no** entries, stops, targets or buy/sell labels; the AI harness does all trade reasoning. Each run records, for every day, the readings behind the harness's pillars as plain counts: microstructure (4 readings), momentum (3 readings), structure facts (Darvas status, distance to the nearest support and resistance in % and ATRs) and broker rating changes in the last 14 days. Files in `docs/data/indicators/`: `<SYMBOL>_scores.csv` (one row per day), and a SCORES section in `<SYMBOL>_ledger.txt` and `<SYMBOL>_latest.json`. The readings were checked against the 21 Nov 2026 harness runs for DBS, OCBC, Keppel, Marvell and Nvidia.
 
 ## News pack (short, price-relevant)
 
@@ -132,7 +128,7 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 | `pipeline.py` | The script that collects everything |
 | `indicators.py` | Works out the indicator ledger (called by `pipeline.py`) |
 | `newsfilter.py` | Builds the short, price-relevant news pack (called by `pipeline.py`) |
-| `pillars.py` | Works out the setups and pillar scores (called by `pipeline.py`) |
+| `pillars.py` | Works out the pillar readings as statistics (called by `pipeline.py`) |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |
