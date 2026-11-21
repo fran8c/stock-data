@@ -5,8 +5,8 @@
 # Each run collects only its own market's stocks, benchmarks and peers, re-pulls
 # any price file that misses the latest session, then rebuilds the packs and the
 # dashboard (the other market's figures are kept from its last run).
-# It also runs (both markets) within a minute or two whenever watchlist.txt or
-# peers.txt is edited. You can start it by hand: Actions tab -> "Daily stock
+# It also runs (both markets) within a minute or two whenever watchlist.txt,
+# peers.txt or report_list.txt is edited. You can start it by hand: Actions tab -> "Daily stock
 # data" -> Run workflow -> pick the market.
 
 name: Daily stock data
@@ -18,10 +18,10 @@ on:
     # hour late. If you change a line here, change it in "Pick the market" too.
     - cron: "7 14 * * 1-5"   # SGX run: 14:07 UTC = 22:07 SGT, Mon-Fri
     - cron: "7 2 * * 2-6"    # US run:  02:07 UTC = 10:07 SGT, Tue-Sat
-  # Also run straight away whenever watchlist.txt or peers.txt is saved (edited) on GitHub.
+  # Also run straight away whenever watchlist.txt, peers.txt or report_list.txt is saved (edited) on GitHub.
   push:
     branches: [main]
-    paths: [watchlist.txt, peers.txt]
+    paths: [watchlist.txt, peers.txt, report_list.txt]
   workflow_dispatch:
     inputs:
       market:
@@ -178,7 +178,7 @@ jobs:
               verdict += ". Dashboard NOT updated (publishing step failed)"
 
           when = datetime.now(timezone(timedelta(hours=8))).strftime("%a %d %b %Y, %H:%M SGT")
-          trigger = {"schedule": "daily schedule", "push": "watchlist edit",
+          trigger = {"schedule": "daily schedule", "push": "watchlist or report list edit",
                      "workflow_dispatch": "started by hand"}.get(env.get("TRIGGER"), env.get("TRIGGER"))
           lines = [
               f"@{env['OWNER']} **{verdict}**",
