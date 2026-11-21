@@ -62,6 +62,16 @@ Every run works out all the Individual Stock Harness indicators for every tradin
 
 A frozen copy of each day's latest figures is saved in `docs/data/history/YYYY-MM-DD/indicators/`. Past rows are recalculated each run, so if Yahoo corrects an old bar, the history picks up the correction. The figures were checked against the 21 Nov 2026 harness runs for DBS, OCBC, Keppel, Marvell and Nvidia (174 of 174 match to 4 decimals).
 
+## News pack (short, price-relevant)
+
+The job still reads 30 days of news (Google News, Bing News, Yahoo) into `news_store.json`. For the harness it then keeps, per stock, only:
+
+- items **about the company itself**: its name in the headline; not research the company publishes about others (e.g. "OCBC keeps BUY on Seatrium"), not an affiliate trust or REIT, not one name in a list;
+- **price-relevant event types**: results, guidance, rating changes (maintained calls and target-only changes are dropped), deals and contracts, dividends / buybacks / share or bond issues, regulators and legal, management changes, index changes;
+- the **14 days** to the stock's last bar, at most **15 items**, ranked by relevance (big-move days and better sources first; repeat coverage merged).
+
+Each item shows its trading day's change %, gap % and volume ratio, with **BIG MOVE** when the change is at least 1.5%, the gap at least 1.0% or volume at least 1.5x normal. Each stock also lists **big-move days with no news kept**, so you know where to look. The rules are keyword-based, so check an item before relying on it. The full unfiltered list is in `news_all.txt`. Sector, country and global news are not in the pack: the harness searches for those itself.
+
 ## Late bars and STALE alerts
 
 Yahoo sometimes publishes a day's bar late. Each run checks every price file against its market's latest session (weekends and the closures in `holidays.txt` are skipped; early-close days still count as sessions). Any file that is behind is re-pulled up to 2 more times, 15 minutes apart. If it is still behind, the job opens an issue titled like **STALE: MRVL, NVDA behind (US run)**, which emails you. The next run of that market closes the issue once the files catch up. No issue means everything is up to date.
@@ -105,6 +115,7 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 | `holidays.txt` | Market closures and early closes (for the stale check and the outlook ranges) |
 | `pipeline.py` | The script that collects everything |
 | `indicators.py` | Works out the indicator ledger (called by `pipeline.py`) |
+| `newsfilter.py` | Builds the short, price-relevant news pack (called by `pipeline.py`) |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |

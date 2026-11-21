@@ -42,6 +42,7 @@ import pandas as pd
 import requests
 
 import indicators   # the official indicator ledger (indicators.py, same folder)
+import newsfilter   # the short, price-relevant news pack (newsfilter.py)
 
 # ----------------------------------------------------------------------------
 # Settings
@@ -1463,23 +1464,44 @@ def main():
               "SGX and US names are collected by separate runs about 5 hours after each market's close; "
               "the status above shows when each market was last collected.")
     data_pack = "\n\n".join([header, "# MARKET-WIDE", "\n".join(macro), *stock_blocks])
-    news_header = (f"NEWS PACK - last {NEWS_DAYS} days, generated {RUN_STAMP}\n"
-                   "Format: <ticker> | <date> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | <facts>\n"
-                   "Facts = the outlet's own preview text or the news feed's description (max 50 words), not the full article; "
-                   "'[summary from X]' means it was taken from outlet X's report of the same story. "
-                   "Trust tags are rule-based: PRIMARY = press wire or official filing; "
-                   "CORROBORATED = similar headline from another outlet within 2 days.")
-    news_pack = (news_header
-                 + f"\n\n# ITEMS WITH A SUMMARY ({len(with_sum)})\n"
-                 + ("\n".join(with_sum) if with_sum else "None on this run.")
-                 + f"\n\n# HEADLINES ONLY ({len(headline_only)}) - no summary could be retrieved. "
-                   "Treat each as unverified: a headline alone can mislead. Open the link before relying on it.\n"
-                 + ("\n".join(headline_only) if headline_only else "None."))
+    # Full 30-day list (for reference) and the short, price-relevant pack (for the harness)
+    all_header = (f"ALL NEWS - last {NEWS_DAYS} days, unfiltered, generated {RUN_STAMP}. For reference only: "
+                  "the harness uses news_pack.txt, which keeps only price-relevant company items.\n"
+                  "Format: <ticker> | <date> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | <facts>")
+    news_all = (all_header
+                + f"\n\n# WITH A SUMMARY ({len(with_sum)})\n" + ("\n".join(with_sum) if with_sum else "None.")
+                + f"\n\n# HEADLINE ONLY ({len(headline_only)})\n" + ("\n".join(headline_only) if headline_only else "None."))
+    try:
+        sections, kept_news, ncount = newsfilter.build_pack(store, watch, OUT / "indicators", TODAY_S, clean, NO_SUMMARY)
+    except Exception as e:  # noqa: BLE001
+        R.scope = "general"
+        R.warn(f"News pack filter failed ({e.__class__.__name__}: {e}); news_pack.txt holds the unfiltered list")
+        traceback.print_exc()
+        sections, kept_news, ncount = None, {}, None
+    if sections is not None:
+        news_header = (f"NEWS PACK - price-relevant company news, {newsfilter.WINDOW_DAYS} days to each stock's last bar, "
+                       f"at most {newsfilter.MAX_ITEMS} items per stock, generated {RUN_STAMP}\n"
+                       "Kept: items about the company itself (name in the headline; not research it publishes about others; not an "
+                       "affiliate trust or REIT; not one name in a list) of these event types: RESULTS, GUIDANCE, RATING CHANGE "
+                       "(maintained calls and target-only changes are dropped), DEAL, CAPITAL, REGULATORY / LEGAL, MANAGEMENT, INDEX. "
+                       "Commentary, opinion, forecasts and CSR are dropped. Rules are keyword-based: check an item before relying on it.\n"
+                       "Format: <date> | <event type> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | "
+                       "day <trading day>: chg <change %> gap <gap %> vol <volume ratio> [BIG MOVE] | <facts, or the no-summary note>\n"
+                       "The day figures come from the indicator ledger (chg is dividend-adjusted). BIG MOVE = |change| >= 1.5%, "
+                       "|gap| >= 1.0% or volume >= 1.5x normal. 'BIG-MOVE DAYS WITH NO NEWS KEPT' lists days to search for news.\n"
+                       "Sector, country and global news are not in this pack: the harness searches for those.\n"
+                       f"Totals: # ITEMS WITH A SUMMARY ({ncount['with_summary']})  # HEADLINES ONLY ({ncount['headline_only']}) "
+                       "(headline-only items are unverified: open the link before relying on them). "
+                       "The full 30-day list is in news_all.txt.")
+        news_pack = news_header + "\n\n" + "\n\n".join(sections)
+    else:
+        news_pack = news_all
     symbols = [i["symbol"] for i in watch] + [b[0] for b in BENCHMARKS] + peer_only
 
     write_text("status.txt", status)
     write_text("data_pack.txt", status + "\n\n" + data_pack)
     write_text("news_pack.txt", news_pack)
+    write_text("news_all.txt", news_all)
     peer_lines = ["PEERS (from peers.txt; use as peer_data in the Individual Stock Harness):"]
     peer_lines += [f"  {s}: {', '.join(peers.get(s, [])) or 'none listed - the harness will suggest peers'}" for s in [i["symbol"] for i in watch]]
     write_text("peers.txt", "\n".join(peer_lines))
@@ -1487,8 +1509,13 @@ def main():
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
     for s in all_stocks:
-        s["news"] = [{k: n.get(k) for k in ("date", "title", "source", "url", "tag", "summary")}
-                     for n in recent if n["ticker"] == s["symbol"]][:6]
+        if s["symbol"] in kept_news:   # the filtered, price-relevant items
+            s["news"] = [{**{k: n.get(k) for k in ("date", "title", "source", "url", "tag", "summary")},
+                          "event": n.get("event"), "big_move": bool((n.get("rx") or {}).get("big"))}
+                         for n in kept_news[s["symbol"]]][:6]
+        else:
+            s["news"] = [{k: n.get(k) for k in ("date", "title", "source", "url", "tag", "summary")}
+                         for n in recent if n["ticker"] == s["symbol"]][:6]
     dash = {"generated": RUN_STAMP, "status": {"critical": crit_all, "warnings": gaps_all},
             "market_runs": {m: (parts[m] or {}).get("run_stamp") for m in MARKETS},
             "stocks": all_stocks, "benchmarks": all_bench,
