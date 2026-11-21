@@ -39,3 +39,4 @@ Prices are each market's latest close. SGX and US dates can differ because of ti
 - DBS Group (D05 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
 - Keppel Ltd (BN4 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
 - Marvell Technology (MRVL on NASDAQ, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt
+- Nvidia (NVDA on NASDAQ, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/NVDA_data.txt

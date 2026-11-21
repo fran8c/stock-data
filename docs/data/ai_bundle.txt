@@ -1,13 +1,13 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 21:39 SGT
+Run time: 2026-11-21 22:00 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 21:39 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 21:39 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 22:00 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 22:00 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (32): expected, marked NOT RETRIEVED in the files
+GAPS (33): expected, marked NOT RETRIEVED in the files
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -20,16 +20,17 @@ GAPS (32): expected, marked NOT RETRIEVED in the files
   - [SGX] BN4.SI: next results date not yet announced (last was 2026-10-29)
   - [SGX] BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed
   - [SGX] BS6.SI: next results date not available
-  - [SGX] BS6.SI: Google News feed failed (HTTPError)
   - [SGX] U96.SI: P/E range covers only 45 months, not 5 years
   - [SGX] U96.SI: next results date not available
   - [SGX] Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
   - [SGX] Z74.SI: next results date not yet announced (last was 2026-11-13)
+  - [SGX] Z74.SI: Google News feed failed (HTTPError)
   - [SGX] No peers in peers.txt for: BS6.SI, U96.SI, Z74.SI - the harness will suggest some
   - [US] SPCX: only 113 daily bars (less than a year of history)
   - [US] SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - [US] SPCX: next results date not yet announced (last was 2026-10-20)
   - [US] MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
+  - [US] MRVL: Google News feed failed (HTTPError)
   - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: next results date not yet announced (last was 2026-11-17)
@@ -105,7 +106,7 @@ PEERS (from peers.txt; use as peer_data in the Individual Stock Harness):
   NVDA: AMD, AVGO
   PLTR: none listed - the harness will suggest peers
 
-DATA PACK - generated 2026-11-21 21:39 SGT
+DATA PACK - generated 2026-11-21 22:00 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -335,7 +336,7 @@ PLTR next results date | 2027-02-01 | Next earnings date per Yahoo (estimated if
 PLTR most recent results date | 2026-11-02 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-21
 PLTR ex-dividend date | NOT RETRIEVED | No ex-dividend date reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-21
 
-NEWS PACK - price-relevant company news, 14 days to each stock's last bar, at most 15 items per stock, generated 2026-11-21 21:39 SGT
+NEWS PACK - price-relevant company news, 14 days to each stock's last bar, at most 15 items per stock, generated 2026-11-21 22:00 SGT
 Kept: items about the company itself (name in the headline; not research it publishes about others; not an affiliate trust or REIT; not one name in a list) of these event types: RESULTS, GUIDANCE, RATING CHANGE (maintained calls and target-only changes are dropped), DEAL, CAPITAL, REGULATORY / LEGAL, MANAGEMENT, INDEX. Commentary, opinion, forecasts and CSR are dropped. Rules are keyword-based: check an item before relying on it.
 Format: <date> | <event type> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | day <trading day>: chg <change %> gap <gap %> vol <volume ratio> [BIG MOVE] | <facts, or the no-summary note>
 The day figures come from the indicator ledger (chg is dividend-adjusted). BIG MOVE = |change| >= 1.5%, |gap| >= 1.0% or volume >= 1.5x normal. 'BIG-MOVE DAYS WITH NO NEWS KEPT' lists days to search for news.
@@ -422,8 +423,8 @@ Dropped: 30 no price-relevant event type; 13 research or commentary by the compa
 2026-11-06 | MANAGEMENT | Ex-ST Engineering, Singtel executive Low Ka Hoe to succeed Tong Yew Heng as Netlink NBN Trust CEO (+1 similar report) | The Business Times | https://news.google.com/rss/articles/CBMi2AFBVV95cUxPRkJYcVVPZHdBSXdWbzhCZHhILVlBazh1YjFWRW1HQWY5bERObjBZTUxlcmtDcS04QXJJcFNOWks4SEw1c09KSk5wSWdFZUZJTGpENVliVGJCQ1VQbTM3T0xtRDRfMmU0eFh5NUl2OS1JUllOTE5tUVREeWMxR3ZlOGpyLVVzRzFUWGFCZmoxNklCYkotMGhFLTU3RXpmbWNabFJ0SGxjN2Q5UmhnS0lpYnNHQlZLdDVmQ0RLSVFCal9wZWtTLW4zenJaMWVWN1Y1Xy1rT3NidjU?oc=5 | CORROBORATED | day 2026-11-06: chg -2.85% gap -3.56% vol 1.59x BIG MOVE | NetLink NBN Trust names ex-ST Engineering and Singtel executive Low Ka Hoe as its next CEO, succeeding Tong Yew Heng in 2027. Read more at straitstimes.com. [summary from The Straits Times]
 BIG-MOVE DAYS WITH NO NEWS KEPT: 2026-11-11 (chg +1.22%, gap +1.22%, vol 0.95x); 2026-11-19 (chg +3.96%, gap +0.99%, vol 1.85x)
 
-## SPCX - SpaceX | window 2026-11-06 to 2026-11-21 (last bar 2026-11-20) | kept 15 of 309 items
-Dropped: 102 no price-relevant event type; 82 commentary / opinion / other; 72 company not in headline; 16 mentioned in passing (list of names); 7 research or commentary by the company about others; 6 merged as repeat coverage; 9 lower-ranked items over the 15-item cap
+## SPCX - SpaceX | window 2026-11-06 to 2026-11-21 (last bar 2026-11-20) | kept 15 of 310 items
+Dropped: 102 no price-relevant event type; 82 commentary / opinion / other; 73 company not in headline; 16 mentioned in passing (list of names); 7 research or commentary by the company about others; 6 merged as repeat coverage; 9 lower-ranked items over the 15-item cap
 2026-11-18 | CAPITAL | SpaceX To Self-Fund Majority Of Compute Expansion, CFO Says, As Bond Sale For AI Chips Reportedly Nears | Yahoo Finance | https://stocktwits.com/news-articles/markets/equity/space-x-to-self-fund-majority-of-compute-expansion-cfo-says-as-bond-sale-for-ai-chips-reportedly-nears/cNbXjL9R9hL | SINGLE-SOURCE | day 2026-11-18: chg +1.27% gap +1.09% vol 0.76x BIG MOVE | SpaceX CFO Bret Johnsen said the company will fund much of its AI and growth push through tighter cash-flow management and short paybacks.
 2026-11-18 | CAPITAL | SPCX Stock In Focus: SpaceX To Reportedly Launch $4B Bond Sale This Week | Yahoo Finance | https://news.google.com/rss/articles/CBMioAFBVV95cUxPTDhCTnBDb1BBTWh3cGNMeERZajBFRDFLNFBqVWdPZGlRUGxZZWtxN3hhaFJBVzRLSG02bEowUi15eXhfa0lINWVLMzRBb2h0V2hwbHgtUzRWNlVLT25JeVdNLWVyYS1YTWJmUzM3NjdDcFVZMHkwLXViNGhHWWJtYk9lMTlmTHo2T0NKY1U2RW14MXF2bF8tRU9ZXzQ1WWtF?oc=5 | SINGLE-SOURCE | day 2026-11-18: chg +1.27% gap +1.09% vol 0.76x BIG MOVE | SUMMARY NOT RETRIEVED - open the link before relying on the headline
 2026-11-18 | DEAL | SpaceX (SPCX) Merger Talks Advance As $74 Billion AI Campus Plan Takes Shape | Yahoo Finance | https://news.google.com/rss/articles/CBMinAFBVV95cUxQb1NacUg0WXJTQmFJeFhXZGhuVlZWVTRwRkJJaGg3X0RRWWk0LXZRdExvTVZXeWZlMzBNdjJaN0Z0aDlCQUZIRHd1UkxrbFlWUXBLaEFxa1hxY2dwRmk2SUhYLVhGblRQSUl0bUZfTUs2ekpvWlpENkdRZkwzdGh3LTBSSXkxMnlwOFhhUWtYbHZfSE50b0NydTZOdHU?oc=5 | SINGLE-SOURCE | day 2026-11-18: chg +1.27% gap +1.09% vol 0.76x BIG MOVE | SUMMARY NOT RETRIEVED - open the link before relying on the headline
@@ -471,8 +472,8 @@ Dropped: 82 commentary / opinion / other; 75 no price-relevant event type; 73 co
 2026-11-10 | CAPITAL | Micron Lost 17% in a Day. Its $35 Billion Buyback Can Start December 9 | TIKR | https://www.tikr.com/blog/micron-lost-17-in-a-day-its-35-billion-buyback-can-start-december-9?ref=yahoofinance&tlnk=yf-261110-3g7hrc5m | SINGLE-SOURCE | day 2026-11-10: chg -1.10% gap -2.14% vol 0.92x BIG MOVE | Key TakeawaysMicron fell more than 17% on November 5 as Democratic midterm wins and a reported Taiwan plant pause hit memory stocks. Fourth-quarter revenue jumped 379% to $54.
 BIG-MOVE DAYS WITH NO NEWS KEPT: 2026-11-06 (chg +5.12%, gap +7.92%, vol 1.53x); 2026-11-09 (chg +6.25%, gap +1.91%, vol 1.05x); 2026-11-11 (chg +11.89%, gap +7.18%, vol 1.19x); 2026-11-13 (chg -2.52%, gap -1.97%, vol 0.91x); 2026-11-19 (chg -2.10%, gap +4.97%, vol 1.12x)
 
-## NVDA - Nvidia | window 2026-11-06 to 2026-11-21 (last bar 2026-11-20) | kept 15 of 551 items
-Dropped: 255 no price-relevant event type; 84 company not in headline; 74 commentary / opinion / other; 15 mentioned in passing (list of names); 4 research or commentary by the company about others; 78 merged as repeat coverage; 26 lower-ranked items over the 15-item cap
+## NVDA - Nvidia | window 2026-11-06 to 2026-11-21 (last bar 2026-11-20) | kept 15 of 554 items
+Dropped: 255 no price-relevant event type; 87 company not in headline; 74 commentary / opinion / other; 15 mentioned in passing (list of names); 4 research or commentary by the company about others; 78 merged as repeat coverage; 26 lower-ranked items over the 15-item cap
 2026-11-20 | REGULATORY / LEGAL | California attorney general subpoenas Nvidia over chips, former CEO’s affair (+1 similar report) | Boston Herald | https://www.bostonherald.com/2026/11/20/california-attorney-general-nvidia-subpoena/ | CORROBORATED | day 2026-11-20: chg -14.01% gap -1.69% vol 2.41x BIG MOVE | California Attorney General Rob Bonta has issued an investigative subpoena to Nvidia related to former CEO Jensen Huang’s affair with a suspected Chinese spy.
 2026-11-20 | REGULATORY / LEGAL | California attorney general issues Nvidia subpoena in probe of China chip diversion (+1 similar report) | CNBC | https://www.msn.com/en-us/money/markets/california-attorney-general-issues-nvidia-subpoena-in-probe-of-china-chip-diversion/ar-AA2hOe3F | SINGLE-SOURCE | day 2026-11-20: chg -14.01% gap -1.69% vol 2.41x BIG MOVE | The investigation by California Attorney General Rob Bonta comes on the heels of the resignation of Nvidia CEO Jensen Huang.
 2026-11-19 | MANAGEMENT | Nvidia’s interim CEO Colette Kress has taken over one of the most consequential company on the planet; those who know her say she’s up to the task (+2 similar reports) | Yahoo Finance | https://news.google.com/rss/articles/CBMirgJBVV95cUxOeHRJM1h1Q1pwRHkycWdsSTE5QjhOYnU4ZkJIWVBWYlF2OFhaQjZ6MlNGSG13d05ES3BLR0ZacnV6TFBRZng0YlBka2RnaFVldi02YzEwUnZEUEJyVVNBN180QXI2YktiNURXSFgzUWxSdjdFNGxRZ2t6dUtQakx6dlNzQjNSUVdQZms4Q3NQRVVuVmlybmZxU3Etejk5RUhHSVgxY1RISzkydkstVk4wMlBwak05aGtScUpLSW5IU1VSRWtpM25uLXRTRFB1TWlvNHNFaTFQLTdGbTBDZGFPN25sQ2pneEVyaFh4dzJGVU16Wkk2clpiY0N6bFNobHBHa0xleW1tNlVRMi1vQ2luMXRSU1htX3FMeXdrd05SdmxKTEpXY2k2bDNtVUpoZw?oc=5 | SINGLE-SOURCE | day 2026-11-19: chg -3.30% gap +1.30% vol 1.29x BIG MOVE | Nvidia's interim CEO, CFO Colette Kress, now overseas one of the most consequential companies in the world. [summary from Yahoo Finance]

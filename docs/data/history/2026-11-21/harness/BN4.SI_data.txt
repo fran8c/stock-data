@@ -1,6 +1,6 @@
 Run the Individual Stock Harness v3.3 (saved in this chat or project) on the inputs below. If the harness is not saved here, paste the harness first, then these inputs.
 
-=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-21 21:39 SGT ===
+=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-21 22:00 SGT ===
 as of: 2026-11-21
 ticker: BN4 on SGX
 mode: A
@@ -610,7 +610,7 @@ Week 2026-11-09 bars 4: O 9.5 C 9.82 H 10.05 L 9.5 prevC 9.45 chg raw 3.9153% ad
 Week 2026-11-16 bars 5: O 9.83 C 8.85 H 9.84 L 8.73 prevC 9.82 chg raw -9.8778% adj -9.8778% up 1 dn 4 volx 1.2654 CVD -6,718,929 UD 0.1632 pos 0.1081 standout 2026-11-20 V 6,377,790 chg -3.0668% CLV -0.1429
 
 news_payload:
-NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-21 21:39 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
+NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-21 22:00 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
 Company: Keppel Ltd (BN4 on SGX; Singapore) | sector words searched: Singapore infrastructure | peers: Sembcorp Industries, Jardine Cycle & Carriage | home index: Straits Times Index | region: Asia
 Window: 2026-11-07 to 2026-11-21
 SEARCH LOG
@@ -620,13 +620,13 @@ COMPANY | Yahoo Finance news feed for BN4.SI (daily) | 1 | 0
 COMPANY | C5: "Keppel Ltd" results date OR ex-dividend date 2026 | 3 | 3
 SECTOR | S1: Singapore infrastructure news November 2026 | 25 | 25
 SECTOR | S2: Sembcorp Industries Jardine Cycle & Carriage Keppel Ltd shares November 2026 | 1 | 0
-COUNTRY/MACRO | K1: Singapore stock market STI 20 November 2026 | 23 | 22
+COUNTRY/MACRO | K1: Singapore stock market STI 20 November 2026 | 22 | 21
 COUNTRY/MACRO | K2: Singapore MAS OR economy OR inflation November 2026 | 25 | 25
-COUNTRY/MACRO | K3: MAS next policy meeting date 2026 | 3 | 3
+COUNTRY/MACRO | K3: MAS next policy meeting date 2026 | 4 | 4
 COUNTRY/MACRO | K3: Singapore GDP release date 2026 | 25 | 25
 GLOBAL/REGIONAL | G1: global markets central banks oil November 2026 | 25 | 23
 GLOBAL/REGIONAL | G2: Asia markets 20 November 2026 | 21 | 21
-DATE-SPECIFIC | D 2026-11-10: "Keppel Ltd" OR "Straits Times Index" 10 November 2026 | 12 | 12
+DATE-SPECIFIC | D 2026-11-10: "Keppel Ltd" OR "Straits Times Index" 10 November 2026 | 16 | 16
 DATE-SPECIFIC | D 2026-11-20: "Keppel Ltd" OR "Straits Times Index" 20 November 2026 | 13 | 13
 DATE-SPECIFIC | D 2026-11-17: "Keppel Ltd" OR "Straits Times Index" 17 November 2026 | 12 | 12
 ITEMS
@@ -649,9 +649,9 @@ COUNTRY/MACRO | 2026-11-21 | STI Index (^STI) charts, data and news | Yahoo Fina
 COUNTRY/MACRO | 2026-11-21 | Anthropic pulls off mega IPO amid AI slump, gold tumbles: Markets this week | The Straits Times | https://news.google.com/rss/articles/CBMi5AFBVV95cUxQak5Rc2p3V0x1eFlXMnZ1Z2tnLV9wSFowT05pWW9qZ0lob2VCZjByQWczbHpBYVpyZEQtOXpCTzI5YjB4SVJkWGI4NWVNVkVKRWQ1WWFqeDhYbXptaGpBd1p3NHc5QmEtU2pEMUpSbDRzSUpmTzRFSjVHNW9sZURXOFNfTWxuYWkwOVF3RjlOTGNseUdYVzVvdlB6MmtqMlRrUWNDOTJZQVVhMlR4T0VDUDd0LVlLWFBzZE5vb1h0d2djbkxGdjIyZ3IyVjVLeG5zM0lQbXhTempxM0RndU5NUTFUSkE?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-19 | Stable Growth in 2027 Economic Outlook | Morgan Stanley | https://news.google.com/rss/articles/CBMiggFBVV95cUxQR18tLWpEQUhEVXNjR2VRZ2xrc180R0hvclR2QjBqRXRmenBhb0QzVG9SQzgwNlY5Y3ltbkEyc2Q1X3REZGFudWZMSHBmcDBYTDZzS04xWl9aV0lsUkNPa3lld3UydVJqWDN1RnN5ZEEtbllXdWluYmlXa1pqVFh2emZ3?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-19 | Global markets mixed amid hawkish Fed minutes, AI uncertainties | Anadolu Ajansı | https://news.google.com/rss/articles/CBMipgFBVV95cUxNZG1uOVBsaU9GM0I1d1YyMndhQ1dYZmY0aWxia2FBT3JYOU9tbnY2dU1rOERTd2ZWTGVzamp6OEw5Rk5MOGthb3ZzazNrM19tZ29QZjhMZF9kcElkZ3VqYl92RFBFajVrSFFQV0JkNTNBWlI3RjdtS3E3VlQ5SU5CMEdOVHdwOWdRRjE5WDJ6SmY3V0xodElzTURwcm1MN1R2UUx6UUJn?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-20 | ECB to Expand Euro Swap Lines for Greater Global Financial Access | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMilgFBVV95cUxOaVdoRUlMRFJRa0dqWWE3OW44cDFPOTFxVGljZVJxMzA5ZjBhbjFLUUdnVjl5Y1kwNGc5Z1dBQUpiRFhIbXZGY3pneWpRbW1GN05FRlZlVS1vUXZQOXA0LW9FVXI5eG1UTlh6UjlNcU40bkhKZzVQV2tQcUtXU05rcU1DSm8yOFBUZ21iRXhkNzBmZ3dkNGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-20 | Rabobank Flags December Fed Hike Pricing / 20 Nov 2026 | www.tmgm.com | https://news.google.com/rss/articles/CBMifEFVX3lxTE9VTDdDVnFISklGcWpoVmNiRExzT0c0VGxZZ3c5TUpaTWNKN1gzQU1PbVFIYzhXNXlnTThJRGxDeFRhXy0tb3VZei1Zc0xpNFVOM25JbEdjUnlkS056RjA1V2xJWDVhVkRXcW1NNEhGTFUtazFsaHA3aUl0LUI?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-20 | The snowballing selloff in global markets | Reuters | https://news.google.com/rss/articles/CBMif0FVX3lxTE84ZFFzbDlRd0J6aHAxMkFGQUl6R2swRWt1ZTFUNWhNZlB1Q3VTMFlIcWNUUWpvZGY4TjdodG9qYkw5eVZiaENISVhjZlVQNy1RRjZ2QktKOER1d3lNOUxyOTc3aThONVdUU3VmX19fMnl2ZmpZeG1idEFGR1BkMlk?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-20 | ECB to Expand Euro Swap Lines for Greater Global Financial Access | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMilgFBVV95cUxOaVdoRUlMRFJRa0dqWWE3OW44cDFPOTFxVGljZVJxMzA5ZjBhbjFLUUdnVjl5Y1kwNGc5Z1dBQUpiRFhIbXZGY3pneWpRbW1GN05FRlZlVS1vUXZQOXA0LW9FVXI5eG1UTlh6UjlNcU40bkhKZzVQV2tQcUtXU05rcU1DSm8yOFBUZ21iRXhkNzBmZ3dkNGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-20 | Oil Prices Rise on Middle East Supply Risks Despite Weekly Losses | kalkine.co.uk | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeUpNWlI5V3V3VEQ3a3Yzc0Z0MVhZWXRXMFNEVFYwVGJPWUF4TzNQUTFPM0RKVzU0ZTNIMEdTemMyeFh4dlRhVVhVSzlXUHkyTmZ4dHozRjM2MnZidWhRTnI3Q3JNYUpyVlpFMDJyQVdTMjhZZmJZWjN4UnI0aDJEbEhma3JhZVNsX3VLWkkwVWtieVpJUnNPQUhGeU52SWg3UUJ3MmVLc0s?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 BACKGROUND (up to 2: dated up to 30 days before the window and still in force)
 none collected (the pipeline does not search for background items)

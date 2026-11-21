@@ -1,13 +1,13 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 21:39 SGT
+Run time: 2026-11-21 22:00 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 21:39 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 21:39 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 22:00 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 22:00 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (32): expected, marked NOT RETRIEVED in the files
+GAPS (33): expected, marked NOT RETRIEVED in the files
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -20,16 +20,17 @@ GAPS (32): expected, marked NOT RETRIEVED in the files
   - [SGX] BN4.SI: next results date not yet announced (last was 2026-10-29)
   - [SGX] BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed
   - [SGX] BS6.SI: next results date not available
-  - [SGX] BS6.SI: Google News feed failed (HTTPError)
   - [SGX] U96.SI: P/E range covers only 45 months, not 5 years
   - [SGX] U96.SI: next results date not available
   - [SGX] Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
   - [SGX] Z74.SI: next results date not yet announced (last was 2026-11-13)
+  - [SGX] Z74.SI: Google News feed failed (HTTPError)
   - [SGX] No peers in peers.txt for: BS6.SI, U96.SI, Z74.SI - the harness will suggest some
   - [US] SPCX: only 113 daily bars (less than a year of history)
   - [US] SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - [US] SPCX: next results date not yet announced (last was 2026-10-20)
   - [US] MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
+  - [US] MRVL: Google News feed failed (HTTPError)
   - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: next results date not yet announced (last was 2026-11-17)
@@ -41,7 +42,7 @@ GAPS (32): expected, marked NOT RETRIEVED in the files
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
   - News: 1263 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-21 21:39 SGT
+DATA PACK - generated 2026-11-21 22:00 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.

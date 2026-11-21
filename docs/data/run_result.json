@@ -1,5 +1,5 @@
 {
- "run_stamp": "2026-11-21 21:39 SGT",
+ "run_stamp": "2026-11-21 22:00 SGT",
  "markets": [
   "SGX",
   "US"
@@ -22,15 +22,16 @@
   "BN4.SI: next results date not yet announced (last was 2026-10-29)",
   "BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed",
   "BS6.SI: next results date not available",
-  "BS6.SI: Google News feed failed (HTTPError)",
   "U96.SI: P/E range covers only 45 months, not 5 years",
   "U96.SI: next results date not available",
   "Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)",
   "Z74.SI: next results date not yet announced (last was 2026-11-13)",
+  "Z74.SI: Google News feed failed (HTTPError)",
   "SPCX: only 113 daily bars (less than a year of history)",
   "SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)",
   "SPCX: next results date not yet announced (last was 2026-10-20)",
   "MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)",
+  "MRVL: Google News feed failed (HTTPError)",
   "MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)",
   "NVDA: 5-year P/E range marked UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)",
   "NVDA: next results date not yet announced (last was 2026-11-17)",

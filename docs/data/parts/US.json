@@ -1,6 +1,6 @@
 {
  "market": "US",
- "run_stamp": "2026-11-21 21:39 SGT",
+ "run_stamp": "2026-11-21 22:00 SGT",
  "expected": "2026-11-20",
  "critical": [],
  "warnings": [
@@ -8,6 +8,7 @@
   "SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)",
   "SPCX: next results date not yet announced (last was 2026-10-20)",
   "MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)",
+  "MRVL: Google News feed failed (HTTPError)",
   "MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)",
   "NVDA: 5-year P/E range marked UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)",
   "NVDA: next results date not yet announced (last was 2026-11-17)",
