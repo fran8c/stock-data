@@ -35,6 +35,7 @@ from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import quote_plus
+from zoneinfo import ZoneInfo
 import xml.etree.ElementTree as ET
 
 import pandas as pd
@@ -69,6 +70,19 @@ SUMMARY_WORDS = 50        # cap on stored preview text (public repo)
 SUMMARY_FETCH_LIMIT = 150  # max article pages opened per run (keeps run short)
 STALE_DAYS = 5            # warn if a ticker's latest bar is older than this
 
+# Each market has its own run (see .github/workflows/daily.yml), about 5 hours
+# after its close. A run collects only its own market's stocks, benchmarks and
+# peers; the other market's figures are kept from its last run.
+MARKETS = {
+    "SGX": {"tz": SGT, "close": (17, 0)},
+    "US": {"tz": ZoneInfo("America/New_York"), "close": (16, 0)},
+}
+READY_AFTER_HOURS = 2      # a session's bar is expected this long after the close
+RETRIES = int(os.environ.get("RETRIES", "2"))                 # re-pulls of files that are behind
+RETRY_WAIT_MIN = float(os.environ.get("RETRY_WAIT_MIN", "15"))  # minutes between re-pulls
+HOLIDAYS_FILE = ROOT / "holidays.txt"
+PARTS = OUT / "parts"      # each market's latest results, combined into the packs
+
 NR = "NOT RETRIEVED"
 NO_SUMMARY = "SUMMARY NOT RETRIEVED - open the link before relying on the headline"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; personal-stock-data-pipeline/1.0)"}
@@ -83,33 +97,65 @@ PRIMARY_SOURCES = [
 # Run report: collects problems for status.txt and decides the exit code
 # ----------------------------------------------------------------------------
 class Report:
+    """
+    Every message is tagged with a scope: "SGX", "US" (that market's names) or
+    "general" (rates, macro, news housekeeping). The status file combines the
+    latest messages for each market with this run's general messages.
+    """
     def __init__(self):
-        self.critical = []   # missing prices or rates -> run fails -> email
-        self.warnings = []   # expected gaps -> listed, no email
+        self.critical = []   # this run: missing prices or rates -> run fails -> email
+        self.warnings = []   # this run: expected gaps -> listed
         self.ok = []
+        self.scope = "general"
+        self.log = []        # (scope, level, message) for this run
+
+    def _add(self, level, msg):
+        self.log.append((self.scope, level, msg))
 
     def crit(self, msg):
         print("CRITICAL:", msg)
         self.critical.append(msg)
+        self._add("crit", msg)
 
     def warn(self, msg):
         print("WARNING:", msg)
         self.warnings.append(msg)
+        self._add("warn", msg)
 
     def good(self, msg):
         print("OK:", msg)
         self.ok.append(msg)
 
-    def text(self):
-        state = "FAILED - see CRITICAL below" if self.critical else (
-            "OK with gaps" if self.warnings else "OK")
-        lines = [f"RUN STATUS: {state}", f"Run time: {RUN_STAMP}", ""]
-        lines.append(f"CRITICAL ({len(self.critical)}): these gaps break the harnesses")
-        lines += [f"  - {m}" for m in self.critical] or ["  - none"]
-        lines.append("")
-        lines.append(f"GAPS ({len(self.warnings)}): expected, marked {NR} in the files")
-        lines += [f"  - {m}" for m in self.warnings] or ["  - none"]
-        return "\n".join(lines)
+    def of(self, scope, level):
+        return [m for s, lv, m in self.log if s == scope and lv == level]
+
+
+def status_text(parts, general):
+    """
+    Combined status: each market's messages from its own latest run, plus the
+    general messages from this run. parts = {"SGX": part or None, "US": ...}.
+    """
+    crit, gaps, runs = [], [], []
+    for m in ("SGX", "US"):
+        p = parts.get(m)
+        if not p:
+            runs.append(f"  - {m}: no run yet under the per-market schedule - start the workflow with market = both")
+            gaps.append(f"[{m}] no data yet from a {m} run")
+            continue
+        runs.append(f"  - {m}: {p['run_stamp']}, latest {m} session expected {p.get('expected') or 'n/a'}")
+        crit += [f"[{m}] {x}" for x in p["critical"]]
+        gaps += [f"[{m}] {x}" for x in p["warnings"]]
+    crit += general["critical"]
+    gaps += general["warnings"]
+    state = "FAILED - see CRITICAL below" if crit else ("OK with gaps" if gaps else "OK")
+    lines = [f"RUN STATUS: {state}", f"Run time: {RUN_STAMP}",
+             "Market data from (each market runs about 5 hours after its close):", *runs, ""]
+    lines.append(f"CRITICAL ({len(crit)}): these gaps break the harnesses")
+    lines += [f"  - {x}" for x in crit] or ["  - none"]
+    lines.append("")
+    lines.append(f"GAPS ({len(gaps)}): expected, marked {NR} in the files")
+    lines += [f"  - {x}" for x in gaps] or ["  - none"]
+    return "\n".join(lines), crit, gaps
 
 
 R = Report()
@@ -224,31 +270,73 @@ def read_peers(path=PEERS_FILE):
 
 
 def market_of(symbol):
-    """Which benchmark a symbol's trading calendar follows."""
-    return "^STI" if symbol.endswith(".SI") or symbol == "^STI" else "^GSPC"
+    """SGX for .SI names and the STI; US for everything else."""
+    return "SGX" if symbol.endswith(".SI") or symbol == "^STI" else "US"
 
 
-def lag_check(last_dates, bench_syms):
+def read_holidays(path=HOLIDAYS_FILE):
+    """holidays.txt lines: MARKET | YYYY-MM-DD | name. Returns {"SGX": {dates}, "US": {dates}}."""
+    out = {m: set() for m in MARKETS}
+    if not path.exists():
+        R.warn("holidays.txt not found - market holidays may be reported as stale data")
+        return out
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        s = raw.strip()
+        if not s or s.startswith("#"):
+            continue
+        parts = [p.strip() for p in s.split("|")]
+        if len(parts) >= 2 and parts[0].upper() in out and re.match(r"^\d{4}-\d{2}-\d{2}$", parts[1]):
+            out[parts[0].upper()].add(parts[1])
+    return out
+
+
+def is_session(market, d, holidays):
+    return d.weekday() < 5 and d.isoformat() not in holidays.get(market, set())
+
+
+def expected_session(market, holidays, now=None):
     """
-    Flag any price file whose last bar is behind the newest bar in its market.
-    A one-session lag is common (Yahoo publishes some bars late) and breaks
-    comparisons in the harness, so it goes in the status banner as a gap.
+    The latest session whose bar should be on Yahoo by now: today (exchange
+    time) if it is a trading day and the close was READY_AFTER_HOURS ago,
+    otherwise the trading day before. Holidays come from holidays.txt.
+    """
+    cfg = MARKETS[market]
+    local = (now or datetime.now(timezone.utc)).astimezone(cfg["tz"])
+    h, m = cfg["close"]
+    ready = local.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(hours=READY_AFTER_HOURS)
+    d = local.date() if local >= ready else local.date() - timedelta(days=1)
+    for _ in range(15):
+        if is_session(market, d, holidays):
+            return d.isoformat()
+        d -= timedelta(days=1)
+    return None
+
+
+def session_open_today(market, now=None):
+    """True if the exchange's session for today has not closed yet (bar would be partial)."""
+    cfg = MARKETS[market]
+    local = (now or datetime.now(timezone.utc)).astimezone(cfg["tz"])
+    h, m = cfg["close"]
+    return local < local.replace(hour=h, minute=m, second=0, microsecond=0) + timedelta(minutes=15), local.date().isoformat()
+
+
+def behind(last_dates, expected):
+    """
+    Files that miss their market's latest session: behind the expected session
+    date, or behind the newest bar any file in the same market has.
+    Returns {symbol: (last bar, should have)}.
     """
     newest = {}
     for sym, d in last_dates.items():
         m = market_of(sym)
         newest[m] = max(newest.get(m, d), d)
-    lagging = []
+    out = {}
     for sym, d in sorted(last_dates.items()):
         m = market_of(sym)
-        if d < newest[m]:
-            kind = "benchmark" if sym in bench_syms else "price file"
-            R.warn(f"{sym}: {kind} ends {d}, behind the newest {m.replace('^GSPC', 'US').replace('^STI', 'SGX')} bar ({newest[m]}) - "
-                   "re-run later or the harness will mark that session as not in the data")
-            lagging.append(sym)
-    if not lagging:
-        R.good("Lag check: every price file is up to date with its market")
-    return lagging
+        want = max(x for x in (expected.get(m), newest[m]) if x)
+        if d < want:
+            out[sym] = (d, want)
+    return out
 
 
 # ----------------------------------------------------------------------------
@@ -265,6 +353,12 @@ def fetch_history(tk, symbol, tries=3):
         try:
             df = tk.history(period="5y", interval="1d", auto_adjust=False, actions=False)
             if df is not None and not df.empty and "Close" in df.columns:
+                # A run started by hand while the market is open would get today's
+                # unfinished bar; leave it out so every saved bar is a full session.
+                still_open, local_today = session_open_today(market_of(symbol))
+                if still_open and df.index[-1].strftime("%Y-%m-%d") == local_today:
+                    df = df.iloc[:-1]
+                    R.good(f"{symbol}: today's unfinished bar left out (market still open)")
                 return df
             last = "empty result"
         except Exception as e:  # noqa: BLE001
@@ -1089,46 +1183,128 @@ def archive_news(store, watch):
     return store
 
 
+def selected_markets():
+    """--market SGX|US|both on the command line, or the MARKET setting; default both."""
+    arg = ""
+    if "--market" in sys.argv and sys.argv.index("--market") + 1 < len(sys.argv):
+        arg = sys.argv[sys.argv.index("--market") + 1]
+    arg = (arg or os.environ.get("MARKET", "") or "both").strip().upper()
+    if arg in ("BOTH", "ALL"):
+        return ["SGX", "US"]
+    if arg in MARKETS:
+        return [arg]
+    raise SystemExit(f"Unknown market '{arg}' - use SGX, US or both")
+
+
+def read_part(name):
+    p = PARTS / f"{name}.json"
+    try:
+        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def write_part(name, data):
+    PARTS.mkdir(parents=True, exist_ok=True)
+    (PARTS / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def main():
+    markets = selected_markets()
+    print(f"Markets on this run: {', '.join(markets)}")
+    R.scope = "general"
+    holidays = read_holidays()
     watch = read_watchlist()
     print(f"Watchlist: {len(watch)} names")
     peers = read_peers()
     on_list = {i["symbol"] for i in watch} | {b for b, _ in BENCHMARKS}
     peer_only = sorted({p for lst in peers.values() for p in lst} - on_list)
     archive_removed(watch, peer_only)
-    stock_blocks, dash_stocks, dash_bench, fresh_news = [], [], [], []
-    last_dates = {}
 
-    # Stocks
-    for item in watch:
-        sym = item["symbol"]
-        print(f"--- {sym}")
-        tk = yf_ticker(sym)
+    run_watch = [i for i in watch if market_of(i["symbol"]) in markets]
+    run_bench = [(b, n) for b, n in BENCHMARKS if market_of(b) in markets]
+    run_peers = [p for p in peer_only if market_of(p) in markets]
+    bench_syms = {b for b, _ in BENCHMARKS}
+    expected = {m: expected_session(m, holidays) for m in markets}
+    for m in markets:
+        print(f"{m}: latest session expected in the data = {expected[m]}")
+
+    # 1. Prices. Every pull rewrites the whole file, so Yahoo's later revisions
+    #    of recent bars (e.g. volume) are picked up each run.
+    tks, hist, prices, failed = {}, {}, {}, {}
+
+    def pull(sym, fresh=False):
+        R.scope = market_of(sym)
+        if fresh or sym not in tks:
+            tks[sym] = yf_ticker(sym)
         try:
-            hist = fetch_history(tk, sym)
-            prices = write_prices(sym, hist)
-            if prices.empty:
+            h = fetch_history(tks[sym], sym)
+            p = write_prices(sym, h)
+            if p.empty:
                 raise RuntimeError("no bars in the last year")
+            hist[sym], prices[sym] = h, p
+            failed.pop(sym, None)
         except Exception as e:  # noqa: BLE001
-            R.crit(f"{sym}: prices failed - {e}")
-            stock_blocks.append(f"## {sym} - {item['name']}\n" + line(f"{sym} latest close", NR, "Price download failed on this run", YAHOO_SRC, yurl(sym, "history/"), TODAY_S))
-            time.sleep(2)
+            failed[sym] = e
+        time.sleep(1.5)
+
+    for sym in [i["symbol"] for i in run_watch] + [b for b, _ in run_bench] + run_peers:
+        print(f"--- {sym} prices")
+        pull(sym)
+
+    def last_dates():
+        return {s: p["Date"].iloc[-1] for s, p in prices.items()}
+
+    # Re-pull any file that misses its market's latest session.
+    lag = behind(last_dates(), expected)
+    for attempt in range(1, RETRIES + 1):
+        if not lag:
+            break
+        print(f"Behind: {', '.join(lag)} - waiting {RETRY_WAIT_MIN:g} min, then re-pull {attempt} of {RETRIES}")
+        time.sleep(RETRY_WAIT_MIN * 60)
+        for sym in list(lag):
+            pull(sym, fresh=True)
+        lag = behind(last_dates(), expected)
+
+    stale = {m: [] for m in markets}
+    for sym, (d, want) in lag.items():
+        m = market_of(sym)
+        R.scope = m
+        kind = "benchmark" if sym in bench_syms else ("peer price file" if sym in run_peers else "price file")
+        R.warn(f"{sym}: {kind} ends {d}, misses the {m} session of {want} after {RETRIES} re-pull(s) - "
+               "the harness will mark that session as not in the data")
+        stale[m].append({"symbol": sym, "last": d, "expected": want})
+    for m in markets:
+        if not stale[m]:
+            R.scope = m
+            R.good(f"Lag check: every {m} price file has the {expected[m]} session")
+
+    # 2. Stocks: figures, news and dashboard rows
+    blocks, dash_stocks, dash_bench, fresh_news = {}, {}, {}, []
+    for item in run_watch:
+        sym = item["symbol"]
+        R.scope = market_of(sym)
+        print(f"--- {sym}")
+        if sym in failed:
+            R.crit(f"{sym}: prices failed - {failed[sym]}")
+            blocks[sym] = f"## {sym} - {item['name']}\n" + line(f"{sym} latest close", NR, "Price download failed on this run", YAHOO_SRC, yurl(sym, "history/"), TODAY_S)
             continue
-        age = (TODAY - datetime.fromisoformat(prices["Date"].iloc[-1]).date()).days
+        tk, h, p = tks[sym], hist[sym], prices[sym]
+        age = (TODAY - datetime.fromisoformat(p["Date"].iloc[-1]).date()).days
         if age > STALE_DAYS:
-            R.crit(f"{sym}: latest bar is {prices['Date'].iloc[-1]}, {age} days old")
+            R.crit(f"{sym}: latest bar is {p['Date'].iloc[-1]}, {age} days old")
         try:
             divs = write_dividends(sym, tk)
         except Exception as e:  # noqa: BLE001
             divs = pd.DataFrame(columns=["Date", "Type", "Amount"])
             R.warn(f"{sym}: dividend history unavailable ({e.__class__.__name__})")
         try:
-            figs, info = stock_figures(item, tk, hist, prices, divs)
+            figs, info = stock_figures(item, tk, h, p, divs)
         except Exception as e:  # noqa: BLE001
             figs, info = [], {}
             R.warn(f"{sym}: fundamentals failed ({e.__class__.__name__}: {e})")
             traceback.print_exc()
-        stock_blocks.append(f"## {sym} - {item['name']} ({item['kind']})\n" + "\n".join(figs))
+        blocks[sym] = f"## {sym} - {item['name']} ({item['kind']})\n" + "\n".join(figs)
 
         try:
             fresh_news += google_news(item)
@@ -1140,59 +1316,49 @@ def main():
             R.warn(f"{sym}: Bing News feed failed ({e.__class__.__name__})")
         fresh_news += yahoo_news(item, tk)
 
-        closes = prices["Close"].tolist()
-        dash_stocks.append({
+        closes = p["Close"].tolist()
+        dash_stocks[sym] = {
             "symbol": sym, "name": item["name"], "kind": item["kind"], "currency": info.get("currency", ""),
-            "sector": info.get("sector") or "", "last_close": closes[-1], "last_date": prices["Date"].iloc[-1],
+            "sector": info.get("sector") or "", "last_close": closes[-1], "last_date": p["Date"].iloc[-1],
             "chg_1d": (closes[-1] / closes[-2] - 1) * 100 if len(closes) > 1 else None,
             "chg_1y": (closes[-1] / closes[0] - 1) * 100 if len(closes) > 1 else None,
-            "first_date": prices["Date"].iloc[0], "closes": [round(c, 4) for c in closes],
-        })
-        R.good(f"{sym}: {len(prices)} bars to {prices['Date'].iloc[-1]}")
-        last_dates[sym] = prices["Date"].iloc[-1]
+            "first_date": p["Date"].iloc[0], "closes": [round(c, 4) for c in closes],
+        }
+        R.good(f"{sym}: {len(p)} bars to {p['Date'].iloc[-1]}")
         time.sleep(1.5)
 
-    # Benchmarks
-    for sym, name in BENCHMARKS:
+    # Benchmarks and peers
+    for sym, name in run_bench:
+        R.scope = market_of(sym)
+        if sym in failed:
+            R.crit(f"{sym} ({name}): prices failed - {failed[sym]}")
+            continue
+        closes = prices[sym]["Close"].tolist()
+        dash_bench[sym] = {"symbol": sym, "name": name, "last_close": closes[-1], "last_date": prices[sym]["Date"].iloc[-1],
+                           "chg_1d": (closes[-1] / closes[-2] - 1) * 100, "chg_1y": (closes[-1] / closes[0] - 1) * 100,
+                           "first_date": prices[sym]["Date"].iloc[0], "closes": [round(c, 2) for c in closes]}
+        R.good(f"{sym}: {len(prices[sym])} bars")
+    for sym in run_peers:
+        R.scope = market_of(sym)
+        if sym in failed:
+            R.warn(f"{sym} (peer): prices {NR} - {failed[sym]}")
+            continue
         try:
-            hist = fetch_history(yf_ticker(sym), sym)
-            prices = write_prices(sym, hist)
-            closes = prices["Close"].tolist()
-            dash_bench.append({"symbol": sym, "name": name, "last_close": closes[-1], "last_date": prices["Date"].iloc[-1],
-                               "chg_1d": (closes[-1] / closes[-2] - 1) * 100, "chg_1y": (closes[-1] / closes[0] - 1) * 100,
-                               "first_date": prices["Date"].iloc[0], "closes": [round(c, 2) for c in closes]})
-            R.good(f"{sym}: {len(prices)} bars")
-            last_dates[sym] = prices["Date"].iloc[-1]
-        except Exception as e:  # noqa: BLE001
-            R.crit(f"{sym} ({name}): prices failed - {e}")
-        time.sleep(1.5)
+            write_dividends(sym, tks[sym])
+        except Exception:  # noqa: BLE001
+            pass
+        R.good(f"{sym} (peer): {len(prices[sym])} bars")
+    for m in markets:
+        R.scope = m
+        no_peers = [i["symbol"] for i in run_watch if market_of(i["symbol"]) == m and not peers.get(i["symbol"])]
+        if no_peers:
+            R.warn("No peers in peers.txt for: " + ", ".join(no_peers) + " - the harness will suggest some")
 
-    # Peers (prices and dividends only; a failure is a gap, not a run failure)
-    for sym in peer_only:
-        try:
-            tk = yf_ticker(sym)
-            prices = write_prices(sym, fetch_history(tk, sym))
-            if prices.empty:
-                raise RuntimeError("no bars in the last year")
-            try:
-                write_dividends(sym, tk)
-            except Exception:  # noqa: BLE001
-                pass
-            last_dates[sym] = prices["Date"].iloc[-1]
-            R.good(f"{sym} (peer): {len(prices)} bars")
-        except Exception as e:  # noqa: BLE001
-            R.warn(f"{sym} (peer): prices {NR} - {e}")
-        time.sleep(1.5)
-    no_peers = [i["symbol"] for i in watch if not peers.get(i["symbol"])]
-    if no_peers:
-        R.warn("No peers in peers.txt for: " + ", ".join(no_peers) + " - the harness will suggest some")
-
-    lag_check(last_dates, {b for b, _ in BENCHMARKS})
-
-    # Rates and macro
+    # 3. Rates and macro (both markets' rates, every run)
+    R.scope = "general"
     macro = market_figures()
 
-    # News
+    # 4. News: this run's market adds fresh items; the store keeps both markets
     store_path = OUT / "news_store.json"
     store = json.loads(store_path.read_text(encoding="utf-8")) if store_path.exists() else {}
     store = archive_news(store, watch)
@@ -1203,11 +1369,40 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     store_path.write_text(json.dumps(store, indent=1, ensure_ascii=False), encoding="utf-8")
 
+    # 5. Save this run's market results, then combine with the other market's latest
+    for m in markets:
+        write_part(m, {
+            "market": m, "run_stamp": RUN_STAMP, "expected": expected[m],
+            "critical": R.of(m, "crit"), "warnings": R.of(m, "warn"), "stale": stale[m],
+            "blocks": {s: b for s, b in blocks.items() if market_of(s) == m},
+            "stocks": {s: d for s, d in dash_stocks.items() if market_of(s) == m},
+            "bench": {s: d for s, d in dash_bench.items() if market_of(s) == m},
+        })
+    general = {"run_stamp": RUN_STAMP, "critical": R.of("general", "crit"),
+               "warnings": R.of("general", "warn")}
+    parts = {m: read_part(m) for m in MARKETS}
+
+    stock_blocks, all_stocks, all_bench = [], [], []
+    for item in watch:
+        sym = item["symbol"]
+        p = parts.get(market_of(sym)) or {}
+        stock_blocks.append(p.get("blocks", {}).get(sym) or (
+            f"## {sym} - {item['name']}\n" + line(f"{sym} latest close", NR,
+            f"No {market_of(sym)} run has collected this name yet", YAHOO_SRC, yurl(sym, "history/"), TODAY_S)))
+        if sym in p.get("stocks", {}):
+            all_stocks.append(p["stocks"][sym])
+    for sym, _ in BENCHMARKS:
+        p = parts.get(market_of(sym)) or {}
+        if sym in p.get("bench", {}):
+            all_bench.append(p["bench"][sym])
+
     # Files
-    status = R.text()
+    status, crit_all, gaps_all = status_text(parts, general)
     header = (f"DATA PACK - generated {RUN_STAMP}\n"
               "Format: <figure> | <value> | <definition> | <source> | <URL> | <date>\n"
-              f"Anything marked {NR} could not be fetched on this run; do not fill it in by guessing.")
+              f"Anything marked {NR} could not be fetched on this run; do not fill it in by guessing.\n"
+              "SGX and US names are collected by separate runs about 5 hours after each market's close; "
+              "the status above shows when each market was last collected.")
     data_pack = "\n\n".join([header, "# MARKET-WIDE", "\n".join(macro), *stock_blocks])
     news_header = (f"NEWS PACK - last {NEWS_DAYS} days, generated {RUN_STAMP}\n"
                    "Format: <ticker> | <date> | <headline> | <source> | <URL> | <PRIMARY/CORROBORATED/SINGLE-SOURCE> | <facts>\n"
@@ -1232,21 +1427,28 @@ def main():
     write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols), "\n".join(peer_lines), data_pack, news_pack]))
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
-    for s in dash_stocks:
+    for s in all_stocks:
         s["news"] = [{k: n.get(k) for k in ("date", "title", "source", "url", "tag", "summary")}
                      for n in recent if n["ticker"] == s["symbol"]][:6]
-    dash = {"generated": RUN_STAMP, "status": {"critical": R.critical, "warnings": R.warnings},
-            "stocks": dash_stocks, "benchmarks": dash_bench,
+    dash = {"generated": RUN_STAMP, "status": {"critical": crit_all, "warnings": gaps_all},
+            "market_runs": {m: (parts[m] or {}).get("run_stamp") for m in MARKETS},
+            "stocks": all_stocks, "benchmarks": all_bench,
             "macro": [m.split(" | ") for m in macro], "news_count": len(nlines),
             "edit_url": edit_url(), "watchlist_size": len(watch),
             "files": {"bundle": "data/ai_bundle.txt", "data_pack": "data/data_pack.txt",
                       "news_pack": "data/news_pack.txt", "status": "data/status.txt"}}
     write_text("dashboard.json", json.dumps(dash, ensure_ascii=False))
 
-    summary = market_summary(dash_stocks, dash_bench, macro, stock_blocks)
+    summary = market_summary(all_stocks, all_bench, macro, stock_blocks)
     write_text("summary.md", summary)
     save_history({"status.txt": status, "summary.md": summary,
                   "data_pack.txt": status + "\n\n" + data_pack, "news_pack.txt": news_pack})
+
+    # What this run did, for the report notice and the STALE alert (see daily.yml)
+    write_text("run_result.json", json.dumps({
+        "run_stamp": RUN_STAMP, "markets": markets, "expected": expected,
+        "critical": R.critical, "warnings": R.warnings, "stale": stale,
+        "retries": RETRIES, "retry_wait_min": RETRY_WAIT_MIN}, ensure_ascii=False, indent=1))
 
     print("\n" + status)
     return 1 if R.critical else 0

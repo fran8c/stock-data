@@ -2,7 +2,7 @@
 
 A daily job that collects prices, dividends, fundamentals, rates and news for my watchlist and publishes them for my AI harnesses.
 
-- **Runs:** Tuesday to Saturday, about 8:07am Singapore time (after the US close), on GitHub's machines. Also runs straight away whenever `watchlist.txt` is edited.
+- **Runs:** two a day on GitHub's machines, each about 5 hours after its market closes: **SGX run** 22:07 Singapore time, Monday to Friday; **US run** 10:07 Singapore time, Tuesday to Saturday. Each run collects only its own market and keeps the other market's figures from its last run. Also runs (both markets) straight away whenever `watchlist.txt` or `peers.txt` is edited. To run by hand: Actions tab -> Daily stock data -> Run workflow -> pick `both`, `SGX` or `US`.
 - **Dashboard:** `https://<your-username>.github.io/stock-data/`
 - **Files for the AI:** `https://<your-username>.github.io/stock-data/data/ai_bundle.txt` (everything in one file)
 
@@ -41,13 +41,22 @@ Go to github.com/settings/notifications. Under **Actions**, tick **Email** and *
 
 ## Daily report notice
 
-After every run, good or bad, the job posts a comment on the issue **Daily stock data reports** (Issues tab). The comment mentions you, so GitHub emails you. If you use the GitHub mobile app, you also get a phone notification. Each comment has:
+After every run (SGX and US), good or bad, the job posts a comment on the issue **Daily stock data reports** (Issues tab). The comment mentions you, so GitHub emails you. If you use the GitHub mobile app, you also get a phone notification. Each comment has:
 
-- the status (OK, OK with gaps, or FAILED with what's missing)
+- which run it was (SGX run / US run) and its status (OK, OK with gaps, or FAILED with what's missing)
+- any files still behind after the re-pulls
 - a market summary: 1-year rates, each index and stock's last close with 1-day and 1-year change, the biggest movers, and results or ex-dividend dates in the next 14 days
 - **latest** links (dashboard, AI bundle, data pack, news pack): these always show the newest run
 - **this run's copy** links: frozen copies of that day's files, which never change
 - a link to the run log
+
+## Late bars and STALE alerts
+
+Yahoo sometimes publishes a day's bar late. Each run checks every price file against its market's latest session (weekends and the dates in `holidays.txt` are skipped). Any file that is behind is re-pulled up to 2 more times, 15 minutes apart. If it is still behind, the job opens an issue titled like **STALE: MRVL, NVDA behind (US run)**, which emails you. The next run of that market closes the issue once the files catch up. No issue means everything is up to date.
+
+Every run rewrites each price file in full, so Yahoo's later corrections to recent bars (e.g. volume) are picked up too.
+
+**Each year:** add the next year's market holidays to `holidays.txt` (MOM publishes Singapore's in June; NYSE publishes in December). A missing holiday causes a false STALE alert that day.
 
 ## Past days
 
@@ -80,10 +89,13 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 | Path | What it is |
 |---|---|
 | `watchlist.txt` | The names to track. Edit this one. |
+| `peers.txt` | Two peers per stock for the Individual Stock Harness |
+| `holidays.txt` | Market holidays, so holidays aren't reported as stale data |
 | `pipeline.py` | The script that collects everything |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |
+| `docs/data/parts/` | Each market's latest results, combined into the packs |
 | `docs/data/archive/` | Files of names taken off the watchlist |
 
 Data comes from Yahoo Finance (unofficial), FRED, MAS, SingStat and Google News. It's for personal research, not investment advice.
