@@ -102,6 +102,16 @@ jobs:
 
       - name: Publish the website
         id: deploy
+        continue-on-error: true   # GitHub sometimes can't find the package for a few seconds; retried below
+        uses: actions/deploy-pages@v4
+
+      - name: Wait a minute before trying again
+        if: steps.deploy.outcome == 'failure'
+        run: sleep 60
+
+      - name: Publish the website (second try)
+        id: deploy_retry
+        if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       # Posts a comment on the issue "Daily stock data reports" after every run,
@@ -116,7 +126,7 @@ jobs:
           REPO_NAME: ${{ github.event.repository.name }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           COLLECT: ${{ steps.collect.outcome }}
-          DEPLOY: ${{ steps.deploy.outcome }}
+          DEPLOY: ${{ steps.deploy.outcome == 'success' && 'success' || steps.deploy_retry.outcome }}
           TRIGGER: ${{ github.event_name }}
           SHA: ${{ steps.save.outputs.sha }}
           REPO: ${{ github.repository }}
