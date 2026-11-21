@@ -1,0 +1,13 @@
+PEERS (from peers.txt; use as peer_data in the Individual Stock Harness):
+  D05.SI: O39.SI, U11.SI
+  O39.SI: D05.SI, U11.SI
+  U11.SI: D05.SI, O39.SI
+  BN4.SI: U96.SI, C07.SI
+  BS6.SI: none listed - the harness will suggest peers
+  U96.SI: none listed - the harness will suggest peers
+  Z74.SI: none listed - the harness will suggest peers
+  SPCX: none listed - the harness will suggest peers
+  MRVL: AVGO, NVDA
+  MU: none listed - the harness will suggest peers
+  NVDA: AMD, AVGO
+  PLTR: none listed - the harness will suggest peers
