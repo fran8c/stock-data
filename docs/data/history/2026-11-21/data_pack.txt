@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 20:38 SGT
+Run time: 2026-11-21 21:20 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 20:38 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 20:38 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 21:20 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 21:20 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -38,9 +38,9 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1256 items have no summary (paywall or site blocks automated visits)
+  - News: 1263 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-21 20:38 SGT
+DATA PACK - generated 2026-11-21 21:20 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -79,6 +79,7 @@ D05.SI dividend per share, trailing 12 months | 3.2400 SGD | Sum of cash dividen
 D05.SI CET1 ratio | NOT RETRIEVED | Not carried by Yahoo; see the bank's quarterly Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/profile/ | retrieved 2026-11-21
 D05.SI CET1 regulatory minimum | NOT RETRIEVED | Set by the bank's regulator; add from the Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/profile/ | retrieved 2026-11-21
 D05.SI next results date | 2027-02-15 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-21
+D05.SI most recent results date | 2026-11-04 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-21
 D05.SI ex-dividend date | 2026-11-13 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-21
 
 ## O39.SI - OCBC (bank)
@@ -215,6 +216,7 @@ MRVL 5-year P/E low | 39.83 | UNRELIABLE (covers only 8 months). Approximate: mo
 MRVL dividend per share, trailing 12 months | 0.2400 USD | Sum of cash dividends with ex-dates since 2025-11-21 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/history/?filter=div | 2026-11-21
 MRVL net debt/EBITDA | 0.47x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-21
 MRVL next results date | 2026-12-01 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-21
+MRVL most recent results date | 2026-08-27 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-21
 MRVL ex-dividend date | 2026-10-09 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-21
 
 ## MU - Micron Technology (company)
@@ -231,6 +233,7 @@ MU 5-year P/E low | 8.00 | UNRELIABLE (covers only 26 months; high is 30x the lo
 MU dividend per share, trailing 12 months | 0.5650 USD | Sum of cash dividends with ex-dates since 2025-11-21 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/?filter=div | 2026-11-21
 MU net debt/EBITDA | -0.35x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU next results date | 2026-12-17 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-21
+MU most recent results date | 2026-09-30 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-21
 MU ex-dividend date | 2026-10-14 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-21
 
 ## NVDA - Nvidia (company)
@@ -264,4 +267,5 @@ PLTR 5-year P/E low | 185.19 | UNRELIABLE (covers only 34 months; high is 6x the
 PLTR dividend per share, trailing 12 months | 0.0000 USD | Sum of cash dividends with ex-dates since 2025-11-21 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/history/?filter=div | 2026-11-21
 PLTR net debt/EBITDA | -3.08x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-21
 PLTR next results date | 2027-02-01 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-21
+PLTR most recent results date | 2026-11-02 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-21
 PLTR ex-dividend date | NOT RETRIEVED | No ex-dividend date reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-21

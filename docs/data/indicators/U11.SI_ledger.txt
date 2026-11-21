@@ -23,6 +23,7 @@ Volume ratio = 4,685,060 / 3,767,663.2 = 1.2435
 UDVR10 (adjusted classification): up 4 vol 16,580,664 | down 6 vol 22,444,480 | ratio 0.7387 selling-dominated
 VT5/20 = 0.8794 quieter than usual; 5-bar chg raw -6.1722% adj -6.1722%
 ATR14 (Wilder) = 0.8149; last 14 TR: 1.03, 0.64, 2.83, 1.14, 1.27, 1.00, 0.66, 0.59, 0.50, 0.51, 0.78, 0.90, 0.45, 0.89
+ATR14 one-step check: previous ATR14 0.8091; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.8900; (13 x 0.8091 + 0.8900) / 14 = 0.8149
 Expected 5-day range = 35.4200 +/- 0.8149*2.236 = 33.5979 - 37.2421
 MACD=-1.4322 Signal=-1.1649 Hist=-0.2672; prev hist -0.2556 
 Momentum proxy (substitute only): SMA20 38.7585 -> bearish
