@@ -43,6 +43,60 @@ Outlook: start day 2026-11-23; missing sessions after last bar none; closures no
   Week 1 (to 2026-11-27) d=5.0: 66.1100 +/- 1.2779*2.236 -> 63.2526 - 68.9674
   Week 2 cumulative (to 2026-12-04) d=10.0: 66.1100 +/- 1.2779*3.162 -> 62.0693 - 70.1507
 
+--- SETUPS (official; trade rules v3.2.1; catalyst = rating changes only, the AI completes it) ---
+Bias BEARISH | Action AVOID - short advisory below | start day 2026-11-23 | time stop for a fill on the start day: close of 2026-12-07
+Rating changes in the window: 2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target to SG$75 (up); 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By Investing.co (up)
+SETUP COUNTER-TREND BUY - Limit buy at 20-bar low / 60-bar low (Limit) E 65.9: stop 63.98 TP1 68.45 TP2 70.37 R1 1.328 R2 2.328 gate PASS -> not proposed
+  P1 Micro AGAINST: VWAP oppose, CVD oppose, UDVR oppose, div/VT oppose
+  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL SUPPORTS: ratings only: 2 favour, 0 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 65.9-1.9169=63.9831; TP1 68.4558; TP2 70.3727
+SETUP COUNTER-TREND BUY - Limit buy at 120-bar low (Limit) E 61.6: stop 59.68 TP1 64.15 TP2 66.07 R1 1.328 R2 2.328 gate PASS -> not proposed | unlikely to fill this week (outside the week-1 range 63.25 - 68.97); also outside the week-2 range; 6.8% from the Close
+  P1 Micro AGAINST: VWAP oppose, CVD oppose, UDVR oppose, div/VT oppose
+  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL SUPPORTS: ratings only: 2 favour, 0 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 61.6-1.9169=59.6831; TP1 64.1558; TP2 66.0727
+SETUP COUNTER-TREND BUY - Limit buy at 52-week low (Limit) E 52.85: stop 50.93 TP1 55.4 TP2 57.32 R1 1.328 R2 2.328 gate PASS -> not proposed | unlikely to fill this week (outside the week-1 range 63.25 - 68.97); also outside the week-2 range; 20.1% from the Close
+  P1 Micro AGAINST: VWAP oppose, CVD oppose, UDVR oppose, div/VT oppose
+  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL SUPPORTS: ratings only: 2 favour, 0 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 52.85-1.9169=50.9331; TP1 55.4058; TP2 57.3227
+SETUP SHORT ADVISORY - Close (market) (Market) E 66.11: stop 68.03 TP1 63.56 TP2 61.64 R1 1.328 R2 2.328 gate PASS -> depends on catalyst
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-2.13 vs main)
+  P3 Structure MIXED: Darvas favour (Breakdown Below), room oppose (blocking: 20-bar low 65.9000, 60-bar low 65.9000), entry neither
+  P4 Catalyst PROVISIONAL AGAINST: ratings only: 0 favour, 2 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 66.11+1.9169=68.0269; TP1 63.5542; TP2 61.6373
+SETUP SHORT ADVISORY - VWAP10 (Limit) E 68.77: stop 70.69 TP1 66.22 TP2 64.3 R1 1.328 R2 2.328 gate PASS -> proposed on technicals
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL AGAINST: ratings only: 0 favour, 2 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 68.77+1.9169=70.6869; TP1 66.2142; TP2 64.2973
+SETUP SHORT ADVISORY - Kijun (Limit) E 70.49: stop 72.41 TP1 67.94 TP2 66.02 R1 1.328 R2 2.328 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 63.25 - 68.97); also outside the week-2 range; 6.6% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL AGAINST: ratings only: 0 favour, 2 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 70.49+1.9169=72.4069; TP1 67.9342; TP2 66.0173
+SETUP SHORT ADVISORY - Limit short at 20-bar high (Limit) E 74.95: stop 76.87 TP1 72.4 TP2 70.48 R1 1.328 R2 2.328 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 63.25 - 68.97); also outside the week-2 range; 13.4% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL AGAINST: ratings only: 0 favour, 2 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 74.95+1.9169=76.8669; TP1 72.3942; TP2 70.4773
+SETUP SHORT ADVISORY - Limit short at 60-bar high / 120-bar high / Darvas ceiling (Limit) E 79.05: stop 80.97 TP1 76.5 TP2 74.58 R1 1.328 R2 2.328 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 63.25 - 68.97); also outside the week-2 range; 19.6% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-2.13 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst PROVISIONAL AGAINST: ratings only: 0 favour, 2 oppose (2026-11-10 CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target t; 2026-11-19 JPMorgan upgrades DBS Group stock rating on valuation, raises PT By In); the AI adds other news
+  Arithmetic: 1.5A 1.9169 2A 2.5558 3.5A 4.4727; stop 79.05+1.9169=80.9669; TP1 76.4942; TP2 74.5773
+Selected buy: Limit buy at 20-bar low / 60-bar low E 65.9 | not proposed
+Selected short: VWAP10 E 68.77 | proposed on technicals
+
 --- WEEKS (last 4) ---
 Week 2026-10-26 bars 5: O 74.0 C 73.13 H 74.58 L 72.8 prevC 74.44 chg raw -1.7598% adj -1.7598% up 1 dn 4 volx 0.6898 CVD -8,709,693 UD 0.1889 pos 0.1854 standout 2026-10-30 V 6,451,720 chg -0.9079% CLV -0.3400
 Week 2026-11-02 bars 5: O 72.4 C 69.72 H 72.46 L 69.0 prevC 73.13 chg raw -4.6629% adj -4.6629% up 1 dn 4 volx 1.7092 CVD 23,523,756 UD 0.2157 pos 0.2081 standout 2026-11-02 V 11,115,000 chg -1.9417% CLV 0.1176

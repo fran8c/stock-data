@@ -47,6 +47,48 @@ Outlook: start day 2026-11-23; missing sessions after last bar none; closures ['
   Week 1 (to 2026-11-27) d=3.5: 125.5300 +/- 10.7059*1.871 -> 105.4993 - 145.5607
   Week 2 cumulative (to 2026-12-04) d=8.5: 125.5300 +/- 10.7059*2.915 -> 94.3223 - 156.7377
 
+--- SETUPS (official; trade rules v3.2.1; catalyst = rating changes only, the AI completes it) ---
+Bias BEARISH | Action AVOID - short advisory below | start day 2026-11-23 | time stop for a fill on the start day: close of 2026-12-08
+Rating changes in the window: none
+SETUP COUNTER-TREND BUY - Limit buy at 20-bar low / 60-bar low / 120-bar low / 52-week low (Limit) E 124.5: stop 108.44 TP1 145.91 TP2 161.97 R1 1.333 R2 2.333 gate PASS -> not proposed
+  P1 Micro AGAINST: VWAP oppose, CVD oppose, UDVR oppose, div/VT oppose
+  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-31.14 vs main)
+  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 124.5-16.0588=108.4412; TP1 145.9118; TP2 161.9706
+SETUP SHORT ADVISORY - Close (market) (Market) E 125.53: stop 141.59 TP1 104.12 TP2 88.06 R1 1.333 R2 2.333 gate PASS -> depends on catalyst
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-31.14 vs main)
+  P3 Structure MIXED: Darvas favour (Breakdown Below), room oppose (blocking: 20-bar low 124.5000, 60-bar low 124.5000, 120-bar low 124.5000, 52-week low 124.5000), entry neither
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 125.53+16.0588=141.5888; TP1 104.1182; TP2 88.0594
+SETUP SHORT ADVISORY - VWAP10 (Limit) E 158.21: stop 174.27 TP1 136.8 TP2 120.74 R1 1.333 R2 2.333 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 105.50 - 145.56); also outside the week-2 range; 26.0% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-31.14 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 158.21+16.0588=174.2688; TP1 136.7982; TP2 120.7394
+SETUP SHORT ADVISORY - Kijun (Limit) E 173.35: stop 189.41 TP1 151.94 TP2 135.88 R1 1.333 R2 2.333 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 105.50 - 145.56); also outside the week-2 range; 38.1% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-31.14 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 173.35+16.0588=189.4088; TP1 151.9382; TP2 135.8794
+SETUP SHORT ADVISORY - Limit short at 20-bar high (Limit) E 219.99: stop 236.05 TP1 198.58 TP2 182.52 R1 1.333 R2 2.333 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 105.50 - 145.56); also outside the week-2 range; 75.2% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-31.14 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 219.99+16.0588=236.0488; TP1 198.5782; TP2 182.5194
+SETUP SHORT ADVISORY - Limit short at 60-bar high / 120-bar high / Darvas ceiling (Limit) E 243.37: stop 259.43 TP1 221.96 TP2 205.9 R1 1.333 R2 2.333 gate PASS -> proposed on technicals | unlikely to fill this week (outside the week-1 range 105.50 - 145.56); also outside the week-2 range; 93.9% from the Close
+  P1 Micro SUPPORTS: VWAP favour, CVD favour, UDVR favour, div/VT favour
+  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-31.14 vs main)
+  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
+  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
+  Arithmetic: 1.5A 16.0588 2A 21.4118 3.5A 37.4706; stop 243.37+16.0588=259.4288; TP1 221.9582; TP2 205.8994
+Selected buy: Limit buy at 20-bar low / 60-bar low / 120-bar low / 52-week low E 124.5 | not proposed
+Selected short: VWAP10 E 158.21 | proposed on technicals
+
 --- WEEKS (last 4) ---
 Week 2026-10-26 bars 5: O 213.11 C 204.64 H 219.99 L 200.92 prevC 210.96 chg raw -2.9958% adj -2.9958% up 2 dn 3 volx 0.9774 CVD -23,128,679 UD 0.5181 pos 0.1951 standout 2026-10-30 V 168,386,400 chg -4.2217% CLV -0.0860
 Week 2026-11-02 bars 5: O 207.53 C 186.64 H 209.98 L 181.46 prevC 204.64 chg raw -8.7959% adj -8.7959% up 2 dn 3 volx 1.6753 CVD -714,050,756 UD 0.4738 pos 0.1816 standout 2026-11-05 V 306,127,800 chg -9.2590% CLV -0.9811

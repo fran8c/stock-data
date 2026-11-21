@@ -41,4 +41,13 @@ up and down days, up/down volume, volume vs normal, week CVD, close position in 
 1 = at the high), the standout (highest-volume) day, and each comparator's change and the relative move.
 
 `<SYMBOL>_latest.json` and `<SYMBOL>_ledger.txt` add the latest day's reference levels, outlook,
-range calibration and comparator dates. Trend charts: see the dashboard.
+range calibration, comparator dates and the SETUPS (every tested setup with its levels and pillar readings).
+
+## Setups file (`<SYMBOL>_setups.csv`, one row per day)
+
+Official trade-rule results for each day (Individual Stock Harness v3.2.1): bias, action, and the selected buy
+and short with label, anchor, order type, entry, stop, TP1, TP2, R(TP2), gate, the four pillars (p1 Microstructure,
+p2 Momentum, p3 Structure, p4 Catalyst), how many of the three technical pillars support, status and fill check.
+The catalyst pillar counts broker rating changes only; the AI completes it with other news. Status:
+"proposed on technicals" (3 of 3 technical pillars support), "depends on catalyst" (2 of 3: proposed only if the
+catalyst supports), "not proposed". Trend charts: see the dashboard.

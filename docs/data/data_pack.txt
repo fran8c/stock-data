@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 12:44 SGT
+Run time: 2026-11-21 19:45 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 12:44 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 12:44 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 19:45 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 19:45 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -38,9 +38,9 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1247 items have no summary (paywall or site blocks automated visits)
+  - News: 1255 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-21 12:44 SGT
+DATA PACK - generated 2026-11-21 19:45 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -85,7 +85,7 @@ D05.SI ex-dividend date | 2026-11-13 | Ex-dividend date per Yahoo - most recent 
 O39.SI latest close | 26.5400 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/history/ | 2026-11-20
 O39.SI 3-month average daily volume | 7,188,475 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/history/ | 2026-11-20
 O39.SI sector | Financial Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/profile/ | retrieved 2026-11-21
-O39.SI trailing EPS | 1.7000 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-21
+O39.SI trailing EPS | 1.7500 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-21
 O39.SI forward EPS | 1.9342 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-21
 O39.SI book value per share | 13.7300 SGD | Shareholders' equity per share, latest reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-21
 O39.SI P/B | 1.93 | Price / book value per share | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-21
@@ -171,9 +171,9 @@ U96.SI ex-dividend date | 2026-08-21 | Ex-dividend date per Yahoo - most recent 
 Z74.SI latest close | 4.1600 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-20
 Z74.SI 3-month average daily volume | 23,685,709 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-20
 Z74.SI sector | Communication Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/profile/ | retrieved 2026-11-21
-Z74.SI trailing EPS | 0.2200 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI trailing EPS | 0.2300 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
 Z74.SI forward EPS | 0.2114 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
-Z74.SI trailing P/E | 18.91 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI trailing P/E | 18.09 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
 Z74.SI forward P/E | 19.68 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
 Z74.SI 5-year P/E high | 79.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-21
 Z74.SI 5-year P/E median | 18.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-21
@@ -221,9 +221,9 @@ MRVL ex-dividend date | 2026-10-09 | Ex-dividend date per Yahoo - most recent (n
 MU latest close | 594.5100 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-20
 MU 3-month average daily volume | 28,257,854 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-20
 MU sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/profile/ | retrieved 2026-11-21
-MU trailing EPS | 64.0000 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
+MU trailing EPS | 74.3300 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU forward EPS | 208.8288 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
-MU trailing P/E | 9.29 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
+MU trailing P/E | 8.00 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU forward P/E | 2.85 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU 5-year P/E high | 239.03 | UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-21
 MU 5-year P/E median | 125.22 | UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-21
@@ -237,9 +237,9 @@ MU ex-dividend date | 2026-10-14 | Ex-dividend date per Yahoo - most recent (no 
 NVDA latest close | 125.5300 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/history/ | 2026-11-20
 NVDA 3-month average daily volume | 171,022,048 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/history/ | 2026-11-20
 NVDA sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/profile/ | retrieved 2026-11-21
-NVDA trailing EPS | 8.0100 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
+NVDA trailing EPS | 9.3100 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
 NVDA forward EPS | 16.6053 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
-NVDA trailing P/E | 15.67 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
+NVDA trailing P/E | 13.48 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
 NVDA forward P/E | 7.56 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-21
 NVDA 5-year P/E high | 519.29 | UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 44 month-ends, 2023-04-28 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/financials/ | retrieved 2026-11-21
 NVDA 5-year P/E median | 91.60 | UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 44 month-ends, 2023-04-28 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/financials/ | retrieved 2026-11-21
