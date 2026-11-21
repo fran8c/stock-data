@@ -1,0 +1,17 @@
+# REPORT LIST — stocks that get a daily copy file for the Individual Stock Harness.
+# Each stock must also be on watchlist.txt. Add a line to add a stock; delete it to stop.
+#
+# Format:   SYMBOL | Ticker on exchange | Sector words for news | Peer names (for news)
+#
+#   SYMBOL        Yahoo Finance symbol, as on watchlist.txt (e.g. D05.SI)
+#   Ticker        How the harness should read it: TICKER on EXCHANGE (e.g. D05 on SGX, MRVL on NASDAQ)
+#   Sector words  Used for the sector news search, e.g. "Singapore banks" or "semiconductor stocks"
+#   Peer names    The peers in peers.txt, by name, comma-separated (used in the peer news search)
+#
+# Files are written to docs/data/harness/ by each run of the stock's market.
+# Lines starting with # are ignored.
+
+O39.SI | O39 on SGX | Singapore banks | DBS Group, UOB
+D05.SI | D05 on SGX | Singapore banks | OCBC, UOB
+BN4.SI | BN4 on SGX | Singapore infrastructure | Sembcorp Industries, Jardine Cycle & Carriage
+MRVL | MRVL on NASDAQ | semiconductor stocks | Broadcom, Nvidia

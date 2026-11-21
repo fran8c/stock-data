@@ -80,6 +80,19 @@ The job still reads 30 days of news (Google News, Bing News, Yahoo) into `news_s
 
 Each item shows its trading day's change %, gap % and volume ratio, with **BIG MOVE** when the change is at least 1.5%, the gap at least 1.0% or volume at least 1.5x normal. Each stock also lists **big-move days with no news kept**, so you know where to look. The rules are keyword-based, so check an item before relying on it. The full unfiltered list is in `news_all.txt`. Sector, country and global news are not in the pack: the harness searches for those itself.
 
+## Harness copy files (one paste per stock)
+
+For each stock on `report_list.txt`, each run of its market writes two files to `docs/data/harness/`:
+
+- `<SYMBOL>.txt`: the **Individual Stock Harness v3.3** (from `harness/`) followed by today's run inputs. Paste it into any AI chat.
+- `<SYMBOL>_data.txt`: the run inputs only, for an AI that already has the harness saved (a Claude Project, a Gemini Gem).
+
+The run inputs are: as of (the exchange's own date), ticker, settings (mode A, STANDARD), the last results date, one year of daily bars, the benchmark and peer closes (last 90 days), dividends, holidays, the official indicator ledger (`github_ledger`), and a news pack in the harness's own format. The news pack holds the company items from `news_pack.txt` plus the harness's fixed sector, country/macro, global and big-move-day searches, run by GitHub through Google News (Bing News if Google fails), with a search log. These are candidates: the AI checks each one, and tops up any scope that comes up short if it can search.
+
+The dashboard's **Harness reports** section has Copy buttons and file links; the report email lists the links; the Past days page keeps each day's files. Full files are about 130,000 characters: if an AI won't take a paste that long, attach the file instead. To add a stock: add it to `watchlist.txt` and `peers.txt`, then add one line to `report_list.txt`.
+
+Everything in this repo is public, including the harness text in `harness/`.
+
 ## Website publishing
 
 If publishing the website fails (GitHub sometimes can't find the website package for a few seconds), the job waits a minute and tries once more. The data is saved to the repo before publishing, so a publish failure never loses data.
@@ -129,11 +142,16 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 | `indicators.py` | Works out the indicator ledger (called by `pipeline.py`) |
 | `newsfilter.py` | Builds the short, price-relevant news pack (called by `pipeline.py`) |
 | `pillars.py` | Works out the pillar readings as statistics (called by `pipeline.py`) |
+| `report_list.txt` | The stocks that get a harness copy file. Edit this one too. |
+| `harness/` | The Individual Stock Harness text used in the copy files |
+| `newscontext.py` | Runs the sector, country and global news searches for the copy files |
+| `copyfiles.py` | Writes the harness copy files (called by `pipeline.py`) |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |
 | `docs/data/parts/` | Each market's latest results, combined into the packs |
 | `docs/data/indicators/` | The indicator ledger, per stock |
+| `docs/data/harness/` | The harness copy files, per report stock |
 | `docs/data/archive/` | Files of names taken off the watchlist |
 
 Data comes from Yahoo Finance (unofficial), FRED, MAS, SingStat and Google News. It's for personal research, not investment advice.

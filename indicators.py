@@ -703,6 +703,10 @@ def ledger_text(symbol, daily, weeks, latest):
              f"vol {f(v['down_vol10'], 0)} | ratio {f(v['udvr10'])} {v['udvr10_label']}")
     L.append(f"VT5/20 = {f(v['vt5_20'])} {v['vt5_20_label']}; 5-bar chg raw {f(v['chg5_raw_pct'])}% adj {f(v['chg5_pct'])}%")
     L.append(f"ATR14 (Wilder) = {f(v['atr14'])}; last 14 TR: " + ", ".join(f"{x:.2f}" for x in daily["true_range"].tail(14)))
+    if len(daily) > 1:   # one-step check for an AI without code: (13 x previous ATR14 + latest TR) / 14
+        pa, tr = daily["atr14"].iloc[-2], daily["true_range"].iloc[-1]
+        L.append(f"ATR14 one-step check: previous ATR14 {f(pa)}; latest TR = max(H-L, |H-prevC|, |L-prevC|) = {f(tr)}; "
+                 f"(13 x {f(pa)} + {f(tr)}) / 14 = {f((13 * pa + tr) / 14)}")
     L.append(f"Expected 5-day range = {f(v['close'])} +/- {f(v['atr14'])}*2.236 = {f(v['range5_low'])} - {f(v['range5_high'])}")
     prev_hist = daily["macd_hist"].iloc[-2] if len(daily) > 1 else None
     L.append(f"MACD={f(v['macd'])} Signal={f(v['macd_signal'])} Hist={f(v['macd_hist'])}; prev hist {f(prev_hist)} {v['macd_note']}")

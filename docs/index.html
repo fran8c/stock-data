@@ -73,6 +73,8 @@ td.nr{color:var(--muted);font-style:italic}
   padding:8px 14px;border-radius:8px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.show{opacity:1}
 .empty{padding:40px;text-align:center}
+.copyrow{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line)}
+.copyrow:first-child{border-top:0}
 </style>
 </head>
 <body>
@@ -94,6 +96,12 @@ td.nr{color:var(--muted);font-style:italic}
       <button data-copylink="news_pack">Copy news pack link</button>
       <a class="btn" id="openbundle" href="data/ai_bundle.txt" target="_blank" rel="noopener">Open bundle</a>
     </div>
+  </div>
+
+  <h2>Harness reports</h2>
+  <div class="ai" id="copyfiles">
+    <p>One file per stock for the Individual Stock Harness v3.3. <b>Full</b> = the harness and today's data: paste it into any AI chat. <b>Data only</b> = today's data: use it where the harness is already saved (a Claude Project, a Gemini Gem). If a paste is too long, download the file and attach it instead.</p>
+    <div id="copylist" class="muted">Loading…</div>
   </div>
 
   <h2>Benchmarks</h2>
@@ -165,6 +173,22 @@ function stockCard(s){
     ${s.scores?`<div class="muted" style="font-size:13px;margin-top:6px">Confluence <strong style="color:var(--ink)">${esc(s.scores.confluence||"–")}</strong> · microstructure ${esc(s.scores.micro||"–")} · momentum ${esc(s.scores.momentum||"–")} · ratings ${s.scores.upgrades??"–"} up / ${s.scores.downgrades??"–"} down (14 days)</div>`:""}</div><ul class="news">${news}</ul></div>`;
 }
 
+function renderCopyFiles(list){
+  if(!list||!list.length){$("#copylist").textContent="No copy files yet. Add stocks to report_list.txt.";return}
+  const k=n=>n==null?"":`${Math.round(n/1000)}k characters`;
+  $("#copylist").classList.remove("muted");
+  $("#copylist").innerHTML=list.map((c,i)=>`<div class="copyrow"><div><strong>${esc(c.name)}</strong> <span class="muted">${esc(c.ticker)} · as of ${esc(c.as_of||"–")}</span></div>
+    <div class="btns">${c.full?`<button class="primary" data-cf="${i}" data-kind="full">Copy full</button>`:""}
+    <button data-cf="${i}" data-kind="data">Copy data only</button>
+    ${c.full?`<a class="btn" href="${esc(c.full)}" target="_blank" rel="noopener" download>Full file (${k(c.full_chars)})</a>`:""}
+    <a class="btn" href="${esc(c.data)}" target="_blank" rel="noopener" download>Data file (${k(c.data_chars)})</a></div></div>`).join("");
+  document.querySelectorAll("[data-cf]").forEach(b=>b.addEventListener("click",async()=>{
+    const c=list[+b.dataset.cf], url=c[b.dataset.kind];
+    try{const t=await (await fetch(url,{cache:"no-store"})).text();await navigator.clipboard.writeText(t);toast(`${c.name}: ${b.dataset.kind==="full"?"full file":"data"} copied, ready to paste`)}
+    catch{toast("Couldn't copy. Use the file link instead.")}
+  }));
+}
+
 function renderStocks(){
   const list=DATA.stocks.filter(s=>FILTER==="all"||(FILTER==="sg")===s.symbol.endsWith(".SI"));
   $("#stocks").innerHTML=list.map(stockCard).join("")||'<div class="card empty muted">No names in this filter.</div>';
@@ -195,7 +219,7 @@ fetch("data/dashboard.json",{cache:"no-store"}).then(r=>{if(!r.ok)throw new Erro
   statusBanner(d.status||{});
   if(d.edit_url){const a=$("#editlist");a.href=d.edit_url;a.hidden=false;$("#edithint").hidden=false}
   $("#bench").innerHTML=(d.benchmarks||[]).map(benchCard).join("")||'<div class="card muted">No benchmark data on this run.</div>';
-  renderStocks();renderMacro(d.macro||[]);
+  renderCopyFiles(d.copy_files);renderStocks();renderMacro(d.macro||[]);
 }).catch(()=>{
   $("#gen").textContent="No data yet";
   $("#status").innerHTML='<div class="banner warn">No data has been collected yet. Run the workflow once from the Actions tab, then refresh this page.</div>';

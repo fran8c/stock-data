@@ -89,6 +89,8 @@ async function show(date){
   let status="",summary="";
   try{status=await (await fetch(base+"status.txt",{cache:"no-store"})).text()}catch{}
   try{const r=await fetch(base+"summary.md",{cache:"no-store"});if(r.ok)summary=await r.text()}catch{}
+  let copies=[];
+  try{const r=await fetch(base+"harness/index.json",{cache:"no-store"});if(r.ok)copies=await r.json()}catch{}
   const first=(status.split("\n")[0]||"").replace("RUN STATUS: ","");
   const cls=/FAILED/.test(first)?"bad":/gaps/.test(first)?"warn":"ok";
   const abs=p=>new URL(base+p,location.href).href;
@@ -101,6 +103,7 @@ async function show(date){
       <button class="btn" data-copy="${esc(abs("data_pack.txt"))}">Copy data pack link</button>
       <button class="btn" data-copy="${esc(abs("news_pack.txt"))}">Copy news pack link</button>
     </div>
+    ${copies.length?`<div class="links"><span class="muted" style="align-self:center">Harness copy files:</span>${copies.map(n=>`<a class="btn" href="${base}harness/${esc(n)}" target="_blank" rel="noopener">${esc(n.replace(".txt","").replace("_data"," data only"))}</a>`).join("")}</div>`:""}
     <div class="sum">${summary?md(summary):'<p class="muted">No market summary was saved for this day.</p>'}</div>`;
   panel.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",async()=>{
     try{await navigator.clipboard.writeText(b.dataset.copy);toast("Link copied")}catch{toast(b.dataset.copy)}

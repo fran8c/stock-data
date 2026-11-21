@@ -43,7 +43,9 @@ import requests
 
 import indicators   # the official indicator ledger (indicators.py, same folder)
 import newsfilter   # the short, price-relevant news pack (newsfilter.py)
-import pillars      # official pillar scores and trade levels (pillars.py)
+import pillars      # pillar readings as neutral statistics (pillars.py)
+import newscontext  # sector, country/macro and global news searches for the copy files (newscontext.py)
+import copyfiles    # per-stock copy files for the Individual Stock Harness (copyfiles.py)
 
 # ----------------------------------------------------------------------------
 # Settings
@@ -85,6 +87,8 @@ READY_AFTER_HOURS = 2      # a session's bar is expected this long after the clo
 RETRIES = int(os.environ.get("RETRIES", "2"))                 # re-pulls of files that are behind
 RETRY_WAIT_MIN = float(os.environ.get("RETRY_WAIT_MIN", "15"))  # minutes between re-pulls
 HOLIDAYS_FILE = ROOT / "holidays.txt"
+REPORT_LIST = ROOT / "report_list.txt"   # stocks that get a daily harness copy file
+HARNESS_DIR = OUT / "harness"             # the copy files
 PARTS = OUT / "parts"      # each market's latest results, combined into the packs
 
 NR = "NOT RETRIEVED"
@@ -615,6 +619,14 @@ def stock_figures(item, tk, hist, prices, divs):
     if ed_s and ed_s >= TODAY_S:
         add("next results date", ed_s,
             "Next earnings date per Yahoo (estimated if the company hasn't confirmed)", yurl(sym), retrieved)
+        try:   # the last release, for the harness's results-date warning
+            edf = tk.get_earnings_dates(limit=12)
+            past = sorted(d.date().isoformat() for d in edf.index if d.date().isoformat() < TODAY_S)
+            if past:
+                add("most recent results date", past[-1], "Last earnings release per Yahoo's earnings calendar",
+                    yurl(sym), retrieved)
+        except Exception:  # noqa: BLE001
+            pass
     elif ed_s:
         # Yahoo keeps showing the last date until the next one is announced
         add("next results date", NR,
@@ -902,10 +914,10 @@ def cap_words(text, n=SUMMARY_WORDS):
     return " ".join(w[:n]) + (" ..." if len(w) > n else "")
 
 
-def google_news(item):
+def google_news(item, days=NEWS_DAYS):
     sg = item["symbol"].endswith(".SI")
     hl, gl, ceid = ("en-SG", "SG", "SG:en") if sg else ("en-US", "US", "US:en")
-    q = f"{item['query']} when:{NEWS_DAYS}d"
+    q = f"{item['query']} when:{days}d"
     url = f"https://news.google.com/rss/search?q={quote_plus(q)}&hl={hl}&gl={gl}&ceid={ceid}"
     root = ET.fromstring(get(url).content)
     found = []
@@ -923,6 +935,18 @@ def google_news(item):
                       "url": (it.findtext("link") or "").strip(), "summary": None, "via": "google"})
     found.sort(key=lambda x: x["date"], reverse=True)
     return found[:NEWS_PER_TICKER]
+
+
+def context_search(query, market, days):
+    """One sector / country / global search for the copy files: Google News RSS, then Bing News RSS if Google fails or is empty."""
+    probe = {"symbol": "CTX.SI" if market == "SGX" else "CTX", "query": query, "name": query}
+    try:
+        found = google_news(probe, days)
+    except Exception:  # noqa: BLE001
+        found = []
+    if not found:
+        found = bing_feed(probe, query)
+    return [{k: n.get(k) for k in ("date", "title", "source", "url", "summary")} for n in found]
 
 
 def bing_queries(item):
@@ -1524,7 +1548,7 @@ def main():
                        "day <trading day>: chg <change %> gap <gap %> vol <volume ratio> [BIG MOVE] | <facts, or the no-summary note>\n"
                        "The day figures come from the indicator ledger (chg is dividend-adjusted). BIG MOVE = |change| >= 1.5%, "
                        "|gap| >= 1.0% or volume >= 1.5x normal. 'BIG-MOVE DAYS WITH NO NEWS KEPT' lists days to search for news.\n"
-                       "Sector, country and global news are not in this pack: the harness searches for those.\n"
+                       "Sector, country and global news: in the harness copy files (docs/data/harness/) for the stocks on report_list.txt.\n"
                        f"Totals: # ITEMS WITH A SUMMARY ({ncount['with_summary']})  # HEADLINES ONLY ({ncount['headline_only']}) "
                        "(headline-only items are unverified: open the link before relying on them). "
                        "The full 30-day list is in news_all.txt.")
@@ -1541,6 +1565,10 @@ def main():
     peer_lines += [f"  {s}: {', '.join(peers.get(s, [])) or 'none listed - the harness will suggest peers'}" for s in [i["symbol"] for i in watch]]
     write_text("peers.txt", "\n".join(peer_lines))
     write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols, [i["symbol"] for i in watch]), "\n".join(peer_lines), data_pack, news_pack]))
+
+    # Individual Stock Harness copy files (report_list.txt) for this run's markets
+    copy_written = write_copy_files(markets, watch, peers, store, kept_news, blocks)
+    copy_index = copy_file_index(watch)
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
     for s in all_stocks:
@@ -1569,13 +1597,30 @@ def main():
             "edit_url": edit_url(), "watchlist_size": len(watch),
             "files": {"bundle": "data/ai_bundle.txt", "data_pack": "data/data_pack.txt",
                       "news_pack": "data/news_pack.txt", "status": "data/status.txt",
-                      "indicators": "data/indicators/"}}
+                      "indicators": "data/indicators/"},
+            "copy_files": copy_index}
     write_text("dashboard.json", json.dumps(dash, ensure_ascii=False))
 
     summary = market_summary(all_stocks, all_bench, macro, stock_blocks)
+    if copy_index:
+        base = pages_base()
+        summary += ("\n\n**Harness copy files** (paste one into an AI chat; the data-only file is for an AI with the harness saved)\n"
+                    + "\n".join(f"- {c['name']} ({c['ticker']}, as of {c['as_of']}): full {base}{c['full'][5:]} | data only {base}{c['data'][5:]}"
+                                 if c["full"] else f"- {c['name']} ({c['ticker']}, as of {c['as_of']}): data only {base}{c['data'][5:]}"
+                                 for c in copy_index))
     write_text("summary.md", summary)
     save_history({"status.txt": status, "summary.md": summary,
                   "data_pack.txt": status + "\n\n" + data_pack, "news_pack.txt": news_pack})
+    # Keep this run's copy files in the dated folder
+    if copy_written:
+        hdir = HISTORY / TODAY_S / "harness"
+        hdir.mkdir(parents=True, exist_ok=True)
+        for s_ in copy_written:
+            for suffix in ("", "_data"):
+                f = HARNESS_DIR / f"{safe_name(s_)}{suffix}.txt"
+                if f.exists():
+                    (hdir / f.name).write_text(f.read_text(encoding="utf-8"), encoding="utf-8")
+        (hdir / "index.json").write_text(json.dumps(sorted(p.name for p in hdir.glob("*.txt"))), encoding="utf-8")
     # Freeze this run's official latest-day indicators in the dated folder
     if indicator_latest:
         frozen = HISTORY / TODAY_S / "indicators"
@@ -1666,6 +1711,97 @@ def market_summary(stocks, bench, macro, stock_blocks):
     out.append("")
     out.append("Prices are each market's latest close. SGX and US dates can differ because of time zones and holidays.")
     return "\n".join(out)
+
+
+def market_as_of(m):
+    """The harness reads as_of_date in the exchange's local time (US runs happen on the next SGT day)."""
+    return NOW.astimezone(MARKETS[m]["tz"]).date().isoformat()
+
+
+def write_copy_files(markets, watch, peers, store, kept_news, blocks):
+    """
+    Copy files for the Individual Stock Harness, for the stocks on report_list.txt in this run's markets:
+    docs/data/harness/<SYMBOL>.txt (harness + run inputs) and <SYMBOL>_data.txt (run inputs only).
+    Returns {symbol: {"full": chars, "data": chars}} for the files written on this run.
+    """
+    report = newscontext.read_report_list(REPORT_LIST)
+    by_sym = {i["symbol"]: i for i in watch}
+    HARNESS_DIR.mkdir(parents=True, exist_ok=True)
+    keep = {safe_name(r["symbol"]) for r in report}
+    for f in HARNESS_DIR.glob("*.txt"):   # a stock taken off report_list.txt loses its copy files
+        if f.stem.removesuffix("_data") not in keep:
+            f.unlink()
+    try:
+        harness_text = (ROOT / copyfiles.HARNESS_FILE).read_text(encoding="utf-8")
+    except FileNotFoundError:
+        R.scope = "general"
+        R.warn(f"{copyfiles.HARNESS_FILE} not found: only the data-only copy files were written")
+        harness_text = None
+    written = {}
+    for m in markets:
+        R.scope = m
+        rep_m = [r for r in report if market_of(r["symbol"]) == m]
+        missing = [r["symbol"] for r in rep_m if r["symbol"] not in by_sym]
+        if missing:
+            R.warn(f"report_list.txt: {', '.join(missing)} not on watchlist.txt - no copy file")
+        rep_m = [r for r in rep_m if r["symbol"] in by_sym
+                 and (OUT / "indicators" / f"{safe_name(r['symbol'])}_ledger.txt").exists()]
+        if not rep_m:
+            continue
+        as_of = market_as_of(m)
+        try:
+            ctx = newscontext.run(rep_m, by_sym, str(OUT / "indicators"), m, as_of, context_search)
+        except Exception as e:  # noqa: BLE001
+            R.warn(f"{m}: sector, country and global news searches failed ({e.__class__.__name__}: {e})")
+            traceback.print_exc()
+            ctx = {}
+        bench = ["^STI"] if m == "SGX" else ["^GSPC", "^IXIC", "^DJI"]
+        for r in rep_m:
+            sym, item = r["symbol"], by_sym[r["symbol"]]
+            try:
+                prices_df = pd.read_csv(PRICES / f"{safe_name(sym)}.csv")
+                comps = []
+                for c in bench + peers.get(sym, []):
+                    f = PRICES / f"{safe_name(c)}.csv"
+                    if f.exists():
+                        name = dict(BENCHMARKS).get(c) or (by_sym.get(c) or {}).get("name") or c
+                        comps.append((f"{name}, {c}", "benchmark_data" if c in bench else "peer_data", pd.read_csv(f)))
+                dv = OUT / "dividends" / f"{safe_name(sym)}.csv"
+                divs = pd.read_csv(dv) if dv.exists() else None
+                lb = prices_df["Date"].iloc[-1]
+                hol = copyfiles.read_holidays(HOLIDAYS_FILE, m, lb,
+                                              (datetime.fromisoformat(lb) + timedelta(days=21)).date().isoformat())
+                ledger = (OUT / "indicators" / f"{safe_name(sym)}_ledger.txt").read_text(encoding="utf-8")
+                full, data = copyfiles.build(r, item, m, as_of, RUN_STAMP, ledger, prices_df, comps, divs, hol,
+                                             copyfiles.pack_figures(blocks.get(sym)), ctx.get(sym), kept_news.get(sym),
+                                             store, clean, harness_text or "", bing_queries(item))
+                if harness_text:
+                    (HARNESS_DIR / f"{safe_name(sym)}.txt").write_text(full, encoding="utf-8")
+                (HARNESS_DIR / f"{safe_name(sym)}_data.txt").write_text(data, encoding="utf-8")
+                written[sym] = {"full": len(full) if harness_text else None, "data": len(data)}
+                R.good(f"{sym}: harness copy file {len(full):,} characters (data only {len(data):,})")
+            except Exception as e:  # noqa: BLE001
+                R.warn(f"{sym}: harness copy file failed ({e.__class__.__name__}: {e})")
+                traceback.print_exc()
+    return written
+
+
+def copy_file_index(watch):
+    """Every copy file on disk (this run's market and the other market's last run), for the dashboard and email."""
+    names = {i["symbol"]: i["name"] for i in watch}
+    out = []
+    for r in newscontext.read_report_list(REPORT_LIST):
+        stem = safe_name(r["symbol"])
+        full, data = HARNESS_DIR / f"{stem}.txt", HARNESS_DIR / f"{stem}_data.txt"
+        if not data.exists():
+            continue
+        head = data.read_text(encoding="utf-8")[:2000]
+        as_of = re.search(r"^as of: (\S+)", head, re.M)
+        out.append({"symbol": r["symbol"], "name": names.get(r["symbol"], r["symbol"]), "ticker": r["ticker"],
+                    "as_of": as_of.group(1) if as_of else None,
+                    "full": f"data/harness/{stem}.txt" if full.exists() else None, "data": f"data/harness/{stem}_data.txt",
+                    "full_chars": full.stat().st_size if full.exists() else None, "data_chars": data.stat().st_size})
+    return out
 
 
 def save_history(files):
