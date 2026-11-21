@@ -1,21 +1,34 @@
-# Runs the pipeline every Tuesday to Saturday at about 8am Singapore time,
-# and again within a minute or two whenever watchlist.txt or peers.txt is edited.
-# It saves the new files into the repo and republishes the dashboard.
-# You can also start it by hand: Actions tab -> "Daily stock data" -> Run workflow.
+# Two runs a day, each about 5 hours after its market closes:
+#   SGX run: 22:07 Singapore time, Monday to Friday (SGX closes 17:00)
+#   US run:  10:07 Singapore time, Tuesday to Saturday (about 9pm New York;
+#            10pm in US summer time)
+# Each run collects only its own market's stocks, benchmarks and peers, re-pulls
+# any price file that misses the latest session, then rebuilds the packs and the
+# dashboard (the other market's figures are kept from its last run).
+# It also runs (both markets) within a minute or two whenever watchlist.txt or
+# peers.txt is edited. You can start it by hand: Actions tab -> "Daily stock
+# data" -> Run workflow -> pick the market.
 
 name: Daily stock data
 
 on:
   schedule:
-    # GitHub's clock is UTC. 00:07 UTC = 08:07 Singapore time.
-    # Days 2-6 = Tuesday to Saturday (after US Monday to Friday sessions).
-    # Minute 7, not 0, because runs set for the top of the hour queue longest.
-    - cron: "7 0 * * 2-6"
+    # GitHub's clock is UTC (Singapore = UTC + 8). Minute 7, not 0, because runs
+    # set for the top of the hour queue longest. GitHub may start a run up to an
+    # hour late. If you change a line here, change it in "Pick the market" too.
+    - cron: "7 14 * * 1-5"   # SGX run: 14:07 UTC = 22:07 SGT, Mon-Fri
+    - cron: "7 2 * * 2-6"    # US run:  02:07 UTC = 10:07 SGT, Tue-Sat
   # Also run straight away whenever watchlist.txt or peers.txt is saved (edited) on GitHub.
   push:
     branches: [main]
     paths: [watchlist.txt, peers.txt]
   workflow_dispatch:
+    inputs:
+      market:
+        description: "Which market to collect"
+        type: choice
+        options: [both, SGX, US]
+        default: both
 
 permissions:
   contents: write   # save the data files back into the repo
@@ -30,7 +43,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90   # includes up to 2 waits of 15 min for late bars
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
@@ -47,10 +60,24 @@ jobs:
       - name: Install libraries
         run: pip install -r requirements.txt
 
+      - name: Pick the market
+        id: which
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          CHOSEN: ${{ github.event.inputs.market }}
+        run: |
+          case "$SCHEDULE" in
+            "7 14 * * 1-5") m=SGX ;;
+            "7 2 * * 2-6")  m=US ;;
+            *) m="${CHOSEN:-both}" ;;   # started by hand or by a watchlist edit
+          esac
+          echo "market=$m" >> "$GITHUB_OUTPUT"
+          echo "Market for this run: $m"
+
       - name: Collect the data
         id: collect
         continue-on-error: true   # still save and publish whatever worked
-        run: python pipeline.py
+        run: python pipeline.py --market "${{ steps.which.outputs.market }}"
 
       - name: Save the data files into the repo
         id: save
@@ -58,7 +85,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs
-          git commit -m "Daily data $(TZ=Asia/Singapore date +%F)" || echo "Nothing new to save"
+          git commit -m "Daily data $(TZ=Asia/Singapore date +%F) (${{ steps.which.outputs.market }})" || echo "Nothing new to save"
           # pick up any edit you made while the job was running, then save
           git pull --rebase origin "${{ github.ref_name }}"
           git push origin HEAD:"${{ github.ref_name }}"
@@ -93,9 +120,10 @@ jobs:
           TRIGGER: ${{ github.event_name }}
           SHA: ${{ steps.save.outputs.sha }}
           REPO: ${{ github.repository }}
+          MARKET: ${{ steps.which.outputs.market }}
         run: |
           python - <<'PY'
-          import os, re, subprocess, pathlib
+          import os, re, json, subprocess, pathlib
           from datetime import datetime, timezone, timedelta
 
           env = os.environ
@@ -108,14 +136,24 @@ jobs:
               m = re.search(pattern, text)
               return int(m.group(1)) if m else None
 
-          crit = count(r"CRITICAL \((\d+)\)", status)
-          gaps = count(r"GAPS \((\d+)\)", status)
+          # This run's own result (its market only); status.txt covers both markets
+          rr_path = d / "run_result.json"
+          rr = json.loads(rr_path.read_text(encoding="utf-8")) if rr_path.exists() else None
+          if rr:
+              crit, gaps = len(rr["critical"]), len(rr["warnings"])
+          else:
+              crit = count(r"CRITICAL \((\d+)\)", status)
+              gaps = count(r"GAPS \((\d+)\)", status)
+          market = env.get("MARKET") or "both"
+          label = {"SGX": "SGX run", "US": "US run"}.get(market, "SGX + US run")
           with_sum = count(r"# ITEMS WITH A SUMMARY \((\d+)\)", news)
           headlines = count(r"# HEADLINES ONLY \((\d+)\)", news)
-          crit_lines = []
-          if crit:
-              block = status.split("CRITICAL", 1)[1].split("GAPS", 1)[0]
-              crit_lines = [l.strip() for l in block.splitlines() if l.strip().startswith("- ")]
+          crit_lines = [f"- {c}" for c in rr["critical"]] if rr else []
+          stale_lines = []
+          if rr:
+              for m, items in rr.get("stale", {}).items():
+                  for x in items:
+                      stale_lines.append(f"- {x['symbol']}: last bar {x['last']}, should have {x['expected']}")
 
           if not status:
               verdict = "FAILED - the script stopped before writing any files"
@@ -125,6 +163,7 @@ jobs:
               verdict = f"OK - {gaps} expected gaps (marked NOT RETRIEVED)"
           else:
               verdict = "OK - all data collected"
+          verdict = f"{label}: {verdict}"
           if env.get("DEPLOY") != "success":
               verdict += ". Dashboard NOT updated (publishing step failed)"
 
@@ -138,6 +177,8 @@ jobs:
           ]
           if crit_lines:
               lines += ["**Critical gaps**"] + crit_lines + [""]
+          if stale_lines:
+              lines += ["**Behind after re-pulls** (a separate STALE issue has the details)"] + stale_lines + [""]
           summary = d / "summary.md"
           if summary.exists() and status:
               lines += [summary.read_text(encoding="utf-8").strip(), ""]
@@ -182,6 +223,66 @@ jobs:
               num = url.rstrip("/").split("/")[-1]
           gh("issue", "comment", num, "--body-file", "notice.md")
           print(pathlib.Path("notice.md").read_text(encoding="utf-8"))
+          PY
+
+      # Opens an issue titled like "STALE: MRVL, NVDA behind (US run)" when a
+      # price file still misses its market's latest session after the re-pulls.
+      # The issue mentions you, so GitHub emails you. When a later run of that
+      # market is up to date, it comments and closes the issue. No issue, no email.
+      - name: Send a STALE alert if files are behind
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import os, json, subprocess, pathlib
+          env = os.environ
+          p = pathlib.Path("docs/data/run_result.json")
+          if not p.exists():
+              raise SystemExit("No run_result.json - nothing to check")
+          r = json.loads(p.read_text(encoding="utf-8"))
+
+          def gh(*args):
+              return subprocess.run(["gh", *args], check=True, capture_output=True, text=True).stdout.strip()
+
+          open_issues = json.loads(gh("issue", "list", "--state", "open", "--search", "STALE in:title",
+                                      "--json", "number,title,body", "--limit", "50") or "[]")
+          actions = f"https://github.com/{env['REPO']}/actions/workflows/daily.yml"
+          for m in r["markets"]:
+              marker = f"<!-- stale-market:{m} -->"
+              mine = [i for i in open_issues if marker in (i.get("body") or "")]
+              items = r["stale"].get(m, [])
+              if items:
+                  names = ", ".join(x["symbol"].lstrip("^") for x in items)
+                  title = f"STALE: {names} behind ({m} run)"
+                  rows = "\n".join(f"| {x['symbol']} | {x['last']} | {x['expected']} |" for x in items)
+                  body = "\n".join([
+                      f"@{env['OWNER']} The {m} run of {r['run_stamp']} still misses the latest {m} session "
+                      f"for these files after {r['retries']} re-pull(s), {r['retry_wait_min']:g} minutes apart:",
+                      "", "| File | Last bar | Should have |", "|---|---|---|", rows, "",
+                      "The harness will mark that session as not in the data. What you can do:",
+                      f"- Wait: the next {m} run re-pulls everything and closes this issue when the files catch up.",
+                      f"- Or re-run now: [Actions]({actions}) -> Run workflow -> market = {m}.",
+                      "- If that day was a market holiday, add it to holidays.txt (then close this issue).",
+                      "", f"Run log: {env['RUN_URL']}", marker])
+                  if mine:
+                      num = str(mine[0]["number"])
+                      gh("issue", "edit", num, "--title", title)
+                      gh("issue", "comment", num, "--body", body)
+                  else:
+                      gh("issue", "create", "--title", title, "--body", body)
+                  print("STALE alert:", title)
+              else:
+                  for i in mine:
+                      exp = r["expected"].get(m)
+                      gh("issue", "comment", str(i["number"]), "--body",
+                         f"All {m} files now have the {exp} session (run of {r['run_stamp']}). Closing.")
+                      gh("issue", "close", str(i["number"]))
+                  print(f"{m}: no files behind")
           PY
 
       - name: Mark the run as failed if prices or rates are missing
