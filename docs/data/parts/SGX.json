@@ -1,6 +1,6 @@
 {
  "market": "SGX",
- "run_stamp": "2026-11-21 21:20 SGT",
+ "run_stamp": "2026-11-21 21:39 SGT",
  "expected": "2026-11-20",
  "critical": [],
  "warnings": [
@@ -16,6 +16,7 @@
   "BN4.SI: next results date not yet announced (last was 2026-10-29)",
   "BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed",
   "BS6.SI: next results date not available",
+  "BS6.SI: Google News feed failed (HTTPError)",
   "U96.SI: P/E range covers only 45 months, not 5 years",
   "U96.SI: next results date not available",
   "Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)",

@@ -35,7 +35,7 @@
 Prices are each market's latest close. SGX and US dates can differ because of time zones and holidays.
 
 **Harness copy files** (paste one into an AI chat; the data-only file is for an AI with the harness saved)
-- OCBC (O39 on SGX, as of 2026-11-21): full https://fran8c.github.io/stock-data/data/harness/O39.SI.txt | data only https://fran8c.github.io/stock-data/data/harness/O39.SI_data.txt
-- DBS Group (D05 on SGX, as of 2026-11-21): full https://fran8c.github.io/stock-data/data/harness/D05.SI.txt | data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
-- Keppel Ltd (BN4 on SGX, as of 2026-11-21): full https://fran8c.github.io/stock-data/data/harness/BN4.SI.txt | data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
-- Marvell Technology (MRVL on NASDAQ, as of 2026-11-21): full https://fran8c.github.io/stock-data/data/harness/MRVL.txt | data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt
+- OCBC (O39 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/O39.SI_data.txt
+- DBS Group (D05 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
+- Keppel Ltd (BN4 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
+- Marvell Technology (MRVL on NASDAQ, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt

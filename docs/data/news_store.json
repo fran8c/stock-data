@@ -20415,7 +20415,7 @@
   "url": "https://www.latimes.com/california/story/2026-11-19/california-subpoenas-nvidia-as-questions-about-ceo-affair-ai-chips-mount",
   "summary": "Atty. Gen. Rob Bonta's office said information gleaned from the subpoenas 'will help the California Department of Justice evaluate whether Nvidia’s actions violated California law.' ...",
   "via": "bing",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "NVDA::nvidiareportedlyjustbriefedemployeesonwhatwillhappeninthenearfuture": {
   "ticker": "NVDA",
@@ -23137,6 +23137,86 @@
   "url": "https://www.msn.com/en-us/news/other/rick-orford-assesses-palantir-micron-and-commercial-space-stocks/vi-AA29iH4c",
   "summary": "Rick Orford evaluates Palantir, Micron, Nebius, SpaceX, Rocket Lab and Redwire. He discusses each company's growth potential, competitive advantages and the differing risks and valuations for ...",
   "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::anthropiccofoundertombrowntodonatetotrumpaccountsaftercompanys935bipofollowingspacexpresidentslead": {
+  "ticker": "SPCX",
+  "date": "2026-11-21",
+  "title": "Anthropic co-founder Tom Brown to donate to Trump Accounts after company’s $93.5B IPO, following SpaceX president’s lead",
+  "source": "Moneywise",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/anthropic-co-founder-tom-brown-133000739.html",
+  "summary": "“We believe that it’s important for ​these great ​entrepreneurs ⁠to share their bounty,” said ​Treasury Secretary Scott Bessent.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::anthropicandspacexhavecreated8600newmillionairesbutryanserhantsaystherealwinnerisinrealestate": {
+  "ticker": "SPCX",
+  "date": "2026-11-21",
+  "title": "Anthropic and SpaceX have created 8,600 new millionaires, but Ryan Serhant says the real winner is in real estate",
+  "source": "Moneywise",
+  "url": "https://finance.yahoo.com/real-estate/articles/anthropic-spacex-created-8-600-131500069.html",
+  "summary": "Lamborghinis and yachts are out.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "SPCX::howlowcouldxrpgoifbitcoinfallsto50000": {
+  "ticker": "SPCX",
+  "date": "2026-11-21",
+  "title": "How Low Could XRP Go if Bitcoin Falls to $50,000?",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/investing/cryptocurrency/2026/11/21/how-low-could-xrp-go-if-bitcoin-falls-to-50000/",
+  "summary": "XRP already sits 75% below its all-time high, and Bitcoin just broke its summer low. Three different estimates point to the same level, and one old price from November 2024 may decide whether holders get a floor or a free fall.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiaskresstellscnbcsjimcramerthatcustomerscontinuetobewithus": {
+  "ticker": "NVDA",
+  "date": "2026-11-17",
+  "title": "Nvidia’s Kress tells CNBC's Jim Cramer that 'customers continue to be with us’",
+  "source": "CNBC",
+  "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html",
+  "summary": "Nvidia is scheduled to release fiscal third-quarter 2027 results Tuesday, November 17, at approximately 4:20 p.m. ET, followed by a 5 p.m. ET earnings call.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::californiaattorneygeneralsubpoenasnvidiaoverchipsformerceosaffair": {
+  "ticker": "NVDA",
+  "date": "2026-11-20",
+  "title": "California attorney general subpoenas Nvidia over chips, former CEO’s affair",
+  "source": "Boston Herald",
+  "url": "https://www.bostonherald.com/2026/11/20/california-attorney-general-nvidia-subpoena/",
+  "summary": "California Attorney General Rob Bonta has issued an investigative subpoena to Nvidia related to former CEO Jensen Huang’s affair with a suspected Chinese spy.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "NVDA::abbvieabbvstockjustgota52dividendincreasehereshowmanysharesyouneedtogenerate1000ayear": {
+  "ticker": "NVDA",
+  "date": "2026-11-21",
+  "title": "AbbVie (ABBV) Stock Just Got a 5.2% Dividend Increase. Here's How Many Shares You Need to Generate $1,000 a Year.",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/21/abbvie-just-raised-its-dividend-52-heres-how-many-shares-you-need-to-generate-1000-a-year/",
+  "summary": "This pharmaceutical giant has hiked its payout for 53 years in a row, so it's likely to keep doing so.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::nvidiasworstlosingstreaksince2008nowhasansecproblemwhatshareholdersneedtoknow": {
+  "ticker": "NVDA",
+  "date": "2026-11-21",
+  "title": "Nvidia’s Worst Losing Streak Since 2008 Now Has an SEC Problem. What Shareholders Need to Know",
+  "source": "24/7 Wall St.",
+  "url": "https://247wallst.com/investing/2026/11/21/nvidias-worst-losing-streak-since-2008-now-has-an-sec-problem-what-shareholders-need-to-know/",
+  "summary": "A reported SEC probe, a CEO exit, and a California subpoena have hit Nvidia while its earnings keep soaring. Retirees holding the stock directly or through index funds face a hard question about which signal to trust.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::got5002quantumcomputingstockstobuyrightnow": {
+  "ticker": "NVDA",
+  "date": "2026-11-21",
+  "title": "Got $500? 2 Quantum Computing Stocks to Buy Right Now",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/21/got-500-2-quantum-computing-stocks-to-buy-right-now/",
+  "summary": "Two quantum companies, one built on atoms and one built on light, for a modest $500 bet.",
+  "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  }
 }
