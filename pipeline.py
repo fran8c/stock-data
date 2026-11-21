@@ -43,6 +43,7 @@ import requests
 
 import indicators   # the official indicator ledger (indicators.py, same folder)
 import newsfilter   # the short, price-relevant news pack (newsfilter.py)
+import pillars      # official pillar scores and trade levels (pillars.py)
 
 # ----------------------------------------------------------------------------
 # Settings
@@ -1149,7 +1150,7 @@ def archive_indicators(watch):
     for f in folder.iterdir():
         if f.name == "COLUMNS.md":
             continue
-        stem = re.sub(r"(_weeks|_latest|_ledger)$", "", f.stem)
+        stem = re.sub(r"(_weeks|_latest|_ledger|_setups)$", "", f.stem)
         if stem not in live:
             dst = ARCHIVE / "indicators"
             dst.mkdir(parents=True, exist_ok=True)
@@ -1166,7 +1167,8 @@ def file_index(symbols, watch_syms=()):
         lines.append("INDICATOR LEDGERS (official pre-computed harness indicators; latest day as text, every day as CSV; "
                      f"column guide: {base}indicators/COLUMNS.md):")
         lines += [f"  {s}: {base}indicators/{safe_name(s)}_ledger.txt | daily {base}indicators/{safe_name(s)}.csv | "
-                  f"weekly {base}indicators/{safe_name(s)}_weeks.csv" for s in watch_syms]
+                  f"weekly {base}indicators/{safe_name(s)}_weeks.csv | setups {base}indicators/{safe_name(s)}_setups.csv"
+                  for s in watch_syms]
     return "\n".join(lines)
 
 
@@ -1320,7 +1322,7 @@ def main():
 
     # 2. Stocks: figures, indicator ledger, news and dashboard rows
     blocks, dash_stocks, dash_bench, fresh_news = {}, {}, {}, []
-    indicator_latest = {}
+    indicator_latest, indicator_frames = {}, {}
     archive_indicators(watch)
     for item in run_watch:
         sym = item["symbol"]
@@ -1361,6 +1363,7 @@ def main():
             d_ind, w_ind, latest = indicators.build(sym, bars_frame(h), divs, comps, bench[0], m, TODAY_S, expected[m])
             indicators.write_outputs(sym, d_ind, w_ind, latest)
             indicator_latest[sym] = latest
+            indicator_frames[sym] = (item, d_ind, w_ind, m)
             R.good(f"{sym}: indicator ledger {len(d_ind)} days to {latest['last_bar']}")
         except Exception as e:  # noqa: BLE001
             R.warn(f"{sym}: indicator ledger failed ({e.__class__.__name__}: {e})")
@@ -1478,6 +1481,22 @@ def main():
         R.warn(f"News pack filter failed ({e.__class__.__name__}: {e}); news_pack.txt holds the unfiltered list")
         traceback.print_exc()
         sections, kept_news, ncount = None, {}, None
+    # Official pillar scores and trade levels for this run's stocks (catalyst = rating changes only)
+    for sym, (item, d_ind, w_ind, m) in indicator_frames.items():
+        R.scope = m
+        try:
+            ratings = pillars.rating_items(store, item)
+            s_hist, s_latest = pillars.build(sym, d_ind, indicator_latest[sym], m, ratings)
+            latest = indicator_latest[sym]
+            latest["setups"] = s_latest
+            latest["setups_ledger"] = pillars.ledger_lines(s_latest)
+            indicators.write_outputs(sym, d_ind, w_ind, latest)
+            s_hist.to_csv(OUT / "indicators" / f"{safe_name(sym)}_setups.csv", index=False, float_format="%.4f")
+            R.good(f"{sym}: setups - {s_latest['action'] if s_latest else 'not computed'}")
+        except Exception as e:  # noqa: BLE001
+            R.warn(f"{sym}: pillar scores failed ({e.__class__.__name__}: {e})")
+            traceback.print_exc()
+
     if sections is not None:
         news_header = (f"NEWS PACK - price-relevant company news, {newsfilter.WINDOW_DAYS} days to each stock's last bar, "
                        f"at most {newsfilter.MAX_ITEMS} items per stock, generated {RUN_STAMP}\n"
@@ -1535,7 +1554,8 @@ def main():
         frozen = HISTORY / TODAY_S / "indicators"
         frozen.mkdir(parents=True, exist_ok=True)
         for s_, lt in indicator_latest.items():
-            (frozen / f"{safe_name(s_)}_latest.json").write_text(json.dumps(lt, indent=1, default=str), encoding="utf-8")
+            (frozen / f"{safe_name(s_)}_latest.json").write_text(
+                json.dumps({k: v for k, v in lt.items() if k != "setups_ledger"}, indent=1, default=str), encoding="utf-8")
 
     # What this run did, for the report notice and the STALE alert (see daily.yml)
     write_text("run_result.json", json.dumps({

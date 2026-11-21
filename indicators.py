@@ -743,6 +743,9 @@ def ledger_text(symbol, daily, weeks, latest):
                  f"closures {ol['closures'] or 'none'}; early closes {ol['early_closes'] or 'none'}")
         L.append(f"  Week 1 (to {ol['week1_end']}) d={ol['d1']}: {f(v['close'])} +/- {f(v['atr14'])}*{ol['sqrt_d1']} -> {f(ol['week1_low'])} - {f(ol['week1_high'])}")
         L.append(f"  Week 2 cumulative (to {ol['week2_end']}) d={ol['d2']}: {f(v['close'])} +/- {f(v['atr14'])}*{ol['sqrt_d2']} -> {f(ol['week2_low'])} - {f(ol['week2_high'])}")
+    if latest.get("setups_ledger"):
+        L.append("")
+        L += latest["setups_ledger"]
     L.append("")
     L.append("--- WEEKS (last 4) ---")
     for _, w in weeks.tail(4).iterrows():
@@ -796,7 +799,16 @@ up and down days, up/down volume, volume vs normal, week CVD, close position in 
 1 = at the high), the standout (highest-volume) day, and each comparator's change and the relative move.
 
 `<SYMBOL>_latest.json` and `<SYMBOL>_ledger.txt` add the latest day's reference levels, outlook,
-range calibration and comparator dates. Trend charts: see the dashboard.
+range calibration, comparator dates and the SETUPS (every tested setup with its levels and pillar readings).
+
+## Setups file (`<SYMBOL>_setups.csv`, one row per day)
+
+Official trade-rule results for each day (Individual Stock Harness v3.2.1): bias, action, and the selected buy
+and short with label, anchor, order type, entry, stop, TP1, TP2, R(TP2), gate, the four pillars (p1 Microstructure,
+p2 Momentum, p3 Structure, p4 Catalyst), how many of the three technical pillars support, status and fill check.
+The catalyst pillar counts broker rating changes only; the AI completes it with other news. Status:
+"proposed on technicals" (3 of 3 technical pillars support), "depends on catalyst" (2 of 3: proposed only if the
+catalyst supports), "not proposed". Trend charts: see the dashboard.
 """
 
 
@@ -815,7 +827,8 @@ def write_outputs(symbol, daily, weeks, latest, outdir=OUTDIR):
         if w[col].dtype.kind == "f":
             w[col] = w[col].round(4)
     w.to_csv(outdir / f"{stem}_weeks.csv", index=False)
-    (outdir / f"{stem}_latest.json").write_text(json.dumps(latest, indent=1, default=str), encoding="utf-8")
+    (outdir / f"{stem}_latest.json").write_text(json.dumps({k: v for k, v in latest.items() if k != "setups_ledger"},
+                                                           indent=1, default=str), encoding="utf-8")
     (outdir / f"{stem}_ledger.txt").write_text(ledger_text(symbol, daily, weeks, latest) + "\n", encoding="utf-8")
     (outdir / "COLUMNS.md").write_text(COLUMNS_MD, encoding="utf-8")
 

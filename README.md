@@ -62,6 +62,18 @@ Every run works out all the Individual Stock Harness indicators for every tradin
 
 A frozen copy of each day's latest figures is saved in `docs/data/history/YYYY-MM-DD/indicators/`. Past rows are recalculated each run, so if Yahoo corrects an old bar, the history picks up the correction. The figures were checked against the 21 Nov 2026 harness runs for DBS, OCBC, Keppel, Marvell and Nvidia (174 of 174 match to 4 decimals).
 
+## Setups and pillar scores (official)
+
+Each run also applies the harness's trade rules (Individual Stock Harness v3.2.1) to every day of the ledger: bias, every allowed buy and short setup with entry, stop, TP1, TP2 and reward-to-risk, the fill check against the next two weeks' ranges, the time stop, and the four pillars with each reading. Files in `docs/data/indicators/`: `<SYMBOL>_setups.csv` (one row per day) and a SETUPS section in `<SYMBOL>_ledger.txt` and `<SYMBOL>_latest.json`.
+
+The catalyst pillar counts **broker rating changes only** (upgrades, downgrades, initiations). Other news is left for the AI, which completes the pillar and flags any difference. So each setup shows one of:
+
+- **proposed on technicals**: all 3 price-based pillars support it (it meets the 3-of-4 minimum whatever the news);
+- **depends on catalyst**: 2 of 3 support it, so it is proposed only if the AI scores the catalyst pillar SUPPORTS;
+- **not proposed**: fewer than 2 support it, or reward-to-risk fails.
+
+Checked against the 21 Nov 2026 harness runs: entries, stops, targets, R, technical pillars and time stops match for DBS, OCBC, Keppel, Marvell and Nvidia (26 of 27; the one difference is a half-tick tie, which is now rounded half up).
+
 ## News pack (short, price-relevant)
 
 The job still reads 30 days of news (Google News, Bing News, Yahoo) into `news_store.json`. For the harness it then keeps, per stock, only:
@@ -71,6 +83,10 @@ The job still reads 30 days of news (Google News, Bing News, Yahoo) into `news_s
 - the **14 days** to the stock's last bar, at most **15 items**, ranked by relevance (big-move days and better sources first; repeat coverage merged).
 
 Each item shows its trading day's change %, gap % and volume ratio, with **BIG MOVE** when the change is at least 1.5%, the gap at least 1.0% or volume at least 1.5x normal. Each stock also lists **big-move days with no news kept**, so you know where to look. The rules are keyword-based, so check an item before relying on it. The full unfiltered list is in `news_all.txt`. Sector, country and global news are not in the pack: the harness searches for those itself.
+
+## Website publishing
+
+If publishing the website fails (GitHub sometimes can't find the website package for a few seconds), the job waits a minute and tries once more. The data is saved to the repo before publishing, so a publish failure never loses data.
 
 ## Late bars and STALE alerts
 
@@ -116,6 +132,7 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 | `pipeline.py` | The script that collects everything |
 | `indicators.py` | Works out the indicator ledger (called by `pipeline.py`) |
 | `newsfilter.py` | Builds the short, price-relevant news pack (called by `pipeline.py`) |
+| `pillars.py` | Works out the setups and pillar scores (called by `pipeline.py`) |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |

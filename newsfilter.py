@@ -87,6 +87,8 @@ DROP = [  # commentary, opinion, forecasts, CSR, marketing, page types
     r"\btarget price\b(?!.*(upgrad|downgrad))", r"\bprice target\b(?!.*(upgrad|downgrad))",
 ]
 
+RATING_PAT = next(p for k, p, _ in EVENTS if k == "RATING CHANGE")
+
 AFFILIATE = r"\b{name}\s+(dc\s+reit|reit|infrastructure trust|pacific oak|trust|china trust|ultra|logistics trust)\b"
 
 
@@ -145,12 +147,17 @@ def about_company(title, terms):
     return True, ""
 
 
+HARD_DROP = [r"\(rating (downgrade|upgrade)\)"]   # author opinions labelled as ratings (e.g. Seeking Alpha), never broker actions
+
+
 def classify(title, summary=""):
     t = title.lower()
+    if any(re.search(p, t) for p in HARD_DROP):
+        return None, 0, "commentary / opinion / other"
     for p in DROP:
         if re.search(p, t):
             # an explicit rating change or results headline overrides generic drops like "price target"
-            if not re.search(EVENTS[0][1], t):
+            if not re.search(RATING_PAT, t):
                 return None, 0, "commentary / opinion / other"
     for kind, pat, w in EVENTS:
         if re.search(pat, t):
