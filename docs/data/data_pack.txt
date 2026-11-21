@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 11:53 SGT
+Run time: 2026-11-21 12:21 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 11:53 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 11:53 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 12:21 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 12:21 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -38,9 +38,9 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1244 items have no summary (paywall or site blocks automated visits)
+  - News: 1246 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-21 11:53 SGT
+DATA PACK - generated 2026-11-21 12:21 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -221,9 +221,9 @@ MRVL ex-dividend date | 2026-10-09 | Ex-dividend date per Yahoo - most recent (n
 MU latest close | 594.5100 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-20
 MU 3-month average daily volume | 28,257,854 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-20
 MU sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/profile/ | retrieved 2026-11-21
-MU trailing EPS | 74.3300 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
+MU trailing EPS | 64.0000 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU forward EPS | 208.8288 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
-MU trailing P/E | 8.00 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
+MU trailing P/E | 9.29 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU forward P/E | 2.85 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-21
 MU 5-year P/E high | 239.03 | UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-21
 MU 5-year P/E median | 125.22 | UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-21
