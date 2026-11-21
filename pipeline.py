@@ -1734,9 +1734,14 @@ def write_copy_files(markets, watch, peers, store, kept_news, blocks):
     try:
         harness_text = (ROOT / copyfiles.HARNESS_FILE).read_text(encoding="utf-8")
     except FileNotFoundError:
-        R.scope = "general"
-        R.warn(f"{copyfiles.HARNESS_FILE} not found: only the data-only copy files were written")
+        # No harness in the repo (kept private): data-only files, and no full copies left anywhere on the site
         harness_text = None
+        print(f"{copyfiles.HARNESS_FILE} not in the repo: writing data-only copy files")
+        for f in [*HARNESS_DIR.glob("*.txt"), *HISTORY.glob("*/harness/*.txt")]:
+            if not f.stem.endswith("_data"):
+                f.unlink()
+        for idx in HISTORY.glob("*/harness/index.json"):
+            idx.write_text(json.dumps(sorted(p.name for p in idx.parent.glob("*.txt"))), encoding="utf-8")
     written = {}
     for m in markets:
         R.scope = m
@@ -1779,7 +1784,8 @@ def write_copy_files(markets, watch, peers, store, kept_news, blocks):
                     (HARNESS_DIR / f"{safe_name(sym)}.txt").write_text(full, encoding="utf-8")
                 (HARNESS_DIR / f"{safe_name(sym)}_data.txt").write_text(data, encoding="utf-8")
                 written[sym] = {"full": len(full) if harness_text else None, "data": len(data)}
-                R.good(f"{sym}: harness copy file {len(full):,} characters (data only {len(data):,})")
+                R.good(f"{sym}: harness copy file {len(full):,} characters (data only {len(data):,})" if harness_text
+                       else f"{sym}: harness data file {len(data):,} characters")
             except Exception as e:  # noqa: BLE001
                 R.warn(f"{sym}: harness copy file failed ({e.__class__.__name__}: {e})")
                 traceback.print_exc()

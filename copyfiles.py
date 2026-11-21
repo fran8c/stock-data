@@ -163,5 +163,6 @@ def build(rep, item, market, as_of, run_stamp, ledger, prices, comps, divs, holi
              "=== END OF RUN INPUTS ==="]
     inputs = "\n".join(head)
     data_text = (f"Run the {HARNESS_NAME} (saved in this chat or project) on the inputs below. "
-                 "If the harness is not saved here, use the full copy file instead.\n\n" + inputs)
+                 + ("If the harness is not saved here, use the full copy file instead.\n\n" if harness_text
+                    else "If the harness is not saved here, paste the harness first, then these inputs.\n\n") + inputs)
     return harness_text.rstrip() + "\n\n" + inputs + "\n", data_text + "\n"
