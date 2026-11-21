@@ -158,10 +158,11 @@ function stockCard(s){
   const news=(s.news||[]).slice(0,4).map(newsItem).join("")||'<li class="muted">No news in the last 30 days.</li>';
   return `<div class="card stock"><div>
     <div class="top"><div><div class="sym">${esc(s.name)}</div><div class="muted" style="font-size:12px">${esc(s.symbol)} · ${esc(s.sector||s.kind)}</div></div>
-    <a class="btn" style="padding:3px 9px;font-size:12px;align-self:start" href="data/prices/${esc(s.symbol.replace("^",""))}.csv" target="_blank" rel="noopener">CSV</a></div>
+    <div style="display:flex;gap:6px;align-self:start"><a class="btn primary" style="padding:3px 9px;font-size:12px" href="stock.html?s=${encodeURIComponent(s.symbol)}">Charts &amp; figures</a>
+    <a class="btn" style="padding:3px 9px;font-size:12px" href="data/prices/${esc(s.symbol.replace("^",""))}.csv" target="_blank" rel="noopener">CSV</a></div></div>
     <div class="price num">${fmt(s.last_close,s.last_close<10?3:2)} <span class="muted" style="font-size:13px">${esc(s.currency)}</span></div>
     <div class="chg num">${pct(s.chg_1d)} on ${esc(s.last_date)} · ${pct(s.chg_1y)} since ${esc(s.first_date)}</div>${spark(s.closes)}
-  </div><ul class="news">${news}</ul></div>`;
+    ${s.scores?`<div class="muted" style="font-size:13px;margin-top:6px">Confluence <strong style="color:var(--ink)">${esc(s.scores.confluence||"–")}</strong> · microstructure ${esc(s.scores.micro||"–")} · momentum ${esc(s.scores.momentum||"–")} · ratings ${s.scores.upgrades??"–"} up / ${s.scores.downgrades??"–"} down (14 days)</div>`:""}</div><ul class="news">${news}</ul></div>`;
 }
 
 function renderStocks(){

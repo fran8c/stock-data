@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stock detail</title>
+<style>
+:root{
+  --bg:#f6f5f1; --panel:#ffffff; --ink:#1c1d1f; --muted:#6b6e73; --line:#e3e1db; --chip:#efede7;
+  --grid:#ecebe6; --axis:#8a8d92; --accent:#2d4f8a;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4;
+  --pos:#2a78d6; --neg:#e34948; --mid:#f0efec; --band:rgba(110,110,105,.14); --band2:rgba(42,120,214,.12);
+  --ok-bg:#e6f3ec; --ok-ink:#1f5c3d; --warn-bg:#fff4dc; --warn-ink:#7a5200; --bad-bg:#fde8e6; --bad-ink:#8c1d18;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#141517; --panel:#1a1a19; --ink:#f0efec; --muted:#a3a29a; --line:#2e3135; --chip:#2a2c30;
+    --grid:#2a2b2c; --axis:#8f8e86; --accent:#8fb0ea;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181;
+    --pos:#3987e5; --neg:#e66767; --mid:#383835; --band:rgba(200,200,190,.13); --band2:rgba(57,135,229,.18);
+    --ok-bg:#16301f; --ok-ink:#9ad9b4; --warn-bg:#3a2d10; --warn-ink:#f3cd7b; --bad-bg:#3d1916; --bad-ink:#f6aaa3;
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--accent)}
+h1{font-size:24px;margin:0;letter-spacing:-.01em}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:30px 0 10px;font-weight:600}
+.muted{color:var(--muted)} .num{font-variant-numeric:tabular-nums}
+.top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:14px 0 4px;position:sticky;top:0;background:var(--bg);padding:8px 0;z-index:5}
+select,button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:600}
+button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-top:12px}
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.tile .k{font-size:12px;color:var(--muted)} .tile .v{font-size:18px;font-weight:600;margin-top:2px}
+.tile .s{font-size:13px;color:var(--muted);margin-top:2px}
+.pill{display:inline-block;font-size:12px;font-weight:600;border-radius:999px;padding:2px 9px}
+.pill.ok{background:var(--ok-bg);color:var(--ok-ink)} .pill.warn{background:var(--warn-bg);color:var(--warn-ink)} .pill.bad{background:var(--bad-bg);color:var(--bad-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(520px,1fr));gap:12px}
+@media (max-width:600px){.grid{grid-template-columns:1fr}}
+.chart{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px 8px;min-width:0;position:relative}
+.chart h3{font-size:15px;margin:0} .chart .sub{font-size:13px;color:var(--muted);margin:2px 0 6px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin:2px 0 4px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{display:inline-block;width:14px;height:3px;border-radius:2px}
+.legend i.box{height:10px;width:10px;border-radius:2px}
+svg{display:block;width:100%;overflow:visible}
+svg text{font-size:11px;fill:var(--muted)}
+.tip{position:absolute;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 9px;
+  font-size:12px;box-shadow:0 4px 14px rgba(0,0,0,.12);display:none;z-index:4;white-space:nowrap}
+.tip b{display:block;margin-bottom:2px}
+.tip .row{display:flex;gap:8px;justify-content:space-between} .tip .row span:first-child{display:inline-flex;align-items:center;gap:5px;color:var(--muted)}
+.tip i{display:inline-block;width:8px;height:8px;border-radius:2px}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:600;text-align:right}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--panel)}
+td.txt,th.txt{text-align:left}
+.tablebox{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:auto;max-height:560px}
+.setups td{white-space:normal;text-align:left;vertical-align:top} .setups th{text-align:left}
+.note{font-size:13px;color:var(--muted)}
+.err{background:var(--bad-bg);color:var(--bad-ink);padding:12px;border-radius:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="muted" style="font-size:13px"><a href="index.html">← Dashboard</a></div>
+      <h1 id="title">Loading…</h1>
+      <div class="muted" id="subtitle"></div>
+    </div>
+  </div>
+
+  <div class="controls" role="toolbar" aria-label="Choose stock and period">
+    <select id="pick" aria-label="Stock"></select>
+    <span class="muted" style="font-size:13px;margin-left:6px">Period</span>
+    <button data-range="21">1M</button><button data-range="63" aria-pressed="true">3M</button>
+    <button data-range="126">6M</button><button data-range="9999">1Y</button>
+  </div>
+
+  <div id="error"></div>
+  <div class="tiles" id="tiles"></div>
+
+  <h2>Price, trend and levels</h2>
+  <div class="grid" id="g-price"></div>
+  <h2>Who is buying or selling (estimates from daily prices and volume)</h2>
+  <div class="grid" id="g-flow"></div>
+  <h2>Momentum and the market</h2>
+  <div class="grid" id="g-mom"></div>
+  <h2>Signals and pillar readings</h2>
+  <div class="grid" id="g-sig"></div>
+
+  <h2>Chart any figure</h2>
+  <div class="controls" style="position:static;padding:0;margin:0 0 8px">
+    <select id="anyfig" aria-label="Figure to chart"></select>
+    <span class="note">Any number column from the daily ledger. Column meanings: <a href="data/indicators/COLUMNS.md">COLUMNS.md</a></span>
+  </div>
+  <div class="grid" id="g-any"></div>
+
+  <h2>Today's pillar readings (statistics, not advice)</h2>
+  <p class="note" id="setupnote"></p>
+  <div class="tablebox"><table class="setups" id="setups"></table></div>
+
+  <h2>Every figure, every day</h2>
+  <p class="note">Newest first, for the period chosen above. Scroll sideways for all columns. Downloads: <span id="downloads"></span></p>
+  <div class="tablebox"><table id="daily"></table></div>
+</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const params=new URLSearchParams(location.search);
+let SYM=params.get("s")||"", RANGE=63, D=[], S=[], LATEST=null, CUR="";
+
+// ---------- CSV ----------
+function parseCSV(text){
+  const rows=[];let row=[],f="",q=false;
+  for(let i=0;i<text.length;i++){const c=text[i];
+    if(q){if(c=='"'){if(text[i+1]=='"'){f+='"';i++}else q=false}else f+=c}
+    else if(c=='"')q=true; else if(c==','){row.push(f);f=""} else if(c=='\n'){row.push(f);rows.push(row);row=[];f=""} else if(c!='\r')f+=c}
+  if(f!==""||row.length){row.push(f);rows.push(row)}
+  const h=rows.shift()||[];
+  return rows.filter(r=>r.length>1).map(r=>{const o={};h.forEach((k,j)=>{const v=r[j];o[k]=v===""||v===undefined?null:(isNaN(v)||/^\d{4}-\d\d-\d\d$/.test(v)?v:Number(v))});return o});
+}
+async function get(url,kind){const r=await fetch(url,{cache:"no-store"});if(!r.ok)throw new Error(url+" ("+r.status+")");return kind==="json"?r.json():r.text()}
+
+// ---------- number formats ----------
+const fmt2=v=>v==null||isNaN(v)?"–":Number(v).toFixed(2);
+function fmt(v,kind){
+  if(v==null||Number.isNaN(v))return "–";
+  if(typeof v!=="number")return String(v);
+  const a=Math.abs(v);
+  if(v===0&&kind!=="pct"&&kind!=="x")return "0";
+  if(kind==="pct")return (v>0?"+":"")+v.toFixed(2)+"%";
+  if(kind==="x")return v.toFixed(2)+"x";
+  if(kind==="int")return Math.round(v).toLocaleString();
+  if(a>=1e9)return (v/1e9).toFixed(2)+"b"; if(a>=1e6)return (v/1e6).toFixed(2)+"m"; if(a>=1e4)return (v/1e3).toFixed(1)+"k";
+  if(a>=1000)return v.toLocaleString(undefined,{maximumFractionDigits:0});
+  if(a>=1)return v.toFixed(2);
+  return v.toFixed(4);
+}
+function tickFmt(v,step,kind){
+  const a=Math.abs(v), sfx=kind==="x"?"x":kind==="pct"?"%":"";
+  if(Math.max(Math.abs(step),a)>=1e4&&kind!=="pct")return fmt(v);
+  const dp=Math.max(0,Math.min(4,-Math.floor(Math.log10(step)+1e-9)));
+  return v.toLocaleString(undefined,{minimumFractionDigits:dp,maximumFractionDigits:dp})+sfx;
+}
+function niceTicks(lo,hi,n=5){
+  if(lo===hi){lo-=1;hi+=1}
+  const span=hi-lo, step0=span/n, mag=Math.pow(10,Math.floor(Math.log10(step0))), err=step0/mag;
+  const step=(err>=7.5?10:err>=3.5?5:err>=1.5?2:1)*mag;
+  const a=Math.floor(lo/step)*step, b=Math.ceil(hi/step)*step, t=[];
+  for(let v=a;v<=b+step/2;v+=step)t.push(+v.toFixed(10));
+  return t;
+}
+
+// ---------- chart ----------
+// spec: {title, sub, series:[{key|values,name,color,kind:'line'|'bar'|'div'|'band'|'step', key2 (band upper)}], refs:[{y,label}], fmt, clamp:[lo,hi], extraTip:(row)=>[[label,text]]}
+function chart(host, spec, rows){
+  const box=document.createElement("div");box.className="chart";
+  const named=spec.series.filter(s=>s.name&&s.kind!=="band"||s.legend);
+  box.innerHTML=`<h3>${esc(spec.title)}</h3><div class="sub">${esc(spec.sub||"")}</div>`+
+    (spec.series.length>1?`<div class="legend">${spec.series.filter(s=>s.name).map(s=>`<span><i class="${s.kind==="bar"||s.kind==="div"||s.kind==="band"?"box":""}" style="background:${s.kind==="div"?"linear-gradient(90deg,var(--pos) 50%,var(--neg) 50%)":s.color}"></i>${esc(s.name)}</span>`).join("")}</div>`:"")+
+    `<div class="plot"></div><div class="tip"></div>`;
+  host.appendChild(box);
+  const draw=()=>{
+    const plot=box.querySelector(".plot"), tip=box.querySelector(".tip");
+    const W=Math.max(300,plot.clientWidth), H=spec.height||210, ml=54, mr=86, mt=8, mb=22, iw=W-ml-mr, ih=H-mt-mb;
+    const n=rows.length; if(!n){plot.innerHTML='<p class="note">No data.</p>';return}
+    const val=(s,r,k)=>{let v=r[k||s.key]; if(v==null||typeof v!=="number")return null; if(spec.clamp)v=Math.max(spec.clamp[0],Math.min(spec.clamp[1],v)); return v};
+    let lo=Infinity,hi=-Infinity;
+    for(const s of spec.series)for(const r of rows){for(const k of [s.key,s.key2]){if(!k)continue;const v=val(s,r,k);if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v)}}}
+    for(const rf of spec.refs||[]){lo=Math.min(lo,rf.y);hi=Math.max(hi,rf.y)}
+    if(spec.series.some(s=>s.kind==="bar"||s.kind==="div")){lo=Math.min(lo,0);hi=Math.max(hi,0)}
+    if(lo===Infinity){plot.innerHTML='<p class="note">Not available for this stock yet (not enough history).</p>';return}
+    const pad=(hi-lo)*0.06||1; const ticks=niceTicks(lo-pad,hi+pad); const y0=ticks[0], y1=ticks[ticks.length-1];
+    const X=i=>ml+(n===1?iw/2:i*(iw/(n-1))), Y=v=>mt+ih-(v-y0)/(y1-y0)*ih;
+    let g="";
+    const step=ticks.length>1?ticks[1]-ticks[0]:1;
+    for(const t of ticks){g+=`<line x1="${ml}" x2="${ml+iw}" y1="${Y(t)}" y2="${Y(t)}" stroke="var(--grid)"/><text x="${ml-6}" y="${Y(t)+4}" text-anchor="end">${tickFmt(t,step,spec.fmt)}</text>`}
+    // month ticks
+    let lastM="";rows.forEach((r,i)=>{const m=r.date.slice(0,7);if(m!==lastM){lastM=m;if(i>0||n<40){g+=`<line x1="${X(i)}" x2="${X(i)}" y1="${mt+ih}" y2="${mt+ih+4}" stroke="var(--axis)"/><text x="${X(i)}" y="${H-4}" text-anchor="middle">${new Date(r.date+"T00:00:00").toLocaleString(undefined,{month:"short"})}${m.endsWith("-01")?" "+m.slice(2,4):""}</text>`}}});
+    g+=`<line x1="${ml}" x2="${ml+iw}" y1="${mt+ih}" y2="${mt+ih}" stroke="var(--axis)"/>`;
+    if(y0<0&&y1>0)g+=`<line x1="${ml}" x2="${ml+iw}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--axis)"/>`;
+    const ends=[];
+    for(const rf of spec.refs||[]){g+=`<line x1="${ml}" x2="${ml+iw}" y1="${Y(rf.y)}" y2="${Y(rf.y)}" stroke="var(--axis)" stroke-dasharray="4 4"/>`;ends.push({y:Y(rf.y),name:rf.label,ref:true})}
+    const bw=Math.max(1,Math.min(14,iw/n-2));
+    for(const s of spec.series){
+      if(s.kind==="band"){let up="",dn="";rows.forEach((r,i)=>{const a=val(s,r,s.key),b=val(s,r,s.key2);if(a!=null&&b!=null){up+=`${X(i)},${Y(Math.max(a,b))} `;dn=`${X(i)},${Y(Math.min(a,b))} `+dn}});if(up)g+=`<polygon points="${up}${dn}" fill="${s.color}"/>`;continue}
+      if(s.kind==="bar"||s.kind==="div"){rows.forEach((r,i)=>{const v=val(s,r);if(v==null)return;const y=Y(Math.max(v,0)),h=Math.max(1,Math.abs(Y(v)-Y(0)));
+        const c=s.kind==="div"?(v>=0?"var(--pos)":"var(--neg)"):s.color;g+=`<rect x="${X(i)-bw/2}" y="${y}" width="${bw}" height="${h}" rx="${bw>6?2:0}" fill="${c}" opacity="${s.opacity||1}"/>`});continue}
+      let d="",pen=false,lastI=-1;
+      rows.forEach((r,i)=>{const v=val(s,r);if(v==null){pen=false;return}
+        if(s.kind==="step"&&pen&&lastI>=0){d+=`L${X(i)},${Y(val(s,rows[lastI]))}`}
+        d+=(pen?"L":"M")+X(i)+","+Y(v);pen=true;lastI=i});
+      g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.width||2}" stroke-linejoin="round" stroke-linecap="round"/>`;
+      if(lastI>=0&&s.name)ends.push({y:Y(val(s,rows[lastI])),name:s.name,color:s.color});
+    }
+    // direct labels at the line ends, nudged apart
+    ends.sort((a,b)=>a.y-b.y);for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<12)ends[i].y=ends[i-1].y+12;
+    for(const e of ends)g+=`<text x="${ml+iw+6}" y="${e.y+4}" style="fill:${e.ref?"var(--muted)":"var(--ink)"}">${esc(e.name)}</text>`;
+    g+=`<line class="xh" x1="0" x2="0" y1="${mt}" y2="${mt+ih}" stroke="var(--axis)" stroke-width="1" style="display:none"/><g class="dots"></g>`;
+    g+=`<rect class="hit" x="${ml}" y="${mt}" width="${iw}" height="${ih}" fill="transparent"/>`;
+    plot.innerHTML=`<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${esc(spec.title)}">${g}</svg>`;
+    const svg=plot.querySelector("svg"), xh=svg.querySelector(".xh"), dots=svg.querySelector(".dots");
+    const show=ev=>{
+      const rect=svg.getBoundingClientRect(), px=(ev.clientX-rect.left)*(W/rect.width);
+      const i=Math.max(0,Math.min(n-1,Math.round((px-ml)/(iw/Math.max(1,n-1))))), r=rows[i];
+      xh.setAttribute("x1",X(i));xh.setAttribute("x2",X(i));xh.style.display="";
+      let dh="",lines=`<b>${esc(r.date)}</b>`;
+      for(const s of spec.series){
+        if(s.kind==="band"){lines+=`<div class="row"><span><i style="background:${s.color}"></i>${esc(s.name||"")}</span><span class="num">${fmt(r[s.key2])} – ${fmt(r[s.key])}</span></div>`;continue}
+        const raw=r[s.key]; if(s.kind==="line"||s.kind==="step"){const v=val(s,r);if(v!=null)dh+=`<circle cx="${X(i)}" cy="${Y(v)}" r="4" fill="${s.color}" stroke="var(--panel)" stroke-width="2"/>`}
+        lines+=`<div class="row"><span><i style="background:${s.kind==="div"?(raw>=0?"var(--pos)":"var(--neg)"):s.color}"></i>${esc(s.name||spec.title)}</span><span class="num">${fmt(raw,s.fmt||spec.fmt)}</span></div>`}
+      for(const [k,v] of (spec.extraTip?spec.extraTip(r):[]))lines+=`<div class="row"><span>${esc(k)}</span><span>${esc(v)}</span></div>`;
+      dots.innerHTML=dh;tip.innerHTML=lines;tip.style.display="block";
+      const bx=box.getBoundingClientRect(),tx=ev.clientX-bx.left+14,tw=tip.offsetWidth;
+      tip.style.left=(tx+tw>bx.width?ev.clientX-bx.left-tw-14:tx)+"px";tip.style.top=(ev.clientY-bx.top+12)+"px";
+    };
+    const hide=()=>{xh.style.display="none";dots.innerHTML="";tip.style.display="none"};
+    svg.addEventListener("pointermove",show);svg.addEventListener("pointerleave",hide);
+  };
+  box._draw=draw; draw();
+}
+
+// ---------- page ----------
+const C=n=>`var(--s${n})`;
+function tiles(){
+  const v=LATEST.values, sc=LATEST.scores||{}, st=sc.structure||{};
+  const pill=l=>{const c=/BULL/.test(l||"")?"ok":/BEAR/.test(l||"")?"bad":"warn";return `<span class="pill ${c}">${esc(l||"–")}</span>`};
+  const conf=v.confluence_final||"";
+  const rt=sc.ratings_14d||{};
+  $("#tiles").innerHTML=[
+    ["Last close",`${LATEST.currency} ${fmt(v.close)}`,`${esc(LATEST.last_bar)} · ${fmt(v.chg_pct,"pct")} on the day`],
+    ["Confluence",pill(conf),`${v.bull_signals} bullish / ${v.bear_signals} bearish of ${v.signals_available} · volume ${esc(v.volume_confirmation)}`],
+    ["Microstructure readings",sc.microstructure?pill(sc.microstructure.label):"–",sc.microstructure?`${sc.microstructure.bullish} bullish / ${sc.microstructure.bearish} bearish of 4`:""],
+    ["Momentum readings",sc.momentum?pill(sc.momentum.label):"–",sc.momentum?`${sc.momentum.bullish} bullish / ${sc.momentum.bearish} bearish of 3`:""],
+    ["Nearest support / resistance",`${fmt(st.support_dist_pct,"pct")} / ${fmt(st.resistance_dist_pct,"pct")}`,`${fmt2(st.support_dist_atr)} / ${fmt2(st.resistance_dist_atr)} ATRs · Darvas ${esc(st.darvas_status||"no box")}${st.darvas_old_box?" (old box)":""}`],
+    ["Broker ratings, 14 days",`${rt.upgrades??"–"} up / ${rt.downgrades??"–"} down`,"upgrades and downgrades in the news store"],
+    ["52-week position",`${fmt(v.from_high52w_pct,"pct")} from high`,`${fmt(v.from_low52w_pct,"pct")} from low`],
+    ["20 days vs main index",`${fmt(v.rs20_main)} pts`,esc(v.rs20_main_label||"")]
+  ].map(([k,val,sub])=>`<div class="tile"><div class="k">${k}</div><div class="v">${val}</div>${sub?`<div class="s">${sub}</div>`:""}</div>`).join("");
+}
+function render(){
+  const rows=D.slice(-RANGE), srows=S.filter(r=>rows.length&&r.date>=rows[0].date);
+  const byDate=Object.fromEntries(srows.map(r=>[r.date,r]));
+  const merged=rows.map(r=>({...r,...Object.fromEntries(Object.entries(byDate[r.date]||{}).map(([k,v])=>["s_"+k,v]))}));
+  ["#g-price","#g-flow","#g-mom","#g-sig","#g-any"].forEach(id=>$(id).innerHTML="");
+  const cur=LATEST.currency;
+  chart($("#g-price"),{title:`Price, 10-day average price and Kijun (${cur})`,sub:"VWAP10 = volume-weighted average price of the last 10 days. Shaded = Ichimoku cloud.",
+    series:[{key:"kumo_top",key2:"kumo_bottom",kind:"band",color:"var(--band)",name:"Cloud"},{key:"kijun",name:"Kijun",color:C(3)},{key:"vwap10",name:"VWAP10",color:C(2)},{key:"close",name:"Close",color:C(1)}]},merged);
+  chart($("#g-price"),{title:`Expected 5-day range and nearest levels (${cur})`,sub:"Shaded = Close ± ATR14 × 2.236 (a heuristic, not a forecast). Lines = the nearest computed support below and resistance above.",
+    series:[{key:"range5_high",key2:"range5_low",kind:"band",color:"var(--band2)",name:"5-day range"},{key:"nearest_resistance",name:"Resistance",color:C(2)},{key:"nearest_support",name:"Support",color:C(3)},{key:"close",name:"Close",color:C(1)}]},merged);
+  chart($("#g-price"),{title:"Typical daily swing (ATR14, % of the close)",sub:"Wilder average of the daily range including gaps.",fmt:"pct",series:[{key:"atr14_pct_of_close",name:"ATR14 %",color:C(1)}]},merged);
+  chart($("#g-price"),{title:"Distance from the 52-week high and low",sub:"Below 0 = under the 52-week high; above 0 = over the 52-week low.",fmt:"pct",
+    series:[{key:"from_low52w_pct",name:"From low",color:C(3)},{key:"from_high52w_pct",name:"From high",color:C(2)}]},merged);
+
+  chart($("#g-flow"),{title:"Buying/selling pressure, last 10 days (CVD10)",sub:"Volume weighted by where each day closed in its range. Blue = net buying estimate, red = net selling estimate.",
+    series:[{key:"cvd10",name:"CVD10",kind:"div"}]},merged);
+  chart($("#g-flow"),{title:"Up-day vs down-day volume, last 10 days (UDVR10)",sub:"Above 1.1 = buying-dominated, below 0.9 = selling-dominated. Values above 5 are drawn at 5.",clamp:[0,5],fmt:"x",
+    refs:[{y:1.1,label:"1.1"},{y:0.9,label:"0.9"}],series:[{key:"udvr10",name:"UDVR10",color:C(1)}],extraTip:r=>[["label",r.udvr10_label||"–"]]},merged);
+  chart($("#g-flow"),{title:"Volume vs normal (volume ratio)",sub:"Each day's volume / the average of the 20 days before. 1.5x or more = a heavy day.",fmt:"x",
+    refs:[{y:1,label:"1.0x"},{y:1.5,label:"1.5x"}],series:[{key:"vol_ratio",name:"Volume ratio",kind:"bar",color:C(1),opacity:.85}]},merged);
+  chart($("#g-flow"),{title:"Volume trend, last 5 vs prior 20 days (VT5/20)",sub:"Below 0.9 = quieter than usual, above 1.1 = busier.",fmt:"x",
+    refs:[{y:1.1,label:"1.1"},{y:0.9,label:"0.9"}],series:[{key:"vt5_20",name:"VT5/20",color:C(1)}]},merged);
+
+  chart($("#g-mom"),{title:"MACD (12, 26, 9)",sub:"Bars = MACD minus signal: blue above the signal line, red below.",
+    series:[{key:"macd_hist",name:"Histogram",kind:"div"},{key:"macd_signal",name:"Signal",color:C(2)},{key:"macd",name:"MACD",color:C(1)}]},merged);
+  chart($("#g-mom"),{title:"Ichimoku score (-3 to +3)",sub:"Cloud position + Tenkan vs Kijun + Chikou. +3 strong bullish, -3 strong bearish.",
+    series:[{key:"ichimoku_score",name:"Score",kind:"div"}],extraTip:r=>[["regime",r.ichimoku_regime||"–"]]},merged);
+  const rsKeys=Object.keys(D[D.length-1]||{}).filter(k=>/^rs20_/.test(k)&&k!=="rs20_main"&&k!=="rs20_main_label");
+  chart($("#g-mom"),{title:"20-day relative strength (points)",sub:"Stock's 20-day change minus each comparator's. Above +1 = leading, below -1 = lagging.",
+    refs:[{y:1,label:"+1"},{y:-1,label:"-1"}],series:rsKeys.slice(0,5).map((k,i)=>({key:k,name:k.replace("rs20_","").replace("_SI",".SI"),color:C(i+1)}))},merged);
+  chart($("#g-mom"),{title:"Darvas box ceiling and floor",sub:"Latest box as of each day. A close beyond the box = breakout or breakdown.",
+    series:[{key:"darvas_ceiling",name:"Ceiling",color:C(2),kind:"step"},{key:"darvas_floor",name:"Floor",color:C(3),kind:"step"},{key:"close",name:"Close",color:C(1)}],
+    extraTip:r=>[["status",r.darvas_status||"–"],["box age",r.darvas_age_bars!=null?r.darvas_age_bars+" bars":"–"]]},merged);
+
+  merged.forEach(r=>r.net_signals=(r.bull_signals??null)==null?null:r.bull_signals-r.bear_signals);
+  chart($("#g-sig"),{title:"Confluence: bullish minus bearish signals",sub:"Four signals: close vs VWAP10, Ichimoku, MACD, CVD10. +3 or more with none opposing = HIGH BULLISH.",
+    series:[{key:"net_signals",name:"Net signals",kind:"div"}],extraTip:r=>[["verdict",r.confluence_final||"–"],["volume",r.volume_confirmation||"–"]]},merged);
+  merged.forEach(r=>{r.micro_net=r.s_micro_bullish==null?null:r.s_micro_bullish-r.s_micro_bearish;r.mom_net=r.s_momentum_bullish==null?null:r.s_momentum_bullish-r.s_momentum_bearish});
+  chart($("#g-sig"),{title:"Pillar readings: bullish minus bearish",sub:"Microstructure (4 readings) and momentum (3 readings). Statistics only, not advice.",
+    series:[{key:"micro_net",name:"Microstructure",color:C(1),kind:"step"},{key:"mom_net",name:"Momentum",color:C(2),kind:"step"}],
+    extraTip:r=>[["microstructure",r.s_micro_label||"–"],["momentum",r.s_momentum_label||"–"]]},merged);
+  chart($("#g-sig"),{title:"Distance to the nearest support and resistance (ATRs)",sub:"How many typical daily swings the close is from the nearest computed level below and above.",
+    series:[{key:"s_resistance_dist_atr",name:"Resistance",color:C(2)},{key:"s_support_dist_atr",name:"Support",color:C(3)}]},merged);
+  chart($("#g-sig"),{title:"Broker rating changes, last 14 days",sub:"Upgrades and downgrades found in the news store (30 days kept).",
+    series:[{key:"s_ratings_upgrades_14d",name:"Upgrades",kind:"bar",color:C(1)},{key:"s_ratings_downgrades_14d",name:"Downgrades",kind:"bar",color:C(2),opacity:.85}]},merged);
+
+  CUR=$("#anyfig").value||CUR;
+  if(CUR)chart($("#g-any"),{title:CUR,sub:"From the daily ledger.",series:[{key:CUR,name:CUR,color:C(1)}]},merged);
+
+  requestAnimationFrame(()=>document.querySelectorAll(".chart").forEach(c=>c._draw&&c._draw()));
+  // tables
+  const cols=Object.keys(D[0]||{});
+  $("#daily").innerHTML=`<thead><tr>${cols.map(c=>`<th class="${typeof D[D.length-1][c]==="string"&&c!=="date"?"txt":""}">${esc(c)}</th>`).join("")}</tr></thead><tbody>`+
+    rows.slice().reverse().map(r=>`<tr>${cols.map(c=>{const v=r[c];return `<td class="${typeof v==="string"&&c!=="date"?"txt":"num"}">${typeof v==="number"?esc(fmt(v)):esc(v??"–")}</td>`}).join("")}</tr>`).join("")+"</tbody>";
+}
+function setupsTable(){
+  const sc=LATEST.scores; if(!sc){$("#setups").innerHTML='<tr><td>Not computed yet.</td></tr>';return}
+  $("#setupnote").textContent=sc.note||"";
+  const st=sc.structure||{}, rt=sc.ratings_14d||{};
+  const rows=[
+    ["Microstructure",`${sc.microstructure.label} (${sc.microstructure.bullish} bullish / ${sc.microstructure.bearish} bearish of 4)`,sc.microstructure.readings],
+    ["Momentum",`${sc.momentum.label} (${sc.momentum.bullish} bullish / ${sc.momentum.bearish} bearish of 3)`,sc.momentum.readings],
+    ["Structure (facts)",`Darvas ${st.darvas_status||"no box"}${st.darvas_old_box?" (OLD BOX: context only)":""}`,
+      `nearest support ${fmt(st.support_dist_pct,"pct")} (${fmt2(st.support_dist_atr)} ATRs); nearest resistance ${fmt(st.resistance_dist_pct,"pct")} (${fmt2(st.resistance_dist_atr)} ATRs)`],
+    ["Broker ratings (14 days)",`${rt.upgrades} upgrade(s), ${rt.downgrades} downgrade(s)`,(rt.items||[]).map(g=>`${g.date} ${g.change}: ${g.title}`).join(" | ")||"none"]];
+  $("#setups").innerHTML=`<thead><tr><th>Pillar</th><th>Reading</th><th>Detail</th></tr></thead><tbody>`+
+    rows.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td>${esc(r[1])}</td><td class="muted">${esc(r[2])}</td></tr>`).join("")+"</tbody>";
+}
+async function load(sym){
+  SYM=sym; $("#error").innerHTML="";
+  const stem=sym.replace("^","");
+  try{
+    const [d,s,l]=await Promise.all([get(`data/indicators/${stem}.csv`),get(`data/indicators/${stem}_scores.csv`).catch(()=>""),get(`data/indicators/${stem}_latest.json`,"json")]);
+    D=parseCSV(d); S=s?parseCSV(s):[]; LATEST=l;
+  }catch(e){$("#error").innerHTML=`<div class="err">Couldn't load ${esc(sym)}: ${esc(e.message)}. The indicator files appear after the next pipeline run.</div>`;return}
+  document.title=`${sym} – stock detail`;
+  $("#title").textContent=`${sym} – ${(window.NAMES||{})[sym]||""}`;
+  $("#subtitle").textContent=`${LATEST.market} · ${LATEST.currency} · last bar ${LATEST.last_bar} · official figures from the pipeline (as of ${LATEST.as_of})`;
+  const numCols=Object.keys(D[D.length-1]).filter(k=>k!=="date"&&D.some(r=>typeof r[k]==="number"));
+  const keep=$("#anyfig").value; $("#anyfig").innerHTML=numCols.map(c=>`<option ${c===(keep||"close")?"selected":""}>${esc(c)}</option>`).join("");
+  $("#downloads").innerHTML=["", "_weeks", "_scores", "_ledger"].map(x=>`<a href="data/indicators/${stem}${x}${x==="_ledger"?".txt":".csv"}">${stem}${x||" daily"}${x==="_ledger"?".txt":".csv"}</a>`).join(" · ");
+  tiles(); setupsTable(); render();
+  history.replaceState(null,"",`?s=${encodeURIComponent(sym)}`);
+}
+document.querySelectorAll("[data-range]").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll("[data-range]").forEach(x=>x.setAttribute("aria-pressed",x===b));RANGE=+b.dataset.range;render()}));
+$("#anyfig").addEventListener("change",()=>{CUR=$("#anyfig").value;render()});
+$("#pick").addEventListener("change",()=>load($("#pick").value));
+let rt;addEventListener("resize",()=>{clearTimeout(rt);rt=setTimeout(()=>document.querySelectorAll(".chart").forEach(c=>c._draw&&c._draw()),150)});
+get("data/dashboard.json","json").then(dash=>{
+  const list=dash.stocks||[]; window.NAMES=Object.fromEntries(list.map(s=>[s.symbol,s.name]));
+  $("#pick").innerHTML=list.map(s=>`<option value="${esc(s.symbol)}">${esc(s.symbol)} – ${esc(s.name)}</option>`).join("");
+  if(!SYM&&list.length)SYM=list[0].symbol; $("#pick").value=SYM; load(SYM);
+}).catch(()=>{ if(SYM)load(SYM); else $("#error").innerHTML='<div class="err">Couldn\'t load the stock list.</div>' });
+</script>
+</body>
+</html>
