@@ -39,59 +39,11 @@ Outlook: start day 2026-11-23; missing sessions after last bar none; closures no
   Week 1 (to 2026-11-27) d=5.0: 4.3000 +/- 0.1793*2.236 -> 3.8991 - 4.7009
   Week 2 cumulative (to 2026-12-04) d=10.0: 4.3000 +/- 0.1793*3.162 -> 3.7331 - 4.8669
 
---- SETUPS (official; trade rules v3.2.1; catalyst = rating changes only, the AI completes it) ---
-Bias BEARISH | Action AVOID - short advisory below (if the catalyst pillar supports) | start day 2026-11-23 | time stop for a fill on the start day: close of 2026-12-07
-Rating changes in the window: none
-SETUP COUNTER-TREND BUY - Limit buy at 20-bar low / 60-bar low (Limit) E 4.14: stop 3.87 TP1 4.49 TP2 4.76 R1 1.296 R2 2.296 gate PASS -> not proposed
-  P1 Micro MIXED: VWAP oppose, CVD favour, UDVR oppose, div/VT favour
-  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-5.18 vs main)
-  P3 Structure AGAINST: Darvas oppose (Breakdown Below), room oppose (blocking: VWAP10 4.4135), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 4.14-0.2689=3.8711; TP1 4.4986; TP2 4.7675
-SETUP COUNTER-TREND BUY - Limit buy at 120-bar low (Limit) E 3.34: stop 3.07 TP1 3.69 TP2 3.96 R1 1.296 R2 2.296 gate PASS -> not proposed | unlikely to fill this week (outside the week-1 range 3.90 - 4.70); also outside the week-2 range; 22.3% from the Close
-  P1 Micro MIXED: VWAP oppose, CVD favour, UDVR oppose, div/VT favour
-  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-5.18 vs main)
-  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 3.34-0.2689=3.0711; TP1 3.6986; TP2 3.9675
-SETUP COUNTER-TREND BUY - Limit buy at 52-week low (Limit) E 3.16: stop 2.89 TP1 3.51 TP2 3.78 R1 1.296 R2 2.296 gate PASS -> not proposed | unlikely to fill this week (outside the week-1 range 3.90 - 4.70); also outside the week-2 range; 26.5% from the Close
-  P1 Micro MIXED: VWAP oppose, CVD favour, UDVR oppose, div/VT favour
-  P2 Momentum AGAINST: Ichimoku oppose, MACD oppose, RS20 oppose (-5.18 vs main)
-  P3 Structure SUPPORTS: Darvas oppose (Breakdown Below), room favour (blocking: none), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 3.16-0.2689=2.8911; TP1 3.5186; TP2 3.7875
-SETUP SHORT ADVISORY - Close (market) (Market) E 4.3: stop 4.57 TP1 3.95 TP2 3.68 R1 1.296 R2 2.296 gate PASS -> not proposed
-  P1 Micro MIXED: VWAP favour, CVD oppose, UDVR favour, div/VT oppose
-  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-5.18 vs main)
-  P3 Structure MIXED: Darvas favour (Breakdown Below), room oppose (blocking: 20-bar low 4.1400, 60-bar low 4.1400), entry neither
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 4.3+0.2689=4.5689; TP1 3.9414; TP2 3.6725
-SETUP SHORT ADVISORY - VWAP10 (Limit) E 4.41: stop 4.68 TP1 4.06 TP2 3.79 R1 1.296 R2 2.296 gate PASS -> not proposed
-  P1 Micro MIXED: VWAP favour, CVD oppose, UDVR favour, div/VT oppose
-  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-5.18 vs main)
-  P3 Structure MIXED: Darvas favour (Breakdown Below), room oppose (blocking: 20-bar low 4.1400, 60-bar low 4.1400), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 4.41+0.2689=4.6789; TP1 4.0514; TP2 3.7825
-SETUP SHORT ADVISORY - Kijun (Limit) E 4.7: stop 4.97 TP1 4.35 TP2 4.08 R1 1.296 R2 2.296 gate PASS -> depends on catalyst
-  P1 Micro MIXED: VWAP favour, CVD oppose, UDVR favour, div/VT oppose
-  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-5.18 vs main)
-  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 4.7+0.2689=4.9689; TP1 4.3414; TP2 4.0725
-SETUP SHORT ADVISORY - Limit short at 20-bar high (Limit) E 4.97: stop 5.24 TP1 4.62 TP2 4.35 R1 1.296 R2 2.296 gate PASS -> depends on catalyst | unlikely to fill this week (outside the week-1 range 3.90 - 4.70); also outside the week-2 range; 15.6% from the Close
-  P1 Micro MIXED: VWAP favour, CVD oppose, UDVR favour, div/VT oppose
-  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-5.18 vs main)
-  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 4.97+0.2689=5.2389; TP1 4.6114; TP2 4.3425
-SETUP SHORT ADVISORY - Limit short at 60-bar high / 120-bar high / Darvas ceiling (Limit) E 5.41: stop 5.68 TP1 5.06 TP2 4.79 R1 1.296 R2 2.296 gate PASS -> depends on catalyst | unlikely to fill this week (outside the week-1 range 3.90 - 4.70); also outside the week-2 range; 25.8% from the Close
-  P1 Micro MIXED: VWAP favour, CVD oppose, UDVR favour, div/VT oppose
-  P2 Momentum SUPPORTS: Ichimoku favour, MACD favour, RS20 favour (-5.18 vs main)
-  P3 Structure SUPPORTS: Darvas favour (Breakdown Below), room favour (blocking: none), entry favour
-  P4 Catalyst FOR THE AI: no rating changes in the window; other news is for the AI to assess
-  Arithmetic: 1.5A 0.2689 2A 0.3586 3.5A 0.6275; stop 5.41+0.2689=5.6789; TP1 5.0514; TP2 4.7825
-Selected buy: Limit buy at 20-bar low / 60-bar low E 4.14 | not proposed
-Selected short: Kijun E 4.7 | depends on catalyst
+--- SCORES (statistics only, not advice: the readings behind the harness's pillars) ---
+Microstructure: MIXED (2 bullish / 2 bearish of 4) - close vs VWAP10 bearish, CVD10 bullish, UDVR10 bearish, divergence/volume trend bullish
+Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-5.18 pts vs main benchmark)
+Structure: Darvas Breakdown Below; nearest support -3.72% (0.89 ATRs); nearest resistance +2.64% (0.63 ATRs)
+Broker rating changes, last 14 days: 0 upgrade(s), 0 downgrade(s)
 
 --- WEEKS (last 4) ---
 Week 2026-10-26 bars 5: O 4.85 C 4.55 H 4.88 L 4.48 prevC 4.88 chg raw -6.7623% adj -6.7623% up 1 dn 4 volx 1.2637 CVD -10,362,722 UD 0.1532 pos 0.1750 standout 2026-10-29 V 27,917,138 chg -3.5491% CLV -0.3600
