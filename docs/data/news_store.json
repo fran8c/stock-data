@@ -21873,8 +21873,8 @@
   "date": "2026-11-21",
   "title": "Prediction: Nvidia Stock Will Do This in the 6 Months After a New CEO Takes Over, According to History",
   "source": "Yahoo Finance",
-  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNLW9ZM3F2c2phdDRwLURNU0NzTHpXRjJTY28yTTdNT0xiVjZOczIxQXNYcTJmemMyN2Vod09MYUdnZUZaSl9saFhHdFBuWWlZRHFVOXFqSkVUSlNJSERBdEdETmxnNnZNeHktR1NpZldpRjVtWmtIQk16WHZLa3VrZUpmcUl6WnNzV3RfRmpobVpSbVBwMFQ5UUJkalFyQQ?oc=5",
-  "summary": "",
+  "url": "https://www.msn.com/en-us/news/other/prediction-nvidia-stock-will-do-this-in-the-6-months-after-a-new-ceo-takes-over-according-to-history/ar-AA2hTbzB",
+  "summary": "Nvidia is searching for a new CEO following Jensen Huang's abrupt resignation.",
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
@@ -22456,6 +22456,66 @@
   "source": "Motley Fool",
   "url": "https://www.fool.com/investing/2026/11/20/the-sp-500-just-entered-correction-territory-heres-what-it-means-for-investors-right-now/",
   "summary": "After plunging 8.6% for the week, the S&P 500 is now in a correction.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::autonomousresearchdowngradesunitedoverseasbanktoneutraladjustspricetargettosg4150": {
+  "ticker": "U11.SI",
+  "date": "2026-11-18",
+  "title": "Autonomous Research Downgrades United Overseas Bank to Neutral, Adjusts Price Target to SG$41.50",
+  "source": "marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVk0yT29RZDFETHJfSDZpWmVZT01YclNBNVN2VkpudkJoXzJ5cW82M1V5OE1KbVhtamc2RENvUG5uMFZTSkg3VngzWjZLa2QzaW1yZGk4MFlCWTZ1Uk40QU5XWmtSMzFyYVpfWDJZTFZVaVZldW9PMUJWQjZWSzNCNVYya3hILS1hUlhmRWhUWDdHRkpmMHR4TGY0UEJUX1hkdDZUbk9jMDJWZXp5Vm9sVFE1QWExWnFaUzNNZHhwaDdVcWZjN2lUSzEzUzlRMUJ1UDQtS2RLQ1NFSHdqSXJKUjl3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "MRVL::mrvlstockquotepriceandforecast": {
+  "ticker": "MRVL",
+  "date": "2026-11-20",
+  "title": "MRVL Stock Quote Price and Forecast",
+  "source": "CNN",
+  "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE40VFZrblZ3RzNzZVM3Y01XNVNTV3hNTGpjbGRhZ1dHUGRSNDMwOVh4VC12Z0FKeDdlOTVxcnlPX25Pb1hYZ3c2RXlJWTVKUzh6?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::trumpdiscloseshundredsofstocktradesincludingnvidiaspacex": {
+  "ticker": "NVDA",
+  "date": "2026-11-20",
+  "title": "Trump Discloses Hundreds of Stock Trades, Including Nvidia, SpaceX",
+  "source": "Newsweek",
+  "url": "https://www.newsweek.com/trump-stock-trades-nvidia-spacex-financial-disclosure-12744178",
+  "summary": "New financial disclosures raise questions about potential conflicts of interest and whether the president met federal reporting deadlines.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::jensenhuangwasntmentionedinlatesttalkswithchinabessentsays": {
+  "ticker": "NVDA",
+  "date": "2026-11-20",
+  "title": "Jensen Huang wasn't mentioned in latest talks with China, Bessent says",
+  "source": "CNBC on MSN",
+  "url": "https://www.msn.com/en-us/money/markets/jensen-huang-wasnt-mentioned-in-latest-talks-with-china-bessent-says/ar-AA2hR967?ocid=BingNewsVerp",
+  "summary": "Questions have been raised over why the Trump administration did not impose restrictions on Megaspeed, a company at the center of the Nvidia scandal.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::ifthenasdaqscorrectionturnsintoabearmarketthisisthefirststockillbuy": {
+  "ticker": "NVDA",
+  "date": "2026-11-21",
+  "title": "If the Nasdaq's Correction Turns Into a Bear Market, This Is the First Stock I'll Buy",
+  "source": "Motley Fool",
+  "url": "https://www.fool.com/investing/2026/11/20/if-the-nasdaq-s-correction-turns-into-a-bear-market-this-is-the-first-stock-i-ll-buy/",
+  "summary": "Another 7.5% fall would send the index into a bear market. Which battered giant would I buy first?",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "NVDA::danivessaysanthropiciposeesverystrongappetitecallsitabigwinfortechsectorafterwhiteknucklenvidiaperiod": {
+  "ticker": "NVDA",
+  "date": "2026-11-21",
+  "title": "Dan Ives Says Anthropic IPO Sees 'Very Strong Appetite,' Calls It A 'Big Win' for Tech Sector After 'White-Knuckle' Nvidia Period",
+  "source": "Benzinga",
+  "url": "https://finance.yahoo.com/technology/ai/articles/dan-ives-says-anthropic-ipo-033013948.html",
+  "summary": "Dan Ives, partner and senior managing director at Yorkville Ives, said investor appetite around Anthropic’s initial public offering signals a \"big win\" for the technology sector following what he described as a \"white-knuckle\" period surrounding NVIDIA Corp. and the broader...",
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  }

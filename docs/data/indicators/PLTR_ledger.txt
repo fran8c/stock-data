@@ -32,7 +32,7 @@ Darvas: ceiling 212.9400 on 2026-10-12, floor 192.6000, status Breakdown Below, 
 RS20: stock 20-bar change raw -27.0699% adj -27.0699%
   ^GSPC: -9.3562% ; RS20 = -17.7136 pts lagging  [^GSPC to 2026-11-20]
   ^IXIC: -12.8590% ; RS20 = -14.2108 pts lagging  [^IXIC to 2026-11-20]
-  ^DJI: -7.7906% ; RS20 = -19.2793 pts lagging  [^DJI to 2026-11-20]
+  ^DJI: -7.7905% ; RS20 = -19.2794 pts lagging  [^DJI to 2026-11-20]
 52w: high 212.9400 (2026-10-12) low 106.3700 (2026-06-25); from high -32.6148% from low 34.8971% (bars in window 251)
 20-bar HH 201.8300 LL 142.2800; 60-bar HH 212.9400 LL 142.2800; 120-bar HH 212.9400 LL 106.3700
 Levels above: Tenkan 158.8450 (+10.70%) | VWAP10 160.8674 (+12.11%) | Kijun 172.9150 (+20.51%)

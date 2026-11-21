@@ -28,7 +28,7 @@
    "last_date": "2026-11-20",
    "sessions_behind_stock": 0,
    "rs20_pts": -32.7053,
-   "chg20_pct": -7.7906,
+   "chg20_pct": -7.7905,
    "label": "lagging"
   },
   "AMD": {
@@ -131,7 +131,7 @@
   "chg20_IXIC_pct": -12.859,
   "IXIC_close_date": "2026-11-20",
   "rs20_DJI": -32.7053,
-  "chg20_DJI_pct": -7.7906,
+  "chg20_DJI_pct": -7.7905,
   "DJI_close_date": "2026-11-20",
   "rs20_AMD": -22.6162,
   "chg20_AMD_pct": -17.8796,

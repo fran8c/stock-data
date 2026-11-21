@@ -34,7 +34,7 @@ Darvas: ceiling 243.3700 on 2026-10-06, floor 229.1100, status Breakdown Below, 
 RS20: stock 20-bar change raw -40.4958% adj -40.4958%
   ^GSPC: -9.3562% ; RS20 = -31.1396 pts lagging  [^GSPC to 2026-11-20]
   ^IXIC: -12.8590% ; RS20 = -27.6368 pts lagging  [^IXIC to 2026-11-20]
-  ^DJI: -7.7906% ; RS20 = -32.7053 pts lagging  [^DJI to 2026-11-20]
+  ^DJI: -7.7905% ; RS20 = -32.7053 pts lagging  [^DJI to 2026-11-20]
   AMD: -17.8796% ; RS20 = -22.6162 pts lagging  [AMD to 2026-11-20]
   AVGO: -5.3687% ; RS20 = -35.1271 pts lagging  [AVGO to 2026-11-20]
 52w: high 243.3700 (2026-10-06) low 124.5000 (2026-11-20); from high -48.4201% from low 0.8273% (bars in window 251)

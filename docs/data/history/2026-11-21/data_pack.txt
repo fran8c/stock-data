@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 12:21 SGT
+Run time: 2026-11-21 12:44 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 12:21 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 12:21 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 12:44 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 12:44 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -38,9 +38,9 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1246 items have no summary (paywall or site blocks automated visits)
+  - News: 1247 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-21 12:21 SGT
+DATA PACK - generated 2026-11-21 12:44 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -171,10 +171,10 @@ U96.SI ex-dividend date | 2026-08-21 | Ex-dividend date per Yahoo - most recent 
 Z74.SI latest close | 4.1600 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-20
 Z74.SI 3-month average daily volume | 23,685,709 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-20
 Z74.SI sector | Communication Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/profile/ | retrieved 2026-11-21
-Z74.SI trailing EPS | 0.2300 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
-Z74.SI forward EPS | 0.2119 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
-Z74.SI trailing P/E | 18.09 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
-Z74.SI forward P/E | 19.64 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI trailing EPS | 0.2200 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI forward EPS | 0.2114 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI trailing P/E | 18.91 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
+Z74.SI forward P/E | 19.68 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-21
 Z74.SI 5-year P/E high | 79.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-21
 Z74.SI 5-year P/E median | 18.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-21
 Z74.SI 5-year P/E low | 12.28 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-20 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-21

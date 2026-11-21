@@ -7,7 +7,7 @@
 | Straits Times Index | 4,975.17 | 2026-11-20 | -2.1% | +11.3% |
 | S&P 500 | 6,910.39 | 2026-11-20 | -3.7% | +4.7% |
 | Nasdaq Composite | 22,617.73 | 2026-11-20 | -5.3% | +1.5% |
-| Dow Jones Industrial Average | 48,147.30 | 2026-11-20 | -1.9% | +4.1% |
+| Dow Jones Industrial Average | 48,147.33 | 2026-11-20 | -1.9% | +4.1% |
 
 **Watchlist**
 

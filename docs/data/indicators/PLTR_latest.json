@@ -27,8 +27,8 @@
   "^DJI": {
    "last_date": "2026-11-20",
    "sessions_behind_stock": 0,
-   "rs20_pts": -19.2793,
-   "chg20_pct": -7.7906,
+   "rs20_pts": -19.2794,
+   "chg20_pct": -7.7905,
    "label": "lagging"
   }
  },
@@ -116,8 +116,8 @@
   "rs20_IXIC": -14.2108,
   "chg20_IXIC_pct": -12.859,
   "IXIC_close_date": "2026-11-20",
-  "rs20_DJI": -19.2793,
-  "chg20_DJI_pct": -7.7906,
+  "rs20_DJI": -19.2794,
+  "chg20_DJI_pct": -7.7905,
   "DJI_close_date": "2026-11-20",
   "rs20_main": -17.7136,
   "rs20_main_label": "lagging",

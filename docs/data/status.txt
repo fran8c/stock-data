@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-21 12:21 SGT
+Run time: 2026-11-21 12:44 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-21 12:21 SGT, latest SGX session expected 2026-11-20
-  - US: 2026-11-21 12:21 SGT, latest US session expected 2026-11-20
+  - SGX: 2026-11-21 12:44 SGT, latest SGX session expected 2026-11-20
+  - US: 2026-11-21 12:44 SGT, latest US session expected 2026-11-20
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -38,4 +38,4 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1246 items have no summary (paywall or site blocks automated visits)
+  - News: 1247 items have no summary (paywall or site blocks automated visits)
