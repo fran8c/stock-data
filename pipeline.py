@@ -41,6 +41,8 @@ import xml.etree.ElementTree as ET
 import pandas as pd
 import requests
 
+import indicators   # the official indicator ledger (indicators.py, same folder)
+
 # ----------------------------------------------------------------------------
 # Settings
 # ----------------------------------------------------------------------------
@@ -285,6 +287,8 @@ def read_holidays(path=HOLIDAYS_FILE):
         if not s or s.startswith("#"):
             continue
         parts = [p.strip() for p in s.split("|")]
+        if len(parts) >= 4 and "EARLY" in parts[3].upper():
+            continue   # half day: the market still trades, so there is a bar
         if len(parts) >= 2 and parts[0].upper() in out and re.match(r"^\d{4}-\d{2}-\d{2}$", parts[1]):
             out[parts[0].upper()].add(parts[1])
     return out
@@ -1122,12 +1126,46 @@ def write_text(name, text):
     (OUT / name).write_text(text.rstrip() + "\n", encoding="utf-8")
 
 
-def file_index(symbols):
+def bars_frame(hist):
+    """Yahoo history -> Date, Open, High, Low, Close, Volume with the same rounding as the price files."""
+    df = pd.DataFrame({
+        "Date": hist.index.strftime("%Y-%m-%d"),
+        "Open": hist["Open"].values, "High": hist["High"].values, "Low": hist["Low"].values,
+        "Close": hist["Close"].values, "Volume": hist["Volume"].values,
+    }).dropna(subset=["Close"])
+    for c in ("Open", "High", "Low", "Close"):
+        df[c] = df[c].round(4)
+    df["Volume"] = df["Volume"].fillna(0).astype("int64")
+    return df
+
+
+def archive_indicators(watch):
+    """Indicator files of names taken off the watchlist go to archive/indicators/."""
+    folder = OUT / "indicators"
+    if not folder.exists():
+        return
+    live = {safe_name(i["symbol"]) for i in watch}
+    for f in folder.iterdir():
+        if f.name == "COLUMNS.md":
+            continue
+        stem = re.sub(r"(_weeks|_latest|_ledger)$", "", f.stem)
+        if stem not in live:
+            dst = ARCHIVE / "indicators"
+            dst.mkdir(parents=True, exist_ok=True)
+            f.replace(dst / f.name)
+
+
+def file_index(symbols, watch_syms=()):
     base = pages_base()
     lines = ["PRICE FILES (one year of daily bars, columns Date, Open, High, Low, Close, Volume):"]
     lines += [f"  {s}: {base}prices/{safe_name(s)}.csv" for s in symbols]
     lines.append("DIVIDEND FILES (columns Date, Type, Amount):")
     lines += [f"  {s}: {base}dividends/{safe_name(s)}.csv" for s in symbols if not s.startswith("^")]
+    if watch_syms:
+        lines.append("INDICATOR LEDGERS (official pre-computed harness indicators; latest day as text, every day as CSV; "
+                     f"column guide: {base}indicators/COLUMNS.md):")
+        lines += [f"  {s}: {base}indicators/{safe_name(s)}_ledger.txt | daily {base}indicators/{safe_name(s)}.csv | "
+                  f"weekly {base}indicators/{safe_name(s)}_weeks.csv" for s in watch_syms]
     return "\n".join(lines)
 
 
@@ -1279,8 +1317,10 @@ def main():
             R.scope = m
             R.good(f"Lag check: every {m} price file has the {expected[m]} session")
 
-    # 2. Stocks: figures, news and dashboard rows
+    # 2. Stocks: figures, indicator ledger, news and dashboard rows
     blocks, dash_stocks, dash_bench, fresh_news = {}, {}, {}, []
+    indicator_latest = {}
+    archive_indicators(watch)
     for item in run_watch:
         sym = item["symbol"]
         R.scope = market_of(sym)
@@ -1305,6 +1345,25 @@ def main():
             R.warn(f"{sym}: fundamentals failed ({e.__class__.__name__}: {e})")
             traceback.print_exc()
         blocks[sym] = f"## {sym} - {item['name']} ({item['kind']})\n" + "\n".join(figs)
+
+        # Official indicator ledger: every harness indicator for every day of the
+        # last year, rebuilt each run from up to 5 years of bars.
+        try:
+            m = market_of(sym)
+            bench = ["^STI"] if m == "SGX" else ["^GSPC", "^IXIC", "^DJI"]
+            comps = {}
+            for c_sym in bench + peers.get(sym, []):
+                if c_sym in hist:
+                    comps[c_sym] = bars_frame(hist[c_sym])
+                elif (PRICES / f"{safe_name(c_sym)}.csv").exists():
+                    comps[c_sym] = pd.read_csv(PRICES / f"{safe_name(c_sym)}.csv")
+            d_ind, w_ind, latest = indicators.build(sym, bars_frame(h), divs, comps, bench[0], m, TODAY_S, expected[m])
+            indicators.write_outputs(sym, d_ind, w_ind, latest)
+            indicator_latest[sym] = latest
+            R.good(f"{sym}: indicator ledger {len(d_ind)} days to {latest['last_bar']}")
+        except Exception as e:  # noqa: BLE001
+            R.warn(f"{sym}: indicator ledger failed ({e.__class__.__name__}: {e})")
+            traceback.print_exc()
 
         try:
             fresh_news += google_news(item)
@@ -1424,7 +1483,7 @@ def main():
     peer_lines = ["PEERS (from peers.txt; use as peer_data in the Individual Stock Harness):"]
     peer_lines += [f"  {s}: {', '.join(peers.get(s, [])) or 'none listed - the harness will suggest peers'}" for s in [i["symbol"] for i in watch]]
     write_text("peers.txt", "\n".join(peer_lines))
-    write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols), "\n".join(peer_lines), data_pack, news_pack]))
+    write_text("ai_bundle.txt", "\n\n".join([status, file_index(symbols, [i["symbol"] for i in watch]), "\n".join(peer_lines), data_pack, news_pack]))
 
     recent = sorted(store.values(), key=lambda n: n["date"], reverse=True)
     for s in all_stocks:
@@ -1436,13 +1495,20 @@ def main():
             "macro": [m.split(" | ") for m in macro], "news_count": len(nlines),
             "edit_url": edit_url(), "watchlist_size": len(watch),
             "files": {"bundle": "data/ai_bundle.txt", "data_pack": "data/data_pack.txt",
-                      "news_pack": "data/news_pack.txt", "status": "data/status.txt"}}
+                      "news_pack": "data/news_pack.txt", "status": "data/status.txt",
+                      "indicators": "data/indicators/"}}
     write_text("dashboard.json", json.dumps(dash, ensure_ascii=False))
 
     summary = market_summary(all_stocks, all_bench, macro, stock_blocks)
     write_text("summary.md", summary)
     save_history({"status.txt": status, "summary.md": summary,
                   "data_pack.txt": status + "\n\n" + data_pack, "news_pack.txt": news_pack})
+    # Freeze this run's official latest-day indicators in the dated folder
+    if indicator_latest:
+        frozen = HISTORY / TODAY_S / "indicators"
+        frozen.mkdir(parents=True, exist_ok=True)
+        for s_, lt in indicator_latest.items():
+            (frozen / f"{safe_name(s_)}_latest.json").write_text(json.dumps(lt, indent=1, default=str), encoding="utf-8")
 
     # What this run did, for the report notice and the STALE alert (see daily.yml)
     write_text("run_result.json", json.dumps({

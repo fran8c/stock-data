@@ -50,9 +50,21 @@ After every run (SGX and US), good or bad, the job posts a comment on the issue 
 - **this run's copy** links: frozen copies of that day's files, which never change
 - a link to the run log
 
+## Indicator ledger (each stock's calculations, every day)
+
+Every run works out all the Individual Stock Harness indicators for every trading day of the past year, from up to 5 years of Yahoo bars. These are the **official figures**: the harness checks against them and flags any difference. Files in `docs/data/indicators/`, per stock:
+
+- `<SYMBOL>.csv` - one row per day: order flow (CLV, CVD10, VWAP10, UDVR10, volume ratio, VT5/20), ATR14, MACD, Ichimoku, Darvas, 20-day relative strength vs each benchmark and peer, 20/60/120-bar and 52-week highs and lows, confluence and volume confirmation, outlook ranges, nearest support and resistance. Open it on github.com to see it as a searchable table.
+- `<SYMBOL>_weeks.csv` - one row per week (the weekly recap figures).
+- `<SYMBOL>_ledger.txt` - the latest day as a readable ledger (the harness's Appendix B layout).
+- `<SYMBOL>_latest.json` - the latest day in full, for the dashboard and the harness.
+- `COLUMNS.md` - what every column means, in plain English.
+
+A frozen copy of each day's latest figures is saved in `docs/data/history/YYYY-MM-DD/indicators/`. Past rows are recalculated each run, so if Yahoo corrects an old bar, the history picks up the correction. The figures were checked against the 21 Nov 2026 harness runs for DBS, OCBC, Keppel, Marvell and Nvidia (174 of 174 match to 4 decimals).
+
 ## Late bars and STALE alerts
 
-Yahoo sometimes publishes a day's bar late. Each run checks every price file against its market's latest session (weekends and the dates in `holidays.txt` are skipped). Any file that is behind is re-pulled up to 2 more times, 15 minutes apart. If it is still behind, the job opens an issue titled like **STALE: MRVL, NVDA behind (US run)**, which emails you. The next run of that market closes the issue once the files catch up. No issue means everything is up to date.
+Yahoo sometimes publishes a day's bar late. Each run checks every price file against its market's latest session (weekends and the closures in `holidays.txt` are skipped; early-close days still count as sessions). Any file that is behind is re-pulled up to 2 more times, 15 minutes apart. If it is still behind, the job opens an issue titled like **STALE: MRVL, NVDA behind (US run)**, which emails you. The next run of that market closes the issue once the files catch up. No issue means everything is up to date.
 
 Every run rewrites each price file in full, so Yahoo's later corrections to recent bars (e.g. volume) are picked up too.
 
@@ -90,12 +102,14 @@ Everything else that can't be fetched is marked `NOT RETRIEVED` and listed in th
 |---|---|
 | `watchlist.txt` | The names to track. Edit this one. |
 | `peers.txt` | Two peers per stock for the Individual Stock Harness |
-| `holidays.txt` | Market holidays, so holidays aren't reported as stale data |
+| `holidays.txt` | Market closures and early closes (for the stale check and the outlook ranges) |
 | `pipeline.py` | The script that collects everything |
+| `indicators.py` | Works out the indicator ledger (called by `pipeline.py`) |
 | `.github/workflows/daily.yml` | The schedule |
 | `docs/index.html` | The dashboard page |
 | `docs/data/` | The daily output (written by the job, don't edit) |
 | `docs/data/parts/` | Each market's latest results, combined into the packs |
+| `docs/data/indicators/` | The indicator ledger, per stock |
 | `docs/data/archive/` | Files of names taken off the watchlist |
 
 Data comes from Yahoo Finance (unofficial), FRED, MAS, SingStat and Google News. It's for personal research, not investment advice.
