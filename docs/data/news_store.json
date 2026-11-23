@@ -520,16 +520,6 @@
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  },
- "O39.SI::bwessreceiveslenderbackingforhamshallbessinuk": {
-  "ticker": "O39.SI",
-  "date": "2026-10-22",
-  "title": "BW ESS receives lender backing for Hams Hall BESS in UK",
-  "source": "Power Technology",
-  "url": "https://www.power-technology.com/news/bw-ess-lender-backing-hams-hall/",
-  "summary": "The project’s initial phase will have 350MW/1.24GWh of capacity, with a ten-year revenue agreement in place with EDF.",
-  "via": "yahoo",
-  "tag": "SINGLE-SOURCE"
- },
  "U11.SI::singaporestockstumble11708pointsasglobaltechrouthitssti": {
   "ticker": "U11.SI",
   "date": "2026-11-07",
@@ -1130,16 +1120,6 @@
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
- "BS6.SI::yangzijiangshipbuildingholdingsltdestimatessgxbs6": {
-  "ticker": "BS6.SI",
-  "date": "2026-10-23",
-  "title": "Yangzijiang Shipbuilding (Holdings) Ltd. Estimates – SGX:BS6",
-  "source": "TradingView",
-  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBMSjZ1ZVItVmlvWTZiRElSWm5KYXN4dWtmQlh1MTJiSTQ1UnFrRV9uTlJMNkRYNmY4UnNUWF9ndHV3c0ZnWDFOMm00U192alV0Ql9NZjJzR054bXpLTW5FM01Hc0NVRUFMYW1KVTB0TTR1bWM?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
  "U96.SI::sembcorpsnew600mwpowerplantstrengthensenergysecurityandpowersai": {
   "ticker": "U96.SI",
   "date": "2026-11-06",
@@ -1638,16 +1618,6 @@
   "title": "Sembcorp collaborates with Nxera to supply low-carbon energy to Nxera data centres",
   "source": "Singtel",
   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNLWNBN3o1THd1RmxuNEtuMWpSRXhueHNIemlmSDItYnlGUmJkZjdycEZZMGNrRnVsdVNTUEhaT1BEZHRGU0lMZkRvUEpSSG5tZXJBOWxONjVON3BNWXpsbmZxRXl6SmFyS0d5V0RoQlVoZXl3ajlvQTYyM1pUTE5URDRiMVpLTW1yMVN0UVBsbmY2R0oyeGp1cw?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
- "Z74.SI::singtelmarketerbillangrelinquishesfulltimeroletakesonfractionalremit": {
-  "ticker": "Z74.SI",
-  "date": "2026-10-22",
-  "title": "Singtel marketer Bill Ang relinquishes full-time role, takes on fractional remit",
-  "source": "Marketing-Interactive",
-  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPLWhHTGk1OXBxWm9PN2RPZVQxb2xWUFh1QTBGZjdBcnVtNWNZd29GVG9qUmJUZEZIdmhZSXJORU5fbC1GTk9RY3RUc1ZLT0JwZWFSUzhnNlY2VGl2aUptMUUwNE1ybU14cUFOdktwRFEyakg1Uk5uR1NZZlpQN0ItUkVKY3JUMzd3TlBaVDFuajRjSnRqZkkyY3NXalB4b29aRmR3MDlpUEhxZTR3TG9HWEdmN0lVV2xB?oc=5",
   "summary": "",
   "via": "google",
   "tag": "SINGLE-SOURCE"
@@ -3221,26 +3191,6 @@
   "summary": "SINGAPORE – Shares of Singapore’s three local banks traded lower on the morning of Nov 2, with OCBC recording the steepest decline, ahead of their earnings releases in early November.",
   "via": "bing",
   "tag": "SINGLE-SOURCE"
- },
- "O39.SI::ocbctoletsingaporecustomersholdringgitinsavingsaccountsfromoct23": {
-  "ticker": "O39.SI",
-  "date": "2026-10-22",
-  "title": "OCBC to let Singapore customers hold ringgit in savings accounts from Oct 23",
-  "source": "Malay Mail",
-  "url": "https://www.malaymail.com/news/singapore/2026/10/22/ocbc-to-let-singapore-customers-hold-ringgit-in-savings-accounts-from-oct-23/240119",
-  "summary": "Oversea-Chinese Banking Corporation Ltd (OCBC) yesterday announced the addition of Malaysian ringgit (MYR) to its multi-currency savings accounts ...",
-  "via": "bing",
-  "tag": "SINGLE-SOURCE"
- },
- "O39.SI::ocbcsmobileinternetbankingservicesfullyrestoredspokesperson": {
-  "ticker": "O39.SI",
-  "date": "2026-10-23",
-  "title": "OCBC's mobile, internet banking services fully restored: Spokesperson",
-  "source": "AsiaOne",
-  "url": "https://www.asiaone.com/singapore/ocbc-online-banking-disruption-restored",
-  "summary": "OCBC's mobile and internet banking services have been fully restored, a spokesperson said.Users reported disruptions to mobile and internet banking services this afternoon.They were also unable to use ...",
-  "via": "bing",
-  "tag": "CORROBORATED"
  },
  "U11.SI::europositiveoutlookhingeson11280againstusdollaruob": {
   "ticker": "U11.SI",
@@ -5771,7 +5721,7 @@
   "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/29/singapore-cambodia-police-and-ocbc-help-singapore-firm-recover-us128mil-from-scammers",
   "summary": "SINGAPORE: A total of US$12.8 million (S$16.4 million) was recovered by the Singapore police, working with their Cambodian counterparts and OCBC Bank, after a company was duped into transferring the ...",
   "via": "bing",
-  "tag": "SINGLE-SOURCE"
+  "tag": "CORROBORATED"
  },
  "O39.SI::yuanrallylikelytocoolnotreverse": {
   "ticker": "O39.SI",
@@ -11636,16 +11586,6 @@
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
- "BN4.SI::keppelltdestimatessgxbn4": {
-  "ticker": "BN4.SI",
-  "date": "2026-10-23",
-  "title": "Keppel Ltd. Estimates – SGX:BN4",
-  "source": "TradingView",
-  "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9SNGNKQXkzVXJpTzlKYWhBdGdTUHZCdmRnSjNXaDVEeXpwbnVHZUVkVVVBWUhsaFNUSm5lOVZidS1PSVYyb1A4Yjh5ejBVZG1TU1hVSXBkTkYtbklJTHo3M21vV2kyR1JpR29CWmZNT1F6eTA?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
  "BS6.SI::yangzijiangstockusd698billionordersliftbacklog": {
   "ticker": "BS6.SI",
   "date": "2026-11-14",
@@ -11841,16 +11781,6 @@
   "summary": "Sembcorp Green Infra Limited, backed by Temasek, receives SEBI nod for its ₹3,750 crore IPO aimed at enhancing its financial position amid India's expansive renewable energy initiatives.",
   "via": "bing",
   "tag": "CORROBORATED"
- },
- "U96.SI::keppelenergysembcorputilitiesandtuaspowertosupplybiomethaneinpilotproject": {
-  "ticker": "U96.SI",
-  "date": "2026-10-23",
-  "title": "Keppel Energy, Sembcorp Utilities and Tuas Power to supply biomethane in pilot project",
-  "source": "The Business Times",
-  "url": "https://www.businesstimes.com.sg/companies-markets/energy-commodities/keppel-energy-sembcorp-utilities-and-tuas-power-supply-biomethane-pilot-project",
-  "summary": "The sandbox will run for 15 years, with the companies expected to bring in their first supplies by end-2028 Read more at The Business Times.",
-  "via": "bing",
-  "tag": "SINGLE-SOURCE"
  },
  "U96.SI::sembcorpgreeninfraipogetssebinodforrs3750croreissue": {
   "ticker": "U96.SI",
@@ -13413,16 +13343,6 @@
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
- "D05.SI::dbsgroupresearchmaintainsbuyonkeppeldcreitwithhighertpof255": {
-  "ticker": "D05.SI",
-  "date": "2026-10-22",
-  "title": "DBS Group Research maintains ‘buy’ on Keppel DC REIT with higher TP of $2.55",
-  "source": "The Edge Singapore",
-  "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOM2htYlFyejJPOC1TUWcwV0xGSVA0ZktzbkdKLVJXSnBTLTI4cHlWV2llbnlOUDktVVZKTXNaWkd5Tl9JNHNUbGdENE8tS3JnSk5kak5pUHh5V05vZXFHLTlkRENDa0F3SG1GMGFGMlRxSkFTYVktTXlnWUdqQ2h5Z1JrbEREVXU2dWp3QTlrYUlSWEpVSXBKZ3dSeGFYOE00MFB0b3pzOUtGVUhiT0JqY2Y3aGxQVDQ?oc=5",
-  "summary": "",
-  "via": "google",
-  "tag": "SINGLE-SOURCE"
- },
  "O39.SI::silverreboundfacesrenewedsellingpressureocbc": {
   "ticker": "O39.SI",
   "date": "2026-11-16",
@@ -13492,16 +13412,6 @@
   "summary": "SINGAPORE: OCBC was named as the strongest bank in the Asia Pacific in the latest ranking announced by financial business intelligence provider The Asian Banker (TAB) on Tuesday (Oct 27). Singapore's ...",
   "via": "bing",
   "tag": "SINGLE-SOURCE"
- },
- "O39.SI::ocbcinternetandmobilebankingservicesrestoredafterfourhourdisruption": {
-  "ticker": "O39.SI",
-  "date": "2026-10-23",
-  "title": "OCBC internet and mobile banking services restored after four-hour disruption",
-  "source": "CNA",
-  "url": "https://www.channelnewsasia.com/singapore/ocbc-down-internet-mobile-banking-app-outage-downdetector-6485511",
-  "summary": "SINGAPORE: Oversea-Chinese Banking Corporation (OCBC) internet and mobile banking services have been restored, the bank said on Friday afternoon (Oct 23), about four hours after reports emerged of ...",
-  "via": "bing",
-  "tag": "CORROBORATED"
  },
  "O39.SI::asiancurrenciesconsolidatebutmaybeweighedbyriskoffsentiment": {
   "ticker": "O39.SI",
@@ -13749,8 +13659,8 @@
   "date": "2026-11-16",
   "title": "Singtel Drops 2.19% To Weigh On Singapore Market At Opening",
   "source": "BusinessToday Malaysia",
-  "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPaFplMnJ2ZC16Qnk3M1BzNUg1QVBXeXBpTVdsY3htUTB4VWg4M3lDX1E1dGhnNlJFNk53bU50UFNxMzk4Y3UxVDUwZFExZVI2YkFLdWQwOHc5YlFqOFM3LS1adlg4Q2QwZDFBTERPV1pDN0xPbmhjMkxwM2poTE9iM25JWFgzOTJON0dhYUt1QXVGbVhiQndNQzdtZVlIZ3VEUGJUdVpR?oc=5",
-  "summary": "",
+  "url": "https://www.businesstoday.com.my/2026/11/16/singtel-drops-2-19-to-weigh-on-singapore-market-at-opening/",
+  "summary": "Singapore shares opened lower on Monday, with the Straits Times Index (STI) falling 13.86 points or 0.26% to 5,217.98 as at 9.05am.",
   "via": "google",
   "tag": "SINGLE-SOURCE"
  },
@@ -23258,5 +23168,538 @@
   "summary": "Past trends show that bearish moments are usually the best times to buy this cryptocurrency.",
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsbankfilestolist266minbondsonsingaporeexchange": {
+  "ticker": "D05.SI",
+  "date": "2026-11-23",
+  "title": "DBS Bank files to list $266M in bonds on Singapore exchange",
+  "source": "Dealroom",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaHhZZDlTLW5fOF9ZOWlxbWRJTzFVNUI3ZWNYZnZCeE4tR2xDcm9oUFJhcnljeGZZZFhHdzZab01mWUp5emVBRHZLQllTRUVjSS05aXZ1Mk8tcXFDWXJyQmpBVG9USUVLX0FHdDJxSTJBRFhKRGdldHJ6THZCeFhlazNPSG8yOHBrbExHRVRDZ1NZUHNfb3Iw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsbankfilesforsingaporelistingof125millionbonds": {
+  "ticker": "D05.SI",
+  "date": "2026-11-23",
+  "title": "DBS Bank Files for Singapore Listing of $125 Million Bonds",
+  "source": "marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdW56ZWt3QURuY2RDMGVQbVV0anFyNlRtQjJMVHRYOHFkT0pzblRTa1l6czVvWEJObEl0MVdEX3UxZzlGd3FSNWN4c2JsZjJ3dEtocGJDSU5NYnEwcVUtcDVkVXdDU0ZlaDQ2NTg4cXhkQkUxcWdRQ09IY0Y5eUNBWDNSM0Q0d2Z2WGs4b0gtcERRd0NGZmFzZEZwQjYzSUZZMTQxdXFmOERZVzJPZ0FV?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsgroupstockdbsbankfilestolist343millioninbonds": {
+  "ticker": "D05.SI",
+  "date": "2026-11-23",
+  "title": "DBS Group stock: DBS Bank files to list 343 million in bonds",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPbjdIWTJzdTVFc0czMGlJa3QyUnFwUmMyOFhMZUxkU3otNHNERXpIWDVqNTlQUDVhZ2syeGxGcjFkRGxmaXdXUDJBSEw0MDRVZVVpM2hHcHJUWW1VZl9QNVdfUkk2a1ZHZUY3a1QtLUJLUW9uT2N3MnAtSktBSnh2NGp6a2luRUJwV0lUY2NOZ3Z6ZTdKVTE3SG0zN1lLdHlPYWM5aTZnM2hMMDYwMFdWU1ZFVTR4ci1Jd0UxbmZBaw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsenables247mintingandburningofusdcstablecoin": {
+  "ticker": "D05.SI",
+  "date": "2026-11-18",
+  "title": "DBS enables 24/7 minting and burning of USDC stablecoin",
+  "source": "Ledger Insights",
+  "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNODhxbEJBM0E5NmphQ3kwLWhpMXM4RkhldTRUbXhiYnduSFNmQWdlQ1RvZGliVlE5MGNheWdDS0xaOHFFQVlmM1ZWYjVqcmJMcktsc3lYeVJvc3lrU1VvTGlfMmllUWFxWlpjRjZWTTNLZHBNNVhvZnhOc1pnLUNub09nZ3dJc2cxZnB6QVJKQzA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsphilippinerenewablesgainurgencyasweakpesoraisesenergyimportrisks": {
+  "ticker": "D05.SI",
+  "date": "2026-11-17",
+  "title": "DBS: Philippine renewables gain urgency as weak peso raises energy import risks",
+  "source": "Manila Bulletin",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRzcxRVhmanBEZUZPRXV2TjlycFpvcUJvS3NPT1lwcXZPTl9wZm43Qm80d2lpZ2ItS0U3S2hVU0dITFJQYU5qZ1c3YXhWeS1xN3JOcnE3UkJiWnVvRVg0cF80dHMxRFJTZmlQWWFpdjlFZlFCYjdRYmpzS2hVWl9hckxHaWRwMXFBc3BoV0pQYU9ycTMzMHpQQjNZd0RyR0VMb21DX1o0QW0wcDQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcnamesangengsiongasglobalcorporatebankingheadinrejigofwholesalebankingbusiness": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC names Ang Eng Siong as global corporate banking head in rejig of wholesale banking business",
+  "source": "The Business Times",
+  "url": "https://www.msn.com/en-sg/money/other/ocbc-names-ang-eng-siong-as-global-corporate-banking-head-in-rejig-of-wholesale-banking-business/ar-AA2i3bPx",
+  "summary": "SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::sizeisnteverythingocbcchiefeyeshigherroebringingstaffalongevenasbankgrows": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "‘Size isn’t everything’: OCBC chief eyes higher ROE, bringing staff along even as bank grows",
+  "source": "The Straits Times",
+  "url": "https://www.msn.com/en-sg/news/other/size-isnt-everything-ocbc-chief-eyes-higher-roe-bringing-staff-along-even-as-bank-grows/ar-AA2hZkU7",
+  "summary": "SINGAPORE – For OCBC group chief executive Tan Teck Long, the struggles of small business owners hit close to home.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::walkingatightropeocbcceotantecklongonbalancingboldmoveswithconservativebanking": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "'Walking a tightrope': OCBC CEO Tan Teck Long on balancing bold moves with conservative banking",
+  "source": "The Business Times",
+  "url": "https://www.businesstimes.com.sg/companies-markets/banking-finance/walking-tightrope-ocbc-ceo-tan-teck-long-balancing-bold-moves-conservative-banking",
+  "summary": "He reflects on his approach to technology, investments and regional expansion plans Read more at The Business Times.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::straitsxandocbcpilotstablecoinbasedcrossborderb2bpayments": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "StraitsX and OCBC Pilot Stablecoin-Based Cross-Border B2B Payments",
+  "source": "Fintech Singapore",
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPMHF4eTI3UVpJVHRmOURicTJ5VjZRSnBHUkRFbDhDRUFpSzZoSDJYSzhfeHRfc3F0TVRWaWZNb0l5U056Tjh1OEo4YVFERVN0Uy1UMlNqR1RRbFVoaTBJaXBkZDdBU0V6SmFXclZMczd2UmQ0OVUzeG1NRGVveHh5MDhKRGsxOWxTdjhoVVJ3?oc=5",
+  "summary": "OCBC and StraitsX launch a cross-border stablecoin payments pilot under MAS BLOOM, settling B2B payments directly into OCBC bank accounts. [summary from Crypto Briefing]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcrestructureswholesalebankingappointsangengsiongtoheadglobalcorporatebanking": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC restructures wholesale banking, appoints Ang Eng Siong to head Global Corporate Banking",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMDNMMHNZeFpiZ0Znc1VpT2s3NURlSzNpOG9HS21IZ1JrUGFyZkRRZ1lJVF80dU1uVjQ4TmJnQXlOSFYwVmpUTXpfMnhsYUFmUFZyU0xWQWxGTG9xQllHNVFOYVRRT3J6STRzWGMyOENibzJaMmlGT2JRNkZmd212YUFaUjhXOXcydVBFNXlsVzhDelprWjVTUkZISEhLRERRWVhMOVctektKTDVOY3ZVT0VmWHJobVB1bE5raFZlSjJtU1pKVW5fcm5VSkpjT093?oc=5",
+  "summary": "SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcceotantecklongonrunningasiapacificsstrongestbank": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC CEO Tan Teck Long on running Asia-Pacific’s strongest bank",
+  "source": "The Business Times",
+  "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNTJpY2FJTUZHMTFFeGdxT20zRW9PUWdKQjJuMFIxT0llVWlJVWRvWmRfQnIwaVk4Ui0xZ2pDTUxnU3YtV25pR01hUFRoZEQxZTJUMGdQSVpSUEd4RF9JUHQ5UjJ4TlpYOFZ3SFAyYnJIWVJ1c0VzclJIbWVITmtCM0Z3MlRlaFk5VV8xZEFGaW4ydXFHT1VMaEQzNlgzaUVqRkdPWEt1WlpHVGRpVGdCTkQxNGdOV2xE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcandstraitsxpilotcrossborderstablecoinpaymentsforsamedayreceipts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC and StraitsX pilot cross-border stablecoin payments for same-day receipts",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLVliUzBFd1o4MFZPTzJtVVR1NVc0SnQ1SVNFZ2tSQXkwSFV5dmJhTnFvSHM2LWwyRDI2WFlob3RFZzMzdE00VVNFYmRXTVlJRVp1Y0xFT1hnTDQ5ZVJoekZtc0M2UXZRX0VwaGZaVVVPNXpSNGhuMFZhSVl3UnJZTnhNbC1Nd25HN2FoRHB0SUVkWHVfVFkyQUZtNE5ncXJ0YnB6aFMwZjNfM21DbFNtSFJadUQzMkRBZDFRUGtn?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::singaporesocbcstraitsxlaunchpilotforcrossborderbusinessstablecoinpayments": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "Singapore's OCBC, StraitsX launch pilot for cross-border business stablecoin payments",
+  "source": "The Block",
+  "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNS0diV3FKTVZzRVF6OFFralQ4cHNhSHY3M2xwOHd0eFd2Ync3bXhZYWJQN2hqVDdWbTlQdjBoQU5tcHpXU1VMWmFxbnUyNmw1akpqNnEwQThTR0FCeU5VcDJGZ3pQRWl5U2ZDbG85UWJuOU5JX2UyeWJwOUFKMjA1MVk1alE5d21CZmN2c3NodjV6cklGakZyQk9mWQ?oc=5",
+  "summary": "StraitsX, the stablecoin-native settlement layer powering global finance, today announced a pilot for cross-border business-to-business (B2B) payments that connects stablecoin settlement with ... [summary from Finextra]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcpilotsstablecointofiatbusinesspayments": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC Pilots Stablecoin-to-Fiat Business Payments",
+  "source": "The Defiant",
+  "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNbVJKZ3A1NjJjU25maVhiZWhEOG85dWRxdThzdUFkaUlTOF9ycWdIUlRfVWdlR1Qyc05TbGszb3ZGSUM3UWJHbGVSMVM1RjRsZUc5R2o3dzVRYzhMcVBUZEl1U3FnRVhTQ1FfQktxRjJIWnNWaHB1Q1NZMnVkeWtqUnlxc0psT3M2MC1FREZaWkZodndkWEJrUzFvN2VWRW8?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcairoutbecomesagrowthshockasemcurrenciestakethedollarsstrength": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC: AI rout becomes a growth shock as EM currencies take the dollar's strength",
+  "source": "investingLive",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZjZHaWJHUmloUC1WNzhVdnFQLS1pcXZGVjJaa2tDZDc5clNFNzFpd2FjNWJnMXVwajZZUWNSNWFoWFFNVjRZd04wckRiUUwzTWp3eXk3cl90bHN3Ui1abUthWmZzelhJZDA1bEd1a2hYZnFwX1NTZW5iM01majhKSzR2MnlicnlKODR2TWd3VFB6YXFZS3l6VFprZDlXWDFLWlhYRmhUMzBSYVZodGhKTW5sNGY0ckk5d05xcw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcstablecoinfirmstraitsxpilotcrossborderpayments": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC, stablecoin firm StraitsX pilot cross-border payments",
+  "source": "Tech in Asia",
+  "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNaDNwWWVNT2hZVzJzVXFhSzlKYThvb3JhUUdZbVNZMnFuSEwtZXF1SzBETWh5bXh2RWFCbEVrZlBNNlZDSWs3VzZPc1RoYlVFbEJsZ2dNQmozeC01ODdUeDhhSnRYWHdhckkxVnZEUDJlbXk0V05wdW1IZ04tUjlHLWFrdURDdzRqa2xsZ0NaY1BhQQ?oc=5",
+  "summary": "OCBC and StraitsX launch a cross-border stablecoin payments pilot under MAS BLOOM, settling B2B payments directly into OCBC bank accounts. [summary from Crypto Briefing]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcappointsangengsiongasheadofglobalcorporatebanking": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC Appoints Ang Eng Siong As Head Of Global Corporate Banking",
+  "source": "TradingView",
+  "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOS0JqUk1oMW5aZVhaVTNVU3VTd1RSV0NlWW5QM3JKZEN2ZnptZGtVRWREb1lyNUxIejFuMXNfaFVSLWg4cFJkcjBPLVl1WHZOdFpDUmJtVzhUOVBaQnJmdTlrVW5uNmZkSjROM043NGdWcUdLVkxXbXJEMEpDVUtsdmlMUDFXd1h0ZGJDdHNtQTctN012SUpLc0FJbE81bHF4aXc2NUZKNkNqdHBvbDFBR3NZVE1VbXFYVUk5WDBDMXZHMnZldVdYZzAxSmNidw?oc=5",
+  "summary": "SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::straitsxandocbctestcrossborderstablecoinpaymentstobankaccounts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "StraitsX and OCBC Test Cross-Border Stablecoin Payments to Bank Accounts",
+  "source": "ForkLog",
+  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbkI0ZXJHSWluUndldXJJRnRvbGRDMUFDX1FTVzZHTGVOVnFWNG1FSWx6WlNTS25DYnJ6TEhXVUZfenRVTzhmZ3ROYmlXejBoV2pxbmdrRExvdjJ4Qk84QlR1Umppb0NOQmEwZjhiVUJ6YlNNOTZla0NYMS1HM0JGWlhhUVpiRVZDc2JCS3BObVR2eE8xUkozbmNZemE?oc=5",
+  "summary": "StraitsX, the stablecoin-native settlement layer powering global finance, today announced a pilot for cross-border business-to-business (B2B) payments that connects stablecoin settlement with ... [summary from Finextra]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcceotantecklongonbalancingboldmoveswithconservativebankingstrategy": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC CEO Tan Teck Long on Balancing Bold Moves with Conservative Banking Strategy",
+  "source": "KuCoin",
+  "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQm1HY1FhWjl2ZXgyakc0TTNBRXRRRDQ2RjVTLWdjQjVNOVZtaEluTTl6aUttT1lzQTE0cG5TaW5sTDgxOVhRaHF5RDdWSDlVTTZhWGFINkJNd1R6SVF5UldQenZISTFhaDRBTjhjLVF0QVZoRVdnbkE3N3M1QjZieVJBVm11QXdxVXEtd0QtOUU2QnJka29xYTlpZUFzUGFEOWN6ZmNUM0NLUTNQMmhZd09VaG8tdw?oc=5",
+  "summary": "He reflects on his approach to technology, investments and regional expansion plans Read more at The Business Times. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::whenambitiontakesadifferentpath": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "When ambition takes a different path",
+  "source": "South China Morning Post",
+  "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPRUozUmxBVWtiNlBSTlI0ZVhGdEpFdWV6MGJmZm03MDkyQ1hIeTlmTTVET2IwOU5XTWhWemM1RjBCUlZ1SzZHV0pTQ1hjM0JyV1ZfMGlTdVN0OGxIWHU0bExPT1VCWS1QYkVkTzNoYzBwMWU2dWhacTJfRWJkUlhaYWYzV25Ia0FTRTljbk42QjV0SUxDMmt6aWNnR3VkRmxXSmJ5UFJkR1VXaGtDbF9qZHB5aGpmZHNxUHpYY2szZlZUVERtLUY5UFNNSDRsYmhxVThUNg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcpilotscrossborderstablecoinpaymentswithstraitsx": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC pilots cross-border stablecoin payments with StraitsX",
+  "source": "Crypto Briefing",
+  "url": "https://cryptobriefing.com/ocbc-straitsx-stablecoin-payments-pilot/",
+  "summary": "OCBC and StraitsX launch a cross-border stablecoin payments pilot under MAS BLOOM, settling B2B payments directly into OCBC bank accounts.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::straitsxocbcstartstablecoincrossborderb2bpaymentspilotlinkedtobankaccounts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "StraitsX, OCBC Start Stablecoin Cross-Border B2B Payments Pilot Linked to Bank Accounts",
+  "source": "bloomingbit",
+  "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5wMlZoS0tKNm5YeHphMEdIQm4tOTJJYW1QLThKWHVFTmtzU2dUQXhLV2xOa21VemlfS3RKWTZQdTVxVkdPTU4tWFFpV1pPQzE5Y3JQNg?oc=5",
+  "summary": "StraitsX, the stablecoin-native settlement layer powering global finance, today announced a pilot for cross-border business-to-business (B2B) payments that connects stablecoin settlement with ... [summary from Finextra]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcstraitsxpilotstablecoinpaymentsintobankaccounts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC, StraitsX Pilot Stablecoin Payments Into Bank Accounts",
+  "source": "OneSafe",
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWltSTVCMFpyOHVyTHhEZG40enhLSlBIdVo5eDdlbHJRWGhTZU9EWTljNWVyS2laWVZtQ21FWU8zNzg2VkRDalI5dUdmZzlzRUktUjNWNnlWRDJZREtKQzBLR1ZMcFBtejdSNUxjb3BmelFMUUdwQ2NxbDF5djZLYkowanNENjNtLTFwdWRB?oc=5",
+  "summary": "StraitsX, the stablecoin-native settlement layer powering global finance, today announced a pilot for cross-border business-to-business (B2B) payments that connects stablecoin settlement with ... [summary from Finextra]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::indonesianrupiahlossesagainstusdollarlimitedbybimeasuresocbc": {
+  "ticker": "O39.SI",
+  "date": "2026-11-21",
+  "title": "Indonesian Rupiah: Losses against US Dollar limited by BI measures - OCBC",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNdlJaQzM2Z2NUcmJrRHY2VHZjMzNTX0JpTWZtcGFLNnplYS1ib2dFeG9QajU1Y185dGtNSWd0VjNfV0MxQ2dMS1ZHbWVIY0NyT2x1bWFaVnl0NTcwOHotOHV5XzlCUmp4WjZTVUlSR192aEtZMHQ2TGMxNE01SkloNi1acTE1WGhiSGhleUFlb1k4UUtNem9uZVVzczJTZElYMVVLX05EU09RaTdvRUJvZTdxcC0tUi00dUhRZ0tic0d6WnpUUThHdlBycmZQaTNDVFE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::malaysianringgithowarechipexportcurbsandyieldsweighingonmyragainstusdollarocbc": {
+  "ticker": "O39.SI",
+  "date": "2026-11-21",
+  "title": "Malaysian Ringgit: How are chip export curbs and yields weighing on MYR against US Dollar? – OCBC",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOcVhqb2pzMDZlUVAyOURCQmlMeW5BZm1Rc2JfQTBVbGpjNGU5TWVtYzRHbHZYWjRCOG16LVFDSHZCdmh3Ty10VmJkc3R2aDB4WFE3UTJ2cDhzSW5jaU1VSjJhemxSUkNzVEY0WFQ4ZGk0OW11V0hONzY0QWN1bEVIaEl3Z2lfemNXQmUtQUt5NUdtVlFQWi0wQ1BSZTZqMjZtdGhLM0FDeTRWOWtLNXM5NVQtVTk0WXRQdTRCTlkwaUJSUXgxUm4waF9UaktKdXotcHhmdkEtYm03c1U2ek9vVzRpZHVkZw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::indonesianrupiahlossesagainstusdollarcontainedbybimeasuresocbc": {
+  "ticker": "O39.SI",
+  "date": "2026-11-21",
+  "title": "Indonesian Rupiah: Losses against US Dollar contained by BI measures - OCBC",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNajV0ZVJSY09SeXhma1VJOTRla0JYb0UyMnR3b3EyLTZSaF90RTl1c2dkVzZ6NmRkdXdTTkJMSkYyeGRVam5fOGotS0pjWGlKZ1BkcjhxU0psUVN4ck1Mb2VDT05zN3pNZjF6cVZaZlNRX0p3TndrOXdBd1N4cG9HbFFJblpPZ2VYcWItMnFCMDFOZjZ2b2xUaFM1Yl9RT29hZDVNdndmUngybGRCSUZiMjFiMHFfTndlR2JEdkJOMlp5OUQ4ZlZVTEYwXzl1X3c?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::straitsxandocbcpilotcrossborderstablecoinpaymentsintobusinessbankaccounts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "StraitsX and OCBC pilot cross-border stablecoin payments into business bank accounts",
+  "source": "Finextra",
+  "url": "https://www.finextra.com/pressarticle/111758/straitsx-and-ocbc-pilot-cross-border-stablecoin-payments-into-business-bank-accounts",
+  "summary": "StraitsX, the stablecoin-native settlement layer powering global finance, today announced a pilot for cross-border business-to-business (B2B) payments that connects stablecoin settlement with ...",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::singaporecambodiapoliceandocbchelpsporefirmrecoverus128millionfromscammers": {
+  "ticker": "O39.SI",
+  "date": "2026-10-29",
+  "title": "Singapore, Cambodia police and OCBC help S’pore firm recover US$12.8 million from scammers",
+  "source": "The Straits Times",
+  "url": "https://www.straitstimes.com/singapore/singapore-cambodia-police-and-ocbc-help-singapore-company-recover-us12-8-million-from-scammers",
+  "summary": "Singapore police recover US$12.8 million in Cambodia scam after company transfer to fake account Read more at straitstimes.com.",
+  "via": "bing",
+  "tag": "CORROBORATED"
+ },
+ "U11.SI::uobstockciticutstargettosgd3390keepssell": {
+  "ticker": "U11.SI",
+  "date": "2026-11-23",
+  "title": "UOB stock: Citi cuts target to SGD 33.90, keeps Sell",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPYzlWbkRNdDZieFZQUXc2TER2a3lvUVdHZ0R4QXhjUUVfYkJUSEFhTWJ4cHAxci15M1dVSDU0bFdGQWlzV2szRGQ1eTkyT1h3UjdSYkZVbXcxa0VlY2FOM3I2UU5zSGc4aXBiS255bjdwS0wwTlBZUGwzbGE5OUd4SGQxbE9tWXkyN0FRMUZGN1RnV0Fsb3l0SlB5Zm1OSDFVa3NKWWhucjh4dmlIbWlOekIwaw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::keppelwindsupdormantsubsidiarywithnoexpectedearningsimpact": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-22",
+  "title": "Keppel Winds Up Dormant Subsidiary With No Expected Earnings Impact",
+  "source": "TipRanks",
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNdzFYLWZPb0VQMHB5Vi16VS1zbW5zUEljYUVJcnNCeHdRRGNMVG9UT05OcEZjSG5hekhObV9WVVB5bE5WTUhLRHBnZTlaSk5RaFdub191WTN0RzVlR2VHYjRIdmVYcTdhb29nNl82dTM5djVUNkJKWWtKelAyN0lwZHRHS1psUG0zYm4xSXJPNGpSeEFJdElnZmdvd2k2Q2JlODhucWxvMmZIUmYzLUU4cjNuRUtrUnF1Uy1n?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::lohchinhua": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-11",
+  "title": "Loh Chin Hua",
+  "source": "Tatler Asia",
+  "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE0taHhlSDlmXzhxSl9BNzNGb0N2cXdoNEx1UGdjcE1mSmg0cmVERjIzV00xTEEyLTFuMEplMm5zNzNyOWg3eFppcmRUekx6ZG5tR0FMZWhHNTJIdw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::yangzijiangrevivesus506millioncleanenergyshipyardprojectintaicang": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-20",
+  "title": "Yangzijiang Revives US$506 Million Clean-Energy Shipyard Project in Taicang",
+  "source": "Data Portuaria",
+  "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPXzR4YzlZVUpmdndldHhpbktEcWxvcDJXLUt0X05UbENocFFaelgyd0RqanpLVWtuOWtNajQ4TlhyRHpwbjdlaTFseVZPc1JVWTROVnJUcG9ubmJUU3E3QnYzZGJyVHVKY1UwUTVQUzlyRkNnRE1vbGtobFdYXzAweV95eFFZU25aN0x3UU9qLUJCV2Z3cHIwdWRkS3pvWm9JLWo3ak9fS2VLMzUxOHJRbkxhazNUV3lqQkt0WlpfYw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::videochineseyardlaunchesnavigazionemontanarisnewestproducttanker": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-23",
+  "title": "VIDEO | Chinese yard launches Navigazione Montanari's newest product tanker",
+  "source": "Baird Maritime",
+  "url": "https://www.bairdmaritime.com/shipping/tankers/yangzijiang-launches-montanari-product-tanker",
+  "summary": "Val di Fassa is the first of two MR1 product tankers the Italian owner ordered in 2024. The owner has not said which ships the pair will replace.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorpjointventurereachesfinancialcloseons27billionabudhabipowerplant": {
+  "ticker": "U96.SI",
+  "date": "2026-11-23",
+  "title": "Sembcorp joint venture reaches financial close on S$2.7 billion Abu Dhabi power plant",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNHRJVk4yMHB4eGkxS3ZjQWNPWkdNaVNESFd5UGhCcGtQMFN6cjVXRHIwR21WS1dCXzRvNGlZTDk0NWpJZ1hTZHN3TXNFQzB0M2pKeXMwVVAtMllHZ1JIcU1RTEdpUU5fS19UemxITHFneEUzUC1XTzZoQTQ4ZWVpMDNPWkhLRU5ZUm5tbER0QUl4NFlPZERUNFVBMUd4S0VrbXpSbldkdm05ZWtVMzROcExmS0ZzRkdwRmFzbE1yZk1HWU1La1hR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::taqaewecaljomaihenergyandwatercompanyandsembcorpindustriesannouncethefinancialcloseoftheaed776blntaweelahcindependentpow": {
+  "ticker": "U96.SI",
+  "date": "2026-11-23",
+  "title": "TAQA, EWEC, Aljomaih Energy and Water Company and Sembcorp Industries announce the financial close of the AED 7.76bln Taweelah C Independent Power Plant",
+  "source": "Zawya",
+  "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNbkFQSUY2Y013ekQ2aUN3c3lPRDUyYnpjYUxJN2pibEJhM0hwbm1TU1NMVVhEck9JOHVVZWUwekpKVDh3Znk4eHBIMFpiTjZmUENKQW9LSW5ndzdRYUU3UHNHZFRuXzlhQ2hHVlluYTBNcjBtQUlqSFh0d1BERnZHSExXVVFkRlJQanJLTU5mOHFabFRYaUpVRVlvbWk2dnpRT1FWRzFlT2FqNm50MG9tcTNsX2FhSHdhQmxhZHRjeFZlMjZleWhlMjhxZ0kyRXVianNHMURwQ3FFU3JBYUJEemdXa3lKNGFVc2o3bFEtUVNhblp6Wk0xbllWQUl0OVRKVUJ2OG9iaTZrTElSN1k3SEJaVmxvcnF1emJWSWVSTmZVZFE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::iporushtocontinuein2026avaadaelectrorazorpaysembcorpgreenamongbigissueskeydetails": {
+  "ticker": "U96.SI",
+  "date": "2026-11-22",
+  "title": "IPO rush to continue in 2026: Avaada Electro, Razorpay, Sembcorp Green among big issues; key details",
+  "source": "Business Today",
+  "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxQSWlhbENpLTNraU80RG1BMHVvT1lWNDJ0TkhZT2VRcG1IUUFUQjZ1QUt1T2h0TXUxN2RwRHFIdXNIS3dHT0w4RFFtVHFiT0oxSV90bUUwNzR4ZWt1bVRWRld2Y0RCRjlFbGtrajQxWFA5YU5GVFQxREIwem1SNzhzX0RMeHdpVFFlMUNKX08ybktuZUxwSlV3TjBPLWVQQ0syUWhYSjlMV196cmRXaUtaaVZ5YVB1UEZYdC1jUUI2VW5PM0owVFNIcXNNMWRVN21JRURWRDJkM0xsUHFuazhwQnlCaTNnWGZ5ZkZhZUtFMkcycHB2V3NDVGt3S1bSAYICQVVfeXFMTloweEtmSHg2TGQ0ZVJKMHJGUVpXZHFHbVhrNWZnUmM2ZEJUTkd3MU5wU3Z3RWNROUpQM25QblVhaWJwRFR5VVJyMG4xdHowT1hmRkJaWVd1RVY5aE9OQ1hFNHU2SW1JUTIzX0VaWU4yaUlWNVlHZlRVbUkzeFBVUHBPU3pXTG1HVmdWVGN0Z0kwdWVSSnhmUkloREkyQzlXVVpOcFpQWHpMSVFqOUNiaGRXWFBMSmtEOW4xVllaYUV2dngyZndWaG9EaElpUlZYSjNsZllTeGtUbW12M3NrN2pEQUVQeV9tTmJuaWVtc2dOZE9hc01FTWhMck5fblE4QWxB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::singaporeenergyplayersandmncsinkdealstoboostgreencapabilities": {
+  "ticker": "U96.SI",
+  "date": "2026-11-19",
+  "title": "Singapore energy players and MNCs ink deals to boost green capabilities",
+  "source": "Singapore Economic Development Board (EDB)",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObHNmcDVEM0h5NkVKb2std29CS2dGS1Y2TGNZTDVZeDdMVU5RTktqaWRmaXhzZmE3N0RSZVdmZUl3VlQxNlhjblZSZlFsMlVUa3d2c0FpY0N2eE5lWWtWMFJGM0VmMk9ydF92RU82RVFPc3RtSW50MUtnY3BTZElRV0RFcnkwN3o2bTRJeFViSjJQaVAzLVdHR1NWaEhrLVJtaUpjN251UjBsTzdGN0VMUHRR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::forwardlookingmanufacturersarebuildinggreenerandmoreresilientsupplychainsinsingaporeandvietnam": {
+  "ticker": "U96.SI",
+  "date": "2026-11-16",
+  "title": "Forward-looking manufacturers are building greener and more resilient supply chains in Singapore and Vietnam",
+  "source": "Singapore Economic Development Board (EDB)",
+  "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNODFCcVRBelladkx5ZmhNYjhDci1wTmM0Zmc0Ukw3d3BxQW9SN2ZtaFR5b3dyaFE2TEpfdWs1VTBKZm9PZWs1Zmo2YTJzSXJScU9LY3RhU25vZC1NWVM4bWZMUXBQUGdFMEFWemt2MzJyM0ZKYWtHOGtZQS02RHZXbl9KVXB6LURHYlNVOW92b0taMy1ZUU5PZVo5Q01GZnVfb2EtNkswdTM5UktSUmFaR214NXRqd0MtYkRaQmZTTFlZVXhTR2lianFiYjF0M2dScGNTRXdVWUloRHZ2aVRDMVYtZw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorpgreeninfragetssebisnodforrs3750croreipo": {
+  "ticker": "U96.SI",
+  "date": "2026-11-16",
+  "title": "Sembcorp Green Infra gets SEBI's nod for Rs 3,750 crore IPO",
+  "source": "Investment Guru India",
+  "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQOGxhZjU4UFU5OGVhdUo0OTRCTmExVzk2UXYyVXlpY2NOMFgzMXE5cHFIZHl6UDNRbldjUE1heW16QlJPdHJrNThQNnltZlZrZDR3dEFUY1FmT19wNTZQbVFNMW1EQ3FoVTA3cW1IQU51QXRzV0ZZLTZleEN5SFhSa1JuMFN0LU56QmpmUDNmME42c2ZsZWZnaVJtZzkyY3hhdl9iemhIaDhULWEx?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::singtelcpfboardcompletetransferof477milliondiscountedsharesto406000holderscdpaccounts": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel, CPF Board complete transfer of 477 million discounted shares to 406,000 holders’ CDP accounts",
+  "source": "CNA",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOd25OaE5PZGUyUTR5UTRDOFJfRXZSVTF0SjV6NFB2aWhTa0tMQzdyQXhINE9fLU5NVWtlbnc1RUR2QmZVSldOdUh1emE0bGdPQXlYVlBHZ1k1MzBSaXBkUGktQTREZTdBS0ZjRXZWemdPNDdUeURtbmxWeGQwODlHNWRvemh0a2I5cl9GX3lMdmkweVlicHV5dktoT1kyRXNuUVM1QVI1SUxOZw?oc=5",
+  "summary": "Holders of Singtel's Special Discounted Shares (SDS) can now hold and manage their shares directly, following the completion of transfer from CPF Board to the Central Depository (CDP) on Nov 21.In an ... [summary from AsiaOne]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::aroundtwothirdsofsingtelsdsholderschoosetokeeptheirsharesasschemeconcludes": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Around two-thirds of Singtel SDS holders choose to keep their shares as scheme concludes",
+  "source": "The Straits Times",
+  "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQM3FUU1RhMGlvVzUzLVl6UGVMTTgySEFYd3hOZTF2RE42dUo1bVZHX08tRFQwTlRJQ2VlVUZWUE4wUmI2RkdoNlcwRndxQzVzLUJYSVBXb2NMRER2Rm5kTmJrUldyN0xIOFpJVVdJSURrcXIzcmx1ZmdKVENudGZyT3FVY3VhZmlVUl9LVDB0dU9Ocm9WVlB5RlBpSmZXd0V3anJOa292VkNrdFlBTnVhbTkza0JOUG5YSmx6V1ZfeXRLeWJmT1JJbkJGb2hudHhhM1AtckIzTVFlTnpj?oc=5",
+  "summary": "Singtel completes transfer of special discounted shares to CDP accounts, ending CPF Board’s trustee role for about 406,000 holders. Read more at straitstimes.com. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::aroundtwothirdsofsingtelsdsholderschoosetoholdtheirsharesasschemeconcludes": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Around two-thirds of Singtel SDS holders choose to hold their shares as scheme concludes",
+  "source": "The Business Times",
+  "url": "https://www.straitstimes.com/business/companies-markets/around-two-thirds-of-singtel-sds-holders-choose-to-hold-their-shares-as-scheme-concludes",
+  "summary": "Singtel completes transfer of special discounted shares to CDP accounts, ending CPF Board’s trustee role for about 406,000 holders. Read more at straitstimes.com.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::singteldiscountedsharestransfercompletedholderscannowmanagesharesdirectly": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel discounted shares transfer completed; holders can now manage shares directly",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQOGRmMnVxSzRranBrUzU3bC05S3JackY1ZjhzdE9ZTEFOWEZYekVDY1dVSDFEUHI2b2hGbUI3UVY0cVJhcGw4X0ZDVVdGd3VRWUp6YVV2RExXNVlQZ01ZZUtPOEFocHlibHhOMldvZ1NPN1VYNGhWdnhzb29lQzd4N0VnSHFQdE9xUHJteDRtd25mLUEza2Vhd3NRMmV5Rk5pZGJYRmZ5WHJsdVFGY0wzdlBkcTNwNlJFVF9ydERwbWhmSTl2UEU0SjNR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singteltatacommunicationsamongthebigwinnersfrostsullivans2026bestpracticesrecognition": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel, Tata Communications among the big winners Frost & Sullivan’s 2026 Best Practices Recognition",
+  "source": "CRN Asia",
+  "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdHFHUlFqcVJuNmxzRFlEME5ZQ25TMkFEbUsyLWRjQnpxOFlwZG1LcGVRZEQteE1lMk1oY1NMSnF1cWRzM0ItWFU3ZjBVbVFyNFNrTTZCbThkcldyTXBBQ0pjMjhXNTFWcnEtNUQtMUVZcTRtRnlrem1nUUxRR0JfVlVEaTF3aU83TG5YZmNKbmNaUWFyalFiQV9pa0otNEtiQlhoUnNteVVDcGpFRVZsTzVGclJvX01uUzNXaXMyZXBxbTdVUFNWTkV3THJLcFNjUnkxUXRn?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::cpfboardsingtelcompletetransferofspecialdiscountedsharestocdpaccountsmoneynews": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "CPF Board, Singtel complete transfer of special discounted shares to CDP accounts, Money News",
+  "source": "AsiaOne.com",
+  "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQMEhQd05CMXdEbkI2eUFJRzl3akFpMlFkOUJLRWVOaTJmY2lzM3E0ampOclF6amppdDRqbEZTa09jcktVQUVHTHUyMDRObUFQY3p3bUlZdVRsMEZpdmg1UUxfeFJnc0ZMa3hWMUxjMldEcWtoTWoza0tqMV9HTnpHVzR6UjlWS3M?oc=5",
+  "summary": "Holders of Singtel's Special Discounted Shares (SDS) can now hold and manage their shares directly, following the completion of transfer from CPF Board to the Central Depository (CDP) on Nov 21.In an ... [summary from AsiaOne]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::singtelcompletestransferofdiscountedsharesto406000holderscdpaccounts": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel completes transfer of discounted shares to 406,000 holders' CDP accounts",
+  "source": "Telecompaper",
+  "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxONW9vV3FSaGN3Q0RqSks0N2pTQ0p5ZjNTRnhFMF9zSkxhWG4ybFU4dVd2MU1tcThjZU1xbTBIYVpKTGE1UVVRTUVZRGV1UlNYNTlwWktnNmYzOEtOdks1c0tPVlo0QjY5VzhLUDV0VkpyMHUtSW00UFFCZUF6YlpLUDlBakM5eTRxdWdQX05LUFg5X0VsR1ZSMzRCSml5LVJMU2RsWVVDX3FpN19uMU9RMjhJRnZnTnhfRkRnY3NR?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::singtelgroupandcpfboardcompletetransferofsingtelspecialdiscountedsharessdstosdsholderscentraldepositoryaccounts": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel Group and CPF Board complete transfer of Singtel Special Discounted Shares (SDS) to SDS holders’ Central Depository accounts",
+  "source": "Singtel",
+  "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQSERrUGxJY1FqRlhfV240MmRNZGZPbnpLb0QyM1hCYWxQSG1DSUswQklueG4xZGZYY1JEZl83NXlVbGp0Qk1jNzNMOUJuWEtERnVKR2pUcW1DVHh3bXFwejNFVlY4bEowWktRWERmQzVXd0VUWkZid0xSN1VwUXQ1bW8xcUdNOFF6QUFWYTBTbGtXQzJnSC1wYjZuZkJKOHQzU3BvQVpVN1FUUUxIMmxiYUtxNkVUcXNNSmpF?oc=5",
+  "summary": "Holders of Singtel's Special Discounted Shares (SDS) can now hold and manage their shares directly, following the completion of transfer from CPF Board to the Central Depository (CDP) on Nov 21.In an ... [summary from AsiaOne]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "Z74.SI::xiaomi18proatsingtelisthefreeredmipad2worthit": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-21",
+  "title": "Xiaomi 18 Pro at Singtel: Is the Free REDMI Pad 2 Worth It?",
+  "source": "DANAMIC",
+  "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNUTAzSGJKZTd6MXE0UEVHRjZSTE5rV1NNamdlSEdjUXhlY3VsUkUzU2tmTUl6Ti02UE42NWVkNTJ2Rmk4MVFOTWtmbmVYYnByMXcxZ3FQZ2NGUXlOcm5HMWpfdG1zMDN5eU5kRXpibkZGUi10YzN0Q0FpbDhHZ3ZfdllBaXFZejFnaDEzNmNIOW5hTkU?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelz74sharepricenewsquotes": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-21",
+  "title": "Singtel (Z74) Share Price, News, Quotes",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxPX1puWWloZUlYbnVkV3FpNE9Zdkw5ZjhVMm96VzJ0ckVRM0xIeFZ2bVU0U1J6NTgyeXVJMWpYQUZmNHZpZUdhZE5mWGxMUGRVOXVPMzZhVW9ycGRtRl83QmlZVU5ieG9vYkNibXNVYkZ1a1VJMWxIcF85Q09sb1QxU0F5aGJsdlJYc0JFNmw2SXZCeEJ0THRvSV8tQmlHMmt3ZWVlY3gwU2ZWNm5aTk5tcHJpWmlYVjdPQXZJeXBEX0ZpYmVEdndsQndSNlpCVkxDZ2Vjem4xX0xVUllqOUJjcWZGMGJVRjhNWlhYMk9lQWFfWWE5b19JdEV2TkQ2b2hpSTJ4SGk5cUQ0ZlRIN1J4Z29Ja1JVUXdUN2xOOGFJLVpKbk5uX2RaZG5wSFZBeHp6c2tSakE2cjE3T1ZLUG1VUUpyR0RDTHVwRUE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtel2qfy27resultsinlineopcoebitguidanceraised": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-20",
+  "title": "SingTel – 2QFY27 results in line; OpCo EBIT guidance raised",
+  "source": "Moomoo",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZFZERXQ0MzM3WDBEeHJjNVRxajZSMWgxbGNuZm9DMTZ6ekk2YVM2OFJaQUVTMWR5czlsMk5maFJIdWdJOWhGZFRWenlwR1hiVkx5SUdqYjUzS2ZCWDhmYjZsQnhaOGVHMHlwNWs2OVpPLTUzcDBSUVpfaUhLN1RmZFVOaWhZM1dTaWZGeGhoaGlnLU1USWpZSVo1Sm9iY3BoVkI5X3ZZVnpXb2FkaUtr?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::iggysjournalsingtelpaid90centsaftera55profitfall19centssitsoutsidetheearningspayout": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-19",
+  "title": "Iggy's Journal: Singtel Paid 9.0 Cents After a 55% Profit Fall. 1.9 Cents Sits Outside the Earnings Payout",
+  "source": "Longbridge",
+  "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5yQkZPaDJQZW5zT2oyc0V2TG5VMHh3bEw2U3V4Q2t1NlE4WnlPNnBWZGE3RjUxTnZWOU81NG51RUNMWGVwYzhnOTdHeGZGc0wzMTQ4VmFkelc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::cpfboardsingtelcompletetransferofspecialdiscountedsharestocdpaccounts": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "CPF Board, Singtel complete transfer of special discounted shares to CDP accounts",
+  "source": "AsiaOne",
+  "url": "https://www.asiaone.com/money/singtel-special-discounted-shares-transfer-cpf-cdp",
+  "summary": "Holders of Singtel's Special Discounted Shares (SDS) can now hold and manage their shares directly, following the completion of transfer from CPF Board to the Central Depository (CDP) on Nov 21.In an ...",
+  "via": "bing",
+  "tag": "CORROBORATED"
  }
 }

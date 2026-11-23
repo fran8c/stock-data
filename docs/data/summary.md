@@ -4,7 +4,7 @@
 
 | | Last close | Date | 1 day | 1 year |
 |---|---:|---|---:|---:|
-| Straits Times Index | 4,975.17 | 2026-11-20 | -2.1% | +11.3% |
+| Straits Times Index | 4,953.81 | 2026-11-23 | -0.4% | +10.2% |
 | S&P 500 | 6,910.39 | 2026-11-20 | -3.7% | +4.7% |
 | Nasdaq Composite | 22,617.73 | 2026-11-20 | -5.3% | +1.5% |
 | Dow Jones Industrial Average | 48,147.33 | 2026-11-20 | -1.9% | +4.1% |
@@ -13,13 +13,13 @@
 
 | | Last close | Date | 1 day | 1 year |
 |---|---:|---|---:|---:|
-| DBS Group | 66.11 SGD | 2026-11-20 | -1.8% | +23.2% |
-| OCBC | 26.54 SGD | 2026-11-20 | -3.2% | +46.9% |
-| UOB | 35.42 SGD | 2026-11-20 | -2.0% | +4.6% |
-| Keppel Ltd | 8.85 SGD | 2026-11-20 | -3.1% | -10.3% |
-| Yangzijiang Shipbuilding | 4.30 SGD | 2026-11-20 | -1.4% | +28.4% |
-| Sembcorp Industries | 5.54 SGD | 2026-11-20 | -1.2% | -8.9% |
-| Singtel | 4.16 SGD | 2026-11-20 | -1.0% | -12.2% |
+| DBS Group | 65.76 SGD | 2026-11-23 | -0.5% | +23.2% |
+| OCBC | 26.41 SGD | 2026-11-23 | -0.5% | +46.1% |
+| UOB | 35.14 SGD | 2026-11-23 | -0.8% | +3.7% |
+| Keppel Ltd | 8.83 SGD | 2026-11-23 | -0.2% | -12.8% |
+| Yangzijiang Shipbuilding | 4.31 SGD | 2026-11-23 | +0.2% | +29.4% |
+| Sembcorp Industries | 5.54 SGD | 2026-11-23 | +0.0% | -10.2% |
+| Singtel | 4.12 SGD | 2026-11-23 | -1.0% | -14.0% |
 | SpaceX | 127.79 USD | 2026-11-20 | -7.7% | -20.6% * |
 | Marvell Technology | 122.28 USD | 2026-11-20 | -11.7% | +57.9% |
 | Micron Technology | 594.51 USD | 2026-11-20 | -13.9% | +186.7% |
@@ -35,8 +35,8 @@
 Prices are each market's latest close. SGX and US dates can differ because of time zones and holidays.
 
 **Harness copy files** (paste one into an AI chat; the data-only file is for an AI with the harness saved)
-- OCBC (O39 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/O39.SI_data.txt
-- DBS Group (D05 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
-- Keppel Ltd (BN4 on SGX, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
+- OCBC (O39 on SGX, as of 2026-11-23): data only https://fran8c.github.io/stock-data/data/harness/O39.SI_data.txt
+- DBS Group (D05 on SGX, as of 2026-11-23): data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
+- Keppel Ltd (BN4 on SGX, as of 2026-11-23): data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
 - Marvell Technology (MRVL on NASDAQ, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt
 - Nvidia (NVDA on NASDAQ, as of 2026-11-21): data only https://fran8c.github.io/stock-data/data/harness/NVDA_data.txt
