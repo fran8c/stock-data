@@ -1,0 +1,245 @@
+{
+ "symbol": "U11.SI",
+ "market": "SGX",
+ "as_of": "2026-11-24",
+ "expected_session": "2026-11-24",
+ "last_bar": "2026-11-24",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "SGD",
+ "tick": 0.01,
+ "main_comparator": "^STI",
+ "comparators": {
+  "^STI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -6.6275,
+   "chg20_pct": -8.5444,
+   "label": "lagging"
+  },
+  "D05.SI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -4.1563,
+   "chg20_pct": -11.0156,
+   "label": "lagging"
+  },
+  "O39.SI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -6.965,
+   "chg20_pct": -8.2069,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-24",
+  "open": 35.7,
+  "high": 36.0,
+  "low": 35.25,
+  "close": 35.28,
+  "volume": 4685680,
+  "dividend": 0.0,
+  "chg_raw_pct": -0.3953,
+  "chg_pct": -0.3953,
+  "gap_pct": 0.7905,
+  "clv": -0.92,
+  "vol_delta": -4310825.6,
+  "cvd10": -6161274.1599,
+  "vwap10": 36.6737,
+  "close_vs_vwap10_pct": -3.8003,
+  "avg_vol20_prior": 3865898.2,
+  "vol_ratio": 1.2121,
+  "up_days10": 4,
+  "down_days10": 6,
+  "up_vol10": 16580664.0,
+  "down_vol10": 19735420.0,
+  "udvr10": 0.8401,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 1.0368,
+  "vt5_20_label": "normal",
+  "chg5_raw_pct": -5.618,
+  "chg5_pct": -5.618,
+  "chg10_raw_pct": -4.3384,
+  "chg10_pct": -4.3384,
+  "chg20_raw_pct": -15.1719,
+  "chg20_pct": -15.1719,
+  "divergence": "None",
+  "true_range": 0.75,
+  "atr14": 0.8103,
+  "atr14_pct_of_close": 2.2967,
+  "range5_low": 33.4682,
+  "range5_high": 37.0918,
+  "macd": -1.4884,
+  "macd_signal": -1.2296,
+  "macd_hist": -0.2588,
+  "macd_note": "",
+  "sma20": 38.443,
+  "momentum_proxy": "bearish",
+  "hh20": 41.81,
+  "ll20": 35.25,
+  "hh60": 43.75,
+  "ll60": 35.25,
+  "hh120": 45.15,
+  "ll120": 35.25,
+  "high52w": 45.15,
+  "high52w_date": "2026-07-15",
+  "low52w": 33.75,
+  "low52w_date": "2025-11-25",
+  "bars_in_52w_window": 250,
+  "from_high52w_pct": -21.8605,
+  "from_low52w_pct": 4.5333,
+  "tenkan": 36.71,
+  "kijun": 38.76,
+  "span_a": 41.5675,
+  "span_b": 41.575,
+  "kumo_top": 41.575,
+  "kumo_bottom": 41.5675,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 45.15,
+  "darvas_ceiling_date": "2026-07-15",
+  "darvas_floor": 41.84,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 91,
+  "darvas_old_box": true,
+  "darvas_crossing_date": "2026-08-13",
+  "darvas_crossing_bars_ago": 71,
+  "darvas_crossing_vol_ratio": 1.1063,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_STI": -6.6275,
+  "chg20_STI_pct": -8.5444,
+  "STI_close_date": "2026-11-24",
+  "rs20_D05_SI": -4.1563,
+  "chg20_D05_SI_pct": -11.0156,
+  "D05_SI_close_date": "2026-11-24",
+  "rs20_O39_SI": -6.965,
+  "chg20_O39_SI_pct": -8.2069,
+  "O39_SI_close_date": "2026-11-24",
+  "rs20_main": -6.6275,
+  "rs20_main_label": "lagging",
+  "signal_vwap": -1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "HIGH BEARISH",
+  "bull_signals": 0,
+  "bear_signals": 4,
+  "signals_available": 4,
+  "volume_confirmation": "CONFIRMS",
+  "confluence_final": "HIGH BEARISH",
+  "outlook_d1": 3.0,
+  "outlook_week1_low": 33.8766,
+  "outlook_week1_high": 36.6834,
+  "outlook_d2": 8.0,
+  "outlook_week2_low": 32.9886,
+  "outlook_week2_high": 37.5714,
+  "nearest_resistance": 36.6737,
+  "nearest_support": 35.25
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "VWAP10",
+    "price": 36.6737,
+    "dist_pct": 3.9505
+   },
+   {
+    "name": "Tenkan",
+    "price": 36.71,
+    "dist_pct": 4.0533
+   },
+   {
+    "name": "Kijun",
+    "price": 38.76,
+    "dist_pct": 9.8639
+   }
+  ],
+  "below": [
+   {
+    "name": "20-bar low / 60-bar low / 120-bar low",
+    "price": 35.25,
+    "dist_pct": -0.085
+   },
+   {
+    "name": "52-week low",
+    "price": 33.75,
+    "dist_pct": -4.3367
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-25",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [],
+  "d1": 3.0,
+  "d2": 8.0,
+  "sqrt_d1": 1.732,
+  "sqrt_d2": 2.828,
+  "week1_low": 33.8766,
+  "week1_high": 36.6834,
+  "week2_low": 32.9886,
+  "week2_high": 37.5714
+ },
+ "calibration_past_year": {
+  "5d_inside": "196",
+  "5d_windows": 245,
+  "5d_share_pct": 80.0,
+  "10d_inside": "176",
+  "10d_windows": 240,
+  "10d_share_pct": 73.3333
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-6.63 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": true,
+   "support_dist_pct": -0.085,
+   "support_dist_atr": 0.037,
+   "resistance_dist_pct": 3.9504,
+   "resistance_dist_atr": 1.7201
+  },
+  "ratings_14d": {
+   "upgrades": 1,
+   "downgrades": 1,
+   "items": [
+    {
+     "date": "2026-11-10",
+     "title": "CLSA Upgrades United Overseas Bank to Accumulate Rating",
+     "source": "marketscreener.com",
+     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWU94MEw4NGVIMzNtbFE4SFdTU04xQWxsMG9ZM1lJdkFJdWljWGNSa25xNFVGa1dDNkRVdS1hUTRYTkI2QU9ZZ2drZGtOOXBwSE5iaFdiVXNnVExFaExIb0VoRUdaY003UGtqYkRDOEpRUWMzZmdWc0VmaGY5UmFycVpOa0JMcE95cWRVdkNZMUZ6a3U5eHdhY1hBU09CZ0JTYnlzelRSSmNoeVVD?oc=5",
+     "direction": 1,
+     "change": "upgrade"
+    },
+    {
+     "date": "2026-11-18",
+     "title": "Autonomous Research Downgrades United Overseas Bank to Neutral, Adjusts Price Target to SG$41.50",
+     "source": "marketscreener.com",
+     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVk0yT29RZDFETHJfSDZpWmVZT01YclNBNVN2VkpudkJoXzJ5cW82M1V5OE1KbVhtamc2RENvUG5uMFZTSkg3VngzWjZLa2QzaW1yZGk4MFlCWTZ1Uk40QU5XWmtSMzFyYVpfWDJZTFZVaVZldW9PMUJWQjZWSzNCNVYya3hILS1hUlhmRWhUWDdHRkpmMHR4TGY0UEJUX1hkdDZUbk9jMDJWZXp5Vm9sVFE1QWExWnFaUzNNZHhwaDdVcWZjN2lUSzEzUzlRMUJ1UDQtS2RLQ1NFSHdqSXJKUjl3?oc=5",
+     "direction": -1,
+     "change": "downgrade"
+    }
+   ]
+  }
+ }
+}

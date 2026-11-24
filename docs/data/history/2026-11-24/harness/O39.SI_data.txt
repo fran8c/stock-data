@@ -1,0 +1,673 @@
+Run the Individual Stock Harness v3.3 (saved in this chat or project) on the inputs below. If the harness is not saved here, paste the harness first, then these inputs.
+
+=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-24 23:05 SGT ===
+as of: 2026-11-24
+ticker: O39 on SGX
+mode: A
+depth: STANDARD
+output: STANDARD
+last_results_date: 2026-11-06 (source: Yahoo Finance via yfinance, https://finance.yahoo.com/quote/O39.SI/, retrieved 2026-11-24)
+
+raw_market_data (O39.SI, 251 daily bars from Yahoo Finance via the pipeline; Close is the real close, not adjusted):
+Date,Open,High,Low,Close,Volume
+2025-11-24,18.15,18.15,18.0,18.08,10253100
+2025-11-25,18.18,18.19,18.08,18.12,2786700
+2025-11-26,18.3,18.38,18.21,18.23,6661500
+2025-11-27,18.33,18.42,18.26,18.27,5366000
+2025-11-28,18.4,18.62,18.36,18.5,6477700
+2025-12-01,18.59,18.72,18.55,18.7,4935200
+2025-12-02,18.8,18.83,18.67,18.77,5214500
+2025-12-03,18.9,18.97,18.86,18.95,5263500
+2025-12-04,19.0,19.0,18.92,18.95,3416500
+2025-12-05,18.96,18.96,18.78,18.92,2935300
+2025-12-08,18.84,18.87,18.72,18.73,3192400
+2025-12-09,18.81,18.85,18.76,18.79,2305600
+2025-12-10,18.83,18.95,18.79,18.95,3091400
+2025-12-11,18.96,19.04,18.95,18.95,4121100
+2025-12-12,19.1,19.2,19.04,19.2,5194292
+2025-12-15,19.08,19.29,19.06,19.29,2740400
+2025-12-16,19.3,19.47,19.25,19.44,4329800
+2025-12-17,19.21,19.45,19.2,19.44,4537800
+2025-12-18,19.46,19.5,19.39,19.5,2954300
+2025-12-19,19.68,19.69,19.5,19.55,4960643
+2025-12-22,19.7,19.89,19.66,19.82,4798800
+2025-12-23,19.91,19.95,19.74,19.9,4790100
+2025-12-24,19.87,19.9,19.75,19.78,1665700
+2025-12-26,19.79,19.89,19.66,19.81,1932500
+2025-12-29,19.89,19.89,19.71,19.71,2705854
+2025-12-30,19.79,19.94,19.77,19.85,3837700
+2025-12-31,19.85,19.86,19.76,19.76,1862800
+2026-01-02,19.8,19.94,19.79,19.85,2178700
+2026-01-05,19.9,19.99,19.89,19.96,3008700
+2026-01-06,20.0,20.2,20.0,20.18,5611500
+2026-01-07,20.2,20.25,20.03,20.06,4912600
+2026-01-08,20.1,20.17,20.03,20.17,4262900
+2026-01-09,20.0,20.0,19.8,19.8,8420300
+2026-01-12,19.84,20.02,19.84,19.9,5075300
+2026-01-13,20.1,20.14,19.96,20.12,4468300
+2026-01-14,20.01,20.15,19.99,20.13,3834500
+2026-01-15,20.13,20.37,20.09,20.37,4804200
+2026-01-16,20.4,20.54,20.33,20.44,5177000
+2026-01-19,20.37,20.38,20.27,20.31,3526800
+2026-01-20,20.23,20.45,20.22,20.35,4647700
+2026-01-21,20.4,20.5,20.23,20.44,5926300
+2026-01-22,20.52,20.59,20.48,20.59,4168500
+2026-01-23,20.65,21.29,20.65,21.29,7436600
+2026-01-26,21.3,21.36,21.0,21.04,6567600
+2026-01-27,21.25,21.42,21.16,21.42,4988100
+2026-01-28,21.31,21.42,21.26,21.29,4292800
+2026-01-29,21.26,21.37,21.25,21.35,4727000
+2026-01-30,21.4,21.44,21.21,21.23,4626000
+2026-02-02,21.23,21.33,20.93,21.1,5417200
+2026-02-03,21.25,21.43,21.22,21.28,3460900
+2026-02-04,21.2,21.44,21.2,21.44,3114700
+2026-02-05,21.45,21.45,21.25,21.45,3697800
+2026-02-06,21.15,21.35,21.15,21.23,6186600
+2026-02-09,21.24,21.44,21.16,21.38,5118700
+2026-02-10,21.3,21.43,21.25,21.32,3982300
+2026-02-11,21.33,21.38,21.26,21.35,2757700
+2026-02-12,21.52,21.79,21.4,21.78,6028500
+2026-02-13,21.66,21.68,21.08,21.11,8377800
+2026-02-16,21.12,21.21,21.02,21.11,1739600
+2026-02-19,21.41,21.75,21.33,21.59,6966900
+2026-02-20,21.79,21.79,21.55,21.72,4035300
+2026-02-23,21.81,21.81,21.58,21.69,4417700
+2026-02-24,21.7,21.7,21.22,21.43,9330200
+2026-02-25,21.35,21.48,21.09,21.4,10489883
+2026-02-26,21.56,21.59,21.29,21.34,6102276
+2026-02-27,21.34,21.43,21.27,21.43,13158617
+2026-03-02,21.0,21.05,20.7,20.93,9707310
+2026-03-03,21.03,21.29,21.02,21.11,8856800
+2026-03-04,21.1,21.17,20.73,20.9,9339500
+2026-03-05,21.03,21.11,20.73,20.84,9338792
+2026-03-06,20.79,20.92,20.7,20.82,5831300
+2026-03-09,20.55,20.55,20.14,20.46,8115000
+2026-03-10,20.56,20.93,20.56,20.93,5753400
+2026-03-11,20.9,20.93,20.75,20.86,5320500
+2026-03-12,20.74,20.87,20.58,20.75,5246100
+2026-03-13,20.7,20.82,20.6,20.63,4302000
+2026-03-16,20.65,20.8,20.64,20.75,3518900
+2026-03-17,20.85,21.1,20.84,21.1,5869900
+2026-03-18,21.15,21.51,21.13,21.45,6983898
+2026-03-19,21.34,21.6,21.26,21.5,6358000
+2026-03-20,21.38,21.55,21.35,21.37,7204060
+2026-03-23,21.07,21.17,20.93,21.0,6704500
+2026-03-24,21.09,21.24,20.98,21.16,5315400
+2026-03-25,21.4,21.49,21.27,21.39,6397800
+2026-03-26,21.5,21.65,21.41,21.52,5322800
+2026-03-27,21.51,21.71,21.4,21.57,4669400
+2026-03-30,21.45,21.75,21.3,21.63,10566500
+2026-03-31,21.75,22.15,21.74,21.97,9115500
+2026-04-01,22.3,22.66,22.3,22.55,9541924
+2026-04-02,22.82,22.83,22.33,22.38,4902900
+2026-04-06,22.35,22.45,22.25,22.44,3572700
+2026-04-07,22.45,22.57,22.3,22.3,3496600
+2026-04-08,22.6,22.9,22.31,22.32,9777800
+2026-04-09,22.5,22.5,22.16,22.19,7386873
+2026-04-10,22.38,22.5,22.28,22.47,6973400
+2026-04-13,22.35,22.58,22.31,22.58,4476000
+2026-04-14,22.66,22.96,22.61,22.88,5873700
+2026-04-15,23.04,23.1,22.83,22.88,6427600
+2026-04-16,23.0,23.0,22.66,22.66,7407000
+2026-04-17,22.69,22.84,22.62,22.72,7318900
+2026-04-20,22.74,22.85,22.55,22.67,5567500
+2026-04-21,22.72,22.73,22.56,22.61,6513579
+2026-04-22,22.6,22.67,22.55,22.59,6100200
+2026-04-23,22.12,22.24,21.8,21.8,9887300
+2026-04-24,21.8,21.82,21.54,21.71,5846800
+2026-04-27,21.72,21.75,21.51,21.6,4656579
+2026-04-28,21.67,21.92,21.62,21.68,4441700
+2026-04-29,21.6,21.77,21.59,21.66,5667400
+2026-04-30,21.75,21.95,21.74,21.9,7767500
+2026-05-04,21.96,22.05,21.85,21.87,5068400
+2026-05-05,21.8,21.83,21.65,21.83,3329100
+2026-05-06,21.92,22.05,21.79,22.0,5450000
+2026-05-07,22.18,22.19,21.88,21.88,8464800
+2026-05-08,22.32,22.56,21.89,21.92,10047800
+2026-05-11,22.0,22.78,21.89,22.5,13663400
+2026-05-12,22.42,22.48,22.06,22.33,8407200
+2026-05-13,22.49,22.89,22.47,22.89,8968800
+2026-05-14,22.87,22.95,22.7,22.95,5004900
+2026-05-15,22.98,23.07,22.85,22.93,6038000
+2026-05-18,22.8,23.04,22.77,23.04,5199700
+2026-05-19,23.11,23.43,23.05,23.43,5749400
+2026-05-20,23.15,23.34,23.1,23.24,5811900
+2026-05-21,23.38,23.44,23.18,23.33,4344300
+2026-05-22,23.4,23.58,23.28,23.53,5285900
+2026-05-25,23.65,23.75,23.46,23.51,3440600
+2026-05-26,23.51,23.62,23.36,23.36,4551800
+2026-05-28,23.25,23.44,23.12,23.16,6926500
+2026-05-29,23.28,23.5,23.28,23.4,16019000
+2026-06-02,23.58,24.08,23.57,24.08,11576700
+2026-06-03,24.35,24.68,24.34,24.53,9177300
+2026-06-04,24.26,24.36,23.9,24.0,8297300
+2026-06-05,24.01,24.15,23.9,23.94,4580108
+2026-06-08,23.63,23.65,23.33,23.4,9031700
+2026-06-09,23.36,23.85,23.36,23.8,7664400
+2026-06-10,23.8,23.8,23.2,23.23,9741900
+2026-06-11,23.25,23.42,23.11,23.34,6060400
+2026-06-12,23.51,23.65,23.36,23.5,5274000
+2026-06-15,23.75,23.89,23.71,23.71,4561800
+2026-06-16,23.74,24.27,23.74,24.26,7317900
+2026-06-17,24.4,24.73,24.36,24.62,7569400
+2026-06-18,24.81,25.1,24.66,25.08,7143500
+2026-06-19,25.0,25.05,24.56,24.63,11602020
+2026-06-22,24.7,25.0,24.7,25.0,5996344
+2026-06-23,25.0,25.32,24.93,25.07,5792100
+2026-06-24,25.06,25.15,24.9,24.95,4320800
+2026-06-25,24.95,25.09,24.88,24.94,3019200
+2026-06-26,24.9,24.94,24.65,24.86,3905900
+2026-06-29,24.92,25.01,24.75,24.88,3420100
+2026-06-30,24.88,24.88,24.71,24.79,5032852
+2026-07-01,24.8,24.87,24.65,24.66,5006200
+2026-07-02,24.7,25.16,24.67,25.08,4250700
+2026-07-03,25.15,25.31,24.98,25.31,4607000
+2026-07-06,25.3,25.5,25.28,25.49,3203900
+2026-07-07,25.5,26.37,25.5,26.34,7445900
+2026-07-08,26.33,27.23,26.21,26.79,10812100
+2026-07-09,27.09,27.54,27.06,27.32,7769500
+2026-07-10,27.32,27.54,27.11,27.43,4874300
+2026-07-13,27.3,27.56,27.3,27.48,4627800
+2026-07-14,27.38,27.92,27.17,27.88,6416000
+2026-07-15,28.0,28.55,27.97,28.36,7356400
+2026-07-16,28.36,28.8,28.3,28.78,8342200
+2026-07-17,28.78,28.78,28.41,28.56,7066100
+2026-07-20,28.79,28.96,28.54,28.69,6016618
+2026-07-21,28.69,28.99,28.4,28.64,7542400
+2026-07-22,28.52,29.18,28.25,29.18,8487800
+2026-07-23,29.05,29.05,28.6,28.9,7091286
+2026-07-24,28.62,29.09,28.54,29.09,4831300
+2026-07-27,29.08,29.3,28.79,29.29,4376590
+2026-07-28,28.94,29.18,28.9,28.93,5512200
+2026-07-29,28.88,29.78,28.88,29.78,6038900
+2026-07-30,29.08,29.38,28.94,29.1,9471200
+2026-07-31,28.88,29.26,28.75,29.13,7061400
+2026-08-03,28.88,29.2,28.83,28.87,6583500
+2026-08-04,28.87,29.06,28.72,28.72,5640700
+2026-08-05,28.65,28.72,28.53,28.63,5621600
+2026-08-06,28.55,29.33,28.55,29.33,6565900
+2026-08-07,29.63,30.5,29.63,30.3,12029000
+2026-08-11,30.15,31.56,30.1,31.36,13249100
+2026-08-12,31.2,31.36,30.93,31.19,6807900
+2026-08-13,31.1,31.5,30.83,31.5,7423338
+2026-08-14,31.48,31.86,31.12,31.79,7230946
+2026-08-17,31.05,31.55,31.0,31.55,6443600
+2026-08-18,31.25,31.39,30.78,30.95,7077400
+2026-08-19,30.21,30.94,30.21,30.94,6133600
+2026-08-20,30.67,30.82,30.43,30.78,6534100
+2026-08-21,30.35,30.98,30.35,30.98,5788200
+2026-08-24,30.8,31.02,30.8,30.92,3733200
+2026-08-25,30.9,31.49,30.88,31.49,6188800
+2026-08-26,31.39,31.73,31.38,31.44,3512100
+2026-08-27,31.21,31.44,30.9,30.9,5102700
+2026-08-28,30.85,31.14,30.85,31.07,4375100
+2026-08-31,31.0,31.55,30.99,31.52,10101900
+2026-09-01,31.52,31.74,31.22,31.34,4946537
+2026-09-02,31.24,31.85,31.24,31.85,5788800
+2026-09-03,32.18,32.43,31.76,31.92,4721100
+2026-09-04,32.0,32.57,31.89,32.27,4702756
+2026-09-07,32.14,32.14,31.73,31.88,4868900
+2026-09-08,31.68,31.84,31.51,31.7,4781500
+2026-09-09,31.61,31.72,31.2,31.35,6159000
+2026-09-10,31.2,31.49,31.1,31.39,4980800
+2026-09-11,31.51,31.65,31.35,31.6,2834300
+2026-09-14,31.65,31.98,31.6,31.85,5123500
+2026-09-15,31.87,31.91,30.98,31.0,8030100
+2026-09-16,31.04,31.5,31.04,31.18,5708300
+2026-09-17,31.28,31.39,31.05,31.28,4307800
+2026-09-18,31.07,31.38,31.0,31.38,14543263
+2026-09-21,31.4,31.68,31.39,31.67,4613774
+2026-09-22,31.68,32.19,31.45,32.14,7183000
+2026-09-23,31.85,31.95,31.4,31.65,6111700
+2026-09-24,31.7,31.85,31.5,31.59,4574300
+2026-09-25,31.56,32.05,31.56,32.01,5307900
+2026-09-28,32.09,32.35,32.05,32.22,4771000
+2026-09-29,32.1,32.29,31.95,32.16,6402000
+2026-09-30,32.28,32.28,31.95,31.99,5497300
+2026-10-01,31.85,32.03,31.5,31.55,8798100
+2026-10-02,31.55,31.94,31.51,31.66,7121700
+2026-10-05,31.8,31.9,31.52,31.88,3873210
+2026-10-06,31.9,32.2,31.68,32.2,6896130
+2026-10-07,31.55,31.68,30.12,30.3,27116720
+2026-10-08,30.03,30.1,28.86,29.0,25304960
+2026-10-09,29.3,29.48,28.8,29.0,10309450
+2026-10-12,29.0,29.35,28.82,29.06,9152680
+2026-10-13,29.05,29.39,28.93,29.2,7512410
+2026-10-14,29.02,29.27,28.86,29.0,7732680
+2026-10-15,28.8,29.04,28.66,28.99,8092680
+2026-10-16,29.1,29.28,28.86,29.0,6007560
+2026-10-19,29.0,29.05,28.51,28.92,4867940
+2026-10-20,28.86,28.97,28.57,28.8,5158760
+2026-10-21,29.04,29.28,28.81,29.14,6411540
+2026-10-22,29.2,29.25,28.94,29.05,4172310
+2026-10-23,29.1,29.1,28.65,29.0,4868890
+2026-10-26,29.05,29.1,28.68,28.95,3977540
+2026-10-27,28.92,29.17,28.85,28.96,3887840
+2026-10-28,29.14,29.23,28.94,29.03,3289540
+2026-10-29,29.22,29.7,29.11,29.34,5989780
+2026-10-30,29.5,29.52,29.11,29.29,5307220
+2026-11-02,29.03,29.03,28.01,28.32,10016220
+2026-11-03,28.33,28.46,27.41,27.91,9721880
+2026-11-04,27.51,27.94,27.22,27.85,11535310
+2026-11-05,27.98,28.25,27.51,27.93,8580900
+2026-11-06,27.35,28.09,27.35,27.73,12314020
+2026-11-10,28.2,28.88,28.18,28.6,13556910
+2026-11-11,28.85,29.38,28.6,28.82,8683570
+2026-11-12,28.94,28.97,28.35,28.67,4983410
+2026-11-13,28.59,28.7,28.21,28.53,4778850
+2026-11-16,28.63,28.69,28.25,28.31,4070450
+2026-11-17,28.06,28.28,27.56,27.68,8654558
+2026-11-18,27.4,27.48,27.01,27.4,6639090
+2026-11-19,27.37,27.5,27.17,27.42,4874870
+2026-11-20,27.0,27.07,26.38,26.54,13375990
+2026-11-24,26.93,27.2,26.61,26.62,7692490
+
+benchmark_data (Straits Times Index, ^STI, last 90 daily closes, Yahoo Finance via the pipeline):
+Date,Close
+2026-07-20,5498.9502
+2026-07-21,5526.7202
+2026-07-22,5595.4199
+2026-07-23,5581.7598
+2026-07-24,5588.3398
+2026-07-27,5620.2402
+2026-07-28,5616.1099
+2026-07-29,5713.1899
+2026-07-30,5673.5801
+2026-07-31,5628.5
+2026-08-03,5612.2798
+2026-08-04,5612.25
+2026-08-05,5581.3701
+2026-08-06,5638.9902
+2026-08-07,5698.4302
+2026-08-11,5754.1699
+2026-08-12,5720.75
+2026-08-13,5720.0498
+2026-08-14,5743.5898
+2026-08-17,5768.46
+2026-08-18,5701.3999
+2026-08-19,5694.2402
+2026-08-20,5671.9102
+2026-08-21,5688.96
+2026-08-24,5680.46
+2026-08-25,5735.6802
+2026-08-26,5721.5898
+2026-08-27,5684.1201
+2026-08-28,5699.9302
+2026-08-31,5755.3599
+2026-09-01,5710.3701
+2026-09-02,5744.1099
+2026-09-03,5747.71
+2026-09-04,5801.96
+2026-09-07,5792.2798
+2026-09-08,5767.4502
+2026-09-09,5729.6299
+2026-09-10,5689.75
+2026-09-11,5695.9302
+2026-09-14,5718.02
+2026-09-15,5638.6401
+2026-09-16,5635.4102
+2026-09-17,5660.52
+2026-09-18,5656.1099
+2026-09-21,5675.23
+2026-09-22,5723.7598
+2026-09-23,5709.9102
+2026-09-24,5683.3701
+2026-09-25,5711.1201
+2026-09-28,5729.02
+2026-09-29,5714.8398
+2026-09-30,5675.8799
+2026-10-01,5667.6699
+2026-10-02,5634.8198
+2026-10-05,5664.3301
+2026-10-06,5701.54
+2026-10-07,5608.4399
+2026-10-08,5412.96
+2026-10-09,5401.8901
+2026-10-12,5415.48
+2026-10-13,5430.5
+2026-10-14,5423.3301
+2026-10-15,5403.5
+2026-10-16,5415.5298
+2026-10-19,5412.0
+2026-10-20,5404.02
+2026-10-21,5437.9902
+2026-10-22,5415.1401
+2026-10-23,5422.1602
+2026-10-26,5415.9102
+2026-10-27,5397.0298
+2026-10-28,5397.9102
+2026-10-29,5396.0298
+2026-10-30,5376.7402
+2026-11-02,5303.8301
+2026-11-03,5269.29
+2026-11-04,5268.6299
+2026-11-05,5296.25
+2026-11-06,5179.1699
+2026-11-10,5258.5898
+2026-11-11,5289.6602
+2026-11-12,5282.7002
+2026-11-13,5231.8398
+2026-11-16,5183.1802
+2026-11-17,5109.1299
+2026-11-18,5054.8901
+2026-11-19,5079.4902
+2026-11-20,4975.1699
+2026-11-23,4953.8101
+2026-11-24,4958.8701
+
+peer_data (DBS Group, D05.SI, last 90 daily closes, Yahoo Finance via the pipeline):
+Date,Close
+2026-07-17,71.96
+2026-07-20,71.9
+2026-07-21,72.0
+2026-07-22,73.66
+2026-07-23,73.5
+2026-07-24,73.94
+2026-07-27,74.38
+2026-07-28,73.91
+2026-07-29,75.0
+2026-07-30,74.85
+2026-07-31,74.02
+2026-08-03,74.45
+2026-08-04,74.5
+2026-08-05,73.55
+2026-08-06,75.08
+2026-08-07,76.33
+2026-08-11,76.99
+2026-08-12,75.85
+2026-08-13,76.5
+2026-08-14,75.53
+2026-08-17,76.88
+2026-08-18,75.72
+2026-08-19,76.0
+2026-08-20,75.84
+2026-08-21,76.0
+2026-08-24,75.56
+2026-08-25,76.4
+2026-08-26,76.24
+2026-08-27,75.65
+2026-08-28,76.15
+2026-08-31,77.4
+2026-09-01,76.91
+2026-09-02,77.6
+2026-09-03,77.95
+2026-09-04,78.65
+2026-09-07,78.47
+2026-09-08,78.1
+2026-09-09,77.5
+2026-09-10,76.79
+2026-09-11,77.0
+2026-09-14,77.66
+2026-09-15,76.75
+2026-09-16,76.8
+2026-09-17,76.94
+2026-09-18,76.86
+2026-09-21,77.36
+2026-09-22,77.8
+2026-09-23,77.69
+2026-09-24,77.48
+2026-09-25,78.0
+2026-09-28,78.11
+2026-09-29,78.38
+2026-09-30,77.5
+2026-10-01,77.36
+2026-10-02,77.21
+2026-10-05,77.83
+2026-10-06,78.56
+2026-10-07,77.49
+2026-10-08,73.85
+2026-10-09,73.36
+2026-10-12,73.94
+2026-10-13,74.47
+2026-10-14,74.34
+2026-10-15,73.75
+2026-10-16,74.11
+2026-10-19,74.45
+2026-10-20,74.43
+2026-10-21,74.65
+2026-10-22,74.57
+2026-10-23,74.44
+2026-10-26,74.21
+2026-10-27,73.92
+2026-10-28,73.99
+2026-10-29,73.8
+2026-10-30,73.13
+2026-11-02,71.71
+2026-11-03,70.88
+2026-11-04,70.78
+2026-11-05,71.2
+2026-11-06,69.72
+2026-11-10,70.37
+2026-11-11,70.97
+2026-11-12,71.0
+2026-11-13,69.9
+2026-11-16,69.3
+2026-11-17,67.7
+2026-11-18,66.94
+2026-11-19,67.34
+2026-11-20,66.11
+2026-11-24,66.24
+
+peer_data (UOB, U11.SI, last 90 daily closes, Yahoo Finance via the pipeline):
+Date,Close
+2026-07-17,42.47
+2026-07-20,42.66
+2026-07-21,42.72
+2026-07-22,43.04
+2026-07-23,43.0
+2026-07-24,43.32
+2026-07-27,43.5
+2026-07-28,43.14
+2026-07-29,43.89
+2026-07-30,43.88
+2026-07-31,43.4
+2026-08-03,43.04
+2026-08-04,43.25
+2026-08-05,43.06
+2026-08-06,43.58
+2026-08-07,43.3
+2026-08-11,42.16
+2026-08-12,41.95
+2026-08-13,41.7
+2026-08-14,41.8
+2026-08-17,41.13
+2026-08-18,40.88
+2026-08-19,40.56
+2026-08-20,40.22
+2026-08-21,40.53
+2026-08-24,40.73
+2026-08-25,41.11
+2026-08-26,40.95
+2026-08-27,40.64
+2026-08-28,40.78
+2026-08-31,41.56
+2026-09-01,41.42
+2026-09-02,41.77
+2026-09-03,41.74
+2026-09-04,42.01
+2026-09-07,41.75
+2026-09-08,41.6
+2026-09-09,41.18
+2026-09-10,40.99
+2026-09-11,41.26
+2026-09-14,42.33
+2026-09-15,41.33
+2026-09-16,41.21
+2026-09-17,41.88
+2026-09-18,41.78
+2026-09-21,42.1
+2026-09-22,42.8
+2026-09-23,42.84
+2026-09-24,42.5
+2026-09-25,42.57
+2026-09-28,43.29
+2026-09-29,43.32
+2026-09-30,42.84
+2026-10-01,43.34
+2026-10-02,43.11
+2026-10-05,43.06
+2026-10-06,43.72
+2026-10-07,42.44
+2026-10-08,40.25
+2026-10-09,39.96
+2026-10-12,40.5
+2026-10-13,40.93
+2026-10-14,41.06
+2026-10-15,41.69
+2026-10-16,41.61
+2026-10-19,41.64
+2026-10-20,41.42
+2026-10-21,42.0
+2026-10-22,41.88
+2026-10-23,41.59
+2026-10-26,41.3
+2026-10-27,41.37
+2026-10-28,41.54
+2026-10-29,41.5
+2026-10-30,41.37
+2026-11-02,40.66
+2026-11-03,40.46
+2026-11-04,38.44
+2026-11-05,37.81
+2026-11-06,36.88
+2026-11-10,37.38
+2026-11-11,37.58
+2026-11-12,37.77
+2026-11-13,37.75
+2026-11-16,37.38
+2026-11-17,36.7
+2026-11-18,36.13
+2026-11-19,36.14
+2026-11-20,35.42
+2026-11-24,35.28
+
+corporate_actions (dividends and splits, last 12 months, Yahoo Finance via the pipeline):
+Date,Type,Amount
+2026-04-23,Dividend,0.58
+2026-08-17,Dividend,0.47
+
+holidays (SGX closures and early closes from the last bar to 3 weeks later, from the pipeline's holidays.txt; source: SGX trading calendar and MOM gazetted public holidays):
+Date,Type,Name
+none in this period
+
+github_ledger:
+INDICATOR LEDGER - O39.SI (SGX, SGD) - official figures computed by the pipeline
+as of 2026-11-24 | last bar 2026-11-24 | expected session 2026-11-24 | bars used 1255 | excluded none
+comparator ^STI ends 2026-11-24 (same as stock)
+comparator D05.SI ends 2026-11-24 (same as stock)
+comparator U11.SI ends 2026-11-24 (same as stock)
+ex-dates in last 60 days: none
+
+--- LAST 10 BARS ---
+      date    open    high     low   close        volume  avg_vol20_prior     clv     vol_delta  chg_raw_pct  chg_pct  gap_pct  vol_ratio
+2026-11-10 28.2000 28.8800 28.1800 28.6000 13556910.0000     6929885.0000  0.2000  2711382.0000       3.1374   3.1374   1.6949     1.9563
+2026-11-11 28.8500 29.3800 28.6000 28.8200  8683570.0000     7150096.5000 -0.4359 -3785145.8974       0.7692   0.7692   0.8741     1.2145
+2026-11-12 28.9400 28.9700 28.3500 28.6700  4983410.0000     7208654.5000  0.0323   160755.1613      -0.5205  -0.5205   0.4164     0.6913
+2026-11-13 28.5900 28.7000 28.2100 28.5300  4778850.0000     7071191.0000  0.3061  1462913.2653      -0.4883  -0.4883  -0.2790     0.6758
+2026-11-16 28.6300 28.6900 28.2500 28.3100  4070450.0000     6905499.5000 -0.7273 -2960327.2727      -0.7711  -0.7711   0.3505     0.5895
+2026-11-17 28.0600 28.2800 27.5600 27.6800  8654558.0000     6808644.0000 -0.6667 -5769705.3333      -2.2254  -2.2254  -0.8831     1.2711
+2026-11-18 27.4000 27.4800 27.0100 27.4000  6639090.0000     6997974.9000  0.6596  4378974.2553      -1.0116  -1.0116  -1.0116     0.9487
+2026-11-19 27.3700 27.5000 27.1700 27.4200  4874870.0000     7071991.4000  0.5152  2511296.6667       0.0730   0.0730  -0.1095     0.6893
+2026-11-20 27.0000 27.0700 26.3800 26.5400 13375990.0000     6995157.9000 -0.5362 -7172632.3188      -3.2093  -3.2093  -1.5317     1.9122
+2026-11-24 26.9300 27.2000 26.6100 26.6200  7692490.0000     7455341.9000 -0.9661 -7431727.6271       0.3014   0.3014   1.4695     1.0318
+CVD10=-15,894,217
+VWAP10 = 27.8281; Close vs VWAP -4.34%
+Volume ratio = 7,692,490 / 7,455,341.9 = 1.0318
+UDVR10 (adjusted classification): up 4 vol 34,807,840 | down 6 vol 42,502,348 | ratio 0.8190 selling-dominated
+VT5/20 = 1.2113 busier; 5-bar chg raw -5.9696% adj -5.9696%
+ATR14 (Wilder) = 0.6549; last 14 TR: 1.05, 0.72, 0.74, 0.74, 1.15, 0.78, 0.62, 0.49, 0.44, 0.75, 0.67, 0.33, 1.04, 0.66
+ATR14 one-step check: previous ATR14 0.6545; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.6600; (13 x 0.6545 + 0.6600) / 14 = 0.6549
+Expected 5-day range = 26.6200 +/- 0.6549*2.236 = 25.1557 - 28.0843
+MACD=-0.6829 Signal=-0.5685 Hist=-0.1144; prev hist -0.0896 
+Momentum proxy (substitute only): SMA20 28.1950 -> bearish
+10-bar change raw -4.0029% adj -4.0029%; Divergence: None
+Tenkan=27.8800 Kijun=28.0400 SpanA=30.4675 SpanB=30.5500 | Kumo Below | TK Neutral Squeeze | Chikou Bearish Unobstructed | score -2 -> Weak Bearish
+Darvas: ceiling 32.5700 on 2026-09-04, floor 31.2000, status Breakdown Below, age 55 bars; crossing day 2026-09-15 (48 bars ago) vol ratio 1.4946 inconclusive
+RS20: stock 20-bar change raw -8.2069% adj -8.2069%
+  ^STI: -8.5444% ; RS20 = 0.3375 pts in line  [^STI to 2026-11-24]
+  D05.SI: -11.0156% ; RS20 = 2.8087 pts leading  [D05.SI to 2026-11-24]
+  U11.SI: -15.1719% ; RS20 = 6.9650 pts leading  [U11.SI to 2026-11-24]
+52w: high 32.5700 (2026-09-04) low 18.0800 (2025-11-25); from high -18.2683% from low 47.2345% (bars in window 250)
+20-bar HH 29.7000 LL 26.3800; 60-bar HH 32.5700 LL 26.3800; 120-bar HH 32.5700 LL 23.1100
+Levels above: VWAP10 27.8281 (+4.54%) | Tenkan 27.8800 (+4.73%) | Kijun 28.0400 (+5.33%)
+Levels below: 20-bar low / 60-bar low 26.3800 (-0.90%) | 120-bar low 23.1100 (-13.19%) | 52-week low 18.0800 (-32.08%)
+Signals: VWAP -1 Ichimoku -1 MACD -1 CVD -1 -> HIGH BEARISH (0 bull / 4 bear of 4); Volume Confirmation CONFIRMS; final HIGH BEARISH
+Calibration (past year): 5d 184/245 = 75.102% ; 10d 171/240 = 71.25%
+Outlook: start day 2026-11-25; missing sessions after last bar none; closures none; early closes none
+  Week 1 (to 2026-11-27) d=3.0: 26.6200 +/- 0.6549*1.732 -> 25.4858 - 27.7542
+  Week 2 cumulative (to 2026-12-04) d=8.0: 26.6200 +/- 0.6549*2.828 -> 24.7680 - 28.4720
+
+--- SCORES (statistics only, not advice: the readings behind the harness's pillars) ---
+Microstructure: BEARISH (0 bullish / 4 bearish of 4) - close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bearish
+Momentum: BEARISH (0 bullish / 2 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 neutral (+0.34 pts vs main benchmark)
+Structure: Darvas Breakdown Below; nearest support -0.90% (0.37 ATRs); nearest resistance +4.54% (1.84 ATRs)
+Broker rating changes, last 14 days: 0 upgrade(s), 1 downgrade(s)
+  2026-11-12 downgrade: BofA downgrades OCBC to ‘neutral’ following better-than-expected 3Q
+
+--- WEEKS (last 4) ---
+Week 2026-11-02 bars 5: O 29.03 C 27.73 H 29.03 L 27.22 prevC 29.29 chg raw -5.3260% adj -5.3260% up 1 dn 4 volx 1.3048 CVD 5,752,999 UD 0.1969 pos 0.2818 standout 2026-11-06 V 12,314,020 chg -0.7161% CLV 0.0270
+Week 2026-11-09 bars 4: O 28.2 C 28.53 H 29.38 L 28.18 prevC 27.73 chg raw 2.8850% adj 2.8850% up 2 dn 2 volx 1.1545 CVD 549,905 UD 2.2782 pos 0.2917 standout 2026-11-10 V 13,556,910 chg 3.1374% CLV 0.2000
+Week 2026-11-16 bars 5: O 28.63 C 26.54 H 28.69 L 26.38 prevC 28.53 chg raw -6.9751% adj -6.9751% up 1 dn 4 volx 1.0894 CVD -9,012,394 UD 0.1489 pos 0.0693 standout 2026-11-20 V 13,375,990 chg -3.2093% CLV -0.5362
+Week 2026-11-23 bars 1 (incomplete): O 26.93 C 26.62 H 27.2 L 26.61 prevC 26.54 chg raw 0.3014% adj 0.3014% up 1 dn 0 volx 1.0318 CVD -7,431,728 UD n/a pos 0.0169 standout 2026-11-24 V 7,692,490 chg 0.3014% CLV -0.9661
+
+news_payload:
+NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-24 23:05 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
+Company: OCBC (O39 on SGX; Singapore) | sector words searched: Singapore banks | peers: DBS Group, UOB | home index: Straits Times Index | region: Asia
+Window: 2026-11-09 to 2026-11-24
+SEARCH LOG
+COMPANY | Google News: "OCBC" (daily, last 30 days kept) | 186 | 156
+COMPANY | Bing News, 3 queries: "OCBC"; "OCBC" shares OR stock; "OCBC" results OR earnings OR dividend OR guidance (daily, counts combined) | 11 | 4
+COMPANY | Yahoo Finance news feed for O39.SI (daily) | 5 | 4
+COMPANY | C5: "OCBC" results date OR ex-dividend date 2026 | 11 | 8
+SECTOR | S1: Singapore banks news November 2026 | 25 | 25
+SECTOR | S2: DBS Group UOB OCBC shares November 2026 | 25 | 25
+COUNTRY/MACRO | K1: Singapore stock market STI 24 November 2026 | 25 | 25
+COUNTRY/MACRO | K2: Singapore MAS OR economy OR inflation November 2026 | 25 | 25
+COUNTRY/MACRO | K3: MAS next policy meeting date 2026 | 5 | 5
+COUNTRY/MACRO | K3: Singapore GDP release date 2026 | 25 | 25
+GLOBAL/REGIONAL | G1: global markets central banks oil November 2026 | 25 | 25
+GLOBAL/REGIONAL | G2: Asia markets 24 November 2026 | 25 | 25
+DATE-SPECIFIC | D 2026-11-20: "OCBC" OR "Straits Times Index" 20 November 2026 | 25 | 25
+DATE-SPECIFIC | D 2026-11-10: "OCBC" OR "Straits Times Index" 10 November 2026 | 25 | 25
+DATE-SPECIFIC | D 2026-11-17: "OCBC" OR "Straits Times Index" 17 November 2026 | 0 | 0
+ITEMS
+COMPANY | 2026-11-10 | OCBC Banking Wealth AuM Hits Record; Q3 2026 Profit Rises | Wealth Briefing Asia | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPU2ZHWnJUUEFLbUpLVUliUGNfVXZoU1R6SE95Uk4zWW51dXJhN3RudG5RNW45WDV0RE1TeEdsRmgxOUNWc1BrTWJzWlhUVUpwdHdYcVdQbkdnRWNCQ05TaDN4eXRMTkw4Z1Q2RG9uellGYTk2Q3N6OEZabzJUcFFvVC1EOUQxNXUxOXNQenc2X2VfVHZfOThnUXpocGxaWmwtanpDeVdVbEk?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | RESULTS; reaction day 2026-11-10: chg +3.14%, gap +1.69%, vol 1.96x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-10 | OCBC stock posts record nine-month profit as loan outlook improves | ad-hoc-news.de | https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTW5XZzR1YmpSbTUzeFRZaWlvYW53MXMwWGRGZVo3aEMtYTNpeWJHamlpQUhSYUR2a0R5MUFzSVhqamJDeDY1N19tVDFVN1RvajJfVDgzbkM3Yy1XNXh6ZXR4OV91NTFMcWdobWwxdWFqSVJXTmF5ekl3RDJRYlp2S0dyTm1PdVlkUFJKeGFzOTY4UzRPaWpSd1k2VzZEWUZJQW41cm9EZVBLVHItTHBWM1lMLUxyeUZxU1hULUVZd0dHT2MxSW9Ncg?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | RESULTS; reaction day 2026-11-10: chg +3.14%, gap +1.69%, vol 1.96x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-11 | ING Groep stock weighs reported OCBC private-bank deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSFlkN1JDZ014RFh2cm5QQTd2eHg5N0ZHQmtWRHM5X1RBT28zQ1ZWeDBadEFaeDZicUJrNW9kaVV1dkdwNGZSZ19oWmtBVnJMOTYzdm1XUS1pdm1HRGNoTzVMMC0xRng4bmVyQTRqNUtrZ04wanEtZVVuMW1jQldPeDgzMkRQVWcyOTdvaUhWQ1M1dU94WmhkaFNDSl8yMTBndmRYV011d3FDaVk4MkVPeHpZdlJVZWNr?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-11: chg +0.77%, gap +0.87%, vol 1.21x; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-12 | BofA downgrades OCBC to ‘neutral’ following better-than-expected 3Q | The Edge Singapore | https://www.theedgesingapore.com/capital/brokers-calls/bofa-downgrades-ocbc-neutral-following-better-expected-3q | SINGLE-SOURCE | NEW/RECYCLED not checked | RATING CHANGE; reaction day 2026-11-12: chg -0.52%, gap +0.42%, vol 0.69x; Bank of America downgraded OCBC to neutral in a report dated Nov 11 on slower wealth and earnings growth. Analysts Sukriti Bansal and Aiden Chionh expect wealth growth to slow. Wealth fees grew only 3 ... | none stated
+COMPANY | 2026-11-16 | 3 Singapore blue chip stocks going ex-dividend in November 2026. Where yields look attractive | Beansprout | https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PTFRGbWMwT3A2M2YzR3dibGlKa1EwaGprdFZqQVdpNXRYNnVia3dpdjd6c0VpZ3QyZVFoY24yRWhJSGU1RVZSUDRsbGNCaUQ0V3FMWjhzd0pBQTRKZ2tKWnI3eUQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-17 | NETS to End CashCard Use for Parking, Tolls on 1 January 2027 | Fintech Singapore | https://news.google.com/rss/articles/CBMiY0FVX3lxTE40T2RhYXpVN1dCc1ZpcTdtdzMwTi1lR0l6bVpCRG9wc2RMUElKczRQSGE2dEtzU0FZbkVsSUo2X01wTWdoTnhaVkJTbUUyUlRENy1nQWpEdkZ5N3RUalkwSXVhcw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-18 | ING Groep stock: OCBC completes USD 1.5 billion deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMitAFBVV95cUxQVEY3ZXVXNXdlZVhZUG5ObWRHempUUE0xT2laR0VBd2FXSlpwX0hRalg4ZXlTWlJVT1JQcy1hc3pzTHZOZXo2RVc0eHdUNi1jOEwtR0hia3lBV01Vdk5pRGFEV0ZJVTNiZ1pxMV9IaGM3clhSd3dVb01BV2V5MWItZ01SbDItaEVCT2xlUDRaUF9CLXZLNVZFNG9RdDRELTVpalVXam42a2VyR24wcHhJYjlCODI?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-18: chg -1.01%, gap -1.01%, vol 0.95x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-18 | Latest COE Prices Nov 2026 and Bidding Results in Singapore | OneShift by Carousell | https://news.google.com/rss/articles/CBMiTkFVX3lxTFA3N0p2d09EOW8xOThJaFoyMjJiNEJnUzRSTWphbWpnemJKWk1ZSUpmUlVPRlloa1p2b0U3cnNrb181N2ZJTUExRlNYbFpXQQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-18 | ISN Enhances Financial Intelligence to Mitigate Global Contractor Risk | FF News | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZUlabmRFTDkxMjYxclZNbTZzcF9pYXpEM3ZGbVQteXBOV2hfOTZIRnJsWEpuUDlhOTNMdVkwR2xIMWNKTFNfS29JSWRoNFFKN3hrZ2Z6b3JDMTY4WGJ4VXF4ZlJtcmdEOGxsanNjbXpGcTN6bzdJQjkyVEZjVkY4NXZyekVUT29oTWtoWExFQ05IU3ZNWWEtNTdSZGtCdDJBMm9JUEJfTmU?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-19 | Best Bank Offers in Singapore (November 2026): UOB Festive Savings, DBS Half-Priced Holidays, and More | MoneySmart | https://news.google.com/rss/articles/CBMidkFVX3lxTE9famtmQjVkRmJCTkJ0M0sxdElVRmN0WExWOGRMa1FSVGw5VTBPTkI4ZnJGa0JmSlQwbGxOMk5keFBsQktxdDNWcmJfZE5iRHF3R0I1ZWlTTXZzVy1RdVdNUUM5dmEyQU5SOUExNEowREpEbmphTXc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-21 | OCBC stock: Bank completes US$1.5 billion ING deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMisgFBVV95cUxPUVl0ZXZfeW8zVEVuMU03WWRRTWpFTjQwa1J6V0dSeGhmZDJ3N0taQ2t2dTBKM3otcWV6V1N2bXZCN2ZLdWY2MGRTZUN3cHpoZDMwei1XNHdPY1pxRDhEVFN2cTRmblFXSllEczBmb2RLU3hDaGRGbHYxdkhhWnRldXlhaXBkTUd2c0RtY2Vhc2FDRzhuSnAxWEZWQ01vaUhUcHZSdXFvOEI2TVBLenZGeWhB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-23 | OCBC restructures wholesale banking, appoints Ang Eng Siong to head Global Corporate Banking | 联合早报 | https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMDNMMHNZeFpiZ0Znc1VpT2s3NURlSzNpOG9HS21IZ1JrUGFyZkRRZ1lJVF80dU1uVjQ4TmJnQXlOSFYwVmpUTXpfMnhsYUFmUFZyU0xWQWxGTG9xQllHNVFOYVRRT3J6STRzWGMyOENibzJaMmlGT2JRNkZmd212YUFaUjhXOXcydVBFNXlsVzhDelprWjVTUkZISEhLRERRWVhMOVctektKTDVOY3ZVT0VmWHJobVB1bE5raFZlSjJtU1pKVW5fcm5VSkpjT093?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times] | none stated
+COMPANY | 2026-11-23 | OCBC, StraitsX Pilot Stablecoin Payments Into Bank Accounts | OneSafe | https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWltSTVCMFpyOHVyTHhEZG40enhLSlBIdVo5eDdlbHJRWGhTZU9EWTljNWVyS2laWVZtQ21FWU8zNzg2VkRDalI5dUdmZzlzRUktUjNWNnlWRDJZREtKQzBLR1ZMcFBtejdSNUxjb3BmelFMUUdwQ2NxbDF5djZLYkowanNENjNtLTFwdWRB?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-24 | OCBC Is Down 15%+ From Its High: What 100 Shares Pay You in Dividends | The Smart Investor | https://sg.news.yahoo.com/ocbc-down-15-high-100-033000808.html | SINGLE-SOURCE | NEW/RECYCLED not checked | CAPITAL; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; OCBC paid S$105 in dividends on 100 shares over the past 12 months. Here's how much of that rests on profit, and how much may not repeat. The post OCBC Is Down 15%+ From Its High: What 100 Shares Pay ... | none stated
+SECTOR | 2026-11-24 | Bank of Singapore bolsters Asean team | Fund Selector Asia | https://news.google.com/rss/articles/CBMidkFVX3lxTFBOMVkza2ZxTWJkOEZFQ0FQODdLSkswRWFZSWpUWXBCdXVvZzFqUHp3TXBuZFFsYk96WENpVVFjaVI4by16MVp5OF9tcVBWSzBQTmdHZGN5UnVXN2xIdXhjT0JaZUhRTlMwdjdkRlI3Mk80UmRZbmc?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | PathFin.ai Trial Tests How Banks and Payment Providers Verify AI Agents | Fintech Singapore | https://news.google.com/rss/articles/CBMiggFBVV95cUxORnM1YXktcXd1VGF4VVpVbkdVcTVHWHNfbXpVWjh6NlJXelpZbjF6THlmbEhjSDBkcXNJSTJwUGlzOHE5TnRZN1JCTGZkdF9xemtGcEdkOUdFMmNFMFBRdHRIUE1IM3dSRFBQTFB6b1Q3ZXdSaGN4UE1RNTVTYmVBNEV3?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Economic and event calendar in Asia Tuesday, November 24, 2026: Singapore and Japan | investingLive | https://news.google.com/rss/articles/CBMisgFBVV95cUxQb2RDblFvZVk5WGJuRlpYVnF3YUNCMXcydEdHMzRRR3h6OHZ3X19GLTVJUGNseXl0QVk3SWpXeEpEM3lHU1gwSGlLdk5lazdWamY5OU42YUh6Rm45WlRETXg2b0MtaVB4Vk4xOHJqZkoyalhiYWlVWkZMRXJnemZPQUctY29RYTBhejVqZ19Oak96a0dmcXU4U01hNlZzM2xWeGJTc1FBcVQ4RDdSbzFJTlRn?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Bank of Singapore added two relationship managers | finews.asia | https://news.google.com/rss/articles/CBMijwFBVV95cUxPLTVLLURFd25OU2hGN3lJV0RPSzh2b3Y5eE5Ydm9vbUFZWnpFb09aNjFieHprb2Y1eFhwcVFYdF9IdkY3TERXU2VpZHB6LUJTcWNUYWZ6ZFFoelVZZGJabl9wWTZwTF9xNjZKUkwxV1UyeW9WNVczNU9ySzhGcXk0ZDhWNkZ3XzBzWDVVSUtFUQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | OTP Group CEO Péter Csányi Strikes the Gong at SGX as CEE’s No. 1 Bank Lists EUR 7 Billion Bond Programme In Singapore #OTPBank #Banking #Finance #Investor #BondListing #EMTN #SGX | Media OutReach Newswire | https://news.google.com/rss/articles/CBMijgJBVV95cUxPdWdfOVZlUTFHMjd6Uy1lZGhYVmRfdk15ZjdpTEFWNC05RTJQbkNyakV4dmZLQktUdVNpSUxMTW03azM3RHNGVjR0c3VNLTg4U3YwdnNPTHNMNlRfZFB4dDFFOWhCU29KUW5vbTRsclFERGlla3lNeHFjTmhqck8yazhKbjd5MDluaE1DQllDc2VGNVIyeUtFNTZqOWVfcDI2Q216OUlUOXluVFBJUGp0Qi1UR3c4S2xYWXdfbm9XcFc2QUp3NFFzVExSMnlRaFpRdkZ1a0kwbS14REtUWWNab1dLX3I5UmYya1FpZk14V0o0WFRxSjdoZGVvRmJyN2JxcW9Zb2FkRmIwMG1JcWc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Wise Platform adds BNI and expands APAC bank partnerships | The Paypers | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTm5ucVhHSlEtRHlqcWd4b3FPeGRCTWcyeng5NDBMOVBuUUFYWjY5ejRrSnZhdk5jNnU4M21Cbmw4ZzREb1NZektucE80eHk1Qy1mVVNjc0ZfcHl1UjZreGUxSFF2UXNWUHFtLU1TSXlBN3dqY2dHT1otZjVpZ0hEY1FWNmRNTzhzMDVneEJTTkJJLUJQYlU1Ti1UWUtlczNMdGVULVhjcHM?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Jensen Huang’s return sends Taiwan stocks up 8.99% to daily limit; STI edges up 0.1% | 联合早报 | https://news.google.com/rss/articles/CBMiugFBVV95cUxPUjJKZDBRYktEQ2U2ZV9rOHRXXzhhRkU1Mk1OYVNOWlVYQmtxbE9hcWQ3Q2tZSkZ3NjROQnp1RXBtWkhiZ0VaWHJQc2k4bVYydGxCSnpNQjRIbUprSGljOUJhcXBmVFVBYTB3WEFjUXRuQlJSVzhNaFNVMnZqVVZCQTRHZndUdFNaQ19nOXJDX1VUWk40S0ZwaXJZdjhaV1hiUnYtRHk3X29qaFpSWG5fUmVfT1BBZ2RPcGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Asia Market Quick Take – 24 November, 2026 | Saxo | https://news.google.com/rss/articles/CBMiogFBVV95cUxPMTF5eHB2LTlNYlRBYXdJM2l5bTF2dm1FalF2aTE4bEgxSTJ5czlHalhVbXZ5eDczMi14WUdKdnNDYWdlemRGOUxVOGFOY1A4b1BHcjQxN3lGTURCSGY1bjJTblEwbHpYaGhfZ3d3VHE2bFhsR2h0dmJrY1ZFcFB0M2lDbDc0MW14U0hzeFBLZUhQZGJ1VzNmMVVKZFlkUDJSb0E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore shares claw back losses on Nvidia-led rally; STI up 0.1% | The Business Times | https://news.google.com/rss/articles/CBMirgFBVV95cUxQOUx3UkZIX2FCYjlka1VPeENka2VRa1huOFc0c3MyaEpxNDNabkxlSTV3S2VVOGZTNVFwemg5ZnNVaWZaOF9VYkNLRFhXSFU0b3E5eGFkOWRNTDlKbkJIS2hERkFPMzBIajNpWTNvSTZ1WEtMMjNob0NQQXF0WVRMWmI5d1Q5NjlUdkZfeVVseEc0YkJpM0pGcHlPT09mck85ZzlOS0FoQ1JNSjJvd1E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore Shares Post Slim Gain as Early Nvidia Boost Fades; Seatrium Falls 7% | Yahoo Finance Singapore | https://news.google.com/rss/articles/CBMihwFBVV95cUxOMV9oS3d3ODY1Z3lmVGxQbmY0ZlpXV0dybVpXcGo1SVpZYy1HNVVxM2FvRmVOVmtYS0U2dWZ3aEdrY3hZV1ZuSlBFeWFZY24wemdtRzNzNUdxcm5pajdJWWoxRmttUVl0bUZ0TG5jOFhGWXIwU056anRITXNDRDQ1RlQ2S2JsRW8?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | How Much Would A $100,000 Portfolio Have Lost In The 2–6 November Market Sell-Off? | DollarsAndSense.sg | https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbG15MHFlQXp5OHVha1FPU1Z5azdmSWhZQmhKVDZmcWJxYzM5WS1GSEoxRXkya1BiQk5Tbnl0VXQ0VVF5UjhfYkZFSkRYcV9mOGVERVlualp1Y2NQejVyUUJINWhUMTFaSVRIZ3R1UFQ5bFlKbnBQdVNhanlzTllRcl9XZkJVZmxxMDU0X09GM2pxSXU2Wm9VbFVFRXJRZjk1N0t3MmZFUVFFNHc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore stocks open 1.49% higher on Tuesday | 联合早报 | https://news.google.com/rss/articles/CBMikgFBVV95cUxQcllQWm9yUHdUYzR4Z3Z2dWlILW9ja05zaHdFNEo4V3FDTGpjRGNoU3p4MkVlMnRTWXBCc2VfV3Y3dmRvTThCbXZGTExYSVN1NFhBemduT2hiaUVJYVZDcFN0VU00cDBFUDNsRUhUYllXMWw1TUd0b01XS1VsaUo2Z1k5VWplcVV2TkhiMzMtNzdMZw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-23 | UK Markets Brief: Why Supermarket Stocks Are Rising and Where Oil Prices Go Next | Morningstar | https://news.google.com/rss/articles/CBMivAFBVV95cUxNQTZvLV9kZlJ4dnRUcXctX3hnVmJWcDloOGxuTE56bW9jWGY0bGtQZUNoU2JpVGNMeUJRT0Q2RE4tdmdtUVdjTC1nMVAtSFg2Sm1TMjlORnE5Zm11QXlDZGJLNktUcUJLTTVwdENTTWVVUFNrdC1NaFdvMU5JeHNpVlNvU3hzck84c1hPZ0tOWGRiNDlpekF0QVliX3RZZGhNSHd0cFRlNWxDMEV5NmdHWGRCTFhHb284Tk1WWA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-23 | Foreign inflows lend support to rupee, bonds; oil in focus | Reuters | https://news.google.com/rss/articles/CBMinwFBVV95cUxNX3Q3UzZ0MVgtdGxvNFJSTlZEblpycG1QMDNHVWdKSktWTDNWUE1JLW9TTXgxT28tQ3RQUjBzbnFINHk5SGtuSk5zdHJ1OGVXNFg1ZkpDOVpPOHE4MHFCRW9oYmpGdVBqbzRVVE91RjZEdldCWVctUUdxVDM5RDFkcXdqZ1NQeTE0aUR6b29RN3pjMEFadjY1OEt6OU00c0U?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-23 | ECB Warns of Payment Fragmentation Risks, Higher Costs, Weaker Ties | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMiogFBVV95cUxPU1dab3pZZkFkVG80RkF5ejhIOGRwS2xMVmc0b2RhV29IVkt6c1I1U2dlYWJ6cnZZV203Ui1Wb09OdWdkZS1XaUNvU0NGdUV3NFFWUzZFdm9nTGpnUm5IVGNOc2cyMGh6OTc2ZS1OZGw1NklQMzIwQTltUm9oUXRYWEw4bzF2VllxMWZyYUcwRUZzMWVCT3VSYWdwS24tWmFoZkE?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | Weekly market commentary | BlackRock | https://news.google.com/rss/articles/CBMingFBVV95cUxQLWJDTjBBalYwVHVpc0VxV1BwRE1xeUt1RWlLQ1VJdnJQRXNnb3p6MnFNbjRBV0s0TnlldW4wSVIycFRQeVNISWJ3VV9wMWdjX1ZndE1Tc24tNzc0anNYWjl0SVBsRDhSa0dVTWlyVVYxX0w5b2JhTFB0Tm9Vb2FwYVZubTU1SVJlcy0zMEpXOEM4ZlhiSU1QazdVQVlldw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | Middle East | MUFG Research | https://news.google.com/rss/articles/CBMiekFVX3lxTFBZWHR3bTNxMjlRLUoxbEFGMlE2SnFONzc4d3pSMnd0dFJ0RjJrbEo5b01CN0lkYmt0OFBpTkJpZnZ2SmRCQk40ZVhjbmQwMXBUSUJSWElWSGV4LW9ZYXNpTmVZZlNYTFA0V3Fqc094c2FLR25ac0djUzRB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | China, India set for record Russian oil imports in 2026, but dema | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMiogFBVV95cUxPTkVSRU5od2R0bEdEU2tXZGFzWHJFMmZJcFZpbVJWZFMwamhBQzJWcGUyc2I4d2tpWTdUa2lzOHJQUEpkWFBXelVob2ZOVXNSVUVuTkFQd21VRVZGWmhUaFVuV041elJlODBiSWxkb0xiYkZGYjZQa0JrQjF5a1BzcjN5UnhtVDJWOXdjSDNBcVNaQnhNN2FfZVA1dy16RnNPa1E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+BACKGROUND (up to 2: dated up to 30 days before the window and still in force)
+none collected (the pipeline does not search for background items)
+CATALYSTS (future-dated events)
+none found in the pipeline's data (run the catalyst query C5 if you can search)
+NOT FOUND
+none
+
+=== END OF RUN INPUTS ===

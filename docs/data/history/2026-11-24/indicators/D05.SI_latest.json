@@ -1,0 +1,255 @@
+{
+ "symbol": "D05.SI",
+ "market": "SGX",
+ "as_of": "2026-11-24",
+ "expected_session": "2026-11-24",
+ "last_bar": "2026-11-24",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "SGD",
+ "tick": 0.01,
+ "main_comparator": "^STI",
+ "comparators": {
+  "^STI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -1.3831,
+   "chg20_pct": -8.5444,
+   "label": "lagging"
+  },
+  "O39.SI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -1.7206,
+   "chg20_pct": -8.2069,
+   "label": "lagging"
+  },
+  "U11.SI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": 5.2445,
+   "chg20_pct": -15.1719,
+   "label": "leading"
+  }
+ },
+ "values": {
+  "date": "2026-11-24",
+  "open": 66.2,
+  "high": 67.33,
+  "low": 66.16,
+  "close": 66.24,
+  "volume": 7509340,
+  "dividend": 0.0,
+  "chg_raw_pct": 0.1966,
+  "chg_pct": 0.1966,
+  "gap_pct": 0.1361,
+  "clv": -0.8632,
+  "vol_delta": -6482421.7094,
+  "cvd10": -20233871.6881,
+  "vwap10": 68.4006,
+  "close_vs_vwap10_pct": -3.1588,
+  "avg_vol20_prior": 6146938.95,
+  "vol_ratio": 1.2216,
+  "up_days10": 5,
+  "down_days10": 5,
+  "up_vol10": 30962870.0,
+  "down_vol10": 34317539.0,
+  "udvr10": 0.9022,
+  "udvr10_label": "balanced",
+  "vt5_20": 1.4393,
+  "vt5_20_label": "busier",
+  "chg5_raw_pct": -4.4156,
+  "chg5_pct": -4.4156,
+  "chg10_raw_pct": -4.9914,
+  "chg10_pct": -3.8296,
+  "chg20_raw_pct": -11.0156,
+  "chg20_pct": -9.9275,
+  "divergence": "None",
+  "true_range": 1.22,
+  "atr14": 1.2738,
+  "atr14_pct_of_close": 1.923,
+  "range5_low": 63.3919,
+  "range5_high": 69.0881,
+  "macd": -2.0863,
+  "macd_signal": -1.716,
+  "macd_hist": -0.3703,
+  "macd_note": "",
+  "sma20": 70.4605,
+  "momentum_proxy": "bearish",
+  "hh20": 74.58,
+  "ll20": 65.9,
+  "hh60": 79.05,
+  "ll60": 65.9,
+  "hh120": 79.05,
+  "ll120": 61.6,
+  "high52w": 79.05,
+  "high52w_date": "2026-09-04",
+  "low52w": 53.4,
+  "low52w_date": "2025-11-25",
+  "bars_in_52w_window": 250,
+  "from_high52w_pct": -16.2049,
+  "from_low52w_pct": 24.0449,
+  "tenkan": 68.75,
+  "kijun": 70.485,
+  "span_a": 75.53,
+  "span_b": 75.775,
+  "kumo_top": 75.775,
+  "kumo_bottom": 75.53,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 79.05,
+  "darvas_ceiling_date": "2026-09-04",
+  "darvas_floor": 77.4,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 55,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-09-10",
+  "darvas_crossing_bars_ago": 51,
+  "darvas_crossing_vol_ratio": 1.177,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_STI": -1.3831,
+  "chg20_STI_pct": -8.5444,
+  "STI_close_date": "2026-11-24",
+  "rs20_O39_SI": -1.7206,
+  "chg20_O39_SI_pct": -8.2069,
+  "O39_SI_close_date": "2026-11-24",
+  "rs20_U11_SI": 5.2445,
+  "chg20_U11_SI_pct": -15.1719,
+  "U11_SI_close_date": "2026-11-24",
+  "rs20_main": -1.3831,
+  "rs20_main_label": "lagging",
+  "signal_vwap": -1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "HIGH BEARISH",
+  "bull_signals": 0,
+  "bear_signals": 4,
+  "signals_available": 4,
+  "volume_confirmation": "NEUTRAL",
+  "confluence_final": "HIGH BEARISH",
+  "outlook_d1": 3.0,
+  "outlook_week1_low": 64.0338,
+  "outlook_week1_high": 68.4462,
+  "outlook_d2": 8.0,
+  "outlook_week2_low": 62.6378,
+  "outlook_week2_high": 69.8422,
+  "nearest_resistance": 68.4006,
+  "nearest_support": 65.9
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "VWAP10",
+    "price": 68.4006,
+    "dist_pct": 3.2618
+   },
+   {
+    "name": "Tenkan",
+    "price": 68.75,
+    "dist_pct": 3.7893
+   },
+   {
+    "name": "Kijun",
+    "price": 70.485,
+    "dist_pct": 6.4085
+   }
+  ],
+  "below": [
+   {
+    "name": "20-bar low / 60-bar low",
+    "price": 65.9,
+    "dist_pct": -0.5133
+   },
+   {
+    "name": "120-bar low",
+    "price": 61.6,
+    "dist_pct": -7.0048
+   },
+   {
+    "name": "52-week low",
+    "price": 53.4,
+    "dist_pct": -19.3841
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-25",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [],
+  "d1": 3.0,
+  "d2": 8.0,
+  "sqrt_d1": 1.732,
+  "sqrt_d2": 2.828,
+  "week1_low": 64.0338,
+  "week1_high": 68.4462,
+  "week2_low": 62.6378,
+  "week2_high": 69.8422
+ },
+ "calibration_past_year": {
+  "5d_inside": "177",
+  "5d_windows": 245,
+  "5d_share_pct": 72.2449,
+  "10d_inside": "171",
+  "10d_windows": 240,
+  "10d_share_pct": 71.25
+ },
+ "ex_dividends_last_60_days": [
+  {
+   "date": "2026-11-13",
+   "amount": 0.81
+  }
+ ],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "close vs VWAP10 bearish, CVD10 bearish, UDVR10 neutral, divergence/volume trend bearish"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-1.38 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -0.5133,
+   "support_dist_atr": 0.2669,
+   "resistance_dist_pct": 3.2618,
+   "resistance_dist_atr": 1.6962
+  },
+  "ratings_14d": {
+   "upgrades": 2,
+   "downgrades": 0,
+   "items": [
+    {
+     "date": "2026-11-10",
+     "title": "CLSA Upgrades DBS Group Holdings to Accumulate, Adjusts Price Target to SG$75",
+     "source": "Moomoo",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZmZfSVNCaE1KYThwc1VjdTJVdzRDU0ZHVGhnRDlLQzY2NTZsLUZlTjdiUGFjaXJtWEJCYTdPSU5pSi16a2M1TXBwdDl6V29kY0xEVDNmZ1ZqUE5MM1ZVTWpYZXVuNVNWeXhKOWRKZ1pSRHUtOV9kMXcwak5aeGdZb0ZJN2MyVm1uRVRyck84bVdQd2VOOUtaUVR5SzR1eVVHb0k4anRTcG4xN3hiOXRybQ?oc=5",
+     "direction": 1,
+     "change": "upgrade"
+    },
+    {
+     "date": "2026-11-19",
+     "title": "JPMorgan upgrades DBS Group stock rating on valuation, raises PT By Investing.com",
+     "source": "Investing.com Canada",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQS0ktb1V4M213MmFZSHhwOXJtY2xCWDg1X1ZDbGxIZEtOOGtOcTJOdDR2Zkt0QVdfT1FyU0VBa3llZE14d25qWTgwLTlGZkdYUi1jTzloREJsV3hnUWpwcEpCQnEwaHlQeHRWT0F1bTFFYUFCOE1OZ3NnY2JDOXNzQzREbG5TVEdCR3UzZm5vbmU3TllwVkhiQ1Q5NjVGTmJtckxMdE11N0R1cGxxN1lVdGpuZTFDNU1WSWFGLUR1LVJXQQ?oc=5",
+     "direction": 1,
+     "change": "upgrade"
+    }
+   ]
+  }
+ }
+}

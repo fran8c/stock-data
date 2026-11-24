@@ -1,0 +1,213 @@
+{
+ "symbol": "BS6.SI",
+ "market": "SGX",
+ "as_of": "2026-11-24",
+ "expected_session": "2026-11-24",
+ "last_bar": "2026-11-24",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "SGD",
+ "tick": 0.01,
+ "main_comparator": "^STI",
+ "comparators": {
+  "^STI": {
+   "last_date": "2026-11-24",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -3.9556,
+   "chg20_pct": -8.5444,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-24",
+  "open": 4.36,
+  "high": 4.39,
+  "low": 4.27,
+  "close": 4.27,
+  "volume": 11597800,
+  "dividend": 0.0,
+  "chg_raw_pct": -0.6977,
+  "chg_pct": -0.6977,
+  "gap_pct": 1.3953,
+  "clv": -1.0,
+  "vol_delta": -11597800.0,
+  "cvd10": -13915093.4474,
+  "vwap10": 4.4301,
+  "close_vs_vwap10_pct": -3.6144,
+  "avg_vol20_prior": 17354731.9,
+  "vol_ratio": 0.6683,
+  "up_days10": 4,
+  "down_days10": 6,
+  "up_vol10": 77935500.0,
+  "down_vol10": 87637900.0,
+  "udvr10": 0.8893,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 0.7235,
+  "vt5_20_label": "quieter than usual",
+  "chg5_raw_pct": -3.6117,
+  "chg5_pct": -3.6117,
+  "chg10_raw_pct": -1.8391,
+  "chg10_pct": -1.8391,
+  "chg20_raw_pct": -12.5,
+  "chg20_pct": -12.5,
+  "divergence": "None",
+  "true_range": 0.12,
+  "atr14": 0.175,
+  "atr14_pct_of_close": 4.0994,
+  "range5_low": 3.8786,
+  "range5_high": 4.6614,
+  "macd": -0.1615,
+  "macd_signal": -0.145,
+  "macd_hist": -0.0165,
+  "macd_note": "",
+  "sma20": 4.534,
+  "momentum_proxy": "bearish",
+  "hh20": 4.88,
+  "ll20": 4.14,
+  "hh60": 5.41,
+  "ll60": 4.14,
+  "hh120": 5.41,
+  "ll120": 3.34,
+  "high52w": 5.41,
+  "high52w_date": "2026-09-23",
+  "low52w": 3.16,
+  "low52w_date": "2026-02-06",
+  "bars_in_52w_window": 250,
+  "from_high52w_pct": -21.0721,
+  "from_low52w_pct": 35.1266,
+  "tenkan": 4.505,
+  "kijun": 4.7,
+  "span_a": 5.105,
+  "span_b": 4.655,
+  "kumo_top": 5.105,
+  "kumo_bottom": 4.655,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 5.41,
+  "darvas_ceiling_date": "2026-09-23",
+  "darvas_floor": 5.14,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 42,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-09-30",
+  "darvas_crossing_bars_ago": 37,
+  "darvas_crossing_vol_ratio": 1.3236,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_STI": -3.9556,
+  "chg20_STI_pct": -8.5444,
+  "STI_close_date": "2026-11-24",
+  "rs20_main": -3.9556,
+  "rs20_main_label": "lagging",
+  "signal_vwap": -1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "HIGH BEARISH",
+  "bull_signals": 0,
+  "bear_signals": 4,
+  "signals_available": 4,
+  "volume_confirmation": "NEUTRAL",
+  "confluence_final": "HIGH BEARISH",
+  "outlook_d1": 3.0,
+  "outlook_week1_low": 3.9668,
+  "outlook_week1_high": 4.5732,
+  "outlook_d2": 8.0,
+  "outlook_week2_low": 3.775,
+  "outlook_week2_high": 4.765,
+  "nearest_resistance": 4.4301,
+  "nearest_support": 4.14
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "VWAP10",
+    "price": 4.4301,
+    "dist_pct": 3.7499
+   },
+   {
+    "name": "Tenkan",
+    "price": 4.505,
+    "dist_pct": 5.5035
+   },
+   {
+    "name": "Kumo bottom",
+    "price": 4.655,
+    "dist_pct": 9.0164
+   }
+  ],
+  "below": [
+   {
+    "name": "20-bar low / 60-bar low",
+    "price": 4.14,
+    "dist_pct": -3.0445
+   },
+   {
+    "name": "120-bar low",
+    "price": 3.34,
+    "dist_pct": -21.7799
+   },
+   {
+    "name": "52-week low",
+    "price": 3.16,
+    "dist_pct": -25.9953
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-25",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [],
+  "d1": 3.0,
+  "d2": 8.0,
+  "sqrt_d1": 1.732,
+  "sqrt_d2": 2.828,
+  "week1_low": 3.9668,
+  "week1_high": 4.5732,
+  "week2_low": 3.775,
+  "week2_high": 4.765
+ },
+ "calibration_past_year": {
+  "5d_inside": "198",
+  "5d_windows": 245,
+  "5d_share_pct": 80.8163,
+  "10d_inside": "196",
+  "10d_windows": 240,
+  "10d_share_pct": 81.6667
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-3.96 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -3.0445,
+   "support_dist_atr": 0.7427,
+   "resistance_dist_pct": 3.7494,
+   "resistance_dist_atr": 0.9146
+  },
+  "ratings_14d": {
+   "upgrades": 0,
+   "downgrades": 0,
+   "items": []
+  }
+ }
+}

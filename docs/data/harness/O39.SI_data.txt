@@ -1,12 +1,12 @@
 Run the Individual Stock Harness v3.3 (saved in this chat or project) on the inputs below. If the harness is not saved here, paste the harness first, then these inputs.
 
-=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-23 23:08 SGT ===
-as of: 2026-11-23
+=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-24 23:05 SGT ===
+as of: 2026-11-24
 ticker: O39 on SGX
 mode: A
 depth: STANDARD
 output: STANDARD
-last_results_date: 2026-11-06 (source: Yahoo Finance via yfinance, https://finance.yahoo.com/quote/O39.SI/, retrieved 2026-11-23)
+last_results_date: 2026-11-06 (source: Yahoo Finance via yfinance, https://finance.yahoo.com/quote/O39.SI/, retrieved 2026-11-24)
 
 raw_market_data (O39.SI, 251 daily bars from Yahoo Finance via the pipeline; Close is the real close, not adjusted):
 Date,Open,High,Low,Close,Volume
@@ -260,11 +260,10 @@ Date,Open,High,Low,Close,Volume
 2026-11-18,27.4,27.48,27.01,27.4,6639090
 2026-11-19,27.37,27.5,27.17,27.42,4874870
 2026-11-20,27.0,27.07,26.38,26.54,13375990
-2026-11-23,26.06,26.45,25.86,26.41,9573150
+2026-11-24,26.93,27.2,26.61,26.62,7692490
 
 benchmark_data (Straits Times Index, ^STI, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-17,5509.4302
 2026-07-20,5498.9502
 2026-07-21,5526.7202
 2026-07-22,5595.4199
@@ -354,6 +353,7 @@ Date,Close
 2026-11-19,5079.4902
 2026-11-20,4975.1699
 2026-11-23,4953.8101
+2026-11-24,4958.8701
 
 peer_data (DBS Group, D05.SI, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
@@ -446,7 +446,7 @@ Date,Close
 2026-11-18,66.94
 2026-11-19,67.34
 2026-11-20,66.11
-2026-11-23,65.76
+2026-11-24,66.24
 
 peer_data (UOB, U11.SI, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
@@ -539,7 +539,7 @@ Date,Close
 2026-11-18,36.13
 2026-11-19,36.14
 2026-11-20,35.42
-2026-11-23,35.14
+2026-11-24,35.28
 
 corporate_actions (dividends and splits, last 12 months, Yahoo Finance via the pipeline):
 Date,Type,Amount
@@ -552,10 +552,10 @@ none in this period
 
 github_ledger:
 INDICATOR LEDGER - O39.SI (SGX, SGD) - official figures computed by the pipeline
-as of 2026-11-23 | last bar 2026-11-23 | expected session 2026-11-23 | bars used 1256 | excluded none
-comparator ^STI ends 2026-11-23 (same as stock)
-comparator D05.SI ends 2026-11-23 (same as stock)
-comparator U11.SI ends 2026-11-23 (same as stock)
+as of 2026-11-24 | last bar 2026-11-24 | expected session 2026-11-24 | bars used 1255 | excluded none
+comparator ^STI ends 2026-11-24 (same as stock)
+comparator D05.SI ends 2026-11-24 (same as stock)
+comparator U11.SI ends 2026-11-24 (same as stock)
 ex-dates in last 60 days: none
 
 --- LAST 10 BARS ---
@@ -569,38 +569,38 @@ ex-dates in last 60 days: none
 2026-11-18 27.4000 27.4800 27.0100 27.4000  6639090.0000     6997974.9000  0.6596  4378974.2553      -1.0116  -1.0116  -1.0116     0.9487
 2026-11-19 27.3700 27.5000 27.1700 27.4200  4874870.0000     7071991.4000  0.5152  2511296.6667       0.0730   0.0730  -0.1095     0.6893
 2026-11-20 27.0000 27.0700 26.3800 26.5400 13375990.0000     6995157.9000 -0.5362 -7172632.3188      -3.2093  -3.2093  -1.5317     1.9122
-2026-11-23 26.0600 26.4500 25.8600 26.4100  9573150.0000     7455341.9000  0.8644  8275095.7627      -0.4898  -0.4898  -1.8086     1.2841
-CVD10=-187,394
-VWAP10 = 27.7350; Close vs VWAP -4.78%
-Volume ratio = 9,573,150 / 7,455,341.9 = 1.2841
-UDVR10 (adjusted classification): up 3 vol 27,115,350 | down 7 vol 52,075,498 | ratio 0.5207 selling-dominated
-VT5/20 = 1.2666 busier; 5-bar chg raw -6.7114% adj -6.7114%
-ATR14 (Wilder) = 0.6563; last 14 TR: 1.05, 0.72, 0.74, 0.74, 1.15, 0.78, 0.62, 0.49, 0.44, 0.75, 0.67, 0.33, 1.04, 0.68
-ATR14 one-step check: previous ATR14 0.6545; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.6800; (13 x 0.6545 + 0.6800) / 14 = 0.6563
-Expected 5-day range = 26.4100 +/- 0.6563*2.236 = 24.9425 - 27.8775
-MACD=-0.6996 Signal=-0.5719 Hist=-0.1278; prev hist -0.0896 
-Momentum proxy (substitute only): SMA20 28.1845 -> bearish
-10-bar change raw -4.7602% adj -4.7602%; Divergence: None
-Tenkan=27.6200 Kijun=27.7800 SpanA=30.4675 SpanB=30.5500 | Kumo Below | TK Neutral Squeeze | Chikou Bearish Unobstructed | score -2 -> Weak Bearish
+2026-11-24 26.9300 27.2000 26.6100 26.6200  7692490.0000     7455341.9000 -0.9661 -7431727.6271       0.3014   0.3014   1.4695     1.0318
+CVD10=-15,894,217
+VWAP10 = 27.8281; Close vs VWAP -4.34%
+Volume ratio = 7,692,490 / 7,455,341.9 = 1.0318
+UDVR10 (adjusted classification): up 4 vol 34,807,840 | down 6 vol 42,502,348 | ratio 0.8190 selling-dominated
+VT5/20 = 1.2113 busier; 5-bar chg raw -5.9696% adj -5.9696%
+ATR14 (Wilder) = 0.6549; last 14 TR: 1.05, 0.72, 0.74, 0.74, 1.15, 0.78, 0.62, 0.49, 0.44, 0.75, 0.67, 0.33, 1.04, 0.66
+ATR14 one-step check: previous ATR14 0.6545; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.6600; (13 x 0.6545 + 0.6600) / 14 = 0.6549
+Expected 5-day range = 26.6200 +/- 0.6549*2.236 = 25.1557 - 28.0843
+MACD=-0.6829 Signal=-0.5685 Hist=-0.1144; prev hist -0.0896 
+Momentum proxy (substitute only): SMA20 28.1950 -> bearish
+10-bar change raw -4.0029% adj -4.0029%; Divergence: None
+Tenkan=27.8800 Kijun=28.0400 SpanA=30.4675 SpanB=30.5500 | Kumo Below | TK Neutral Squeeze | Chikou Bearish Unobstructed | score -2 -> Weak Bearish
 Darvas: ceiling 32.5700 on 2026-09-04, floor 31.2000, status Breakdown Below, age 55 bars; crossing day 2026-09-15 (48 bars ago) vol ratio 1.4946 inconclusive
-RS20: stock 20-bar change raw -8.9310% adj -8.9310%
-  ^STI: -8.6377% ; RS20 = -0.2933 pts in line  [^STI to 2026-11-23]
-  D05.SI: -11.6604% ; RS20 = 2.7294 pts leading  [D05.SI to 2026-11-23]
-  U11.SI: -15.5085% ; RS20 = 6.5775 pts leading  [U11.SI to 2026-11-23]
-52w: high 32.5700 (2026-09-04) low 18.0000 (2025-11-24); from high -18.9131% from low 46.7222% (bars in window 251)
-20-bar HH 29.7000 LL 25.8600; 60-bar HH 32.5700 LL 25.8600; 120-bar HH 32.5700 LL 23.1100
-Levels above: Tenkan 27.6200 (+4.58%) | VWAP10 27.7350 (+5.02%) | Kijun 27.7800 (+5.19%)
-Levels below: 20-bar low / 60-bar low 25.8600 (-2.08%) | 120-bar low 23.1100 (-12.50%) | 52-week low 18.0000 (-31.84%)
+RS20: stock 20-bar change raw -8.2069% adj -8.2069%
+  ^STI: -8.5444% ; RS20 = 0.3375 pts in line  [^STI to 2026-11-24]
+  D05.SI: -11.0156% ; RS20 = 2.8087 pts leading  [D05.SI to 2026-11-24]
+  U11.SI: -15.1719% ; RS20 = 6.9650 pts leading  [U11.SI to 2026-11-24]
+52w: high 32.5700 (2026-09-04) low 18.0800 (2025-11-25); from high -18.2683% from low 47.2345% (bars in window 250)
+20-bar HH 29.7000 LL 26.3800; 60-bar HH 32.5700 LL 26.3800; 120-bar HH 32.5700 LL 23.1100
+Levels above: VWAP10 27.8281 (+4.54%) | Tenkan 27.8800 (+4.73%) | Kijun 28.0400 (+5.33%)
+Levels below: 20-bar low / 60-bar low 26.3800 (-0.90%) | 120-bar low 23.1100 (-13.19%) | 52-week low 18.0800 (-32.08%)
 Signals: VWAP -1 Ichimoku -1 MACD -1 CVD -1 -> HIGH BEARISH (0 bull / 4 bear of 4); Volume Confirmation CONFIRMS; final HIGH BEARISH
-Calibration (past year): 5d 184/246 = 74.7967% ; 10d 172/241 = 71.3693%
-Outlook: start day 2026-11-24; missing sessions after last bar none; closures none; early closes none
-  Week 1 (to 2026-11-27) d=4.0: 26.4100 +/- 0.6563*2.0 -> 25.0974 - 27.7226
-  Week 2 cumulative (to 2026-12-04) d=9.0: 26.4100 +/- 0.6563*3.0 -> 24.4411 - 28.3789
+Calibration (past year): 5d 184/245 = 75.102% ; 10d 171/240 = 71.25%
+Outlook: start day 2026-11-25; missing sessions after last bar none; closures none; early closes none
+  Week 1 (to 2026-11-27) d=3.0: 26.6200 +/- 0.6549*1.732 -> 25.4858 - 27.7542
+  Week 2 cumulative (to 2026-12-04) d=8.0: 26.6200 +/- 0.6549*2.828 -> 24.7680 - 28.4720
 
 --- SCORES (statistics only, not advice: the readings behind the harness's pillars) ---
 Microstructure: BEARISH (0 bullish / 4 bearish of 4) - close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bearish
-Momentum: BEARISH (0 bullish / 2 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 neutral (-0.29 pts vs main benchmark)
-Structure: Darvas Breakdown Below; nearest support -2.08% (0.84 ATRs); nearest resistance +4.58% (1.84 ATRs)
+Momentum: BEARISH (0 bullish / 2 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 neutral (+0.34 pts vs main benchmark)
+Structure: Darvas Breakdown Below; nearest support -0.90% (0.37 ATRs); nearest resistance +4.54% (1.84 ATRs)
 Broker rating changes, last 14 days: 0 upgrade(s), 1 downgrade(s)
   2026-11-12 downgrade: BofA downgrades OCBC to ‘neutral’ following better-than-expected 3Q
 
@@ -608,60 +608,61 @@ Broker rating changes, last 14 days: 0 upgrade(s), 1 downgrade(s)
 Week 2026-11-02 bars 5: O 29.03 C 27.73 H 29.03 L 27.22 prevC 29.29 chg raw -5.3260% adj -5.3260% up 1 dn 4 volx 1.3048 CVD 5,752,999 UD 0.1969 pos 0.2818 standout 2026-11-06 V 12,314,020 chg -0.7161% CLV 0.0270
 Week 2026-11-09 bars 4: O 28.2 C 28.53 H 29.38 L 28.18 prevC 27.73 chg raw 2.8850% adj 2.8850% up 2 dn 2 volx 1.1545 CVD 549,905 UD 2.2782 pos 0.2917 standout 2026-11-10 V 13,556,910 chg 3.1374% CLV 0.2000
 Week 2026-11-16 bars 5: O 28.63 C 26.54 H 28.69 L 26.38 prevC 28.53 chg raw -6.9751% adj -6.9751% up 1 dn 4 volx 1.0894 CVD -9,012,394 UD 0.1489 pos 0.0693 standout 2026-11-20 V 13,375,990 chg -3.2093% CLV -0.5362
-Week 2026-11-23 bars 1 (incomplete): O 26.06 C 26.41 H 26.45 L 25.86 prevC 26.54 chg raw -0.4898% adj -0.4898% up 0 dn 1 volx 1.2841 CVD 8,275,096 UD 0.0000 pos 0.9322 standout 2026-11-23 V 9,573,150 chg -0.4898% CLV 0.8644
+Week 2026-11-23 bars 1 (incomplete): O 26.93 C 26.62 H 27.2 L 26.61 prevC 26.54 chg raw 0.3014% adj 0.3014% up 1 dn 0 volx 1.0318 CVD -7,431,728 UD n/a pos 0.0169 standout 2026-11-24 V 7,692,490 chg 0.3014% CLV -0.9661
 
 news_payload:
-NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-23 23:08 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
+NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-24 23:05 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
 Company: OCBC (O39 on SGX; Singapore) | sector words searched: Singapore banks | peers: DBS Group, UOB | home index: Straits Times Index | region: Asia
-Window: 2026-11-09 to 2026-11-23
+Window: 2026-11-09 to 2026-11-24
 SEARCH LOG
-COMPANY | Google News: "OCBC" (daily, last 30 days kept) | 172 | 142
-COMPANY | Bing News, 3 queries: "OCBC"; "OCBC" shares OR stock; "OCBC" results OR earnings OR dividend OR guidance (daily, counts combined) | 10 | 3
-COMPANY | Yahoo Finance news feed for O39.SI (daily) | 4 | 3
-COMPANY | C5: "OCBC" results date OR ex-dividend date 2026 | 9 | 6
+COMPANY | Google News: "OCBC" (daily, last 30 days kept) | 186 | 156
+COMPANY | Bing News, 3 queries: "OCBC"; "OCBC" shares OR stock; "OCBC" results OR earnings OR dividend OR guidance (daily, counts combined) | 11 | 4
+COMPANY | Yahoo Finance news feed for O39.SI (daily) | 5 | 4
+COMPANY | C5: "OCBC" results date OR ex-dividend date 2026 | 11 | 8
 SECTOR | S1: Singapore banks news November 2026 | 25 | 25
 SECTOR | S2: DBS Group UOB OCBC shares November 2026 | 25 | 25
-COUNTRY/MACRO | K1: Singapore stock market STI 23 November 2026 | 25 | 25
+COUNTRY/MACRO | K1: Singapore stock market STI 24 November 2026 | 25 | 25
 COUNTRY/MACRO | K2: Singapore MAS OR economy OR inflation November 2026 | 25 | 25
-COUNTRY/MACRO | K3: MAS next policy meeting date 2026 | 3 | 3
+COUNTRY/MACRO | K3: MAS next policy meeting date 2026 | 5 | 5
 COUNTRY/MACRO | K3: Singapore GDP release date 2026 | 25 | 25
 GLOBAL/REGIONAL | G1: global markets central banks oil November 2026 | 25 | 25
-GLOBAL/REGIONAL | G2: Asia markets 23 November 2026 | 25 | 25
+GLOBAL/REGIONAL | G2: Asia markets 24 November 2026 | 25 | 25
 DATE-SPECIFIC | D 2026-11-20: "OCBC" OR "Straits Times Index" 20 November 2026 | 25 | 25
 DATE-SPECIFIC | D 2026-11-10: "OCBC" OR "Straits Times Index" 10 November 2026 | 25 | 25
-DATE-SPECIFIC | D 2026-11-17: "OCBC" OR "Straits Times Index" 17 November 2026 | 25 | 25
+DATE-SPECIFIC | D 2026-11-17: "OCBC" OR "Straits Times Index" 17 November 2026 | 0 | 0
 ITEMS
-COMPANY | 2026-11-09 | ING Groep stock in focus as OCBC nears Asian private-bank deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMiwwFBVV95cUxOTjFZWGJuNGRYQkhBWGY2THZpbmFaeHBMd2RtdDBUSXpJd0ZVVlA5ajU4NG5TM2hQYkNUMW9TV29WZWtIU0xrY2hDT01sa1JTOEdjeVZUQjd2eEs5M0d4TFJ1eWlvSWZVRzU1eE1CNXBGdnZ6UDFpenQtLXpDRTZkb0k3U1dWTzVkdUZtZDFEWWhuVDBGcUg0VGJXai1WX0RhY3JJMS16anhJMmJNOWhURnhDWkR0MThrT0Z1VTBxUUZHaGs?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-10: chg +3.14%, gap +1.69%, vol 1.96x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-10 | OCBC Banking Wealth AuM Hits Record; Q3 2026 Profit Rises | Wealth Briefing Asia | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPU2ZHWnJUUEFLbUpLVUliUGNfVXZoU1R6SE95Uk4zWW51dXJhN3RudG5RNW45WDV0RE1TeEdsRmgxOUNWc1BrTWJzWlhUVUpwdHdYcVdQbkdnRWNCQ05TaDN4eXRMTkw4Z1Q2RG9uellGYTk2Q3N6OEZabzJUcFFvVC1EOUQxNXUxOXNQenc2X2VfVHZfOThnUXpocGxaWmwtanpDeVdVbEk?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | RESULTS; reaction day 2026-11-10: chg +3.14%, gap +1.69%, vol 1.96x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-10 | OCBC stock posts record nine-month profit as loan outlook improves | ad-hoc-news.de | https://news.google.com/rss/articles/CBMiyAFBVV95cUxPTW5XZzR1YmpSbTUzeFRZaWlvYW53MXMwWGRGZVo3aEMtYTNpeWJHamlpQUhSYUR2a0R5MUFzSVhqamJDeDY1N19tVDFVN1RvajJfVDgzbkM3Yy1XNXh6ZXR4OV91NTFMcWdobWwxdWFqSVJXTmF5ekl3RDJRYlp2S0dyTm1PdVlkUFJKeGFzOTY4UzRPaWpSd1k2VzZEWUZJQW41cm9EZVBLVHItTHBWM1lMLUxyeUZxU1hULUVZd0dHT2MxSW9Ncg?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | RESULTS; reaction day 2026-11-10: chg +3.14%, gap +1.69%, vol 1.96x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-10 | Standard Chartered Bonus$aver: Earn up to 7.35% p.a. with Sign-Up Invest Interest Promotion | Beansprout | https://news.google.com/rss/articles/CBMifEFVX3lxTFBOV0tFZ1lLeUwtSkdYczY1ODctS2tjM1hUWklCa0Y3MlB0cE5zRGZYS094YlpiZmw1Rl9uel9tNUpybE1HSU5UNURjcGk4bjZ3aVFnZEhKbEJ2NERyb1F2bzFlM2hlWVhHbUlNc1R4RzUtWXFOVFVVR0gwWHc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-11 | DBS vs OCBC vs UOB: Which Singapore bank stands out for income after the pullback and 3Q 2026 results | Beansprout | https://news.google.com/rss/articles/CBMibkFVX3lxTE8xd1hhTmdkOUNEQU5reVZYZW42RGVvMGRiQ3Y2czFWYWJ4M2dlVDlHTFNZa2tFTmtNWkVMZGdlM2xTNm9rZFhhTlBQVTBLVWN3Y0hDV2xNOGpTbFVMN3dyb0RlWVh0ekNmeTJGZTl3?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-11 | ING Groep stock weighs reported OCBC private-bank deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSFlkN1JDZ014RFh2cm5QQTd2eHg5N0ZHQmtWRHM5X1RBT28zQ1ZWeDBadEFaeDZicUJrNW9kaVV1dkdwNGZSZ19oWmtBVnJMOTYzdm1XUS1pdm1HRGNoTzVMMC0xRng4bmVyQTRqNUtrZ04wanEtZVVuMW1jQldPeDgzMkRQVWcyOTdvaUhWQ1M1dU94WmhkaFNDSl8yMTBndmRYV011d3FDaVk4MkVPeHpZdlJVZWNr?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-11: chg +0.77%, gap +0.87%, vol 1.21x; headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-12 | BofA downgrades OCBC to ‘neutral’ following better-than-expected 3Q | The Edge Singapore | https://www.theedgesingapore.com/capital/brokers-calls/bofa-downgrades-ocbc-neutral-following-better-expected-3q | SINGLE-SOURCE | NEW/RECYCLED not checked | RATING CHANGE; reaction day 2026-11-12: chg -0.52%, gap +0.42%, vol 0.69x; Bank of America downgraded OCBC to neutral in a report dated Nov 11 on slower wealth and earnings growth. Analysts Sukriti Bansal and Aiden Chionh expect wealth growth to slow. Wealth fees grew only 3 ... | none stated
 COMPANY | 2026-11-16 | 3 Singapore blue chip stocks going ex-dividend in November 2026. Where yields look attractive | Beansprout | https://news.google.com/rss/articles/CBMiZEFVX3lxTE9PTFRGbWMwT3A2M2YzR3dibGlKa1EwaGprdFZqQVdpNXRYNnVia3dpdjd6c0VpZ3QyZVFoY24yRWhJSGU1RVZSUDRsbGNCaUQ0V3FMWjhzd0pBQTRKZ2tKWnI3eUQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-17 | NETS to End CashCard Use for Parking, Tolls on 1 January 2027 | Fintech Singapore | https://news.google.com/rss/articles/CBMiY0FVX3lxTE40T2RhYXpVN1dCc1ZpcTdtdzMwTi1lR0l6bVpCRG9wc2RMUElKczRQSGE2dEtzU0FZbkVsSUo2X01wTWdoTnhaVkJTbUUyUlRENy1nQWpEdkZ5N3RUalkwSXVhcw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-18 | ING Groep stock: OCBC completes USD 1.5 billion deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMitAFBVV95cUxQVEY3ZXVXNXdlZVhZUG5ObWRHempUUE0xT2laR0VBd2FXSlpwX0hRalg4ZXlTWlJVT1JQcy1hc3pzTHZOZXo2RVc0eHdUNi1jOEwtR0hia3lBV01Vdk5pRGFEV0ZJVTNiZ1pxMV9IaGM3clhSd3dVb01BV2V5MWItZ01SbDItaEVCT2xlUDRaUF9CLXZLNVZFNG9RdDRELTVpalVXam42a2VyR24wcHhJYjlCODI?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-18: chg -1.01%, gap -1.01%, vol 0.95x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-18 | Latest COE Prices Nov 2026 and Bidding Results in Singapore | OneShift by Carousell | https://news.google.com/rss/articles/CBMiTkFVX3lxTFA3N0p2d09EOW8xOThJaFoyMjJiNEJnUzRSTWphbWpnemJKWk1ZSUpmUlVPRlloa1p2b0U3cnNrb181N2ZJTUExRlNYbFpXQQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-18 | ISN Enhances Financial Intelligence to Mitigate Global Contractor Risk | FF News | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZUlabmRFTDkxMjYxclZNbTZzcF9pYXpEM3ZGbVQteXBOV2hfOTZIRnJsWEpuUDlhOTNMdVkwR2xIMWNKTFNfS29JSWRoNFFKN3hrZ2Z6b3JDMTY4WGJ4VXF4ZlJtcmdEOGxsanNjbXpGcTN6bzdJQjkyVEZjVkY4NXZyekVUT29oTWtoWExFQ05IU3ZNWWEtNTdSZGtCdDJBMm9JUEJfTmU?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-19 | Best Bank Offers in Singapore (November 2026): UOB Festive Savings, DBS Half-Priced Holidays, and More | MoneySmart | https://news.google.com/rss/articles/CBMidkFVX3lxTE9famtmQjVkRmJCTkJ0M0sxdElVRmN0WExWOGRMa1FSVGw5VTBPTkI4ZnJGa0JmSlQwbGxOMk5keFBsQktxdDNWcmJfZE5iRHF3R0I1ZWlTTXZzVy1RdVdNUUM5dmEyQU5SOUExNEowREpEbmphTXc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-21 | OCBC stock: Bank completes US$1.5 billion ING deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMisgFBVV95cUxPUVl0ZXZfeW8zVEVuMU03WWRRTWpFTjQwa1J6V0dSeGhmZDJ3N0taQ2t2dTBKM3otcWV6V1N2bXZCN2ZLdWY2MGRTZUN3cHpoZDMwei1XNHdPY1pxRDhEVFN2cTRmblFXSllEczBmb2RLU3hDaGRGbHYxdkhhWnRldXlhaXBkTUd2c0RtY2Vhc2FDRzhuSnAxWEZWQ01vaUhUcHZSdXFvOEI2TVBLenZGeWhB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-23: chg -0.49%, gap -1.81%, vol 1.28x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-21 | Oversea-Chinese Banking Corporation Limited (O39.SI) stock price, news, quote and history | Yahoo Finance Australia | https://news.google.com/rss/articles/CBMiVEFVX3lxTE9ZUnRyUFFIdG41RkdxUE5lRW1UeTdVcl9hTTVjcHdTLXZ0dXRoNnNXa1dvN2owUHZZSjRHUUhHMlVCUXNQbUt5dWpMS3ppODcwWF9TVA?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-23 | OCBC restructures wholesale banking, appoints Ang Eng Siong to head Global Corporate Banking | 联合早报 | https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMDNMMHNZeFpiZ0Znc1VpT2s3NURlSzNpOG9HS21IZ1JrUGFyZkRRZ1lJVF80dU1uVjQ4TmJnQXlOSFYwVmpUTXpfMnhsYUFmUFZyU0xWQWxGTG9xQllHNVFOYVRRT3J6STRzWGMyOENibzJaMmlGT2JRNkZmd212YUFaUjhXOXcydVBFNXlsVzhDelprWjVTUkZISEhLRERRWVhMOVctektKTDVOY3ZVT0VmWHJobVB1bE5raFZlSjJtU1pKVW5fcm5VSkpjT093?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-23: chg -0.49%, gap -1.81%, vol 1.28x BIG MOVE; SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times] | none stated
+COMPANY | 2026-11-21 | OCBC stock: Bank completes US$1.5 billion ING deal | ad-hoc-news.de | https://news.google.com/rss/articles/CBMisgFBVV95cUxPUVl0ZXZfeW8zVEVuMU03WWRRTWpFTjQwa1J6V0dSeGhmZDJ3N0taQ2t2dTBKM3otcWV6V1N2bXZCN2ZLdWY2MGRTZUN3cHpoZDMwei1XNHdPY1pxRDhEVFN2cTRmblFXSllEczBmb2RLU3hDaGRGbHYxdkhhWnRldXlhaXBkTUd2c0RtY2Vhc2FDRzhuSnAxWEZWQ01vaUhUcHZSdXFvOEI2TVBLenZGeWhB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | DEAL; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-23 | OCBC restructures wholesale banking, appoints Ang Eng Siong to head Global Corporate Banking | 联合早报 | https://news.google.com/rss/articles/CBMi0AFBVV95cUxPMDNMMHNZeFpiZ0Znc1VpT2s3NURlSzNpOG9HS21IZ1JrUGFyZkRRZ1lJVF80dU1uVjQ4TmJnQXlOSFYwVmpUTXpfMnhsYUFmUFZyU0xWQWxGTG9xQllHNVFOYVRRT3J6STRzWGMyOENibzJaMmlGT2JRNkZmd212YUFaUjhXOXcydVBFNXlsVzhDelprWjVTUkZISEhLRERRWVhMOVctektKTDVOY3ZVT0VmWHJobVB1bE5raFZlSjJtU1pKVW5fcm5VSkpjT093?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times] | none stated
 COMPANY | 2026-11-23 | OCBC, StraitsX Pilot Stablecoin Payments Into Bank Accounts | OneSafe | https://news.google.com/rss/articles/CBMijgFBVV95cUxOUWltSTVCMFpyOHVyTHhEZG40enhLSlBIdVo5eDdlbHJRWGhTZU9EWTljNWVyS2laWVZtQ21FWU8zNzg2VkRDalI5dUdmZzlzRUktUjNWNnlWRDJZREtKQzBLR1ZMcFBtejdSNUxjb3BmelFMUUdwQ2NxbDF5djZLYkowanNENjNtLTFwdWRB?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | Bank of Singapore snaps up StanChart banker as cluster head | Citywire | https://news.google.com/rss/articles/CBMioAFBVV95cUxOTEFLU1ZYT1JreHozMk1yZlF2dG5ic1dHUnNHajNZU09fYnM4ckpXaXhhVzRhUFpfT2FNUndkSGtpRjVyR0RZdEpLTW9DSTZpbk4zZzdMOTdSQU1hcnhyV054Vk1BYTFnaWEzeC1hRjQxSVNLZERCcWxfbEg1TU1UTmlGa01TVXp4VGVqYWItbVh1ZWNIdDVqeEZFOHlEY0dl?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | Singapore and China Explore Cross-Border Fast Payment Link | Fintech Singapore | https://news.google.com/rss/articles/CBMiggFBVV95cUxQcEJRYmVrSFNnVl9ra09ka2xfeGcwMDdzXzBaa0dmVUt6M3hzZmJnV0ZSd2YwRjNseE1Va2g0eGxfWThhVlBUU0FGRVNxY0ZzNnE1bl8xRzR0WEF2YmtLLUh2cUk3czRMS3doMHI3cHliY3Z1Q09tOXpKZjg3SExyMGVn?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | DBS Bank files to list $266M in bonds on Singapore exchange | Dealroom | https://news.google.com/rss/articles/CBMilwFBVV95cUxPaHhZZDlTLW5fOF9ZOWlxbWRJTzFVNUI3ZWNYZnZCeE4tR2xDcm9oUFJhcnljeGZZZFhHdzZab01mWUp5emVBRHZLQllTRUVjSS05aXZ1Mk8tcXFDWXJyQmpBVG9USUVLX0FHdDJxSTJBRFhKRGdldHJ6THZCeFhlazNPSG8yOHBrbExHRVRDZ1NZUHNfb3Iw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | OCBC CEO Tan Teck Long on running Asia-Pacific’s strongest bank | The Business Times | https://news.google.com/rss/articles/CBMiuAFBVV95cUxQNTJpY2FJTUZHMTFFeGdxT20zRW9PUWdKQjJuMFIxT0llVWlJVWRvWmRfQnIwaVk4Ui0xZ2pDTUxnU3YtV25pR01hUFRoZEQxZTJUMGdQSVpSUEd4RF9JUHQ5UjJ4TlpYOFZ3SFAyYnJIWVJ1c0VzclJIbWVITmtCM0Z3MlRlaFk5VV8xZEFGaW4ydXFHT1VMaEQzNlgzaUVqRkdPWEt1WlpHVGRpVGdCTkQxNGdOV2xE?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | Singapore Fintech Festival 2026 News Roundup | Fintech Singapore | https://news.google.com/rss/articles/CBMiqwFBVV95cUxNd0JqazB2MjJSZ0hKb1dFQVlYaHNlN3c5b2xPVmx1OEplOXo0Sjg5WWFYOFJTbVpKLXhmcTh3a2ZDckRRY3V0Y0twVGxnZ3RscjYtZnBUa1dQT2RobXVCTUU5aS1DNDlsOENBY1cwNUYyOWpLMEd0Z2NveThKN290eVJ1QnlIR1BjR2FLNlVRY0xXLVZGRktWUjhXUjBhRnd4TXNmcTJGOFFoeHM?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-23 | 5 Macro Trends Defining the Bank of Tomorrow | Fintech Singapore | https://news.google.com/rss/articles/CBMinwFBVV95cUxNaXE4Z3B2MHBTdlRaaTFibHZoa21lTERZR1JLbElVQk92SUI2S0x2dkVMVXkzbWZXV0dMRldpZUlEYXhldXBVc1pqQ3VUQzhWblMyWjd0Z1kyTjhOTUZXZzBtbl9fMjhfWUpTTEZnalFLRkJNdlVONXc4YW10RU1naUhKWG1ZcU1DVTU3bEdnQ1diVjdNb1FBYW5MXzBURU0?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | Singapore shares extend decline alongside regional indices; STI down 0.4% | The Business Times | https://news.google.com/rss/articles/CBMivwFBVV95cUxPUUNGUExXTlJUTTBXbjFiTklkcFZ3Qlp5dXkwT1lfV1MwZ3V2UG42Wml6NVF6RFhhLVlveTZTaENlTmNLM3I2MFRiOTRqT2lIeHBtWVZYZDJmTVJsN2R4eWNCczJQb0ltelI5SjlOMkFFOF8tb1BhY3l4SGhUbk9Vc3ZnMHg0RUFST0ZHVlZYWWhBdU5UaUJrOUdiSGZvSi1CVzVXc012TE9Pc3RDcUhHT056dVZFcjVFYVpicjEzNA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | Singapore Shares Start Week in Red Amid Cautious Investor Sentiment | Yahoo Finance Singapore | https://news.google.com/rss/articles/CBMihwFBVV95cUxNYkdGaXJZSmItSmxial9pZ3poSExZZV9hVFRHNlptWXZpWXJDQzRNYjRNWkxxTGJERGtHRHZjM0lYM3c4X1R5NXBrUTNPdVpxSzNnQ3g3RGFYc2I5cEZzUUpEMV9ESEtZWDZyVW5HQm80Vjk2SzkwbTZmVXVhNTF1VG1BVXc5RGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | STI falls another 0.43% on Monday as investor sentiment remains weak | 联合早报 | https://news.google.com/rss/articles/CBMirAFBVV95cUxPdll1LW9leF9Mc0c5ZFM4SEtsanFmaGtKM0txRzhzZXpwTGlhblBOczktY1pFem4wamd5ZWFXN05wVHVPQV9pU0VtSUhlUm8ySDJ3bUVlS3hOanBZSHVxVVY1WGp2cElmMWxtMmR2N1d1M3JkbDlPR1BCRXZOVXpXMDJIaVhrQkp5SHRwSGZ6TXh3c2l4RUw2dWNaTDZpaHI4Q1dyVFhuUkVhV21u?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | Webull HK Launches Korean Stock Trading | Yahoo Finance Singapore | https://news.google.com/rss/articles/CBMihwFBVV95cUxQRFFCX2gwc04wQ3ZsVlh6aWlvdmhoWFNOVi1Dc2VuRGpjSW5vRlZKVGoyZDM2Uk1GWXFTLU9MdTh2WmIyVmN2MGpnOVdtRHl2OEFJTHFrSEJlNTFWMjRxR0dXQ0ZKRVlHNkxMOUQtTHpweElGX0lVdHREamxTR1g4cmZqU2Z4M0U?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | Consolidated Water Declares First Quarter Cash Dividend | Yahoo Finance Singapore | https://news.google.com/rss/articles/CBMilAFBVV95cUxOcEd4UGQ2ZWJ3a1hQMHJtQmNFTWtUdEE2cmFNUUx3TXhVT0JsRDRrVnpMYnFpakZBNGRjcFAyQ2hRTDFSSHFJckY2SjBnYWIxdFFSX2NUN1cxX2l0WkNFTnFBcHU5RXF3YUhiUllBUWd5eDJUTHlBQTBYckVHTlNlYnBJWHZQeHpZVkI3V2tzN0xpYUY1?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-23 | Singapore Shares Face Heavy Opening Pressure, STI Falls To 4,914 | BusinessToday Malaysia | https://news.google.com/rss/articles/CBMiqwFBVV95cUxPbEFFdGJGRE54WUtqYmZnbWwyVFBCQndPaUotRGlqcjhjdkFmM2lMaU5GX0VuNlFSVll1c2J5d2dZQkI2dzdhcy0wZGhGUEFlVHZhTWhpU2h6d1UwTHRIMXNTaG1CbGR6ZENIQ1hSRkFSQ01HZEZQUDQ4NFNicThXZGE2T3JSemNVbWtQVHdLNGhnUlpiZWpQejlVMnhpcmFQd20xcUZCeWZqZWc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-24 | OCBC Is Down 15%+ From Its High: What 100 Shares Pay You in Dividends | The Smart Investor | https://sg.news.yahoo.com/ocbc-down-15-high-100-033000808.html | SINGLE-SOURCE | NEW/RECYCLED not checked | CAPITAL; reaction day 2026-11-24: chg +0.30%, gap +1.47%, vol 1.03x BIG MOVE; OCBC paid S$105 in dividends on 100 shares over the past 12 months. Here's how much of that rests on profit, and how much may not repeat. The post OCBC Is Down 15%+ From Its High: What 100 Shares Pay ... | none stated
+SECTOR | 2026-11-24 | Bank of Singapore bolsters Asean team | Fund Selector Asia | https://news.google.com/rss/articles/CBMidkFVX3lxTFBOMVkza2ZxTWJkOEZFQ0FQODdLSkswRWFZSWpUWXBCdXVvZzFqUHp3TXBuZFFsYk96WENpVVFjaVI4by16MVp5OF9tcVBWSzBQTmdHZGN5UnVXN2xIdXhjT0JaZUhRTlMwdjdkRlI3Mk80UmRZbmc?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | PathFin.ai Trial Tests How Banks and Payment Providers Verify AI Agents | Fintech Singapore | https://news.google.com/rss/articles/CBMiggFBVV95cUxORnM1YXktcXd1VGF4VVpVbkdVcTVHWHNfbXpVWjh6NlJXelpZbjF6THlmbEhjSDBkcXNJSTJwUGlzOHE5TnRZN1JCTGZkdF9xemtGcEdkOUdFMmNFMFBRdHRIUE1IM3dSRFBQTFB6b1Q3ZXdSaGN4UE1RNTVTYmVBNEV3?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Economic and event calendar in Asia Tuesday, November 24, 2026: Singapore and Japan | investingLive | https://news.google.com/rss/articles/CBMisgFBVV95cUxQb2RDblFvZVk5WGJuRlpYVnF3YUNCMXcydEdHMzRRR3h6OHZ3X19GLTVJUGNseXl0QVk3SWpXeEpEM3lHU1gwSGlLdk5lazdWamY5OU42YUh6Rm45WlRETXg2b0MtaVB4Vk4xOHJqZkoyalhiYWlVWkZMRXJnemZPQUctY29RYTBhejVqZ19Oak96a0dmcXU4U01hNlZzM2xWeGJTc1FBcVQ4RDdSbzFJTlRn?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Bank of Singapore added two relationship managers | finews.asia | https://news.google.com/rss/articles/CBMijwFBVV95cUxPLTVLLURFd25OU2hGN3lJV0RPSzh2b3Y5eE5Ydm9vbUFZWnpFb09aNjFieHprb2Y1eFhwcVFYdF9IdkY3TERXU2VpZHB6LUJTcWNUYWZ6ZFFoelVZZGJabl9wWTZwTF9xNjZKUkwxV1UyeW9WNVczNU9ySzhGcXk0ZDhWNkZ3XzBzWDVVSUtFUQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | OTP Group CEO Péter Csányi Strikes the Gong at SGX as CEE’s No. 1 Bank Lists EUR 7 Billion Bond Programme In Singapore #OTPBank #Banking #Finance #Investor #BondListing #EMTN #SGX | Media OutReach Newswire | https://news.google.com/rss/articles/CBMijgJBVV95cUxPdWdfOVZlUTFHMjd6Uy1lZGhYVmRfdk15ZjdpTEFWNC05RTJQbkNyakV4dmZLQktUdVNpSUxMTW03azM3RHNGVjR0c3VNLTg4U3YwdnNPTHNMNlRfZFB4dDFFOWhCU29KUW5vbTRsclFERGlla3lNeHFjTmhqck8yazhKbjd5MDluaE1DQllDc2VGNVIyeUtFNTZqOWVfcDI2Q216OUlUOXluVFBJUGp0Qi1UR3c4S2xYWXdfbm9XcFc2QUp3NFFzVExSMnlRaFpRdkZ1a0kwbS14REtUWWNab1dLX3I5UmYya1FpZk14V0o0WFRxSjdoZGVvRmJyN2JxcW9Zb2FkRmIwMG1JcWc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-24 | Wise Platform adds BNI and expands APAC bank partnerships | The Paypers | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTm5ucVhHSlEtRHlqcWd4b3FPeGRCTWcyeng5NDBMOVBuUUFYWjY5ejRrSnZhdk5jNnU4M21Cbmw4ZzREb1NZektucE80eHk1Qy1mVVNjc0ZfcHl1UjZreGUxSFF2UXNWUHFtLU1TSXlBN3dqY2dHT1otZjVpZ0hEY1FWNmRNTzhzMDVneEJTTkJJLUJQYlU1Ti1UWUtlczNMdGVULVhjcHM?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Jensen Huang’s return sends Taiwan stocks up 8.99% to daily limit; STI edges up 0.1% | 联合早报 | https://news.google.com/rss/articles/CBMiugFBVV95cUxPUjJKZDBRYktEQ2U2ZV9rOHRXXzhhRkU1Mk1OYVNOWlVYQmtxbE9hcWQ3Q2tZSkZ3NjROQnp1RXBtWkhiZ0VaWHJQc2k4bVYydGxCSnpNQjRIbUprSGljOUJhcXBmVFVBYTB3WEFjUXRuQlJSVzhNaFNVMnZqVVZCQTRHZndUdFNaQ19nOXJDX1VUWk40S0ZwaXJZdjhaV1hiUnYtRHk3X29qaFpSWG5fUmVfT1BBZ2RPcGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Asia Market Quick Take – 24 November, 2026 | Saxo | https://news.google.com/rss/articles/CBMiogFBVV95cUxPMTF5eHB2LTlNYlRBYXdJM2l5bTF2dm1FalF2aTE4bEgxSTJ5czlHalhVbXZ5eDczMi14WUdKdnNDYWdlemRGOUxVOGFOY1A4b1BHcjQxN3lGTURCSGY1bjJTblEwbHpYaGhfZ3d3VHE2bFhsR2h0dmJrY1ZFcFB0M2lDbDc0MW14U0hzeFBLZUhQZGJ1VzNmMVVKZFlkUDJSb0E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore shares claw back losses on Nvidia-led rally; STI up 0.1% | The Business Times | https://news.google.com/rss/articles/CBMirgFBVV95cUxQOUx3UkZIX2FCYjlka1VPeENka2VRa1huOFc0c3MyaEpxNDNabkxlSTV3S2VVOGZTNVFwemg5ZnNVaWZaOF9VYkNLRFhXSFU0b3E5eGFkOWRNTDlKbkJIS2hERkFPMzBIajNpWTNvSTZ1WEtMMjNob0NQQXF0WVRMWmI5d1Q5NjlUdkZfeVVseEc0YkJpM0pGcHlPT09mck85ZzlOS0FoQ1JNSjJvd1E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore Shares Post Slim Gain as Early Nvidia Boost Fades; Seatrium Falls 7% | Yahoo Finance Singapore | https://news.google.com/rss/articles/CBMihwFBVV95cUxOMV9oS3d3ODY1Z3lmVGxQbmY0ZlpXV0dybVpXcGo1SVpZYy1HNVVxM2FvRmVOVmtYS0U2dWZ3aEdrY3hZV1ZuSlBFeWFZY24wemdtRzNzNUdxcm5pajdJWWoxRmttUVl0bUZ0TG5jOFhGWXIwU056anRITXNDRDQ1RlQ2S2JsRW8?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | How Much Would A $100,000 Portfolio Have Lost In The 2–6 November Market Sell-Off? | DollarsAndSense.sg | https://news.google.com/rss/articles/CBMiqwFBVV95cUxQbG15MHFlQXp5OHVha1FPU1Z5azdmSWhZQmhKVDZmcWJxYzM5WS1GSEoxRXkya1BiQk5Tbnl0VXQ0VVF5UjhfYkZFSkRYcV9mOGVERVlualp1Y2NQejVyUUJINWhUMTFaSVRIZ3R1UFQ5bFlKbnBQdVNhanlzTllRcl9XZkJVZmxxMDU0X09GM2pxSXU2Wm9VbFVFRXJRZjk1N0t3MmZFUVFFNHc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-24 | Singapore stocks open 1.49% higher on Tuesday | 联合早报 | https://news.google.com/rss/articles/CBMikgFBVV95cUxQcllQWm9yUHdUYzR4Z3Z2dWlILW9ja05zaHdFNEo4V3FDTGpjRGNoU3p4MkVlMnRTWXBCc2VfV3Y3dmRvTThCbXZGTExYSVN1NFhBemduT2hiaUVJYVZDcFN0VU00cDBFUDNsRUhUYllXMWw1TUd0b01XS1VsaUo2Z1k5VWplcVV2TkhiMzMtNzdMZw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-23 | UK Markets Brief: Why Supermarket Stocks Are Rising and Where Oil Prices Go Next | Morningstar | https://news.google.com/rss/articles/CBMivAFBVV95cUxNQTZvLV9kZlJ4dnRUcXctX3hnVmJWcDloOGxuTE56bW9jWGY0bGtQZUNoU2JpVGNMeUJRT0Q2RE4tdmdtUVdjTC1nMVAtSFg2Sm1TMjlORnE5Zm11QXlDZGJLNktUcUJLTTVwdENTTWVVUFNrdC1NaFdvMU5JeHNpVlNvU3hzck84c1hPZ0tOWGRiNDlpekF0QVliX3RZZGhNSHd0cFRlNWxDMEV5NmdHWGRCTFhHb284Tk1WWA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-23 | Indonesia central bank says MSCI talks with Prabowo support rupiah | Yahoo! Finance Canada | https://news.google.com/rss/articles/CBMiiAFBVV95cUxOM2NvNDA5VmxxMDc2YXVHVlF6X09vS0dOS0t6YlBUcEFVT2M5a2ViQ3lWaDBYeHowV2RScFdOdDZjaXRnRkFCSFJxLVhmdDRLQVowZHM1OW82WFBtLXpYcnV4ZkhIWjR0S0ZTOUxyS1BUTFRrcHVEWFcyM2QwQlk3NkU4bFo5Uk9z?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-23 | US futures rally as AI rout pauses, Asian authorities prop up stocks | Reuters | https://news.google.com/rss/articles/CBMigwFBVV95cUxNR2c4ZVNmcHBzVFctOTBkRUd2d0VHTklseUhCcEtZT2VHbU1WbWprMUk2aDZSQ2tkZHNYVE9EWUgyaEkxeWtyN0M2V2NzR2ZCTHFmMEhvbHFDeExTNUdTeDF3WkxJZ2RSdmZ2cHBxWlFjTXdoa1hXdlZQRWtyTFFKVlJjMA?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-23 | Foreign inflows lend support to rupee, bonds; oil in focus | Reuters | https://news.google.com/rss/articles/CBMinwFBVV95cUxNX3Q3UzZ0MVgtdGxvNFJSTlZEblpycG1QMDNHVWdKSktWTDNWUE1JLW9TTXgxT28tQ3RQUjBzbnFINHk5SGtuSk5zdHJ1OGVXNFg1ZkpDOVpPOHE4MHFCRW9oYmpGdVBqbzRVVE91RjZEdldCWVctUUdxVDM5RDFkcXdqZ1NQeTE0aUR6b29RN3pjMEFadjY1OEt6OU00c0U?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-23 | Indian rupee could rise to 91.50/$ on equity inflows, HDFC Bank's treasury head says | Reuters | https://news.google.com/rss/articles/CBMivgFBVV95cUxOd3pBMG1XeGk3X0tmdVlkOWFnRlhTS3h3a1VyZkFhbElMZ2NXa3hPdjVEdkxUYWlxWTZZbmxLV1RSZlV6NDNSQmVXUUVkaV9RSzRodXB1TWw0bkw3Sm02OXVSNGNxS3VHWk95WTN1c19Pa0pEWVlGYmVrSnFnRVNqVzNXbDRiOWx4clplN0d4T2kxUDBxQmNrR2MtNk81T0RWbTBYNml3Q1RnMk45MDN6NGpoeTVJblA3c3BORnhR?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 GLOBAL/REGIONAL | 2026-11-23 | ECB Warns of Payment Fragmentation Risks, Higher Costs, Weaker Ties | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMiogFBVV95cUxPU1dab3pZZkFkVG80RkF5ejhIOGRwS2xMVmc0b2RhV29IVkt6c1I1U2dlYWJ6cnZZV203Ui1Wb09OdWdkZS1XaUNvU0NGdUV3NFFWUzZFdm9nTGpnUm5IVGNOc2cyMGh6OTc2ZS1OZGw1NklQMzIwQTltUm9oUXRYWEw4bzF2VllxMWZyYUcwRUZzMWVCT3VSYWdwS24tWmFoZkE?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | Weekly market commentary | BlackRock | https://news.google.com/rss/articles/CBMingFBVV95cUxQLWJDTjBBalYwVHVpc0VxV1BwRE1xeUt1RWlLQ1VJdnJQRXNnb3p6MnFNbjRBV0s0TnlldW4wSVIycFRQeVNISWJ3VV9wMWdjX1ZndE1Tc24tNzc0anNYWjl0SVBsRDhSa0dVTWlyVVYxX0w5b2JhTFB0Tm9Vb2FwYVZubTU1SVJlcy0zMEpXOEM4ZlhiSU1QazdVQVlldw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | Middle East | MUFG Research | https://news.google.com/rss/articles/CBMiekFVX3lxTFBZWHR3bTNxMjlRLUoxbEFGMlE2SnFONzc4d3pSMnd0dFJ0RjJrbEo5b01CN0lkYmt0OFBpTkJpZnZ2SmRCQk40ZVhjbmQwMXBUSUJSWElWSGV4LW9ZYXNpTmVZZlNYTFA0V3Fqc094c2FLR25ac0djUzRB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-24 | China, India set for record Russian oil imports in 2026, but dema | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMiogFBVV95cUxPTkVSRU5od2R0bEdEU2tXZGFzWHJFMmZJcFZpbVJWZFMwamhBQzJWcGUyc2I4d2tpWTdUa2lzOHJQUEpkWFBXelVob2ZOVXNSVUVuTkFQd21VRVZGWmhUaFVuV041elJlODBiSWxkb0xiYkZGYjZQa0JrQjF5a1BzcjN5UnhtVDJWOXdjSDNBcVNaQnhNN2FfZVA1dy16RnNPa1E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 BACKGROUND (up to 2: dated up to 30 days before the window and still in force)
 none collected (the pipeline does not search for background items)
 CATALYSTS (future-dated events)

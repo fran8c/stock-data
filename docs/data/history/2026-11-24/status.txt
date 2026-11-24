@@ -1,13 +1,13 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-24 10:52 SGT
+Run time: 2026-11-24 23:05 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-23 23:08 SGT, latest SGX session expected 2026-11-23
+  - SGX: 2026-11-24 23:05 SGT, latest SGX session expected 2026-11-24
   - US: 2026-11-24 10:52 SGT, latest US session expected 2026-11-23
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (31): expected, marked NOT RETRIEVED in the files
+GAPS (29): expected, marked NOT RETRIEVED in the files
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -15,9 +15,7 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - [SGX] O39.SI: next results date not yet announced (last was 2026-11-06)
   - [SGX] U11.SI: P/B range covers only 45 months, not 5 years
   - [SGX] U11.SI: CET1 and its minimum need the bank's own disclosure
-  - [SGX] U11.SI: next results date not yet announced (last was 2026-11-04)
   - [SGX] BN4.SI: 5-year P/E range marked UNRELIABLE (high is 10x the low, so earnings or book value changed sharply)
-  - [SGX] BN4.SI: next results date not yet announced (last was 2026-10-29)
   - [SGX] BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed
   - [SGX] BS6.SI: next results date not available
   - [SGX] U96.SI: P/E range covers only 45 months, not 5 years
@@ -38,4 +36,4 @@ GAPS (31): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1359 items have no summary (paywall or site blocks automated visits)
+  - News: 1399 items have no summary (paywall or site blocks automated visits)

@@ -23287,9 +23287,10 @@
   "title": "OCBC and StraitsX pilot cross-border stablecoin payments for same-day receipts",
   "source": "联合早报",
   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQLVliUzBFd1o4MFZPTzJtVVR1NVc0SnQ1SVNFZ2tSQXkwSFV5dmJhTnFvSHM2LWwyRDI2WFlob3RFZzMzdE00VVNFYmRXTVlJRVp1Y0xFT1hnTDQ5ZVJoekZtc0M2UXZRX0VwaGZaVVVPNXpSNGhuMFZhSVl3UnJZTnhNbC1Nd25HN2FoRHB0SUVkWHVfVFkyQUZtNE5ncXJ0YnB6aFMwZjNfM21DbFNtSFJadUQzMkRBZDFRUGtn?oc=5",
-  "summary": "",
+  "summary": "StraitsX has announced a pilot for cross-border B2B payments that connects stablecoin settlement with participating OCBC clients’ existing bank accounts. [summary from Singapore Business Review]",
   "via": "google",
-  "tag": "CORROBORATED"
+  "tag": "CORROBORATED",
+  "borrowed": true
  },
  "O39.SI::singaporesocbcstraitsxlaunchpilotforcrossborderbusinessstablecoinpayments": {
   "ticker": "O39.SI",
@@ -23584,7 +23585,7 @@
   "date": "2026-11-23",
   "title": "Around two-thirds of Singtel SDS holders choose to keep their shares as scheme concludes",
   "source": "The Straits Times",
-  "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQM3FUU1RhMGlvVzUzLVl6UGVMTTgySEFYd3hOZTF2RE42dUo1bVZHX08tRFQwTlRJQ2VlVUZWUE4wUmI2RkdoNlcwRndxQzVzLUJYSVBXb2NMRER2Rm5kTmJrUldyN0xIOFpJVVdJSURrcXIzcmx1ZmdKVENudGZyT3FVY3VhZmlVUl9LVDB0dU9Ocm9WVlB5RlBpSmZXd0V3anJOa292VkNrdFlBTnVhbTkza0JOUG5YSmx6V1ZfeXRLeWJmT1JJbkJGb2hudHhhM1AtckIzTVFlTnpj?oc=5",
+  "url": "https://www.straitstimes.com/business/companies-markets/around-two-thirds-of-singtel-sds-holders-choose-to-hold-their-shares-as-scheme-concludes",
   "summary": "Singtel completes transfer of special discounted shares to CDP accounts, ending CPF Board’s trustee role for about 406,000 holders. Read more at straitstimes.com. [summary from The Business Times]",
   "via": "google",
   "borrowed": true,
@@ -25133,6 +25134,579 @@
   "source": "GuruFocus.com",
   "url": "https://finance.yahoo.com/markets/stocks/articles/why-palantir-pltr-stock-today-173107823.html",
   "summary": "Palantir shares rose 10.6% on Monday, Nov. 23, as AI stocks rallied after Nvidia reinstated Jensen Huang as CEO.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsbankindiaopensdedicatedwealthbranchinmumbai": {
+  "ticker": "D05.SI",
+  "date": "2026-11-24",
+  "title": "DBS Bank India Opens Dedicated Wealth Branch in Mumbai",
+  "source": "Hubbis",
+  "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVVlsNm1CdU13Z05pTUMwWnVqNkZQQUJxUFg4X2RLUnZ4dzRrTWNpa3RBUjVvR0I2MENMTnNWS0JFMk13SHB1cWw0MWdNb3NranYzNXVaV09XNmhRR2IzOXQtQnVKNHNYLWJEZmZSTE5ZcWRKZlZxM2h0V1psTHdtZUlYa20?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "D05.SI::dbsbankfilesforsingaporelistingof200millionbonds": {
+  "ticker": "D05.SI",
+  "date": "2026-11-24",
+  "title": "DBS Bank Files for Singapore Listing of $200 Million Bonds",
+  "source": "marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNcmpmR2o0TmQ4cXRtd3VUYzhZeTRtMVpNMnNOWVVMa0lIZ0dGRmhpcnNnMl9lUkhGYk5pOENkZHI0SnE5ZDg5Y09aOGxJV1dwYUx3T2k5SnVtUDlFSzNsNUN2T1ZrcUxkTEgyNmJWYzktN1ZFbWRiY1VjWmNiNGw2M3N3clNvX0o1U2RUaGpjYkJQZFRCSFlpdVVzNk5IREdMRnJkaHBadHpYZ0Q3b25v?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "D05.SI::dbsbankindiaturnsborivalibranchintodedicatedwealthhubforaffluentmumbaiclients": {
+  "ticker": "D05.SI",
+  "date": "2026-11-24",
+  "title": "DBS Bank India turns Borivali branch into dedicated wealth hub for affluent Mumbai clients",
+  "source": "Prop News Time",
+  "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQU1p3UmxQd251SWNWSm5YZEpTNnhKTmF0Mm9rNENsaUVUdHR0a2hlVk1hWGM1MVZHZGxiMlRFTzJYTk1YaHlUaHFxWUhQbWxkcVJuNUlPTklQa1VKcXd2WU5Qb1J2VE1jVVF6d2k4WThPZzZ2eUctQUhXU3RNajgwd1dlOWQ1MEJ0V3dWZjk3Q1dGYjFVWTJZdUU4aElrSTRWUWFRb0ExaTViWk1FWXBtV2tzNjloZk9IWnYwRWxEY2dTWldCOXoyRG1Fa2N0MkZRWC1pSERUelgydw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "D05.SI::nvidianasdaqnvdacoverageinitiatedbyanalystsatdbsbank": {
+  "ticker": "D05.SI",
+  "date": "2026-11-24",
+  "title": "NVIDIA (NASDAQ:NVDA) Coverage Initiated by Analysts at Dbs Bank",
+  "source": "MarketBeat",
+  "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNUi1QX0FUbEUyemNqZHM0LU5EbVcxTHhTYkZLWWkwYU1NSldGTDFSVVdCZXkyalcxVHdwN1NlQ2I3Q3NLazg5c1h1ZEJuZmNEYjV0UWFsME9mNWJfZjRfeTZVTktWUHN1QnNrUGU0SWJzSnRDRnZzNFo5MllsN0RJOFdzNG5BS2p2a2J3dWFaRFNfd2EzZFBoSjUtT2RfQ1RKWFh2MHJkZGtXVlh2LU1mWDdYMDBxSDhfZmMyb3FndFY?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsgroupstockbankfilestolist200millionusdollarsinbonds": {
+  "ticker": "D05.SI",
+  "date": "2026-11-24",
+  "title": "DBS Group stock: Bank files to list 200 million US dollars in bonds",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWWlkV1dzeXBOZDhFRXNWaS0wdFVIQUNqVkhBMG01RG5iUS1DbWNOZmdObkh5VDBoU3NhcXEtTGhkS2duODdJNXpDLVlOZFB2QXZNRE1nRFJtVnl2TlFGMGI2djUwakFKSU1iLU9YOTFHSDdKMndTN25pM2dTcUJLSTU1VGJlWHNBMk5Td0JRWEhaalZRQ0tUWkZpVVdKNTZfWWlhWEwzVlYyT0hEeEU0cy12Vjl0clVOVHJkejY5ejR4UmlEWkhSdA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "D05.SI::dbsgroupholdingsstockinfocusastradefinancerulestighten": {
+  "ticker": "D05.SI",
+  "date": "2026-11-23",
+  "title": "DBS Group Holdings Stock In Focus As Trade Finance Rules Tighten",
+  "source": "Yahoo Finance",
+  "url": "https://finance.yahoo.com/markets/stocks/articles/dbs-group-holdings-stock-focus-151015327.html",
+  "summary": "Trade rules are tightening, yet global commerce still moves trillions across borders, and that mix of friction and flow can reshape which trade finance stocks thrive or struggle. Investors watching record-high restrictions and fresh support measures may see both risk and missed potential. This article explains those dynamics and profiles ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::mofhastakennoteoffourcompaniesrm42blnclaimagainstdbsbank": {
+  "ticker": "D05.SI",
+  "date": "2026-11-21",
+  "title": "MOF Has Taken Note Of Four Companies’ RM4.2 Bln Claim Against DBS Bank",
+  "source": "BernamaBiz",
+  "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9KRzR4Y1pQc1lsckFNb09DZEhIUS1RQmxpcUxSRWF4Y2RsSmk5NHk0aXFHMlgtaGNWLTc2S3RlaXg3VEEzb0VtVU56ZFhybjNhZlBTQjRYZndpVEk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::indoasiannewsservice": {
+  "ticker": "D05.SI",
+  "date": "2026-11-20",
+  "title": "Indo-Asian News Service",
+  "source": "IANS",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNcTI3Tm9jaW1CX1o0NDF1dzJILUh5LW9KdllXaS15Zm8ydG96R0VPald1OS1ONHZNUTB6dGtYVVM2RG4wSEhvbE1kdWtHN0MwUmdvOENYaEVNbE1tRmR5MjM0WnFjN0lWMkF0NkxJckNYMXdNS1g3dVR0WW5LVHBQVHlfZ2ZJc3lTdzJwTjNGZjFfSkM1bHY2emRJWUZtVkptZkhJ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsgroupholdingsdevlq22024earningsreportresultscallslides": {
+  "ticker": "D05.SI",
+  "date": "2026-11-19",
+  "title": "DBS Group Holdings (DEVL) Q2 2024 Earnings Report - Results, Call & Slides",
+  "source": "TipRanks",
+  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5DY2pmcmoxYVdBZC1CbmhCbVE2UmlSYjhxb2YtdThFTEE2MmsxMWp3SGp4Q3h5TTRoN183aDlDQnV0dkxoN3VsMl9CVGYydEIzLVJ0YkJqQkRuMEdKMVBpMHZvU2tXdUxtY3FKcXhEa0k?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "D05.SI::dbsgroupholdingsdevlq22026earningsreportresultscallslides": {
+  "ticker": "D05.SI",
+  "date": "2026-11-19",
+  "title": "DBS Group Holdings (DEVL) Q2 2026 Earnings Report - Results, Call & Slides",
+  "source": "TipRanks",
+  "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5fblpoSEpXRzh5aDRwVmNtUzk4aDRpZEx5Qkx5M0F6YlZ0SEwxUHhiWVNnZ21iWHFSdy05TTA3d2ZCMzFBdnpmM2t2UmhINFpEM1dHbjMtdlhsdUQtS2FkamdOZm45b0xXWjV2QXBkWDE?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcisdown15fromitshighwhat100sharespayyouindividends": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Is Down 15%+ From Its High: What 100 Shares Pay You in Dividends",
+  "source": "The Smart Investor",
+  "url": "https://sg.news.yahoo.com/ocbc-down-15-high-100-033000808.html",
+  "summary": "OCBC paid S$105 in dividends on 100 shares over the past 12 months. Here's how much of that rests on profit, and how much may not repeat. The post OCBC Is Down 15%+ From Its High: What 100 Shares Pay ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::stockstowatchocbcmanulifeusreit": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "Stocks to watch: OCBC, Manulife US Reit",
+  "source": "The Business Times",
+  "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNcDZSX3BDVnNoNEVHUlRUb21XamNvQUo5anBQelNzT294U0VST2E1c2YwT3YwX3Rzd1pEUDk5NTd2cTFSX2l0Tl9ZNWFPSVU3Q2JjYTlSVzE1aXJCY0RzbmpFRHpheFd2dGo5NnRPU3Q2RkhYQkhGSm8wVFQ1MmtXYmxMS3BTMmdYUUQzNy1n?oc=5",
+  "summary": "SINGAPORE] The following companies saw new developments that may affect trading of their securities on Tuesday (Nov 24): Read more at The Business Times. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::stockstowatchocbckeppelstarhubmanulifeusreit": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "Stocks to watch: OCBC, Keppel, Starhub, Manulife US Reit",
+  "source": "The Business Times",
+  "url": "https://www.businesstimes.com.sg/companies-markets/stocks-watch-ocbc-keppel-starhub-manulife-us-reit",
+  "summary": "SINGAPORE] The following companies saw new developments that may affect trading of their securities on Tuesday (Nov 24): Read more at The Business Times.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::bestsmebanks2027asiapacific": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "Best SME Banks 2027 | Asia-Pacific",
+  "source": "Global Finance Magazine",
+  "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTFA5dDMtaXU5QVJnRjJBMklCZ0M1MGFBR2xXaDJiMjdRZmZQbGlLSVhWS2lvSGQ2bl81ME5kcDNxNngtekJOU1RzLURaVXktLWxvSXBfNFJUb0N1SU5DNS1mRmtCVGp2amlOMDJGYXl6N1dWbFprVUV1THRrRQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcgroupresearchinitiatescoverageonokpholdingswithfairvalueof98cents": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Group Research initiates coverage on OKP Holdings with fair value of 98 cents",
+  "source": "The Edge Singapore",
+  "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOQlFjYURzd0Uyd1VsdkxhVzhDQkZ2SmdjeExXeUZ2cEpab1FCRUd3NHpPVElPTmJDSmN5UkdiellPUFR4dVltd3hRQkJ2aU9fYVRSS1F0aGhnOFJUOE15aFZOaks2b0hqNDJldldpeHY3TWpyekZubUpYQ2xoMW81WDZMTDBCaHY3d05xT2I2S3VuYzRqR1kxLVpuMjlxaXBHQW1UMktXUDhmM09Ray1HUVJ3UGhMa1JFVDk4S3J0eEdNdV9U?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcappointsangengsiongelainelamtoleadwholesalebankingunits": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC appoints Ang Eng Siong, Elaine Lam to lead wholesale banking units",
+  "source": "Singapore Business Review",
+  "url": "https://sbr.com.sg/news/ocbc-appoints-ang-eng-siong-elaine-lam-lead-wholesale-banking-units",
+  "summary": "Oversea-Chinese Banking Corporation (OCBC) will move Ang Eng Siong, chief executive of OCBC China, to lead its Global Corporate Banking division. Elaine Lam, who now runs that business, will lead a ...",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::straitsxpartnersocbcforcorporatestoreceivestablecoinpaymentsintoaccounts": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "StraitsX partners OCBC for corporates to receive stablecoin payments into accounts",
+  "source": "Ledger Insights",
+  "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdUJmTFhmdkpvM2JpN2l6bzI2cTdMZ1FrYk1FNTRlWUVXYnF1Qkc1bUI0Q1dFWF9hRXAyRmFGQ3pNanVSSHRrMV9RakhGd091NXgxUjNESFN4NjZDYjd2OC1TM25BM21nbHg0TjBBdDVseWtmbG1NbzF4OF83MGQ5aDRDWTlqalJKZmlscUNHYWlsS1o4TTBKMENUNDZoQUR0Y3FabDFwNjlDWnFKRUZUME9zU1U?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbctapschinachiefangengsiongtoleadglobalcorporatebanking": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Taps China Chief Ang Eng Siong to Lead Global Corporate Banking",
+  "source": "Fintech Singapore",
+  "url": "https://fintechnews.sg/142234/fintech/ang-eng-siong-ocbc-global-corporate-banking/",
+  "summary": "Ang Eng Siong will head OCBC global corporate banking from 2027 as the bank splits its wholesale business into three divisions.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcgroupresearchinitiatescoverageofweehurholdingswithbuyrating": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Group Research initiates coverage of Wee Hur Holdings with ‘buy’ rating",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQU3hvR19ELU9VcjVuZU5TWDlVN244RkN2X3VYX0VMU3c3QUlVY3JMLVFVNWFiYUZVWDZDUVhBVE84Mnk4ZDROd2xwRGR6UE5MQ1B0cmpyWXpGOFd4RmdRSURYR0V1VHFYZUVVd2lMM19DLVhNbFFnTk80UHpKTU53ZkR2UzhjWVpjMHNvXzFwYVkxNHBZV0VnRldSNDdQd1dfSjNSaEtvRmtyWTNmSFlxX2ZCSQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcandstraitsxpilotstablecoinpaymentsforcrossborderbusinesses": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC and StraitsX Pilot Stablecoin Payments for Cross-Border Businesses",
+  "source": "Serrari Group",
+  "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVnFxN1VxTzhOWV9hNFg5bnZQTDc1RmVaSUxzWkVhblhUQ2U5WGc4LUJ3R0NXQUZwR1dOTjRBYVdKT1ZraS0ycnJPWlU0djFRRE1xb0FCY1Y5b1lna19uM0x2ZWZZVU94YnZPenlWOUEwU0lnSXU3WkJoLUV3ZHh0V3lCU05tX3VyNkkxcnAxaF96UFhYRHZoS09WSFRCQQ?oc=5",
+  "summary": "StraitsX has announced a pilot for cross-border B2B payments that connects stablecoin settlement with participating OCBC clients’ existing bank accounts. [summary from Singapore Business Review]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcnamesangengsiongheadofglobalcorporatebanking": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Names Ang Eng Siong Head Of Global Corporate Banking",
+  "source": "Retail News Asia",
+  "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQdXp1cHRGYnlTVGQxUWRSd1NIOVlsN3EzZEdqb0NpUGtsTDAxdDYyN210VlFBOWpvbGJONmhzenNKb1h3cnZnQS03MDhPQjh6bllaN3BJa0FocDZLR0pqYUpseVd3RTJobDBULVk0ZVptaktDTVhjcjk4cS14WnFfMmpSY3NYN0VU?oc=5",
+  "summary": "SINGAPORE – OCBC has appointed Ang Eng Siong, the current chief executive of OCBC China, as its new head of global corporate banking from Jan 1, 2027. [summary from The Business Times]",
+  "via": "google",
+  "borrowed": true,
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcrestructureswholesalebankingbusinessreshufflestopexecutives": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC Restructures Wholesale Banking Business; Reshuffles Top Executives",
+  "source": "marketscreener.com",
+  "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQYXpBdEJHNnZfODl0SlVDd2tvSWpLODlQVjhIbDYzc1lwYk1vVVRKMnhyOVdyRHJUUm9wX0otOHhhWjIybHdqR0lBN0FTNnFYT0pUWnFOTUdISC1oUlNaNmFCQzRVZG9OWkRYTDAtdTU0Wk5kRVFTVXNiR1VRLWt0WWtmMTdidEVHNFoxbjl6NVNFUWxrbG5pNEc1dWV0YXZidWZ0cDF3cWJ3c0pQZl8yNk1FbDctREZqM3J2SGNDdFc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::straitsxocbcpilotcrossborderstablecoinpaymentsforbusinesses": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "StraitsX, OCBC pilot cross-border stablecoin payments for businesses",
+  "source": "Singapore Business Review",
+  "url": "https://sbr.com.sg/news/straitsx-ocbc-pilot-cross-border-stablecoin-payments-businesses",
+  "summary": "StraitsX has announced a pilot for cross-border B2B payments that connects stablecoin settlement with participating OCBC clients’ existing bank accounts.",
+  "via": "google",
+  "tag": "CORROBORATED"
+ },
+ "O39.SI::ocbcstraitsxteststablecoinrailsforsamedaycorporatesettlement": {
+  "ticker": "O39.SI",
+  "date": "2026-11-23",
+  "title": "OCBC, StraitsX Test Stablecoin Rails for Same-Day Corporate Settlement",
+  "source": "BigGo Finance",
+  "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1EOW1tbHh6YW5DZ1p5dkFNVThSOU9pWnNUbzdaeVFjcTRMSUEySUQ2UkxNd0ZaMjdoQ21EM3RuLXJicHhaZXNxeWJUUUx6c04tb0pXbUhzWWJscGRaSjBoazRpU0FxQXFRUnpsa1V2c2k5VWZZcnc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::ocbcstockbankreshapeswholesalebusinessfor2027growth": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "OCBC stock: Bank reshapes wholesale business for 2027 growth",
+  "source": "Ad Hoc News",
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/ocbc-stock-bank-reshapes-wholesale-business-for-2027-growth/70548923",
+  "summary": "OCBC announced a reorganisation of its wholesale banking business on November 24, 2026, according to The Asian Banker. The Singapore bank will divide the business into three units as part of its Next ...",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "O39.SI::financialclosereachedon21bntaweelahcpowerplant": {
+  "ticker": "O39.SI",
+  "date": "2026-11-24",
+  "title": "Financial close reached on $2.1bn Taweelah C power plant",
+  "source": "Power Technology",
+  "url": "https://www.power-technology.com/news/financial-close-reached-taweelah-c/",
+  "summary": "The 2.6GW gas facility will balance renewable generation and support surging UAE power demand from 2028.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::circleventuresanduobventuresinvestincrossborderpaymentsgroupkairosx": {
+  "ticker": "U11.SI",
+  "date": "2026-11-24",
+  "title": "Circle Ventures and UOB Ventures Invest in Cross-Border Payments Group KairosX",
+  "source": "Cryptonews.net",
+  "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ObGNnaWFSX3YyRE9FQjRlLXluMG9pYjR3d0lhaFBUYTQ5OVA1VVlEMnhZR3pvTFpJTVQtck1ibENxdU82bjZsVm5MRVdtZUtBVjFWN2l6VVg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::kairosxannouncesinvestmentsfromcircleventuresanduobventuremanagement": {
+  "ticker": "U11.SI",
+  "date": "2026-11-23",
+  "title": "KairosX Announces Investments from Circle Ventures and UOB Venture Management",
+  "source": "TradingView",
+  "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQTFZBUC05eG9Va29wSkZlWVFwSXR4cDl0Y2U2QlJTN1dfZ203ZzdQUXBBSkNOX1Q4VmZTN0loZ1FqZjM1dzE0dTdCU2FyMkVHbmJ0ZXB2YjExenJScnU5WF92cEQ1SktmU205aHdnUWdzbjM5QTVhTHhfSVRZSEJha2FBRkl1MHY3SlMzZld5TWtNX29OX0V1ZkFxNnRvOFdIejQ3RUNoT3BFbWFRNFhtdTd0cThCclNEcjBpTjZVdkJtdV93emJ4X3lHSQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::unitedoverseasbanklimiteduoveystockpricenewsquotehistory": {
+  "ticker": "U11.SI",
+  "date": "2026-11-21",
+  "title": "United Overseas Bank Limited (UOVEY) Stock Price, News, Quote & History",
+  "source": "Yahoo! Finance Canada",
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBqSGxWVDJxby1WY3JXMTlaSkxLbElpdEg0M2xKMG5DSzZiNF91ckNyQWxKMFZTLWtNVHFhWUIxSGJ6aFEtdGdYNFRFZ1pPa0ZDUk9V?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::uobstockdbscutstargettosgd1880": {
+  "ticker": "U11.SI",
+  "date": "2026-11-21",
+  "title": "UOB stock: DBS cuts target to SGD 18.80",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1pPVmUybE4xb2lFUjVlQTV4M2ZYYUxtRFB1NTB4dldNZTJ0dTc1OV9RbnBWQnFWTnNTMmc4bFZHSXJBWlVhRkV6RjMtdVl3bE9jaDh3RTEtT2FINllCUUdOX0JVdENsQlhMZHZ2b3pTcjlaZkFyQVlOREIzTHFPQXExeUZGYnF2cnlydHNxN0JBaEYyNHVMYm1XMUFfVmEtNUpF?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::euroatafreshlowof10952whyisbroadusdollarstrengthoutweighingeurozoneresilience": {
+  "ticker": "U11.SI",
+  "date": "2026-11-20",
+  "title": "Euro at a fresh low of 1.0952: Why is broad US Dollar strength outweighing Eurozone resilience?",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNOFVjWmVUYlRkTDljRi11RnAzbFdmdi15bXVyZFQ0MExkd1B1OWloTHdJc0pIMGhvQ2ppMWtOd3VXLWVscng2UldWcG4xUWh6dUlNeEdILTRzSnJvdVJKcGxzNDBpWjEwa1NDVER3dlVJRUNMQ2JCRDZQVWlIazN5ZXh6UzFza1U5R3J6dUNVOERMWjc1SFFQMFRmNUJxRDJaa0dHdUV2SU5oV082aXpTaUppVl8xVjduaXRkQXVqX1ZkT3d0VmVlQlZNRGF2aDNaUV9XSWJVeGs5VFZUT0o1NVAxZVY1MXYzckJ3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::10952euroslidestoanewlowasbroadusdollargainsovershadoweurozoneresilience": {
+  "ticker": "U11.SI",
+  "date": "2026-11-20",
+  "title": "1.0952: Euro slides to a new low as broad US Dollar gains overshadow Eurozone resilience",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQeEtLRHpQZ0JQVmYxemlOeWpJS05mUjg2U1JwbFNtYmJ5ek1OWnhVcVJMc2g0MVpxb005WjVtOERIdW55RDRCSVB1RVVvSGJ1b0tmYnhVLVJMZzR0djc3d2Z0amFQdDBXNTZQT0MyWXZld3R4Wm9JTU9qX1labEhVR0lVUnRGN0VtUGF2cVllY0hYMjhIT2c1X3ZPS0pwaDNUdGk0anBFZTZackRBczJqVV9hUXJIQXFXeENEdjN4a1h3djFvOEgtLXZ5dGVFdTd0RHNPLXlTRXNyWVVLaE1CODhwTGJ3WnEz?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::uobstockdbscutstargetwhilekeepinghold": {
+  "ticker": "U11.SI",
+  "date": "2026-11-20",
+  "title": "UOB stock: DBS cuts target while keeping Hold",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQd0pUWHJTcEkyRXE3dXRsZW5sV3lNWmNWWE9rT29NeWlOUlZBRTBvMGpiMEo2N1VjeklkS2pWTzRwVzJSZDFHLXZMcmhjWWswLTQwNXBqY2Y2V1JGdUVDcDNtOWtOcklRXzdEbUx4VWlEV0VweWJ2WlVsN0tMMEdRLVIteDJKejdPaDNtLXVKaUpXc2tyNTBwalpIdmJDZ2oybmktU1J6S24wVEk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::singaporesellstokenizedbillsworths100millioncoindesk": {
+  "ticker": "U11.SI",
+  "date": "2026-11-19",
+  "title": "Singapore sells tokenized bills worth S$100 million — CoinDesk",
+  "source": "UA.NEWS",
+  "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPZG9DeTVGLWJMeHdLWmZybk9uLWlOWVZxS0pkeEhHSnB4OVFIRFhWUi01VFQ0d2RvRVE4QjJOeGJJUEdJMFVVUWtaS1laWXJXSVB6WlRXc2RRNzJNZVF6WUFTb1JLWGFiVTBSUXFPS0djcUJ5Y1Q2Y1pwaENjWFBXVGFNcXpJQXJCTm9sSEJxVmlHTWNGT0lsa3ZGb0RMeFZ0aDM3cC0zQk5UcnB0TU9UYg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::10952eurohitsafreshlowasbroadusdollarstrengthdrownsouteurozoneresilience": {
+  "ticker": "U11.SI",
+  "date": "2026-11-19",
+  "title": "1.0952: Euro hits a fresh low as broad US Dollar strength drowns out Eurozone resilience",
+  "source": "www.tmgm.com",
+  "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVUxVXzNvWGRRbm9tY08xM09mdUpsRlJKYXc0ZEJfNHFLS3R0RGpkTDB6cExWTFNJVDI0QkJJNTd2S25SWlRzTW1sSkZ1WjVNQ0FjSk5IVzNPdjR3Z2NFY2YxcW5OelNWTld2UnYyX1MtR00wYjIxckdyd29LMVFzNUF6S0NkNTY2Q00zVVlWUFN1bWhuUjk3dUZHT0kxUWlnUHBZRm93eThTZjAzOEZwNTY5Vzh3VlQtZ0pSN1hsbDQ0VVBkZE9PWERmVWJpZjlpbmlJMnAyTVh0V0N6UlMwdU9fMHdZRTA?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::crowdedsingaporebankstocksfacerotationasairisksmount": {
+  "ticker": "U11.SI",
+  "date": "2026-11-18",
+  "title": "Crowded Singapore bank stocks face rotation as AI risks mount",
+  "source": "Yahoo Finance Singapore",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUGtqS01BZE9DTG5wMWJGaWxnZkFjNlpWdV91RVZUaFZXc1RELVBHQm5PekRyOThCYlNVc3Y3eUt2UTdYQjhJWXlZMmtEcHBUd2hpTHJOTzFDQk9UeU1tbEdQZkJpTkM2aW9PNjZBdE9XM01PRjZHSmdhLXNtWUxjbm9yOXF6NF93bEpF?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::uobstockdbscutstargettosgd1880keepshold": {
+  "ticker": "U11.SI",
+  "date": "2026-11-18",
+  "title": "UOB stock: DBS cuts target to SGD 18.80, keeps Hold",
+  "source": "ad-hoc-news.de",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPekY4bkdCR19lV2w1c1BCNjZITDlQS2hpSnBwM1ZISjljRF9vREc4cnpWMWlXZV9rcmV4azIzM3lpaExpMmNHeUlLalc5VHZDbE5XUmRzdjZXOHRpb3FSQXVvZGpoZ3VZakRNNXBMTkpyczdaQjU2NHNrOXpJVUk1a082S2VMVEMzdFplZzBwSFY2ZU5RU2lZdUpPRGwteVFpRVlTTzlYbjI3Q0NEVTQ0WUF3?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::11000euroclingstoakeyfloorafterfivestraightdaysoflossesfxstreet": {
+  "ticker": "U11.SI",
+  "date": "2026-11-17",
+  "title": "1.1000: Euro clings to a key floor after five straight days of losses | FXStreet",
+  "source": "شبكة تواصل الإخبارية",
+  "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1qemstX3Y4bXlDaFMwUm5hWUpCbEczMXp3VFRYMU1jSThjdDVwM0c2aDZsajE3OVpPMGFPNGZaQjk1MjVMVE8tdEF6WWlxOFRfX244?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::alphabetteammeetannouncesplansforhongkongsingaporebondsales": {
+  "ticker": "U11.SI",
+  "date": "2026-11-12",
+  "title": "Alphabet team meet announces plans for Hong Kong, Singapore bond sales",
+  "source": "The News International",
+  "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMEZYeTVuS2F0dmVpM0M5R0wzS3k4cG5ySFBxWjVSNURHeG16eVRnbWo2OTl3VnMxSE1zMmNzMjNBSTY2eTdrd0RBOURUSlJKZjVHSDVkdTRRUTRpcWhEU1N3SXBGa2NDYUJXdDBqWmhmc2pCRjA1MUhuVURwcl81S3JkSm5PdzV6SkYxSTFZOXJRVHlyaFJNN3pkNzRqQXI2ZDFHNE9YZWZfdDF4cjlRbtIBrAFBVV95cUxNZnl2cUQ1dXVyek1XRE9BVTdDaUFDYVcwaEQ3Q2hEdzFRRlBHSl9aX0JicmpiTFpmVXpIR19MRzgtdjhKU0xDNlFRbGE0cGdiVzI4clpYbUo1TFFwYV9fUzFoWWRwSE9qNk5tbHk5RmUwN2dVeUgxVTZnd25WaUZxWm41cVU2RUstazVaNWZUTmpsaGZEVzY1cU9FYVhHYnZvODNiZzhTNVZBWFQ2?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U11.SI::dbsvsuobvsocbcwhichbankdeliveredthestrongestfinancialperformancein3q9mfy2026": {
+  "ticker": "U11.SI",
+  "date": "2026-11-11",
+  "title": "DBS vs. UOB vs. OCBC: Which Bank Delivered the Strongest Financial Performance in 3Q & 9M FY2026?",
+  "source": "The Singaporean Investor",
+  "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOYURMaC11R293OFBqbFdLSFZxR1VXY3JENjFzckxNZU55WUtabm42dFJlaHAzNEl6Um0wSEJ3dDBIWGZzM2lMdG8wTWl4cWp0YmhfNmRrUDZyOG53dmtaWFhEY3ROc2NxS01MRFQ2QWVxSHpYNDlZYWY0M18ydERXSTlscHQ0NmRzVzFVUS1xVGljaDJ0QURsUlZxUTNYYTZYWjd2RGhhUWhjUVVzeHJfSHQzVmRYM3lVYnM3Y0Z5Z1Jta3BxMlFzU2JtTzZRS3VXSUpDZ19xcnQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::keppelagreestomergem1andstarhubinallsharedeal": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-24",
+  "title": "Keppel agrees to merge M1 and Starhub in all-share deal",
+  "source": "Yahoo News Singapore",
+  "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZXgzNnh1TENZbmM2dW1uc25fc0VYNGlaQXBTNUlPY2wwLWVWT2YxcXE1SUV2MFFzRkpZeTI2UUx3aUc1dlNhWWZPanVKQkVmM0RlTjNCeW9NSWh2QUxvQVhoUFpSR1lVb3BRZk1UdjNoU1ZlMlNhX3Y2LVRFQndVcUU4YWdhM21FWFYyT19NV1lMYTM1RFZFSW96Vlk?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::singaporesstarhubm1tomergein850mcostsynergydeal": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-24",
+  "title": "Singapore's StarHub, M1 to merge in $850M cost-synergy deal",
+  "source": "TNGlobal",
+  "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPaHdHRUduSnR4T25NeTBaY1JYNVZubzd0OGZfTlgxeEdfQnhnR09sRi01Rkh5WGo0NTFLQWFiWUd6bnlOMU91RXRUY1RFa2dwWTBlZ2RrTGpKcEZTa3Q0bFJBOFZRNEZsNWNSS2dkQlloNHFyMzl0QTBzMVpIZUwzaU1UeUxOU19QU0JZQmpaSlFvSVlQNUNZ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::starhubriseskeppelfallsonnewsofm1sale": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-24",
+  "title": "StarHub rises, Keppel falls on news of M1 sale",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNR0VlX0pwcVoxd21JRWNNbzRoWnJHS2theFJyRGNPN3RhMl9uaDlFOGMwY0tmM0RkUGdMd09KR1FieTFEdlVWel9RSHJvYm1QX3YtUnhyOTNjRjdNQVFwQTg3RkNzUlV5RFloMHlPVzN3UFBveERaU2JHazloV2F0SHhrYnI2dGxJR0NpMmpDNHphajNJVmpmWGlrNXdZVDhreDNPZ3M2S3libWpnR0hFWUZ5SFpiR0hxVmc?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::m1tobecomewhollyownedstarhubsubsidiaryindealwiths136billionenterprisevalue": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-24",
+  "title": "M1 to become wholly owned StarHub subsidiary in deal with S$1.36 billion enterprise value",
+  "source": "联合早报",
+  "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOV19DWlQwUFh5MVc3MU15MFVfU2hkLXZlcnRTUVFBOUhCc0ozVlRsMEdWUmxqVks5QVBmU3BSSVpNS2IzQ3BDczhySDB6Mm5fYTJWblFySHhCZWwyT0Fjd3F2TVpYX0RkNWFLdmdQSU1PUG1ZVjNVeFJCMzZxSDR1QTd2eGJnak5sQjlBRHh0Z2lZT1RzMTdTSnBMSWFoLTl6RzVRU252UFhna2hQamZERW8yV2NjaXBVaDJCTVJ4d0ozZw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BN4.SI::keppelsaysvietnamjointventuredivestmentcompleted": {
+  "ticker": "BN4.SI",
+  "date": "2026-11-23",
+  "title": "Keppel Says Vietnam Joint-Venture Divestment Completed",
+  "source": "TipRanks",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPMm9tNEVnc24tZmkzcldTbUs5V05CZlNBUnBteHQtTUtBX0hpNnpFTURDendMdERxRlpHekxPY1N0UUkyOWJJZE9JcDl2My00dHZCYVRPcVBRbmRWT1ZycmpCVnVDUFpsUy1KbllyWS1SQVZGX01CM2NCY0xOeXpnWk1RRmJpQzItUzJ4X2E1YmZVUTFXV1VjY2FMV0FnbVNWSUJGZVZNamswQQ?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "BS6.SI::chinasshipyardaccumulationandthenewmaritimeorder": {
+  "ticker": "BS6.SI",
+  "date": "2026-11-23",
+  "title": "China’s shipyard accumulation and the new maritime order",
+  "source": "container-news",
+  "url": "https://container-news.com/chinas-shipyard-accumulation-and-the-new-maritime-order/",
+  "summary": "Yangzijiang Shipbuilding signed an agreement to build Yangzi Runze, a clean-energy vessel base it had put on hold in 2025.",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorpindustriessgxu96stockforecastanalystpredictions": {
+  "ticker": "U96.SI",
+  "date": "2026-11-18",
+  "title": "Sembcorp Industries (SGX:U96) Stock Forecast & Analyst Predictions",
+  "source": "Simply Wall St",
+  "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxONTVPZjZnejB5ODNWbzhSaVNteEpmbnNOakxiTy1wY091enROZG9oNzNWTE0wXzgwc0tmVmY4QlA3cWpnc1NGZDlDZ0pxdFBiQnNhdGNqNHR5UTNIc2tHMWRGZVY3SjdDMng0TDVGTFJKWmsteE04MUlGVUIzVkt6QlBSMXRnRXBZeVM0?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::sembcorppartnersematoheadquartersenergystoragesystemforgridstability": {
+  "ticker": "U96.SI",
+  "date": "2026-11-11",
+  "title": "Sembcorp partners EMA to headquarters energy storage system for grid stability",
+  "source": "Singapore Economic Development Board (EDB)",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPc0pDNEJRR1RoWXVfaVV0MEUwYU5ES1NzVnFNRmIwTFRfV2ZpZlVINmFubmwxSXMtTkFmU2FwVnRGNzQ4RkVQRFlteWp2UU95bUJkOUQtSzN6NlpXZl91YmNBY194aW9rbjRRRmJYbXBBOTIyQU5SdDFzeHpoMWhaOFBFRnl0eHRWNE82YlRZNzl4LVlBSllhSWNaZk8tOGxnT0lENjlTRXRnMk93QmpLblAyeE5vXzFZb014dw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::jobsinsingaporewhyimbuildingmycareerinsingaporesenergysector": {
+  "ticker": "U96.SI",
+  "date": "2026-11-11",
+  "title": "Jobs in Singapore: “Why I’m building my career in Singapore’s energy sector”",
+  "source": "Singapore Economic Development Board (EDB)",
+  "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPTXhwbDFyQnBEcnJDbF9FVFZrQVdYbW13QzBNWXRXS2JNTER0ODB3d1RidU44R3ZINlhhSWd4dkZaSVFCdldOTUVGck9ySlIwMlIxV095N3dCbDVGRl9qUTVWQnJTcVpBXzhJRVJGaEpnRDFsWjBrdHdHaV9zSWZqSWMwZW90V3RSS0JSU1A5NDJ2UEE3ZFVka0hRRFB6ZGVrV3FzNHJEZ3NGbTNfUTJLQWVB?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::dayoneandsembcorpunittoevaluateonsitepowerfordatacentres": {
+  "ticker": "U96.SI",
+  "date": "2026-10-30",
+  "title": "DayOne and Sembcorp unit to evaluate on-site power for data centres",
+  "source": "Singapore Business Review",
+  "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQWG1oNnE0Y2RLbFppZ2VGZGxTLTNsMXpwczBVM3U2T1p1RTNJSVlGbHVqSkFLN2NadTZTaElqVTBndkl0b1lXY0JTSnU0WTEyS1ZsZzh5aFBDdW1wWlZJUGdOR19ZdExnRHlyWjdPLXcwczlBR1hDLXNDYU5PSFpIemwyZXdZUjFBWHVDNTJNdHg3aWVTZm1Cd1h6Q0pGeThRaWkxNXotYw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "U96.SI::financialclosereachedon21bntaweelahcpowerplant": {
+  "ticker": "U96.SI",
+  "date": "2026-11-24",
+  "title": "Financial close reached on $2.1bn Taweelah C power plant",
+  "source": "Power Technology",
+  "url": "https://www.power-technology.com/news/financial-close-reached-taweelah-c/",
+  "summary": "The 2.6GW gas facility will balance renewable generation and support surging UAE power demand from 2028.",
+  "via": "yahoo",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::howcashflowplanningandtechnologycanhelpsmesturnopportunitiesintogrowth": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-24",
+  "title": "How cash-flow planning and technology can help SMEs turn opportunities into growth",
+  "source": "The Straits Times",
+  "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQdU5DdHRxQXh3OTV3ZnMzQVFFODZkdjE0YlhqQkJDRUExX2s4VGxFOVRVTVZwMVEzZHBoWktPWDBwRUZsM3YzUkNOTlh2SHl3LUZpVXVxcHYzT0dHWENubkIyRkJwd1Y2eVRhTmNIaUE3N3VRaW1GRVJPcmtqd21LQ1pnSW8xbm9nc3BhVW5hRWxOMjRmNkhNNndjdWlwUGJ1c3lmcV9UNDBubDBYN3VlN1dkUHQ4LW9BTzFlWg?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::bestvalue1yearmobileplaninsingaporesavemorewithhi": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-24",
+  "title": "Best Value 1-Year Mobile Plan in Singapore: Save More with hi!",
+  "source": "Singtel",
+  "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQdDZkT1J6bmJqNGlENF85R0Q1MFZ1am1JeVkyYzNqTklNUXNUa1l0RTNhT2ZqS1dxSW1QQ1diMVloSmloc1cwREhNeHRjQjdRbGY4ZWVjcG5WdVBXSmYxTlhnWHZobHNWR1lETk5MSGJnNDdKamVyeFZ2OVJjY3pGcHdkLXJHVXFfU0RRMnYtemtVQ01hOTdXcmFKT2o3azFZOW1PbG1EYlhnYUFIVDFuZ1RVMGR5bjZ2LUZENHFNUjU4dw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::xiaomi18proseriesspecswheretobuy": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-24",
+  "title": "Xiaomi 18 Pro Series: Specs & Where to Buy",
+  "source": "Singtel",
+  "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPeWtsc01XZ3hKYjBrVWtZRjFqNkVCYnR0dDFRb0xzZlV6dmJrMEVLWUtackR4SkU0WGJWQ3AyUm9PbjFpS002aXk0dnl1ZXAyaWhoaHFiTXY4M3h5Y0FJNm5aLU9pWGxmdHUxMGQzN1dZcXlEcGxaMVdQVV93cjVMaC1UaW9vM2FUbjJaSjRsQzZaUGdvU1hkeXAwZlpodUd5OUF5TmliQ0lhZw?oc=5",
+  "summary": "",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelwrapsupdiscountedsharemigration": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Singtel wraps up discounted share migration",
+  "source": "Singapore Business Review",
+  "url": "https://sbr.com.sg/markets-investing/news/singtel-wraps-discounted-share-migration",
+  "summary": "Singtel and the CPF Board have transferred 477 million Singtel Special Discounted Shares, held by about 406,000 shareholders, to their CPD accounts.",
+  "via": "google",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::singtelstockcompletestransferof477milliondiscountedshares": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-24",
+  "title": "Singtel stock completes transfer of 477 million discounted shares",
+  "source": "Ad Hoc News",
+  "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/singtel-stock-completes-transfer-of-477-million-discounted-shares/70548951",
+  "summary": "Singtel and the CPF Board completed the transfer of Singtel Special Discounted Shares on November 21, the company and the trustee said in a Singapore Exchange announcement dated November 23. The ...",
+  "via": "bing",
+  "tag": "SINGLE-SOURCE"
+ },
+ "Z74.SI::sierradoublesvaluationto30bwithinsixmonthsasdemandforaiincxtakesoff": {
+  "ticker": "Z74.SI",
+  "date": "2026-11-23",
+  "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+  "source": "TechCrunch",
+  "url": "https://finance.yahoo.com/technology/ai/articles/sierra-doubles-valuation-30b-within-144303731.html",
+  "summary": "Enterprise customer experience company Sierra, co-founded by former Salesforce co-CEO Bret Taylor, said on Monday that it has raised $1.75 billion in a Series F round.",
   "via": "yahoo",
   "tag": "SINGLE-SOURCE"
  }
