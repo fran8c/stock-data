@@ -1,13 +1,13 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-23 23:08 SGT
+Run time: 2026-11-24 10:52 SGT
 Market data from (each market runs about 5 hours after its close):
   - SGX: 2026-11-23 23:08 SGT, latest SGX session expected 2026-11-23
-  - US: 2026-11-21 22:00 SGT, latest US session expected 2026-11-20
+  - US: 2026-11-24 10:52 SGT, latest US session expected 2026-11-23
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (32): expected, marked NOT RETRIEVED in the files
+GAPS (31): expected, marked NOT RETRIEVED in the files
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -25,13 +25,12 @@ GAPS (32): expected, marked NOT RETRIEVED in the files
   - [SGX] Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
   - [SGX] Z74.SI: next results date not yet announced (last was 2026-11-13)
   - [SGX] No peers in peers.txt for: BS6.SI, U96.SI, Z74.SI - the harness will suggest some
-  - [US] SPCX: only 113 daily bars (less than a year of history)
+  - [US] SPCX: only 114 daily bars (less than a year of history)
   - [US] SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - [US] SPCX: next results date not yet announced (last was 2026-10-20)
   - [US] MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
-  - [US] MRVL: Google News feed failed (HTTPError)
-  - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
-  - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 20x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 25x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 15x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: next results date not yet announced (last was 2026-11-17)
   - [US] PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] No peers in peers.txt for: SPCX, MU, PLTR - the harness will suggest some
@@ -39,4 +38,4 @@ GAPS (32): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1288 items have no summary (paywall or site blocks automated visits)
+  - News: 1359 items have no summary (paywall or site blocks automated visits)

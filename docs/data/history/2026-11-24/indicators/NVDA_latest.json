@@ -1,0 +1,257 @@
+{
+ "symbol": "NVDA",
+ "market": "US",
+ "as_of": "2026-11-24",
+ "expected_session": "2026-11-23",
+ "last_bar": "2026-11-23",
+ "bars_used": 1254,
+ "bars_excluded": [],
+ "currency": "USD",
+ "tick": 0.01,
+ "main_comparator": "^GSPC",
+ "comparators": {
+  "^GSPC": {
+   "last_date": "2026-11-23",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -17.8616,
+   "chg20_pct": -5.7264,
+   "label": "lagging"
+  },
+  "^IXIC": {
+   "last_date": "2026-11-23",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -15.6404,
+   "chg20_pct": -7.9475,
+   "label": "lagging"
+  },
+  "^DJI": {
+   "last_date": "2026-11-23",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -18.3049,
+   "chg20_pct": -5.283,
+   "label": "lagging"
+  },
+  "AMD": {
+   "last_date": "2026-11-23",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -8.9403,
+   "chg20_pct": -14.6476,
+   "label": "lagging"
+  },
+  "AVGO": {
+   "last_date": "2026-11-23",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -18.8427,
+   "chg20_pct": -4.7453,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-23",
+  "open": 167.04,
+  "high": 171.5,
+  "low": 156.93,
+  "close": 165.05,
+  "volume": 779184200,
+  "dividend": 0.0,
+  "chg_raw_pct": 31.4825,
+  "chg_pct": 31.4825,
+  "gap_pct": 33.0678,
+  "clv": 0.1146,
+  "vol_delta": 89309376.3898,
+  "cvd10": -803939124.2991,
+  "vwap10": 157.4311,
+  "close_vs_vwap10_pct": 4.8395,
+  "avg_vol20_prior": 287643565.0,
+  "vol_ratio": 2.7089,
+  "up_days10": 2,
+  "down_days10": 8,
+  "up_vol10": 1118399000.0,
+  "down_vol10": 3589734500.0,
+  "udvr10": 0.3116,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 2.2596,
+  "vt5_20_label": "busier",
+  "chg5_raw_pct": 5.7064,
+  "chg5_pct": 5.7064,
+  "chg10_raw_pct": -7.623,
+  "chg10_pct": -7.623,
+  "chg20_raw_pct": -23.588,
+  "chg20_pct": -23.588,
+  "divergence": "None",
+  "true_range": 45.97,
+  "atr14": 13.2248,
+  "atr14_pct_of_close": 8.0126,
+  "range5_low": 135.4794,
+  "range5_high": 194.6206,
+  "macd": -18.0764,
+  "macd_signal": -15.7789,
+  "macd_hist": -2.2975,
+  "macd_note": "",
+  "sma20": 178.9095,
+  "momentum_proxy": "bearish",
+  "hh20": 219.99,
+  "ll20": 124.5,
+  "hh60": 243.37,
+  "ll60": 124.5,
+  "hh120": 243.37,
+  "ll120": 124.5,
+  "high52w": 243.37,
+  "high52w_date": "2026-10-06",
+  "low52w": 124.5,
+  "low52w_date": "2026-11-20",
+  "bars_in_52w_window": 251,
+  "from_high52w_pct": -32.1815,
+  "from_low52w_pct": 32.5703,
+  "tenkan": 151.02,
+  "kijun": 173.345,
+  "span_a": 227.13,
+  "span_b": 225.31,
+  "kumo_top": 227.13,
+  "kumo_bottom": 225.31,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 243.37,
+  "darvas_ceiling_date": "2026-10-06",
+  "darvas_floor": 229.11,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 34,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-10-12",
+  "darvas_crossing_bars_ago": 30,
+  "darvas_crossing_vol_ratio": 0.6494,
+  "darvas_crossing_volume_label": "fakeout / liquidity-trap risk",
+  "rs20_GSPC": -17.8616,
+  "chg20_GSPC_pct": -5.7264,
+  "GSPC_close_date": "2026-11-23",
+  "rs20_IXIC": -15.6404,
+  "chg20_IXIC_pct": -7.9475,
+  "IXIC_close_date": "2026-11-23",
+  "rs20_DJI": -18.3049,
+  "chg20_DJI_pct": -5.283,
+  "DJI_close_date": "2026-11-23",
+  "rs20_AMD": -8.9403,
+  "chg20_AMD_pct": -14.6476,
+  "AMD_close_date": "2026-11-23",
+  "rs20_AVGO": -18.8427,
+  "chg20_AVGO_pct": -4.7453,
+  "AVGO_close_date": "2026-11-23",
+  "rs20_main": -17.8616,
+  "rs20_main_label": "lagging",
+  "signal_vwap": 1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "LEAN BEARISH",
+  "bull_signals": 1,
+  "bear_signals": 3,
+  "signals_available": 4,
+  "volume_confirmation": "CONFIRMS",
+  "confluence_final": "LEAN BEARISH",
+  "outlook_d1": 2.5,
+  "outlook_week1_low": 144.1417,
+  "outlook_week1_high": 185.9583,
+  "outlook_d2": 7.5,
+  "outlook_week2_low": 128.8274,
+  "outlook_week2_high": 201.2726,
+  "nearest_resistance": 173.345,
+  "nearest_support": 157.4311
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "Kijun",
+    "price": 173.345,
+    "dist_pct": 5.0257
+   },
+   {
+    "name": "20-bar high",
+    "price": 219.99,
+    "dist_pct": 33.2869
+   },
+   {
+    "name": "Kumo bottom",
+    "price": 225.31,
+    "dist_pct": 36.5101
+   }
+  ],
+  "below": [
+   {
+    "name": "VWAP10",
+    "price": 157.4311,
+    "dist_pct": -4.6161
+   },
+   {
+    "name": "Tenkan",
+    "price": 151.02,
+    "dist_pct": -8.5005
+   },
+   {
+    "name": "20-bar low / 60-bar low / 120-bar low / 52-week low",
+    "price": 124.5,
+    "dist_pct": -24.5683
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-24",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [
+   "2026-11-26"
+  ],
+  "early_closes": [
+   "2026-11-27"
+  ],
+  "d1": 2.5,
+  "d2": 7.5,
+  "sqrt_d1": 1.581,
+  "sqrt_d2": 2.739,
+  "week1_low": 144.1417,
+  "week1_high": 185.9583,
+  "week2_low": 128.8274,
+  "week2_high": 201.2726
+ },
+ "calibration_past_year": {
+  "5d_inside": "199",
+  "5d_windows": 246,
+  "5d_share_pct": 80.8943,
+  "10d_inside": "205",
+  "10d_windows": 241,
+  "10d_share_pct": 85.0622
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "MIXED",
+   "bullish": 2,
+   "bearish": 2,
+   "readings": "close vs VWAP10 bullish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bullish"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-17.86 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -4.6161,
+   "support_dist_atr": 0.5761,
+   "resistance_dist_pct": 5.0257,
+   "resistance_dist_atr": 0.6272
+  },
+  "ratings_14d": {
+   "upgrades": 0,
+   "downgrades": 0,
+   "items": []
+  }
+ }
+}
