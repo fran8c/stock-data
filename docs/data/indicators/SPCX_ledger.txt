@@ -32,7 +32,7 @@ Tenkan=135.5600 Kijun=143.2850 SpanA=157.2625 SpanB=140.7650 | Kumo Below | TK B
 Darvas: ceiling 176.4200 on 2026-10-06, floor 160.0000, status Breakdown Below, age 35 bars; crossing day 2026-10-13 (30 bars ago) vol ratio 0.7208 fakeout / liquidity-trap risk
 RS20: stock 20-bar change raw -15.3251% adj -15.3251%
   ^GSPC: -6.7530% ; RS20 = -8.5720 pts lagging  [^GSPC to 2026-11-24]
-  ^IXIC: -10.3644% ; RS20 = -4.9606 pts lagging  [^IXIC to 2026-11-24]
+  ^IXIC: -10.3644% ; RS20 = -4.9607 pts lagging  [^IXIC to 2026-11-24]
   ^DJI: -4.5036% ; RS20 = -10.8215 pts lagging  [^DJI to 2026-11-24]
 52w high/low: INSUFFICIENT DATA (have 115, need 240)
 20-bar HH 148.2000 LL 120.3900; 60-bar HH 176.4200 LL 120.3900; 120-bar HH n/a LL n/a

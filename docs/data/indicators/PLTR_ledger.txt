@@ -32,7 +32,7 @@ Tenkan=157.6660 Kijun=172.4550 SpanA=194.1875 SpanB=182.8200 | Kumo Below | TK B
 Darvas: ceiling 212.9400 on 2026-10-12, floor 192.6000, status Breakdown Below, age 31 bars; crossing day 2026-10-16 (27 bars ago) vol ratio 1.4244 inconclusive
 RS20: stock 20-bar change raw -18.8950% adj -18.8950%
   ^GSPC: -6.7530% ; RS20 = -12.1419 pts lagging  [^GSPC to 2026-11-24]
-  ^IXIC: -10.3644% ; RS20 = -8.5305 pts lagging  [^IXIC to 2026-11-24]
+  ^IXIC: -10.3644% ; RS20 = -8.5306 pts lagging  [^IXIC to 2026-11-24]
   ^DJI: -4.5036% ; RS20 = -14.3914 pts lagging  [^DJI to 2026-11-24]
 52w: high 212.9400 (2026-10-12) low 106.3700 (2026-06-25); from high -24.3073% from low 51.5277% (bars in window 251)
 20-bar HH 198.7400 LL 142.2800; 60-bar HH 212.9400 LL 142.2800; 120-bar HH 212.9400 LL 106.3700
@@ -48,7 +48,8 @@ Outlook: start day 2026-11-25; missing sessions after last bar none; closures ['
 Microstructure: MIXED (1 bullish / 2 bearish of 4) - close vs VWAP10 bullish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral
 Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-12.14 pts vs main benchmark)
 Structure: Darvas Breakdown Below; nearest support -1.30% (0.22 ATRs); nearest resistance +7.00% (1.20 ATRs)
-Broker rating changes, last 14 days: 0 upgrade(s), 0 downgrade(s)
+Broker rating changes, last 14 days: 1 upgrade(s), 0 downgrade(s)
+  2026-11-24 upgrade: Palantir: Why I'm Upgrading To Strong Buy After The Selloff
 
 --- WEEKS (last 4) ---
 Week 2026-11-02 bars 5: O 186.52 C 160.38 H 187.55 L 152.6 prevC 184.11 chg raw -12.8890% adj -12.8890% up 1 dn 4 volx 1.7317 CVD -24,770,241 UD 0.1388 pos 0.2226 standout 2026-11-03 V 53,062,500 chg -1.6485% CLV 0.7981

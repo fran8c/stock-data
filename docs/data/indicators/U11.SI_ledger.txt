@@ -1,5 +1,5 @@
 INDICATOR LEDGER - U11.SI (SGX, SGD) - official figures computed by the pipeline
-as of 2026-11-24 | last bar 2026-11-24 | expected session 2026-11-24 | bars used 1255 | excluded none
+as of 2026-11-25 | last bar 2026-11-24 | expected session 2026-11-24 | bars used 1255 | excluded none
 comparator ^STI ends 2026-11-24 (same as stock)
 comparator D05.SI ends 2026-11-24 (same as stock)
 comparator O39.SI ends 2026-11-24 (same as stock)
@@ -7,7 +7,6 @@ ex-dates in last 60 days: none
 
 --- LAST 10 BARS ---
       date    open    high     low   close       volume  avg_vol20_prior     clv     vol_delta  chg_raw_pct  chg_pct  gap_pct  vol_ratio
-2026-11-10 36.7000 37.5000 36.5000 37.3800 6027844.0000     3783527.9000  0.7600  4581161.4400       1.3557   1.3557  -0.4881     1.5932
 2026-11-11 37.6800 38.0400 37.3800 37.5800 3819320.0000     3927634.1000 -0.3939 -1504580.6061       0.5350   0.5350   0.8026     0.9724
 2026-11-12 38.0000 38.1700 37.7300 37.7700 3364530.0000     3926257.1000 -0.8182 -2752797.2727       0.5056   0.5056   1.1176     0.8569
 2026-11-13 37.9000 37.9700 37.4700 37.7500 1908030.0000     3892246.6000  0.1200   228963.6000      -0.0530  -0.0530   0.3442     0.4902
@@ -16,38 +15,39 @@ ex-dates in last 60 days: none
 2026-11-18 36.0000 36.2500 35.8000 36.1300 3435990.0000     3692212.1000  0.4667  1603462.0000      -1.5531  -1.5531  -1.9074     0.9306
 2026-11-19 36.0300 36.2000 35.7500 36.1400 3368970.0000     3753472.7000  0.7333  2470578.0000       0.0277   0.0277  -0.2768     0.8976
 2026-11-20 35.8000 35.8900 35.2500 35.4200 4685060.0000     3767663.2000 -0.4687 -2196121.8750      -1.9923  -1.9923  -0.9408     1.2435
-2026-11-24 35.7000 36.0000 35.2500 35.2800 4685680.0000     3865898.2000 -0.9200 -4310825.6000      -0.3953  -0.3953   0.7905     1.2121
-CVD10=-6,161,274
-VWAP10 = 36.6737; Close vs VWAP -3.80%
-Volume ratio = 4,685,680 / 3,865,898.2 = 1.2121
-UDVR10 (adjusted classification): up 4 vol 16,580,664 | down 6 vol 19,735,420 | ratio 0.8401 selling-dominated
-VT5/20 = 1.0368 normal; 5-bar chg raw -5.6180% adj -5.6180%
-ATR14 (Wilder) = 0.8103; last 14 TR: 0.64, 2.83, 1.14, 1.27, 1.00, 0.66, 0.59, 0.50, 0.51, 0.78, 0.90, 0.45, 0.89, 0.75
-ATR14 one-step check: previous ATR14 0.8149; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.7500; (13 x 0.8149 + 0.7500) / 14 = 0.8103
-Expected 5-day range = 35.2800 +/- 0.8103*2.236 = 33.4682 - 37.0918
-MACD=-1.4884 Signal=-1.2296 Hist=-0.2588; prev hist -0.2672 
-Momentum proxy (substitute only): SMA20 38.4430 -> bearish
-10-bar change raw -4.3384% adj -4.3384%; Divergence: None
-Tenkan=36.7100 Kijun=38.7600 SpanA=41.5675 SpanB=41.5750 | Kumo Below | TK Bearish | Chikou Bearish Unobstructed | score -3 -> Strong Bearish
-Darvas: ceiling 45.1500 on 2026-07-15, floor 41.8400, status Breakdown Below, age 91 bars OLD BOX (context only); crossing day 2026-08-13 (71 bars ago) vol ratio 1.1063 inconclusive
-RS20: stock 20-bar change raw -15.1719% adj -15.1719%
-  ^STI: -8.5444% ; RS20 = -6.6275 pts lagging  [^STI to 2026-11-24]
-  D05.SI: -11.0156% ; RS20 = -4.1563 pts lagging  [D05.SI to 2026-11-24]
-  O39.SI: -8.2069% ; RS20 = -6.9650 pts lagging  [O39.SI to 2026-11-24]
-52w: high 45.1500 (2026-07-15) low 33.7500 (2025-11-25); from high -21.8605% from low 4.5333% (bars in window 250)
-20-bar HH 41.8100 LL 35.2500; 60-bar HH 43.7500 LL 35.2500; 120-bar HH 45.1500 LL 35.2500
-Levels above: VWAP10 36.6737 (+3.95%) | Tenkan 36.7100 (+4.05%) | Kijun 38.7600 (+9.86%)
-Levels below: 20-bar low / 60-bar low / 120-bar low 35.2500 (-0.09%) | 52-week low 33.7500 (-4.34%)
+2026-11-23 34.9000 35.2700 34.9000 35.1400 5015350.0000     3865898.2000  0.2973  1491050.0000      -0.7905  -0.7905  -1.4681     1.2973
+2026-11-24 35.7000 36.0000 35.2500 35.2800 4685680.0000     3967077.7000 -0.9200 -4310825.6000       0.3984   0.3984   1.5936     1.1811
+CVD10=-9,251,386
+VWAP10 = 36.3733; Close vs VWAP -3.01%
+Volume ratio = 4,685,680 / 3,967,077.7 = 1.1811
+UDVR10 (adjusted classification): up 4 vol 15,238,500 | down 6 vol 20,065,090 | ratio 0.7595 selling-dominated
+VT5/20 = 1.1479 busier; 5-bar chg raw -3.8692% adj -3.8692%
+ATR14 (Wilder) = 0.7986; last 14 TR: 2.83, 1.14, 1.27, 1.00, 0.66, 0.59, 0.50, 0.51, 0.78, 0.90, 0.45, 0.89, 0.52, 0.86
+ATR14 one-step check: previous ATR14 0.7938; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 0.8600; (13 x 0.7938 + 0.8600) / 14 = 0.7986
+Expected 5-day range = 35.2800 +/- 0.7986*2.236 = 33.4944 - 37.0656
+MACD=-1.5241 Signal=-1.2903 Hist=-0.2338; prev hist -0.2677 
+Momentum proxy (substitute only): SMA20 38.1350 -> bearish
+10-bar change raw -5.6180% adj -5.6180%; Divergence: None
+Tenkan=36.5350 Kijun=38.5850 SpanA=41.5675 SpanB=41.5750 | Kumo Below | TK Bearish | Chikou Bearish Unobstructed | score -3 -> Strong Bearish
+Darvas: ceiling 45.1500 on 2026-07-15, floor 41.8400, status Breakdown Below, age 92 bars OLD BOX (context only); crossing day 2026-08-13 (72 bars ago) vol ratio 1.1063 inconclusive
+RS20: stock 20-bar change raw -14.5763% adj -14.5763%
+  ^STI: -8.4388% ; RS20 = -6.1374 pts lagging  [^STI to 2026-11-24]
+  D05.SI: -10.7398% ; RS20 = -3.8365 pts lagging  [D05.SI to 2026-11-24]
+  O39.SI: -8.0484% ; RS20 = -6.5279 pts lagging  [O39.SI to 2026-11-24]
+52w: high 45.1500 (2026-07-15) low 33.7500 (2025-11-25); from high -21.8605% from low 4.5333% (bars in window 251)
+20-bar HH 41.8100 LL 34.9000; 60-bar HH 43.7500 LL 34.9000; 120-bar HH 45.1500 LL 34.9000
+Levels above: VWAP10 36.3733 (+3.10%) | Tenkan 36.5350 (+3.56%) | Kijun 38.5850 (+9.37%)
+Levels below: 20-bar low / 60-bar low / 120-bar low 34.9000 (-1.08%) | 52-week low 33.7500 (-4.34%)
 Signals: VWAP -1 Ichimoku -1 MACD -1 CVD -1 -> HIGH BEARISH (0 bull / 4 bear of 4); Volume Confirmation CONFIRMS; final HIGH BEARISH
-Calibration (past year): 5d 196/245 = 80.0% ; 10d 176/240 = 73.3333%
+Calibration (past year): 5d 197/246 = 80.0813% ; 10d 177/241 = 73.444%
 Outlook: start day 2026-11-25; missing sessions after last bar none; closures none; early closes none
-  Week 1 (to 2026-11-27) d=3.0: 35.2800 +/- 0.8103*1.732 -> 33.8766 - 36.6834
-  Week 2 cumulative (to 2026-12-04) d=8.0: 35.2800 +/- 0.8103*2.828 -> 32.9886 - 37.5714
+  Week 1 (to 2026-11-27) d=3.0: 35.2800 +/- 0.7986*1.732 -> 33.8969 - 36.6631
+  Week 2 cumulative (to 2026-12-04) d=8.0: 35.2800 +/- 0.7986*2.828 -> 33.0217 - 37.5383
 
 --- SCORES (statistics only, not advice: the readings behind the harness's pillars) ---
-Microstructure: BEARISH (0 bullish / 3 bearish of 4) - close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral
-Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-6.63 pts vs main benchmark)
-Structure: Darvas Breakdown Below (OLD BOX: context only); nearest support -0.09% (0.04 ATRs); nearest resistance +3.95% (1.72 ATRs)
+Microstructure: BEARISH (0 bullish / 4 bearish of 4) - close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bearish
+Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-6.14 pts vs main benchmark)
+Structure: Darvas Breakdown Below (OLD BOX: context only); nearest support -1.08% (0.48 ATRs); nearest resistance +3.10% (1.37 ATRs)
 Broker rating changes, last 14 days: 1 upgrade(s), 1 downgrade(s)
   2026-11-10 upgrade: CLSA Upgrades United Overseas Bank to Accumulate Rating
   2026-11-18 downgrade: Autonomous Research Downgrades United Overseas Bank to Neutral, Adjusts Price Target to SG
@@ -56,4 +56,4 @@ Broker rating changes, last 14 days: 1 upgrade(s), 1 downgrade(s)
 Week 2026-11-02 bars 5: O 41.1 C 36.88 H 41.21 L 36.54 prevC 41.37 chg raw -10.8533% adj -10.8533% up 0 dn 5 volx 1.7738 CVD 1,657,446 UD 0.0000 pos 0.0728 standout 2026-11-04 V 11,440,840 chg -4.9926% CLV -0.1337
 Week 2026-11-09 bars 4: O 36.7 C 37.75 H 38.17 L 36.5 prevC 36.88 chg raw 2.3590% adj 2.3590% up 3 dn 1 volx 0.9990 CVD 552,747 UD 6.9243 pos 0.7485 standout 2026-11-10 V 6,027,844 chg 1.3557% CLV 0.7600
 Week 2026-11-16 bars 5: O 37.74 C 35.42 H 37.89 L 35.25 prevC 37.75 chg raw -6.1722% adj -6.1722% up 1 dn 4 volx 0.8794 CVD -2,403,196 UD 0.2564 pos 0.0644 standout 2026-11-20 V 4,685,060 chg -1.9923% CLV -0.4687
-Week 2026-11-23 bars 1 (incomplete): O 35.7 C 35.28 H 36.0 L 35.25 prevC 35.42 chg raw -0.3953% adj -0.3953% up 0 dn 1 volx 1.2121 CVD -4,310,826 UD 0.0000 pos 0.0400 standout 2026-11-24 V 4,685,680 chg -0.3953% CLV -0.9200
+Week 2026-11-23 bars 2 (incomplete): O 34.9 C 35.28 H 36.0 L 34.9 prevC 35.42 chg raw -0.3953% adj -0.3953% up 1 dn 1 volx 1.2547 CVD -2,819,776 UD 0.9343 pos 0.3455 standout 2026-11-23 V 5,015,350 chg -0.7905% CLV 0.2973

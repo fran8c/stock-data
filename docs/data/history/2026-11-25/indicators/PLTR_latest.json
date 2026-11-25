@@ -20,7 +20,7 @@
   "^IXIC": {
    "last_date": "2026-11-24",
    "sessions_behind_stock": 0,
-   "rs20_pts": -8.5305,
+   "rs20_pts": -8.5306,
    "chg20_pct": -10.3644,
    "label": "lagging"
   },
@@ -113,7 +113,7 @@
   "rs20_GSPC": -12.1419,
   "chg20_GSPC_pct": -6.753,
   "GSPC_close_date": "2026-11-24",
-  "rs20_IXIC": -8.5305,
+  "rs20_IXIC": -8.5306,
   "chg20_IXIC_pct": -10.3644,
   "IXIC_close_date": "2026-11-24",
   "rs20_DJI": -14.3914,
@@ -229,9 +229,18 @@
    "resistance_dist_atr": 1.1953
   },
   "ratings_14d": {
-   "upgrades": 0,
+   "upgrades": 1,
    "downgrades": 0,
-   "items": []
+   "items": [
+    {
+     "date": "2026-11-24",
+     "title": "Palantir: Why I'm Upgrading To Strong Buy After The Selloff",
+     "source": "Seeking Alpha",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMW9ObTlJbkpuVDZXd3ZWVVZZbEUzZTI1VHIwYVJvVnl3THJ5YVNlMHgwV1ZWYnRXRVVONjFwZkZKNzktSFgwRkxKREpBN3UtOUcwb09Kemg4eENndmlHeFZTMDdGR2xQX3E2Nk04eS1wUGZwRTdqRlZveF9uT1ZuSGJEVWc2aU0zV0E1MnNnQ3pzVUdFYjZJZjBWZFp1b3c?oc=5",
+     "direction": 1,
+     "change": "upgrade"
+    }
+   ]
   }
  }
 }

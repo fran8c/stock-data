@@ -1,13 +1,21 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-25 10:54 SGT
+Run time: 2026-11-25 13:28 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-24 23:05 SGT, latest SGX session expected 2026-11-24
-  - US: 2026-11-25 10:54 SGT, latest US session expected 2026-11-24
+  - SGX: 2026-11-25 13:28 SGT, latest SGX session expected 2026-11-24
+  - US: 2026-11-25 13:28 SGT, latest US session expected 2026-11-24
 
 CRITICAL (0): these gaps break the harnesses
   - none
 
-GAPS (29): expected, marked NOT RETRIEVED in the files
+GAPS (36): expected, marked NOT RETRIEVED in the files
+  - [SGX] D05.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] O39.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] U11.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] BN4.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] BS6.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] U96.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] Z74.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] C07.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -31,9 +39,8 @@ GAPS (29): expected, marked NOT RETRIEVED in the files
   - [US] NVDA: next results date not yet announced (last was 2026-11-17)
   - [US] PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] No peers in peers.txt for: SPCX, MU, PLTR - the harness will suggest some
-  - US GDP q/q annualised: no response after 2 tries (ReadTimeout)
   - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1458 items have no summary (paywall or site blocks automated visits)
+  - News: 1483 items have no summary (paywall or site blocks automated visits)

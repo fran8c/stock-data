@@ -20,7 +20,7 @@
   "^IXIC": {
    "last_date": "2026-11-24",
    "sessions_behind_stock": 0,
-   "rs20_pts": -4.9606,
+   "rs20_pts": -4.9607,
    "chg20_pct": -10.3644,
    "label": "lagging"
   },
@@ -113,7 +113,7 @@
   "rs20_GSPC": -8.572,
   "chg20_GSPC_pct": -6.753,
   "GSPC_close_date": "2026-11-24",
-  "rs20_IXIC": -4.9606,
+  "rs20_IXIC": -4.9607,
   "chg20_IXIC_pct": -10.3644,
   "IXIC_close_date": "2026-11-24",
   "rs20_DJI": -10.8215,
