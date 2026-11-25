@@ -1,5 +1,4 @@
 date,close,confluence_final,micro_bullish,micro_bearish,micro_label,momentum_bullish,momentum_bearish,momentum_label,darvas_status,darvas_old_box,support_dist_pct,support_dist_atr,resistance_dist_pct,resistance_dist_atr,ratings_upgrades_14d,ratings_downgrades_14d
-2025-11-25,53.5000,LEAN BEARISH,0,3,BEARISH,1,1,MIXED,Breakdown Below,False,-1.1776,0.9742,0.2991,0.2474,0,0
 2025-11-26,53.8400,CONFLICTING,2,2,MIXED,1,1,MIXED,Breakdown Below,False,-0.2026,0.1666,0.2879,0.2367,0,0
 2025-11-27,54.0000,CONFLICTING,2,2,MIXED,1,1,MIXED,Breakdown Below,False,-0.5396,0.4552,0.1481,0.1250,0,0
 2025-11-28,54.2000,CONFLICTING,2,2,MIXED,1,1,MIXED,Inside,False,-0.2214,0.1924,0.0369,0.0321,0,0
@@ -250,3 +249,4 @@ date,close,confluence_final,micro_bullish,micro_bearish,micro_label,momentum_bul
 2026-11-20,66.1100,HIGH BEARISH,0,4,BEARISH,0,3,BEARISH,Breakdown Below,False,-0.3177,0.1643,3.9933,2.0659,2,0
 2026-11-23,65.7600,HIGH BEARISH,0,4,BEARISH,0,3,BEARISH,Breakdown Below,False,-1.0797,0.5624,3.8948,2.0289,2,0
 2026-11-24,66.2400,HIGH BEARISH,0,4,BEARISH,0,3,BEARISH,Breakdown Below,False,-1.7965,0.9266,2.4050,1.2404,2,0
+2026-11-25,65.4400,HIGH BEARISH,0,3,BEARISH,0,3,BEARISH,Breakdown Below,False,-0.5960,0.3094,2.8794,1.4950,1,0
