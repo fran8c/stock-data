@@ -397,6 +397,44 @@ def write_prices(symbol, hist):
     return df
 
 
+def keep_dropped_bars(symbol, hist):
+    """
+    Yahoo sometimes leaves a day out of a later download (on 24 Nov 2026 every
+    SGX stock lost its 23 Nov bar). Put back any bar saved on an earlier run
+    that Yahoo no longer sends. Yahoo's figures still win for every date it
+    does send, so later corrections (e.g. volume) are still picked up.
+    """
+    path = PRICES / f"{safe_name(symbol)}.csv"
+    if hist is None or hist.empty or not path.exists():
+        return hist
+    saved = pd.read_csv(path, dtype={"Date": str})
+    have = set(hist.index.strftime("%Y-%m-%d"))
+    newest = hist.index[-1].strftime("%Y-%m-%d")
+    lost = saved[~saved["Date"].isin(have) & (saved["Date"] < newest)]
+    if lost.empty:
+        return hist
+    idx = pd.DatetimeIndex(pd.to_datetime(lost["Date"]))
+    if hist.index.tz is not None:
+        idx = idx.tz_localize(hist.index.tz)
+    idx.name = hist.index.name
+    add = pd.DataFrame(index=idx, columns=hist.columns, dtype="float64")
+    for c in ("Open", "High", "Low", "Close", "Volume"):
+        if c in add.columns:
+            add[c] = lost[c].astype("float64").values
+    if "Adj Close" in add.columns:      # not saved in the files; Close is the closest stand-in
+        add["Adj Close"] = add["Close"]
+    out = pd.concat([hist, add]).sort_index()
+    R.warn(f"{symbol}: Yahoo left out {', '.join(lost['Date'])} - kept the bar(s) saved on an earlier run")
+    return out
+
+
+def missing_sessions(prices, ref_prices, lookback=60):
+    """Trading days in the benchmark's last `lookback` bars that this price file lacks."""
+    first = prices["Date"].iloc[0]
+    have = set(prices["Date"])
+    return [d for d in ref_prices["Date"].tail(lookback) if d >= first and d not in have]
+
+
 def write_dividends(symbol, tk):
     rows = []
     cutoff = pd.Timestamp(TODAY - timedelta(days=730))
@@ -1317,7 +1355,7 @@ def main():
         if fresh or sym not in tks:
             tks[sym] = yf_ticker(sym)
         try:
-            h = fetch_history(tks[sym], sym)
+            h = keep_dropped_bars(sym, fetch_history(tks[sym], sym))
             p = write_prices(sym, h)
             if p.empty:
                 raise RuntimeError("no bars in the last year")
@@ -1357,6 +1395,30 @@ def main():
         if not stale[m]:
             R.scope = m
             R.good(f"Lag check: every {m} price file has the {expected[m]} session")
+
+    # Gap check: a day missing in the middle of a file (the lag check above only
+    # looks at the last bar). Compared with the market's benchmark index.
+    ref_sym = {"SGX": "^STI", "US": "^GSPC"}
+    for sym, p in sorted(prices.items()):
+        m = market_of(sym)
+        ref = ref_sym.get(m)
+        if not ref or sym in bench_syms:
+            continue
+        ref_p = prices.get(ref)
+        if ref_p is None and (PRICES / f"{safe_name(ref)}.csv").exists():
+            ref_p = pd.read_csv(PRICES / f"{safe_name(ref)}.csv", dtype={"Date": str})
+        if ref_p is None:
+            continue
+        gaps = missing_sessions(p, ref_p)
+        R.scope = m
+        if gaps:
+            R.crit(f"{sym}: price file is missing {', '.join(gaps)} (the {ref} file has these days) - "
+                   "figures spanning these days are computed without them")
+    for b in [b for b, _ in run_bench]:
+        if b in prices and int(prices[b]["Volume"].iloc[-1]) == 0 and len(prices[b]) > 1 \
+                and int(prices[b]["Volume"].iloc[-2]) > 0:
+            R.scope = market_of(b)
+            R.warn(f"{b}: latest bar {prices[b]['Date'].iloc[-1]} has zero volume - Yahoo may not have finished it")
 
     # 2. Stocks: figures, indicator ledger, news and dashboard rows
     blocks, dash_stocks, dash_bench, fresh_news = {}, {}, {}, []
