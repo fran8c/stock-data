@@ -1,7 +1,7 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-26 10:53 SGT
+Run time: 2026-11-26 23:06 SGT
 Market data from (each market runs about 5 hours after its close):
-  - SGX: 2026-11-25 23:11 SGT, latest SGX session expected 2026-11-25
+  - SGX: 2026-11-26 23:06 SGT, latest SGX session expected 2026-11-26
   - US: 2026-11-26 10:53 SGT, latest US session expected 2026-11-25
 
 CRITICAL (0): these gaps break the harnesses
@@ -16,7 +16,7 @@ GAPS (37): expected, marked NOT RETRIEVED in the files
   - [SGX] U96.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
   - [SGX] Z74.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
   - [SGX] C07.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
-  - [SGX] ^STI: latest bar 2026-11-25 has zero volume - Yahoo may not have finished it
+  - [SGX] ^STI: latest bar 2026-11-26 has zero volume - Yahoo may not have finished it
   - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
   - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
   - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
@@ -44,4 +44,4 @@ GAPS (37): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1520 items have no summary (paywall or site blocks automated visits)
+  - News: 1556 items have no summary (paywall or site blocks automated visits)
