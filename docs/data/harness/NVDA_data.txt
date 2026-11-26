@@ -1,16 +1,15 @@
 Run the Individual Stock Harness v3.3 (saved in this chat or project) on the inputs below. If the harness is not saved here, paste the harness first, then these inputs.
 
-=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-25 13:28 SGT ===
+=== RUN INPUTS for the Individual Stock Harness v3.3 - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-26 10:53 SGT ===
 as of: 2026-11-25
 ticker: NVDA on NASDAQ
 mode: A
 depth: STANDARD
 output: STANDARD
-last_results_date: 2026-11-17 (source: Yahoo Finance via yfinance, https://finance.yahoo.com/quote/NVDA/, retrieved 2026-11-25)
+last_results_date: 2026-11-17 (source: Yahoo Finance via yfinance, https://finance.yahoo.com/quote/NVDA/, retrieved 2026-11-26)
 
 raw_market_data (NVDA, 251 daily bars from Yahoo Finance via the pipeline; Close is the real close, not adjusted):
 Date,Open,High,Low,Close,Volume
-2025-11-25,174.91,178.16,169.55,177.82,320600300
 2025-11-26,181.63,182.91,178.24,180.26,183852000
 2025-11-28,179.01,179.29,176.5,177.0,121332800
 2025-12-01,174.76,180.3,173.68,179.92,188131000
@@ -260,11 +259,11 @@ Date,Open,High,Low,Close,Volume
 2026-11-19,152.92,158.13,145.71,145.98,322940100
 2026-11-20,143.52,143.73,124.5,125.53,633418400
 2026-11-23,167.04,171.5,156.93,165.05,782593300
-2026-11-24,159.1,159.92,150.5,155.38,383594200
+2026-11-24,159.1,159.92,150.5,155.38,386223600
+2026-11-25,144.06,150.37,141.17,149.3,363377300
 
 benchmark_data (S&P 500, ^GSPC, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-21,7509.2002
 2026-07-22,7498.96
 2026-07-23,7408.2998
 2026-07-24,7411.98
@@ -354,10 +353,10 @@ Date,Close
 2026-11-20,6910.3901
 2026-11-23,7237.1699
 2026-11-24,7201.0898
+2026-11-25,7182.7798
 
 benchmark_data (Nasdaq Composite, ^IXIC, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-21,25837.2109
 2026-07-22,25690.9004
 2026-07-23,25137.6895
 2026-07-24,24975.8203
@@ -447,10 +446,10 @@ Date,Close
 2026-11-20,22617.7305
 2026-11-23,24089.5605
 2026-11-24,23733.5391
+2026-11-25,23585.8027
 
 benchmark_data (Dow Jones Industrial Average, ^DJI, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-21,52224.6406
 2026-07-22,52218.5781
 2026-07-23,51711.6484
 2026-07-24,51947.25
@@ -540,10 +539,10 @@ Date,Close
 2026-11-20,48147.3281
 2026-11-23,49595.3086
 2026-11-24,50018.6992
+2026-11-25,50182.9492
 
 peer_data (AMD, AMD, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-21,544.43
 2026-07-22,552.33
 2026-07-23,539.69
 2026-07-24,521.95
@@ -633,10 +632,10 @@ Date,Close
 2026-11-20,424.39
 2026-11-23,453.46
 2026-11-24,413.27
+2026-11-25,406.03
 
 peer_data (AVGO, AVGO, last 90 daily closes, Yahoo Finance via the pipeline):
 Date,Close
-2026-07-21,386.5
 2026-07-22,396.81
 2026-07-23,392.47
 2026-07-24,381.92
@@ -726,6 +725,7 @@ Date,Close
 2026-11-20,304.41
 2026-11-23,313.55
 2026-11-24,301.08
+2026-11-25,300.86
 
 corporate_actions (dividends and splits, last 12 months, Yahoo Finance via the pipeline):
 Date,Type,Amount
@@ -741,17 +741,16 @@ Date,Type,Name
 
 github_ledger:
 INDICATOR LEDGER - NVDA (US, USD) - official figures computed by the pipeline
-as of 2026-11-25 | last bar 2026-11-24 | expected session 2026-11-24 | bars used 1254 | excluded none
-comparator ^GSPC ends 2026-11-24 (same as stock)
-comparator ^IXIC ends 2026-11-24 (same as stock)
-comparator ^DJI ends 2026-11-24 (same as stock)
-comparator AMD ends 2026-11-24 (same as stock)
-comparator AVGO ends 2026-11-24 (same as stock)
+as of 2026-11-26 | last bar 2026-11-25 | expected session 2026-11-25 | bars used 1255 | excluded none
+comparator ^GSPC ends 2026-11-25 (same as stock)
+comparator ^IXIC ends 2026-11-25 (same as stock)
+comparator ^DJI ends 2026-11-25 (same as stock)
+comparator AMD ends 2026-11-25 (same as stock)
+comparator AVGO ends 2026-11-25 (same as stock)
 ex-dates in last 60 days: none
 
 --- LAST 10 BARS ---
       date     open     high      low    close         volume  avg_vol20_prior     clv       vol_delta  chg_raw_pct  chg_pct  gap_pct  vol_ratio
-2026-11-11 172.8000 177.5400 170.7700 173.7300 339214800.0000   154562130.0000 -0.1256  -42589745.9380       2.8658   2.8658   2.3151     2.1947
 2026-11-12 151.0100 167.1400 148.8000 166.1900 747707600.0000   165586365.0000  0.8964  670246071.1014      -4.3401  -4.3401 -13.0778     4.5155
 2026-11-13 169.9100 170.0000 158.3900 162.8500 365796600.0000   196617350.0000 -0.2317  -84753906.4599      -2.0097  -2.0097   2.2384     1.8604
 2026-11-16 159.0200 163.2000 155.0100 156.1400 333822100.0000   208844555.0000 -0.7241 -241705134.6764      -4.1204  -4.1204  -2.3519     1.5984
@@ -760,111 +759,112 @@ ex-dates in last 60 days: none
 2026-11-19 152.9200 158.1300 145.7100 145.9800 322940100.0000   250105510.0000 -0.9565 -308899226.0870      -3.2989  -3.2989   1.2984     1.2912
 2026-11-20 143.5200 143.7300 124.5000 125.5300 633418400.0000   259982135.0000 -0.8929 -565563906.8123     -14.0088 -14.0088  -1.6852     2.4364
 2026-11-23 167.0400 171.5000 156.9300 165.0500 782593300.0000   287643565.0000  0.1146   89700124.2965      31.4825  31.4825  33.0678     2.7207
-2026-11-24 159.1000 159.9200 150.5000 155.3800 383594200.0000   322231765.0000  0.0361   13845225.9023      -5.8588  -5.8588  -3.6050     1.1904
-CVD10=-653,116,223
-VWAP10 = 156.1182; Close vs VWAP -0.47%
-Volume ratio = 383,594,200 / 322,231,765.0 = 1.1904
-UDVR10 (adjusted classification): up 2 vol 1,121,808,100 | down 8 vol 3,544,055,500 | ratio 0.3165 selling-dominated
-VT5/20 = 2.0866 busier; 5-bar chg raw -0.0515% adj -0.0515%
-ATR14 (Wilder) = 13.3194; last 14 TR: 18.67, 13.30, 16.40, 12.78, 8.65, 24.93, 11.61, 8.19, 7.86, 9.30, 12.42, 21.48, 45.97, 14.55
-ATR14 one-step check: previous ATR14 13.2248; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 14.5500; (13 x 13.2248 + 14.5500) / 14 = 13.3194
-Expected 5-day range = 155.3800 +/- 13.3194*2.236 = 125.5978 - 185.1622
-MACD=-17.2658 Signal=-16.0762 Hist=-1.1895; prev hist -2.2975 
-Momentum proxy (substitute only): SMA20 175.7815 -> bearish
-10-bar change raw -7.9993% adj -7.9993%; Divergence: None
-Tenkan=148.0000 Kijun=173.3450 SpanA=226.0575 SpanB=225.3100 | Kumo Below | TK Bearish | Chikou Bearish Unobstructed | score -3 -> Strong Bearish
-Darvas: ceiling 243.3700 on 2026-10-06, floor 229.1100, status Breakdown Below, age 35 bars; crossing day 2026-10-12 (31 bars ago) vol ratio 0.6494 fakeout / liquidity-trap risk
-RS20: stock 20-bar change raw -28.7051% adj -28.7051%
-  ^GSPC: -6.7530% ; RS20 = -21.9521 pts lagging  [^GSPC to 2026-11-24]
-  ^IXIC: -10.3644% ; RS20 = -18.3407 pts lagging  [^IXIC to 2026-11-24]
-  ^DJI: -4.5036% ; RS20 = -24.2016 pts lagging  [^DJI to 2026-11-24]
-  AMD: -26.2360% ; RS20 = -2.4691 pts lagging  [AMD to 2026-11-24]
-  AVGO: -12.0498% ; RS20 = -16.6554 pts lagging  [AVGO to 2026-11-24]
-52w: high 243.3700 (2026-10-06) low 124.5000 (2026-11-20); from high -36.1548% from low 24.8032% (bars in window 251)
-20-bar HH 219.9900 LL 124.5000; 60-bar HH 243.3700 LL 124.5000; 120-bar HH 243.3700 LL 124.5000
-Levels above: VWAP10 156.1182 (+0.48%) | Kijun 173.3450 (+11.56%) | 20-bar high 219.9900 (+41.58%)
-Levels below: Tenkan 148.0000 (-4.75%) | 20-bar low / 60-bar low / 120-bar low / 52-week low 124.5000 (-19.87%)
+2026-11-24 159.1000 159.9200 150.5000 155.3800 386223600.0000   322231765.0000  0.0361   13940129.9363      -5.8588  -5.8588  -3.6050     1.1986
+2026-11-25 144.0600 150.3700 141.1700 149.3000 363377300.0000   337302960.0000  0.7674  278852580.2174      -3.9130  -3.9130  -7.2854     1.0773
+CVD10=-331,578,993
+VWAP10 = 154.1139; Close vs VWAP -3.12%
+Volume ratio = 363,377,300 / 337,302,960.0 = 1.0773
+UDVR10 (adjusted classification): up 1 vol 782,593,300 | down 9 vol 3,910,062,200 | ratio 0.2001 selling-dominated
+VT5/20 = 1.9900 busier; 5-bar chg raw -1.0996% adj -1.0996%
+ATR14 (Wilder) = 13.3830; last 14 TR: 13.30, 16.40, 12.78, 8.65, 24.93, 11.61, 8.19, 7.86, 9.30, 12.42, 21.48, 45.97, 14.55, 14.21
+ATR14 one-step check: previous ATR14 13.3194; latest TR = max(H-L, |H-prevC|, |L-prevC|) = 14.2100; (13 x 13.3194 + 14.2100) / 14 = 13.3830
+Expected 5-day range = 149.3000 +/- 13.3830*2.236 = 119.3755 - 179.2245
+MACD=-16.9189 Signal=-16.2448 Hist=-0.6741; prev hist -1.1895 
+Momentum proxy (substitute only): SMA20 172.4775 -> bearish
+10-bar change raw -14.0621% adj -14.0621%; Divergence: None
+Tenkan=148.0000 Kijun=173.3450 SpanA=226.0925 SpanB=225.3100 | Kumo Below | TK Bearish | Chikou Bearish Unobstructed | score -3 -> Strong Bearish
+Darvas: ceiling 243.3700 on 2026-10-06, floor 229.1100, status Breakdown Below, age 36 bars; crossing day 2026-10-12 (32 bars ago) vol ratio 0.6494 fakeout / liquidity-trap risk
+RS20: stock 20-bar change raw -30.6807% adj -30.6807%
+  ^GSPC: -7.2469% ; RS20 = -23.4337 pts lagging  [^GSPC to 2026-11-25]
+  ^IXIC: -11.1641% ; RS20 = -19.5166 pts lagging  [^IXIC to 2026-11-25]
+  ^DJI: -4.3681% ; RS20 = -26.3126 pts lagging  [^DJI to 2026-11-25]
+  AMD: -29.8060% ; RS20 = -0.8746 pts in line  [AMD to 2026-11-25]
+  AVGO: -14.4822% ; RS20 = -16.1984 pts lagging  [AVGO to 2026-11-25]
+52w: high 243.3700 (2026-10-06) low 124.5000 (2026-11-20); from high -38.6531% from low 19.9197% (bars in window 251)
+20-bar HH 215.3300 LL 124.5000; 60-bar HH 243.3700 LL 124.5000; 120-bar HH 243.3700 LL 124.5000
+Levels above: VWAP10 154.1139 (+3.22%) | Kijun 173.3450 (+16.11%) | 20-bar high 215.3300 (+44.23%)
+Levels below: Tenkan 148.0000 (-0.87%) | 20-bar low / 60-bar low / 120-bar low / 52-week low 124.5000 (-16.61%)
 Signals: VWAP -1 Ichimoku -1 MACD -1 CVD -1 -> HIGH BEARISH (0 bull / 4 bear of 4); Volume Confirmation CONFIRMS; final HIGH BEARISH
 Calibration (past year): 5d 199/246 = 80.8943% ; 10d 205/241 = 85.0622%
-Outlook: start day 2026-11-25; missing sessions after last bar none; closures ['2026-11-26']; early closes ['2026-11-27']
-  Week 1 (to 2026-11-27) d=1.5: 155.3800 +/- 13.3194*1.225 -> 139.0637 - 171.6963
-  Week 2 cumulative (to 2026-12-04) d=6.5: 155.3800 +/- 13.3194*2.55 -> 121.4155 - 189.3445
+Outlook: start day 2026-11-27; missing sessions after last bar none; closures none; early closes ['2026-11-27']
+  Week 1 (to 2026-11-27) d=0.5: 149.3000 +/- 13.3830*0.707 -> 139.8382 - 158.7618
+  Week 2 cumulative (to 2026-12-04) d=5.5: 149.3000 +/- 13.3830*2.345 -> 117.9168 - 180.6832
 
 --- SCORES (statistics only, not advice: the readings behind the harness's pillars) ---
 Microstructure: BEARISH (0 bullish / 4 bearish of 4) - close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bearish
-Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-21.95 pts vs main benchmark)
-Structure: Darvas Breakdown Below; nearest support -4.75% (0.55 ATRs); nearest resistance +0.48% (0.06 ATRs)
-Broker rating changes, last 14 days: 0 upgrade(s), 0 downgrade(s)
+Momentum: BEARISH (0 bullish / 3 bearish of 3) - Ichimoku bearish, MACD bearish, RS20 bearish (-23.43 pts vs main benchmark)
+Structure: Darvas Breakdown Below; nearest support -0.87% (0.10 ATRs); nearest resistance +3.22% (0.36 ATRs)
+Broker rating changes, last 14 days: 0 upgrade(s), 1 downgrade(s)
+  2026-11-25 downgrade: S&P warns Nvidia's board may be compromised, puts chipmaker's rating on downgrade watch
 
 --- WEEKS (last 4) ---
 Week 2026-11-02 bars 5: O 207.53 C 186.64 H 209.98 L 181.46 prevC 204.64 chg raw -8.7959% adj -8.7959% up 2 dn 3 volx 1.6753 CVD -714,050,756 UD 0.4738 pos 0.1816 standout 2026-11-05 V 306,127,800 chg -9.2590% CLV -0.9811
 Week 2026-11-09 bars 5: O 173.07 C 162.85 H 179.92 L 148.8 prevC 186.64 chg raw -12.7465% adj -12.7465% up 1 dn 4 volx 3.9843 CVD 749,530,840 UD 0.1691 pos 0.4515 standout 2026-11-12 V 747,707,600 chg -4.3401% CLV 0.8964
 Week 2026-11-16 bars 5: O 159.02 C 125.53 H 163.2 L 124.5 prevC 162.85 chg raw -22.9168% adj -22.9168% up 0 dn 5 volx 1.9603 CVD -1,299,563,992 UD 0.0000 pos 0.0266 standout 2026-11-20 V 633,418,400 chg -14.0088% CLV -0.8929
-Week 2026-11-23 bars 2 (incomplete): O 167.04 C 155.38 H 171.5 L 150.5 prevC 125.53 chg raw 23.7792% adj 23.7792% up 1 dn 1 volx 2.0271 CVD 103,545,350 UD 2.0402 pos 0.2324 standout 2026-11-23 V 782,593,300 chg 31.4825% CLV 0.1146
+Week 2026-11-23 bars 3 (incomplete): O 167.04 C 149.3 H 171.5 L 141.17 prevC 125.53 chg raw 18.9357% adj 18.9357% up 1 dn 2 volx 1.7756 CVD 382,492,834 UD 1.0440 pos 0.2681 standout 2026-11-23 V 782,593,300 chg 31.4825% CLV 0.1146
 
 news_payload:
-NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-25 13:28 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
+NEWS PACK - from the user's own GitHub pipeline (fran8c/stock-data), run 2026-11-26 10:53 SGT. Collected by keyword rules from news feeds (Google News, Bing News, Yahoo Finance): every item is a candidate to check under news_rules D to I.
 Company: Nvidia (NVDA on NASDAQ; US) | sector words searched: semiconductor stocks | peers: AMD, Broadcom | home index: S&P 500 | region: US/global
 Window: 2026-11-09 to 2026-11-25
 SEARCH LOG
-COMPANY | Google News: "Nvidia" (daily, last 30 days kept) | 330 | 302
-COMPANY | Bing News, 3 queries: "Nvidia"; "Nvidia" shares OR stock; "Nvidia" results OR earnings OR dividend OR guidance (daily, counts combined) | 154 | 152
-COMPANY | Yahoo Finance news feed for NVDA (daily) | 170 | 156
-COMPANY | C5: "Nvidia" results date OR ex-dividend date 2026 | 8 | 8
-SECTOR | S1: semiconductor stocks news November 2026 | 25 | 25
-SECTOR | S2: AMD Broadcom Nvidia shares November 2026 | 25 | 25
-COUNTRY/MACRO | K1: US stock market S&P 500 24 November 2026 | 22 | 22
-COUNTRY/MACRO | K2: US Federal Reserve OR economy OR inflation November 2026 | 25 | 25
-COUNTRY/MACRO | K3: Federal Reserve next policy meeting date 2026 | 25 | 25
-COUNTRY/MACRO | K3: US GDP release date 2026 | 25 | 25
-GLOBAL/REGIONAL | G1: global markets central banks oil November 2026 | 25 | 25
-GLOBAL/REGIONAL | G2: Wall Street markets 24 November 2026 | 25 | 25
-DATE-SPECIFIC | D 2026-11-23: "Nvidia" OR "S&P 500" 23 November 2026 | 25 | 25
+COMPANY | Google News: "Nvidia" (daily, last 30 days kept) | 340 | 310
+COMPANY | Bing News, 3 queries: "Nvidia"; "Nvidia" shares OR stock; "Nvidia" results OR earnings OR dividend OR guidance (daily, counts combined) | 166 | 162
+COMPANY | Yahoo Finance news feed for NVDA (daily) | 180 | 156
+COMPANY | C5: "Nvidia" results date OR ex-dividend date 2026 | 25 | 25
+SECTOR | S1: semiconductor stocks news November 2026 | 25 | 24
+SECTOR | S2: AMD Broadcom Nvidia shares November 2026 | 25 | 24
+COUNTRY/MACRO | K1: US stock market S&P 500 25 November 2026 | 25 | 12
+COUNTRY/MACRO | K2: US Federal Reserve OR economy OR inflation November 2026 | 25 | 16
+COUNTRY/MACRO | K3: Federal Reserve next policy meeting date 2026 | 25 | 24
+COUNTRY/MACRO | K3: US GDP release date 2026 | 25 | 18
+GLOBAL/REGIONAL | G1: global markets central banks oil November 2026 | 25 | 23
+GLOBAL/REGIONAL | G2: Wall Street markets 25 November 2026 | 25 | 5
+DATE-SPECIFIC | D 2026-11-23: "Nvidia" OR "S&P 500" 23 November 2026 | 25 | 23
 DATE-SPECIFIC | D 2026-11-20: "Nvidia" OR "S&P 500" 20 November 2026 | 25 | 25
-DATE-SPECIFIC | D 2026-11-24: "Nvidia" OR "S&P 500" 24 November 2026 | 25 | 25
+DATE-SPECIFIC | D 2026-11-24: "Nvidia" OR "S&P 500" 24 November 2026 | 25 | 24
 ITEMS
-COMPANY | 2026-11-10 | Trump says FBI is investigating Nvidia CEO Jensen Huang’s relationship with alleged Chinese spy | NBC News | https://www.yahoo.com/news/politics/articles/trump-says-fbi-investigating-nvidia-222507663.html | CORROBORATED | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-10: chg -5.47%, gap -2.63%, vol 3.13x BIG MOVE; President Donald Trump said he spoke to Nvidia CEO Jensen Huang after the company revealed it launched a probe of his affair with an alleged Chinese spy. | none stated
-COMPANY | 2026-11-10 | Nvidia investigates CEO Jensen Huang amid allegations he was target of Chinese intelligence effort | CBS News | https://news.google.com/rss/articles/CBMiigFBVV95cUxNa3k3U25UbEN5bDBpODExQVZEUTVUWFRwWlZwSGF3SW1xaU5kVERpZ0ZpeE03NUZjbTlLVUFrQkEzbTZtY0RKS2N4NVUzdWt4N1NHb3VfcFlUekdQS1ZPRnlVcHZ2aGFGeTVENEZuai1fbjhCTjJSdUlNdzJ1Y3pvUTdzb2lJRlM3Q1E?oc=5 | CORROBORATED | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-10: chg -5.47%, gap -2.63%, vol 3.13x BIG MOVE; headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-11 | Nvidia stock falls 7% after report board is preparing to oust Jensen Huang after second affair | Insider on MSN | https://www.msn.com/en-us/news/other/nvidia-stock-falls-7-after-report-board-is-preparing-to-oust-jensen-huang-after-second-affair/ar-AA2heXyt | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-11: chg +2.87%, gap +2.32%, vol 2.19x BIG MOVE; Nvidia stock was down 7% after hours following two new reports about Jensen Huang dropped, including one that said its board was preparing to remove him. | none stated
+COMPANY | 2026-11-12 | Exclusive / Nvidia Is Preparing to Oust CEO Jensen Huang | WSJ | https://news.google.com/rss/articles/CBMikwFBVV95cUxON2VaZ01EcWdXc1ZGb3plNUNMM294WGZlT0tTbWw2SFNPOHZ3ZERtQlR6RkhLRWF2cHExRnNfWGZINm1NWVoxVjRSUDRTVXRFb1RaRGcyMXFUdEd0LWtlME5SVHJETVdzOHR6eHhyNXJLVXF6cldFbnhHMXcydFMzTGhzVnhWN2RQX2d0X1N4QVZvdUU?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-12: chg -4.34%, gap -13.08%, vol 4.52x BIG MOVE; Move follows company investigation into an affair with a Chinese woman alleged to be a spy. [summary from The Wall Street Journal] | none stated
 COMPANY | 2026-11-12 | Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump | TechCrunch on MSN | https://www.msn.com/en-us/news/other/democrats-launch-nvidia-investigation-write-scathing-letter-on-huang-s-scheme-with-trump/ar-AA2hkg7V | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-12: chg -4.34%, gap -13.08%, vol 4.52x BIG MOVE; This Congressional investigation into Nvidia's China sales and its dealings with Trump is the second one, so far, since news of the alleged spy affair broke. | none stated
 COMPANY | 2026-11-13 | Alleged spy at center of Nvidia CEO affair reportedly being probed over Super Micro smuggling effort | Yahoo Finance | https://finance.yahoo.com/technology/article/alleged-spy-at-center-of-nvidia-ceo-affair-reportedly-being-probed-over-super-micro-smuggling-effort-214712179.html | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-13: chg -2.01%, gap +2.24%, vol 1.86x BIG MOVE; The woman at the center of the Nvidia affair scandal is also reportedly being probed for involvement in a separate chip smuggling scheme. | none stated
-COMPANY | 2026-11-17 | NVIDIA Q3 FY27 Earnings Preview: Guidance, Rubin and the CEO Change | CoinDCX | https://news.google.com/rss/articles/CBMic0FVX3lxTE1uckJKdWNZaDQ2eWRRR3dfd3ZIZnNZSHE0MlFvRkpHUzBFTWluN0VLeFV2QzNXOGpCcl9BeGtQUmdSOXBNYTFuT3ljT3dZdk9xYVJvTVNkeHp3eVZJV3FNR0FZVkhZb2p6TEZGVHBPRHNIX3M?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-17 | Nvidia Preview: Strong Results, Uncertain Future | XTB.com | https://news.google.com/rss/articles/CBMipgFBVV95cUxPaFRleEZmbUViUDhrTkxPbW00VzMyNVhWeXpfcUUtSDJsT3ZLRzVpUm1QLVdjWWY5SVdic2FicENYNnZIRzhjRXlBNklFbmNFRnRUaWVtN1ZKSkhHWEI5VW81VDRwd0prWkktWUJqcEFVWHVMUnBWRUJxc2Y3X01zN1dwMTVOMFVaWERFZGxlU1B2RmN0M1NWa0p4QzByZlJ0NDVEcktR?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-18 | Nvidia board says it does not intend to reinstate Jensen Huang as CEO | NPR | https://news.google.com/rss/articles/CBMifkFVX3lxTE5EalRiWEJJQlhHY1VhazRNalhHZm9tZ2dQdFB0U3VuT2hJa1hQNXpuZEY0YnlOV3J5ajEyczd4N18ycjhDZ1B4RHpiTVhYTjlhWTFrdUdrUEhiMXJndlRzMU95VG9PazdzRGNyMHd4WWdsOGtqSWxrX2NNcG1FZw?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-18: chg -2.89%, gap +2.40%, vol 1.48x BIG MOVE; Nvidia (NVDA) board Chairman Harvey Jones said on the company's third quarter earnings call that it does not intend to reinstate Jensen Huang as CEO, a week after he resigned from the post following "personal behavior inconsistent with the company's code of conduct." [summary from Yahoo Finance Video] | none stated
 COMPANY | 2026-11-18 | Nvidia records strong growth in first earnings report without Jensen Huang | CBS News | https://news.google.com/rss/articles/CBMifEFVX3lxTE5zbkVuZVV1aE51bVM3Vkxyc2lYQVR4Qms5TDhnOTVwQTV4cG9MMkZtQVAxQXlWdDVSR25hUE9uMnRVbXZpWE5kTXZKNlZzdTlnV2NydUtYeklYaTNldjhFclBfaVZvTllXdFJ0dXRqQ3BhMzJSSlNpOTJtdVg?oc=5 | CORROBORATED | NEW/RECYCLED not checked | RESULTS; reaction day 2026-11-18: chg -2.89%, gap +2.40%, vol 1.48x BIG MOVE; Nvidia's latest earnings are the first time the chipmaker has reported financial results without founder and former CEO Jensen Huang at the helm. [summary from CBS News on MSN] | none stated
 COMPANY | 2026-11-18 | Nvidia with a positive Q3 despite SEC probing Nvidia amid Huang Scandal | Yahoo Finance Video | https://finance.yahoo.com/video/nvidia-with-a-positive-q3-despite-sec-probing-nvidia-amid-huang-scandal-223224298.html | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-18: chg -2.89%, gap +2.40%, vol 1.48x BIG MOVE; Deirdre Bosa discusses Jensen Huang's statement that he would be willing to return, the SEC's post-scandal probe into Nvidia (NVDA), and Nvidia's positive earnings report. Deirdre Bosa then sits down with Mustafa Suleyman, Microsoft's (MSFT) AI chief, to discuss Microsoft's 6 new AI models, the AI competition, and the 'handoverism' ... | none stated
 COMPANY | 2026-11-18 | National security and AI figures urge DOJ to probe what Nvidia knew about chip smuggling | NBC News on MSN | https://www.msn.com/en-us/news/other/national-security-and-ai-figures-urge-doj-to-probe-what-nvidia-knew-about-chip-smuggling/ar-AA2hHTmI | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-18: chg -2.89%, gap +2.40%, vol 1.48x BIG MOVE; A letter from 15 national security and AI leaders scrutinized the chipmaker’s knowledge of illegal transfers of its chips to China. | none stated
-COMPANY | 2026-11-18 | Nvidia rebounds 4% after earnings 🔼 Can the AI giant lift Wall Street? | XTB.com | https://news.google.com/rss/articles/CBMiwAFBVV95cUxPa0RaZXR4amZFVlpCWndrZ3JBek9yWDl4R1VQc2VPZmJ5UmxxYlc4LUNsYkR6MTJFSHBBMXpEV0JBNVZHUS0zd1JMYVctRE8wcDdpci1FZURNLTdTXzl3cmJxNnAxdFhhU0R0dXQwajBmWWw4RXhvSFN2YTdqdVpCSVRpVDdod1JZR1RWdUVpNzVEVTVydHJvR2FFTDVJcWZ1MEVIcVZObERsTUwyR1ViMFhLZXZxc0dMUTQyX0h2a2E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-18 | US OPEN: Nvidia Isn’t Enough as Wall Street Slips Back Into the Red | XTB.com | https://news.google.com/rss/articles/CBMiwAFBVV95cUxNcGdwMlRrTG8zZDhheFlYMU02M2Y1MTlvbDlvbU9CaGN4YjlDeklmblpJZTE3QXlGRnIweFFIcmpPeUdmQXRBdWo2T1FsRUZ3ZUU3UllhT3ZYUzFRdW1RVmY2UUU5VHJQVlBTQmF5a29xNUVyRWtTTFBSVUZZWktzWGVzQlNOMnRCMGxaTEtZdGYzVHRBY2lURElHNkxCUmxWeEN0ZWcyTFN4TjA4NG83VHdaMDU1eGNVWkV6aVBCdjc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COMPANY | 2026-11-19 | Micron Stock (MU) Falls 1.0% After Nvidia Earnings (Nov 18) | Gotrade | https://news.google.com/rss/articles/CBMifkFVX3lxTE01WHJkd29zVDNSODh5bTIzbk5ZdkU0SWJvWFlpalRkbTFFanNwQVBTWnlUQkMyZ1lNNm1jU2tBdlFmelM1MDNmd1JvTVJJUk5fSVdOWmJfZldaQVA1bUtDVUxVWTNPQXJWR1ZQeW8zM3ZCYk1wZ0pjVXZjVXVsZw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-20 | California attorney general subpoenas Nvidia over chips, former CEO’s affair | Boston Herald | https://www.bostonherald.com/2026/11/20/california-attorney-general-nvidia-subpoena/ | CORROBORATED | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-20: chg -14.01%, gap -1.69%, vol 2.44x BIG MOVE; California Attorney General Rob Bonta has issued an investigative subpoena to Nvidia related to former CEO Jensen Huang’s affair with a suspected Chinese spy. | none stated
 COMPANY | 2026-11-20 | California attorney general issues Nvidia subpoena in probe of China chip diversion | CNBC | https://www.msn.com/en-us/money/markets/california-attorney-general-issues-nvidia-subpoena-in-probe-of-china-chip-diversion/ar-AA2hOe3F | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-20: chg -14.01%, gap -1.69%, vol 2.44x BIG MOVE; The investigation by California Attorney General Rob Bonta comes on the heels of the resignation of Nvidia CEO Jensen Huang. | none stated
-COMPANY | 2026-11-20 | Jensen Huang Congress Testimony: 1 December Date and Format | Admirals | https://news.google.com/rss/articles/CBMiqAFBVV95cUxPd2JEaldRVXRmc3FuQW9WYTB6S2VvMGhJWDJxRVR1NUtVdDAwY2dxQlN6NUg5SWtUZDBfWDJzTTVoaFJTeEJrT1NLSUFGUDVoc21jb1N5OUlycjBDbTRfejJCYXdZMUdWbDZjbUpWd21tSC15NWRMai1JamViTW01d25talMxLVhDRmE4VkFRcy1tQk0zMTJPSnpzcDNKVlgtY0RhYTRqbmc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 COMPANY | 2026-11-21 | Nvidia stock extends $2.7 trillion rout as SEC probe reportedly investigates its accounting | Yahoo Finance | https://finance.yahoo.com/markets/article/nvidia-stock-extends-25-trillion-rout-as-sec-probe-reportedly-investigates-its-accounting-194945274.html | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-23: chg +31.48%, gap +33.07%, vol 2.72x BIG MOVE; Nvidia's record sell-off deepened as Reuters reported that SEC investigators are examining its accounting. | none stated
 COMPANY | 2026-11-21 | Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices | The New York Times | https://www.nytimes.com/2026/11/20/business/nvidia-sec-accounting.html | SINGLE-SOURCE | NEW/RECYCLED not checked | REGULATORY / LEGAL; reaction day 2026-11-23: chg +31.48%, gap +33.07%, vol 2.72x BIG MOVE; Questions around the company’s accounting had surfaced amid revelations about its questionable chip sales in Asia. | none stated
-COMPANY | 2026-11-23 | Trump Wanted Nvidia’s Chief Reinstated. Here’s How He Succeeded. | The New York Times | https://www.nytimes.com/2026/11/23/us/politics/trump-nvidia-huang.html | SINGLE-SOURCE | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-23: chg +31.48%, gap +33.07%, vol 2.72x BIG MOVE; President Trump decided he wanted to do whatever he could to help Mr. Huang get his old job back, two people familiar with the matter said. | none stated
-COMPANY | 2026-11-24 | Nvidia board reinstates Jensen Huang as CEO | Al Jazeera | https://news.google.com/rss/articles/CBMikgFBVV95cUxOQXRFOVpPQ1FxaTlVS0hfVGV5Tl91TzVUWldXTVgwVmI3eHRoYXhYbmllLUFobHhSWThOaXRTSVRDRkJ2ZTdsRDRHSElWRmU0SUFiQTU3VXk5V0pyREk0VFMwWUdFdTdUd2tCcEdNQmprZjFoM0VuUDNJNi1DYjdoc3FjV1RCZGxqRjdqX1MxQmtsZ9IBlwFBVV95cUxNdXhERGZiakd4c2ZlSnQ4UGZwNVVjUjNqTUhtNEozUXRUTVdkR09DeExjRllITG0tU0s3V05uYmwtQ1RPc2d4S2cxWTBjVW5rWk1RQVh3bEZLNms0NjFiZ2F2ZnBWYmJtTzFhYXhGVWVfcWFLN1liaEVfSEh2aGNvZGpyMzhEQ2VfT1Bzejl3TXpVdUNDSkU0?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-24: chg -5.86%, gap -3.60%, vol 1.19x BIG MOVE; Nvidia said Monday that it has restored Jensen Huang as the chipmaker's chief executive, calling him the "right person" to lead the company. [summary from CBS News on MSN] | none stated
-SECTOR | 2026-11-24 | Chip Stocks Lead Wall Street's Monday Rebound as Buyers Return | Nasdaq | https://news.google.com/rss/articles/CBMiqgFBVV95cUxNNzhXSk05VVF0dDVmOHlOTlpNMGxJMFRqQjN1eXE2Ynh0eU9aNmdxZ2prWDZjTkxTOUFRcllBMnZoZ1RrdUxzZ2dsOFh1aUVZVDZJQ3M3RW1UNUFZdkV4WE9rVmx0bmszTWJiVk05ZW5zSUJfRDR0d0NCdUxUMENmWUNSSlJoZmo0clU2dlJ3cDNfWFprYm56Q1pLNUk1X0lEemJLZ1NIY01idw?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-25 | US stock market today: Nasdaq and S&P 500 fall as Nvidia and AI stocks slide, Dow gains | Beinsure | https://news.google.com/rss/articles/CBMiggFBVV95cUxPWXhISFVWZllNX2ItSVRiWFVqSDFNQzloY29ZNGJjR04wa2lyRWx5Q1Nibjk1SGEzOHNMN0FrU2RiLV9JNW8yQjdHa25EZWRYLXliQzc2RDh5YWRUUHlWX1FRcHpNZmJySFJXM0t1d0lRd1RsSGNpSWF5NTJjNjV4UHR3?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-23 | AMD vs Nvidia GPU: 97% Growth vs 30x Claim [2026] | shattered.io | https://news.google.com/rss/articles/CBMilgFBVV95cUxQN0RZZ1JDbjVJVEVEZ185SUJSbm1LMHNtMEk3a0Y0VFUteTRseTNDR3dwYjk3emxULVBGcDhUV0xKNTc2WTBObThEa0loNEo5Y256d3MtekFZeno2TktMMmZWdVJsalJTbUJoLV9qb3lMelByb1lpS2FIN1diSFNWNEp0Sm1PMXhMRW02dndRY3Nzd2xXU1E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-24 | Nvidia board reinstates Jensen Huang as CEO | Al Jazeera | https://news.google.com/rss/articles/CBMikgFBVV95cUxOQXRFOVpPQ1FxaTlVS0hfVGV5Tl91TzVUWldXTVgwVmI3eHRoYXhYbmllLUFobHhSWThOaXRTSVRDRkJ2ZTdsRDRHSElWRmU0SUFiQTU3VXk5V0pyREk0VFMwWUdFdTdUd2tCcEdNQmprZjFoM0VuUDNJNi1DYjdoc3FjV1RCZGxqRjdqX1MxQmtsZ9IBlwFBVV95cUxNdXhERGZiakd4c2ZlSnQ4UGZwNVVjUjNqTUhtNEozUXRUTVdkR09DeExjRllITG0tU0s3V05uYmwtQ1RPc2d4S2cxWTBjVW5rWk1RQVh3bEZLNms0NjFiZ2F2ZnBWYmJtTzFhYXhGVWVfcWFLN1liaEVfSEh2aGNvZGpyMzhEQ2VfT1Bzejl3TXpVdUNDSkU0?oc=5 | CORROBORATED | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-24: chg -5.86%, gap -3.60%, vol 1.20x BIG MOVE; Nvidia said Monday that it has restored Jensen Huang as the chipmaker's chief executive, calling him the "right person" to lead the company. [summary from CBS News on MSN] | none stated
+COMPANY | 2026-11-24 | NVDA Stock Quote Price and Forecast | CNN | https://news.google.com/rss/articles/CBMiUEFVX3lxTE5oakpQaVAtWVg3Rjh6M2FFaExEa1JVeThKN1FIX1p2OG1lWmVaVnhlU3Zsek42ZlRyd055aXc2dGNHa0NxV2RfU1I1dUoweXNi?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-24 | Nvidia Stock $216: SpaceX $40B GPU Deal, Bull $243 | FinanceFeeds | https://news.google.com/rss/articles/CBMivAFBVV95cUxOT2ZzTjNmanRRMnAxOW5GZTR0Y2hPU1NtZ29TOElBa3BfTHVlR2pCUzQ5UTBkRGtyeHhNWkhpZUlKZDN2UnRVdG1wNzdHeUhoakNhbmFaSkhBeF9vY1ZLajNLWk9mQmVSYXJjbldsYUIwYS1ycnplSnQtZ1lvVlZYV0RMcjdueXgtOUd5aEQzVER3bHh0c21MUWl6RGJzRkxfNjlmOWZsRjJpMWY0Mnp4b2NPWGJ1UjlNbm1vbQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-25 | S&P warns Nvidia's board may be compromised, puts chipmaker's rating on downgrade watch | Reuters on MSN | https://www.msn.com/en-us/money/technology/s-p-warns-nvidia-s-board-may-be-compromised-puts-chipmaker-s-rating-on-downgrade-watch/ar-AA2ieqfx | SINGLE-SOURCE | NEW/RECYCLED not checked | RATING CHANGE; reaction day 2026-11-25: chg -3.91%, gap -7.29%, vol 1.08x BIG MOVE; By Anhata Rooprai and Harshita Mary Varghese Nov 25 (Reuters) - S&P Global Ratings placed Nvidia's credit rating on watch for a possible downgrade on Wednesday, saying the departure and subsequent ... | none stated
+COMPANY | 2026-11-25 | S&P Global warns Nvidia’s credit rating could be downgraded over governance risks | Insider on MSN | https://www.msn.com/en-us/money/top-stocks/s-p-global-warns-nvidia-s-credit-rating-could-be-downgraded-over-governance-risks/ar-AA2idLck | SINGLE-SOURCE | NEW/RECYCLED not checked | RATING CHANGE; reaction day 2026-11-25: chg -3.91%, gap -7.29%, vol 1.08x BIG MOVE; The ratings agency said it could cut Nvidia's AA credit rating over concerns about management and governance, and that it plans to meet with the board. | none stated
+COMPANY | 2026-11-25 | COHR Stock Swings After Nvidia-Led AI Rally: $15M Insider Buy Draws Attention | Stocktwits | https://stocktwits.com/news-articles/markets/equity/cohr-stock-swings-after-nvidia-led-ai-rally-15-m-insider-buy-draws-attention/cNbHcl8R9lg | SINGLE-SOURCE | NEW/RECYCLED not checked | MANAGEMENT; reaction day 2026-11-25: chg -3.91%, gap -7.29%, vol 1.08x BIG MOVE; AI stock swings, growing demand for infrastructure keep Coherent in investors' spotlight. | none stated
+COMPANY | 2026-11-25 | Anthropic Lockup Expiration: Every Unlock Date to Nov 2027 | Everything-PR | https://news.google.com/rss/articles/CBMiYEFVX3lxTE5XRHhNem9OUnBUaHZoSTdRTDcyV2FianhRNzUwLWQzT1hQZXhPbkFEdDI4QUxFcWpDMHZnNDdTMnh0cGpYaXk5S2JSd1N4bm1hWV8yUzh0Y3I2cHRBdDJtbA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COMPANY | 2026-11-25 | Google Earnings Date: When Does Alphabet Report Earnings? Time, Results History and Stock Reaction | MEXC | https://news.google.com/rss/articles/CBMijgFBVV95cUxOLUZoYnJ1TTZocVdGbFNPZFY3M3VSNU56S2t1NmVMUC1PdWNobHhDY1NRYTZjSGVlU1RLZTQxTEV0TkdYVDY5bmoxNmg2Mm9jUG9VRUIyZjA5MmtfM2NvSmM1RHQweDhwM3BWREgzRU5sM3h5OWxDdXJvT0x3SDZ6ODVmVnRzSWZ6aEoyOWtn?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-25 | Semiconductor Stocks Are Sinking. These 2 AI Chip Stocks Could Make You Richer on the Rebound. | The Motley Fool | https://news.google.com/rss/articles/CBMi0AFBVV95cUxNR21mNnJQQ2VudDcxTlk2dzVTVjVVUkZYaTMxendmaWlVSTBRMlhrWWNSUnM5WEJrN1JHQ0lqakg3NW9tME9Uajk5aVBtalhGWWdhdGpzSzctbU41N3FoLUxuMG8wOG9teVJsZ2xROTZlZW5zTU9tbk5YT1NNWWhKTXdaWW1URVdKNVZTX0w1ejZKR1hSbjVVWV9QYmFUMDJZeFZESGJpMVpNbEdja0tuOHlaaVp0cDMxYzltNnpVNDdxNEtoZ3pkdFkwMVpFVjBI?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-25 | AXTI vs. ASX: Which AI Semiconductor Stock Is the Better Buy Now? | Zacks Investment Research | https://news.google.com/rss/articles/CBMipgFBVV95cUxNbVU1eVJETnZTNWx2NEQ0RFZWcmNDOUhkZWhYcmROQ05KN3N0b0ZhZkpkZUdwSm1FYUVtNlUwQjN3dWdUMWV3OEpqcnlBV1Nvb3ZrbzgzUFg1MWZxYmZQdXpUMXF4NTl1NDdFWW5xcHlYXzJxX3BOd21NcnRQcEJOSUlZbWVMYlJBTjZaTWZuNHdmOC1NaWdRRHZnMno3OW13dG1zejFB?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 SECTOR | 2026-11-25 | Taiwan Semiconductor Stocks Fall 2.78% After Taipei Shares Hit the 10% Limit | TradingView | https://news.google.com/rss/articles/CBMizwFBVV95cUxNbWhPakhJTVpWYXJfa3ozbVM5ZGdaNFB4Nm5PQmREU0tMckNpUjFRcFEzTUlLRDNrWXI2aHY4Y0lhWEp0Nk9WVmg1N0R1RDFneFFjRXhUdnlmRF93TDVLTHNoVVkwd1g2QmQ2OWtRcGVRTk43TXZyZGpaeUFYaEIwS28tMk9OaUI5c2d3Z2NkWlVoNks3YlZ4VlhfdERmeUZVbk04Qml4WkJHVmppUWxDQzUxeVc5c3dpRTd5X2ZtVi1iLVlVb2xzNWRZWS0xcnM?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-25 | Nasdaq falls 1.5% as Nvidia drops 5.9% and chip stocks slide; Dow rises 0.9% and Anthropic closes below its IPO price | MLQ.ai | https://news.google.com/rss/articles/CBMiywFBVV95cUxOTjI1b0RKanFNcjFJS19PYTBfM01tLVlxQ3QwUkN3SlNCdXl0d1RWLVRQNWJrOUQyY2YwTHQzTzJocHhvdzREM1l4RmthYUhiYldUbEY4WmEwQzIwanJNOEVaNWw4WHpVZW55QVJoNEJCMC13THJrR1FoWjJFbHQ1Y3VNV3VFUlBJS09lUTRqeWpzSmFfTDE4bFhYVjJ5V0RaVDYwbV9MeXNxcEkyNzFZR0M5dzFEbThtYVVTNkpHUjRGM1Y4N3dtbUJobw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-SECTOR | 2026-11-25 | Director Raejeanne Skillern receives 1,305 stock units from Lattice Semiconductor (LSCC). | Stock Titan | https://news.google.com/rss/articles/CBMivAFBVV95cUxNUF9fTWI5bV94S3B2MHl0WnJRNWdvNXpCdWhmZER3S1VYOEYyWmJJenJ0VDRKNFZzZzhHcS1YQzdEZTZ2UFdkejVLOXdySEd3UUpudjhhejZqbU41NDNnRzByOXZfTzBzdDVoR2VlM1JDSGgtZ2lDdmx5d1Awalg4LS1SNlc2MVpreHBNVTRJdWNFVjVxZ0hvNFdBbzB0em11eUZJcFpjUkZRdkd6M1Z5ekF1TWxzSHRrNzJKMQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | How major US stock indexes fared Tuesday 11/24/2026 | KVUE | https://news.google.com/rss/articles/CBMi4AFBVV95cUxPNlBxME5Jb3RiSHZaUEF3RlR3aWRlaDZCdzdMU2NFb29wZTJ3WExKYmwyNUJtbFd3SWFzX3lpWjhNVUFyUmhfN1B4b3pka1AtR3V3UjVGdTdCT3NMMXZoRWtGbGdXbDJkVEt1NUpaRnBCSldXdGVzaEExSENfQklaeXcwc3cwaC0wS2ZaZXVOR3pzSUFaT1JZbVVVUGhYTVdwSEtIbE5FdnBmOURmM1hvTUF1anQ4WF90SkJqVkl2OFNuTGtROGV2bUN1TTZwZFYySGMxcXJjTGdmUHp4Qk5xOA?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | Nasdaq, S&P 500 end lower following Monday’s Nvidia-fueled rally | Virginia Business | https://news.google.com/rss/articles/CBMiggFBVV95cUxOMkNYcFIzdC03QUxKU1dEWWk1U1hNZEFWQ1puLTF6QVJPR0RFWVdBakdGZlpybVdIZFcyMUhQbmdmNUxZWG1UTjdiNXB0SlJ3UTl2YWxDR082MHlnM185eDBnU1dDT2gwRHE0MjVRNG92cVdoV0xsUmptWDZyY0RmX0ZB?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | Tech sell-off resumes as euphoria from Jensen Huang’s Nvidia return subsides | The Guardian | https://news.google.com/rss/articles/CBMihwFBVV95cUxPZ1p5a3A3ZXJ1bVJ4QjNneS1oelRUWTAxd0hpamlSdWUtRmU1bXpoVGNiNEFYQUoxUnFyV0d4QnFGRF9wNkdzYlFsUE40TElfMG5nZVF1X2hmMUNoVHhUaExDZ2lEQXFtTERYOHN2cS1saXVCWnZZbzZvRTRSanlMVHY2ekFXY2c?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | POLL Bruised S&P 500 seen gaining more than 12% by end-2027: Reuters poll | Reuters | https://news.google.com/rss/articles/CBMimgFBVV95cUxNWDhDOWgxS1ZTNEd0eHJXVXI3RjZ4MTJJM0Y5cHUzNDE3ZWM3YllDV3lFeTdWZHVjNVNHSU5pZU53V1ZJV1ZHRVhScFVOMXhzMk1ySzZZN2JtWmlSOE5TbThBM2RXcVliNVAwOElhSHhuaWpiNE5TRXotcE1VZmxONGJWdzBkVWpPRm1LM0NFb2xMQTJFYUM5ZVpB?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | Possible Tesla merger could aid SpaceX's S&P 500 entry, ⁠J.P. Morgan says | Reuters | https://news.google.com/rss/articles/CBMivAFBVV95cUxNeF9US0dlUFQ3RDhYOXdRbUlzYkJOQlhGdWdVTm02VjVUbkVlRFIxb0F5RFZNTEZTRndBcXcxWGtYa2lfTTAtTjJSN1MwSFRSYXdDSGJuM3RRSnlDTVZwVk1nNTJmeDdKUEp1VDd4enBsR2FTcG5uR3g1Z3lYLWdickFodnd5Q1pVejM1OTJ5cE5oZDBWdUE4c2F0bktTVlRNY185LThMaENJVWNpbG1IUERZbnJCMER2R2p0NQ?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-COUNTRY/MACRO | 2026-11-25 | US Stock Market Today: 5 Critical Moves as Nasdaq Falls | STL.News | https://news.google.com/rss/articles/CBMibEFVX3lxTFBVbC1hQ21hMFNOejE4VGdfNHVaN094c2dVYmRLaU5fNm5ERkJaNVduZTVWY3BDV2xNUTVGQ0hoSGxnYUdfbzZzV3otaFRNVDVSYnpka21NRUo1Mk1fYUVIaHFZaWhwX3ZqZ0NXdw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-23 | Weekly market commentary | BlackRock | https://news.google.com/rss/articles/CBMingFBVV95cUxQLWJDTjBBalYwVHVpc0VxV1BwRE1xeUt1RWlLQ1VJdnJQRXNnb3p6MnFNbjRBV0s0TnlldW4wSVIycFRQeVNISWJ3VV9wMWdjX1ZndE1Tc24tNzc0anNYWjl0SVBsRDhSa0dVTWlyVVYxX0w5b2JhTFB0Tm9Vb2FwYVZubTU1SVJlcy0zMEpXOEM4ZlhiSU1QazdVQVlldw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-23 | UK Markets Brief: Why Supermarket Stocks Are Rising and Where Oil Prices Go Next | Morningstar | https://news.google.com/rss/articles/CBMivAFBVV95cUxNQTZvLV9kZlJ4dnRUcXctX3hnVmJWcDloOGxuTE56bW9jWGY0bGtQZUNoU2JpVGNMeUJRT0Q2RE4tdmdtUVdjTC1nMVAtSFg2Sm1TMjlORnE5Zm11QXlDZGJLNktUcUJLTTVwdENTTWVVUFNrdC1NaFdvMU5JeHNpVlNvU3hzck84c1hPZ0tOWGRiNDlpekF0QVliX3RZZGhNSHd0cFRlNWxDMEV5NmdHWGRCTFhHb284Tk1WWA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-24 | Rupee climbs past 93/USD | The Daily Star | https://news.google.com/rss/articles/CBMikwFBVV95cUxNZVdxUFF1bTNNUlVLT1phb0kteFlkSG8wY0ZxOTJLdmp3YUdJcm80eE5sU1Q1VkJ1MnhmM2NZQ2RyT2lwMlBSa3VEQTFBb0k0YnFtRFR4bXV6T0xNYkJ4MG5pUmNpNzFvdDBfanJ3Yk1fUm9BMlliY0EzZF9QakRhbDRGRmU1UGt4RWhhTXFWbVd0VDA?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-25 | Bank of Canada expects 2nd round of oil-linked inflation in 2027, Macklem says | CBC | https://news.google.com/rss/articles/CBMiiwFBVV95cUxOSGQ0dkVVaHR2dHpPWVBhUnlIb3d5Y2dJaE5SbW9NNnhCYkJQRHJVOFNIMklxSXdoVllXVVlJemwtVHVpT3p1RTRaZDE5S296S1lKN3BmTWQ1MEd6REVXclhlUS01VEtBNThzbVJKMzQtTVAyeE5tS2FZN3dGYWctQzJnVTVhRVdFUWNz?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-25 | US Dollar Awaits Fed Data, Aussie Surges on Inflation News | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMinwFBVV95cUxOcHA3M3puc0xlelpIaFdBWW1xYVNGTFhibE5iLVlkWjBrSlZ4dU9DX3hLSFRvOXJYZDBKOGplMi1RdE1XclYyTEJKU1JILVowSHhBNmt3ZTlRTkZ0R0t0US1kdWJuVEU4bXdnV1pLeXltRmZmcjFZOFJIN25WRGtlMmFVRDNTMXZicjlrMVhPSl9FeXVCRUY1OFN1aTQzeHM?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
-GLOBAL/REGIONAL | 2026-11-25 | Macklem says inflation forecast is lower, but oil price pressures are lingering | BNN Bloomberg | https://news.google.com/rss/articles/CBMi0wFBVV95cUxPT1NwZUhEUk1EN0VUT1dwa2U0cXQwY3JTMm11NXRsVS1mNUFfZ0ZrYXZldVdZbmRoektXRGo4NWI5d3VwUFNsRHJ6XzVHZ1h3Yl93OFY2QlFDODJUdzZpRlBkNXVGYW9KOTY2SEQ4bG1QZWE1WklQZDNMM3pZd0ZQR1BkZHZua1IxOGx1bGU5Mk1qTUZBWE0xM0FpMFhVdUFmT0JVclFkenZqZ2hESHNoMEREZjlHRzNEZ2c1QlRSSGh1QWpWc1BjR3FZcXhqckpNZV9J?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-25 | Wall Street Ends Mixed as Nasdaq and S&P 500 Fall Amid Renewed AI Sell-Off; Dow Jones Gains 423 Points | Kotak Neo | https://news.google.com/rss/articles/CBMizgFBVV95cUxOd2cwbHRfcDZoTzRFZGVScFY2MDh6TXdNVHhvYmpaU2ZGSnhUZEk5eG5wTDVGMU9QSU5rdTNzTngzdVpOdDk2bkJ1RTFXdTBrM0xuaDVSbWdIYU9OQTZRaXlOU0hjcUhaTXBEX25yRVF3OEcxV3d3UjgxWUVWZTlJUV8xa0RuaS00S0p5c1hWVUdWVFVQejBpNU1OTGUwQmxQSjdreTc2ZDZjeHF5V1NObXAyVnpTTGhrS1VkRUdYUHdOTnFCM1h3NnhyRkJpdw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+SECTOR | 2026-11-25 | Asian Markets Fall as Kospi Slides Over 5% and Nikkei Drops Nearly 3% Amid Renewed AI Sell-Off and US Tariff Concerns | Kotak Neo | https://news.google.com/rss/articles/CBMi3AFBVV95cUxObW00UXlWT2RUYXpadW1HV3dRUVJoaElOVExJaDJKdEZ5azZ5eUJVZmtQS3Y4U29jWXUwV3BucWJfNzdydVJUVzE0VjlOeERCelFDSnduTkx3Z1dpcFd6Nll1T25wLU4yYkwydHZ2TnFoUW1xYkJDaXVENlJla05QbVdUOVBHN3o1VXZ4dFloQy1qQUc3d0o5RkhfSG5SdEx3QlFGNXBUMG1RWjdneU5GN3F6RGZuSjdPSWtJSUNHTmM4TGt2MkhNeDI0ZFNIUks1dmNESU56RTlXMG1Z?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | Nasdaq, S&P 500 end down, but well off lows as investors buy bargains | Reuters | https://news.google.com/rss/articles/CBMiugFBVV95cUxNdUdBTGhVT2V5cDcydUZMX2NTdTkxVDBJSHdCMUgwNXBibGhQc28zdktpLXA2dGVUYzRzV3hpMld1U29KempSNUswd2dNYVdITlFxV2NycEkwbnlpZkdPSDNicVRKM3NCU2l0M0hoWU13UTZkbTAtX2JFempxaUtFbjdTZGMxT2lXM2g3dkR4cy1UYnVfZ09kOWpTNGxtUEZZOTRPaXhENlZ6OGt2ZF94d0RCVjdOSldfc0E?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | This Happens to the S&P 500 About Twice a Year. Here's What History Says Happens Next. | The Motley Fool | https://news.google.com/rss/articles/CBMiqwFBVV95cUxNTElyUkRKTFZnc3hWblJFX2tTbnRLNlNseDJPTnBSQjVmdDZwODMwU0NQTWZaVVZRZ1FveW1DWV9UMHVkNkZqek8yVzYxQlEzZGFydFFMeFRRTUVwX3l0VDZSUWJwTHdacDEyMm03ZEtvUmlPT0FjLTBYOXpyVnhQR0ptZXA1U2FNdkNkSTdvLUN5LVlhdHhrYm1zOWpYZjY3QWdQbFNlWDIwREk?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | JPMorgan's 8,200 S&P 500 target for 2027 sits below peers as Fed risk tempers AI upside | investingLive | https://news.google.com/rss/articles/CBMizwFBVV95cUxPM2pnZFZfMFJrNTcxM0dieEo3aW1CYV9kbGxuTDhmZi11NjFoU0JkV2liSy1YcUdjMzc1TTNGNU9tV3d2QmhFMGVTVHdNWkNOcWw5N3lmYjRFTC1nb3haUTV2Yl84aTJ5YzdxaFlGbVNoYWRPTGktUGU0azZQY0swR0lZOUdkanlkXzFDR1ZHWU4zOHREYzBJSml4QTFWYWpHMTM0ODE0WEtoS2hYZm9EOEg2a3NsNXBjeUFvVjlBeFVKNnVnNC1tLVZ1MDJDcGc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | Bank of America sees the S&P 500 climbing to 7,800 next year, making up lost ground | CNBC | https://news.google.com/rss/articles/CBMidkFVX3lxTE84UzNOVmlTVldab2JHQklST2ZvOHVDMzdhcGhXcEstc1JQeE5oc0FXZUJPT1hHc0dkYm1GU3hKaEx5Nk1RbjROaEZzZE1pNjhFQ3BBeUxlR3cwVkc1RkZVNHNBRmdPU2NzU3JnTlVTeUxmakVSbHc?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | Stock Market: Will S&P 500 Open Up or Down Today? | Yahoo Finance | https://news.google.com/rss/articles/CBMikgFBVV95cUxOOWM3amlybWNYR3AycjEySjQ0S01iRmNMb1U0YlB0Q0FwMUpjZU1qM0Z6WlEyVm5SMmh1eUV0ZUd2a0VzNzU5LTcxVEl0VGRsdEVHeUxZRlBrQlBXZGthLUg0SEZULWNZaGV4ZGlLSUN6dXZHQ2pRczE2ajZKTWNXeFZCLW45QnF1UVlFWTZnT091UQ?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+COUNTRY/MACRO | 2026-11-25 | US Stock Market Today: Dow Rises, Nasdaq Falls | HDFC Sky | https://news.google.com/rss/articles/CBMitgFBVV95cUxNSElpMkhCNWlycnpjR1JYSDF0RGM2Q0NlZXk1NTBZZGRhemZYVThQbjdLUVM0a2RydDl1TlRRNHlYa1hWMDk1Ql9obU00VHZ1c0NkQVo3T2F4WE9CZVpWcUhYY0I3dU9ZVmtUQy1wUDVHUThUU0NmUW5FaGZTTEdLbFBSaUxWdDZldEVzRWpRQ1dZMUU5bDhvQjVEZUxoSzhMd3Z4WjNTOVNhaWtyYlFlOE5YMXdSZw?oc=5 | CORROBORATED | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | Bank Indonesia's Governor said the central bank's 2027 budget proposal to parliament assumes a benchmark interest rate of 6% and USD/IDR trading in a 17,800–18,200 range | Newsquawk | https://news.google.com/rss/articles/CBMipAJBVV95cUxNYzJXTEdXb0plUHhzMEVXZUZJMXh0Z1dRZzRudHUwTTBzQ2YwOWZLUFVjNVFOd01lYlppTWtRcEFSbTA2UUQwMDV1YXpxcndkV19vMWZRcGRLeGdnY01fbURhVkM5NkEzWUJFbkU2WVpEcm8wR0ZNMExtaXBZR284R2FPcHVYelZFamJhOXhTTDhMTFBSYk44aUJfTkJGY0doN0hJb1h4YUJYWFR0VnlwaVRLTXFHNDMxaTJ5aGEwc3NFZXlIdi1Eb0VtQjVlZUJBVGNZVmhCZGwyemZGQVZDZE5jUnFlWGZFcGlNd2dlUGl1R0FmVnhoYVZsdHpTMUJ4cTZ0Y0xjU2lSTGEzV1kxd2RaY2tTUFlURFhjTmMxSDJwWEZG?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | India's RBI sees broad food inflation pressures; was net dollar buyer in Sept, bulletin shows | Reuters | https://news.google.com/rss/articles/CBMixwFBVV95cUxPU0hxckhBM1hYZ2wzV2hyRFZ2cF9Ud3Nja0VJcjRMbWJibVZfWDM0OHQwcFpTVWE4TWxwV2swbExTeHRab3hzZHJGc1p6ZnEyLVFJLTdSWVU2RWNmSHFHeXBzTEpDQzBUUktOTk5FZXhpa3NHaEZXS2pMTk41T0ktaUxLLVR1RDZieTBYZWl4a21ITm9oS0VyZWQ0c2xTYkZhbllfV2YxLUpZckRWZ1NUdHlaOWJ6NEZYc1d0N1h2SzNjZGdEaGVV?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | Dollar Surges as Risk-Off Mood Prevails Before US Inflation Data | Global Banking & Finance Review | https://news.google.com/rss/articles/CBMinwFBVV95cUxOcHA3M3puc0xlelpIaFdBWW1xYVNGTFhibE5iLVlkWjBrSlZ4dU9DX3hLSFRvOXJYZDBKOGplMi1RdE1XclYyTEJKU1JILVowSHhBNmt3ZTlRTkZ0R0t0US1kdWJuVEU4bXdnV1pLeXltRmZmcjFZOFJIN25WRGtlMmFVRDNTMXZicjlrMVhPSl9FeXVCRUY1OFN1aTQzeHM?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | Market Movers blog: Markets wobble on dip in Nvidia and TSMC as Huang comeback euphoria ebbs | Investment Week | https://news.google.com/rss/articles/CBMickFVX3lxTE5mZHNUUnlOeExDV2hSRjhxWEs0blpwaGhqUzIzQ054d1JaTnNIcGZWbkhtTDVwZFdwUXM5ekRkX2Z5UFJEWW5uMGtRSzVnd2NwZDFRUWZnYm9JWHFlTUptZzJGSHdKOS1oTEJxOUk0bFRWdw?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | Falling global oil prices could mean inflation ends below forecast, Bank of Canada says | BNN Bloomberg | https://news.google.com/rss/articles/CBMi0wFBVV95cUxPT1NwZUhEUk1EN0VUT1dwa2U0cXQwY3JTMm11NXRsVS1mNUFfZ0ZrYXZldVdZbmRoektXRGo4NWI5d3VwUFNsRHJ6XzVHZ1h3Yl93OFY2QlFDODJUdzZpRlBkNXVGYW9KOTY2SEQ4bG1QZWE1WklQZDNMM3pZd0ZQR1BkZHZua1IxOGx1bGU5Mk1qTUZBWE0xM0FpMFhVdUFmT0JVclFkenZqZ2hESHNoMEREZjlHRzNEZ2c1QlRSSGh1QWpWc1BjR3FZcXhqckpNZV9J?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
+GLOBAL/REGIONAL | 2026-11-25 | Share Market Today: Nifty 50, Bank Nifty / Nov 25, 2026 | Liquide Blog | https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaVBCWkFuYXRIdlhlemZjbUMyb1pOVTZzWjd5RmEwQ09LeHNLVnloQ3BnQ0VvaDZSS1VmMXR5SmRpRTBNTlVvTFFrMV9zS0ROYTI3blVaemdVOWF0Umo1LVh2UTF3VmE1SVdmaDRWby02RWhTR1NHd0VLMGJSbi1wOUswNlNFM1NMbWVna1JqcWdkY1UtV3R0OWtkVzJvNUwwT3diWFZ3bWU1SGJ0TWkzdWNoLWZrdzVPZlNBZXZTblkwRDM4NGxnZS1WOFEza0pLZmRqSDNFVGVIVlBrUmdvMW9qNGtNVVBLYS1zQUZkdXd3bU0?oc=5 | SINGLE-SOURCE | NEW/RECYCLED not checked | headline only (no summary in the feed; open the link before relying on it) | none stated
 BACKGROUND (up to 2: dated up to 30 days before the window and still in force)
 none collected (the pipeline does not search for background items)
 CATALYSTS (future-dated events)
-2026-12-02 | ex-dividend date | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/ | retrieved 2026-11-25
+2026-12-02 | ex-dividend date | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/ | retrieved 2026-11-26
 NOT FOUND
 none
 

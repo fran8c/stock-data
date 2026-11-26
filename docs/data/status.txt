@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-25 23:11 SGT
+Run time: 2026-11-26 10:53 SGT
 Market data from (each market runs about 5 hours after its close):
   - SGX: 2026-11-25 23:11 SGT, latest SGX session expected 2026-11-25
-  - US: 2026-11-25 13:28 SGT, latest US session expected 2026-11-24
+  - US: 2026-11-26 10:53 SGT, latest US session expected 2026-11-25
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -32,11 +32,11 @@ GAPS (37): expected, marked NOT RETRIEVED in the files
   - [SGX] Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
   - [SGX] Z74.SI: next results date not yet announced (last was 2026-11-13)
   - [SGX] No peers in peers.txt for: BS6.SI, U96.SI, Z74.SI - the harness will suggest some
-  - [US] SPCX: only 115 daily bars (less than a year of history)
+  - [US] SPCX: only 116 daily bars (less than a year of history)
   - [US] SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
   - [US] MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
-  - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 28x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
-  - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 16x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 30x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 17x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] NVDA: next results date not yet announced (last was 2026-11-17)
   - [US] PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
   - [US] No peers in peers.txt for: SPCX, MU, PLTR - the harness will suggest some
@@ -44,4 +44,4 @@ GAPS (37): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1489 items have no summary (paywall or site blocks automated visits)
+  - News: 1520 items have no summary (paywall or site blocks automated visits)

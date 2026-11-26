@@ -1,0 +1,259 @@
+{
+ "symbol": "NVDA",
+ "market": "US",
+ "as_of": "2026-11-26",
+ "expected_session": "2026-11-25",
+ "last_bar": "2026-11-25",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "USD",
+ "tick": 0.01,
+ "main_comparator": "^GSPC",
+ "comparators": {
+  "^GSPC": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -23.4337,
+   "chg20_pct": -7.2469,
+   "label": "lagging"
+  },
+  "^IXIC": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -19.5166,
+   "chg20_pct": -11.1641,
+   "label": "lagging"
+  },
+  "^DJI": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -26.3126,
+   "chg20_pct": -4.3681,
+   "label": "lagging"
+  },
+  "AMD": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -0.8746,
+   "chg20_pct": -29.806,
+   "label": "in line"
+  },
+  "AVGO": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -16.1984,
+   "chg20_pct": -14.4822,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-25",
+  "open": 144.06,
+  "high": 150.37,
+  "low": 141.17,
+  "close": 149.3,
+  "volume": 363377300,
+  "dividend": 0.0,
+  "chg_raw_pct": -3.913,
+  "chg_pct": -3.913,
+  "gap_pct": -7.2854,
+  "clv": 0.7674,
+  "vol_delta": 278852580.2174,
+  "cvd10": -331578993.028,
+  "vwap10": 154.1139,
+  "close_vs_vwap10_pct": -3.1236,
+  "avg_vol20_prior": 337302960.0,
+  "vol_ratio": 1.0773,
+  "up_days10": 1,
+  "down_days10": 9,
+  "up_vol10": 782593300.0,
+  "down_vol10": 3910062200.0,
+  "udvr10": 0.2001,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 1.99,
+  "vt5_20_label": "busier",
+  "chg5_raw_pct": -1.0996,
+  "chg5_pct": -1.0996,
+  "chg10_raw_pct": -14.0621,
+  "chg10_pct": -14.0621,
+  "chg20_raw_pct": -30.6807,
+  "chg20_pct": -30.6807,
+  "divergence": "None",
+  "true_range": 14.21,
+  "atr14": 13.383,
+  "atr14_pct_of_close": 8.9639,
+  "range5_low": 119.3755,
+  "range5_high": 179.2245,
+  "macd": -16.9189,
+  "macd_signal": -16.2448,
+  "macd_hist": -0.6741,
+  "macd_note": "",
+  "sma20": 172.4775,
+  "momentum_proxy": "bearish",
+  "hh20": 215.33,
+  "ll20": 124.5,
+  "hh60": 243.37,
+  "ll60": 124.5,
+  "hh120": 243.37,
+  "ll120": 124.5,
+  "high52w": 243.37,
+  "high52w_date": "2026-10-06",
+  "low52w": 124.5,
+  "low52w_date": "2026-11-20",
+  "bars_in_52w_window": 251,
+  "from_high52w_pct": -38.6531,
+  "from_low52w_pct": 19.9197,
+  "tenkan": 148.0,
+  "kijun": 173.345,
+  "span_a": 226.0925,
+  "span_b": 225.31,
+  "kumo_top": 226.0925,
+  "kumo_bottom": 225.31,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 243.37,
+  "darvas_ceiling_date": "2026-10-06",
+  "darvas_floor": 229.11,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 36,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-10-12",
+  "darvas_crossing_bars_ago": 32,
+  "darvas_crossing_vol_ratio": 0.6494,
+  "darvas_crossing_volume_label": "fakeout / liquidity-trap risk",
+  "rs20_GSPC": -23.4337,
+  "chg20_GSPC_pct": -7.2469,
+  "GSPC_close_date": "2026-11-25",
+  "rs20_IXIC": -19.5166,
+  "chg20_IXIC_pct": -11.1641,
+  "IXIC_close_date": "2026-11-25",
+  "rs20_DJI": -26.3126,
+  "chg20_DJI_pct": -4.3681,
+  "DJI_close_date": "2026-11-25",
+  "rs20_AMD": -0.8746,
+  "chg20_AMD_pct": -29.806,
+  "AMD_close_date": "2026-11-25",
+  "rs20_AVGO": -16.1984,
+  "chg20_AVGO_pct": -14.4822,
+  "AVGO_close_date": "2026-11-25",
+  "rs20_main": -23.4337,
+  "rs20_main_label": "lagging",
+  "signal_vwap": -1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "HIGH BEARISH",
+  "bull_signals": 0,
+  "bear_signals": 4,
+  "signals_available": 4,
+  "volume_confirmation": "CONFIRMS",
+  "confluence_final": "HIGH BEARISH",
+  "outlook_d1": 0.5,
+  "outlook_week1_low": 139.8382,
+  "outlook_week1_high": 158.7618,
+  "outlook_d2": 5.5,
+  "outlook_week2_low": 117.9168,
+  "outlook_week2_high": 180.6832,
+  "nearest_resistance": 154.1139,
+  "nearest_support": 148.0
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "VWAP10",
+    "price": 154.1139,
+    "dist_pct": 3.2243
+   },
+   {
+    "name": "Kijun",
+    "price": 173.345,
+    "dist_pct": 16.1052
+   },
+   {
+    "name": "20-bar high",
+    "price": 215.33,
+    "dist_pct": 44.2264
+   }
+  ],
+  "below": [
+   {
+    "name": "Tenkan",
+    "price": 148.0,
+    "dist_pct": -0.8707
+   },
+   {
+    "name": "20-bar low / 60-bar low / 120-bar low / 52-week low",
+    "price": 124.5,
+    "dist_pct": -16.6109
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-27",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [
+   "2026-11-27"
+  ],
+  "d1": 0.5,
+  "d2": 5.5,
+  "sqrt_d1": 0.707,
+  "sqrt_d2": 2.345,
+  "week1_low": 139.8382,
+  "week1_high": 158.7618,
+  "week2_low": 117.9168,
+  "week2_high": 180.6832
+ },
+ "calibration_past_year": {
+  "5d_inside": "199",
+  "5d_windows": 246,
+  "5d_share_pct": 80.8943,
+  "10d_inside": "205",
+  "10d_windows": 241,
+  "10d_share_pct": 85.0622
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 4,
+   "readings": "close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend bearish"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-23.43 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -0.8707,
+   "support_dist_atr": 0.0971,
+   "resistance_dist_pct": 3.2243,
+   "resistance_dist_atr": 0.3597
+  },
+  "ratings_14d": {
+   "upgrades": 0,
+   "downgrades": 1,
+   "items": [
+    {
+     "date": "2026-11-25",
+     "title": "S&P warns Nvidia's board may be compromised, puts chipmaker's rating on downgrade watch",
+     "source": "Reuters on MSN",
+     "url": "https://www.msn.com/en-us/money/technology/s-p-warns-nvidia-s-board-may-be-compromised-puts-chipmaker-s-rating-on-downgrade-watch/ar-AA2ieqfx",
+     "direction": -1,
+     "change": "downgrade"
+    }
+   ]
+  }
+ }
+}
