@@ -1,7 +1,7 @@
 {
  "symbol": "NVDA",
  "market": "US",
- "as_of": "2026-11-26",
+ "as_of": "2026-11-27",
  "expected_session": "2026-11-25",
  "last_bar": "2026-11-25",
  "bars_used": 1255,
@@ -52,25 +52,25 @@
   "high": 150.37,
   "low": 141.17,
   "close": 149.3,
-  "volume": 363377300,
+  "volume": 366571900,
   "dividend": 0.0,
   "chg_raw_pct": -3.913,
   "chg_pct": -3.913,
   "gap_pct": -7.2854,
   "clv": 0.7674,
-  "vol_delta": 278852580.2174,
-  "cvd10": -331578993.028,
-  "vwap10": 154.1139,
-  "close_vs_vwap10_pct": -3.1236,
+  "vol_delta": 281304088.4783,
+  "cvd10": -329127484.7672,
+  "vwap10": 154.109,
+  "close_vs_vwap10_pct": -3.1205,
   "avg_vol20_prior": 337302960.0,
-  "vol_ratio": 1.0773,
+  "vol_ratio": 1.0868,
   "up_days10": 1,
   "down_days10": 9,
   "up_vol10": 782593300.0,
-  "down_vol10": 3910062200.0,
-  "udvr10": 0.2001,
+  "down_vol10": 3913256800.0,
+  "udvr10": 0.2,
   "udvr10_label": "selling-dominated",
-  "vt5_20": 1.99,
+  "vt5_20": 1.9926,
   "vt5_20_label": "busier",
   "chg5_raw_pct": -1.0996,
   "chg5_pct": -1.0996,
@@ -157,15 +157,15 @@
   "outlook_d2": 5.5,
   "outlook_week2_low": 117.9168,
   "outlook_week2_high": 180.6832,
-  "nearest_resistance": 154.1139,
+  "nearest_resistance": 154.109,
   "nearest_support": 148.0
  },
  "reference_levels": {
   "above": [
    {
     "name": "VWAP10",
-    "price": 154.1139,
-    "dist_pct": 3.2243
+    "price": 154.109,
+    "dist_pct": 3.2211
    },
    {
     "name": "Kijun",
@@ -238,8 +238,8 @@
    "darvas_old_box": false,
    "support_dist_pct": -0.8707,
    "support_dist_atr": 0.0971,
-   "resistance_dist_pct": 3.2243,
-   "resistance_dist_atr": 0.3597
+   "resistance_dist_pct": 3.221,
+   "resistance_dist_atr": 0.3593
   },
   "ratings_14d": {
    "upgrades": 0,

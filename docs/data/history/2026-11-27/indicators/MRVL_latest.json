@@ -1,0 +1,264 @@
+{
+ "symbol": "MRVL",
+ "market": "US",
+ "as_of": "2026-11-27",
+ "expected_session": "2026-11-25",
+ "last_bar": "2026-11-25",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "USD",
+ "tick": 0.01,
+ "main_comparator": "^GSPC",
+ "comparators": {
+  "^GSPC": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -40.7245,
+   "chg20_pct": -7.2469,
+   "label": "lagging"
+  },
+  "^IXIC": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -36.8073,
+   "chg20_pct": -11.1641,
+   "label": "lagging"
+  },
+  "^DJI": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -43.6033,
+   "chg20_pct": -4.3681,
+   "label": "lagging"
+  },
+  "AVGO": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -33.4891,
+   "chg20_pct": -14.4822,
+   "label": "lagging"
+  },
+  "NVDA": {
+   "last_date": "2026-11-25",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -17.2907,
+   "chg20_pct": -30.6807,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-25",
+  "open": 122.84,
+  "high": 131.14,
+  "low": 117.8,
+  "close": 130.93,
+  "volume": 28713100,
+  "dividend": 0.0,
+  "chg_raw_pct": -0.4864,
+  "chg_pct": -0.4864,
+  "gap_pct": -6.6353,
+  "clv": 0.9685,
+  "vol_delta": 27809089.3553,
+  "cvd10": -41937564.937,
+  "vwap10": 141.7947,
+  "close_vs_vwap10_pct": -7.6623,
+  "avg_vol20_prior": 34630945.0,
+  "vol_ratio": 0.8291,
+  "up_days10": 2,
+  "down_days10": 8,
+  "up_vol10": 64009000.0,
+  "down_vol10": 215661400.0,
+  "udvr10": 0.2968,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 1.0517,
+  "vt5_20_label": "normal",
+  "chg5_raw_pct": -10.0385,
+  "chg5_pct": -10.0385,
+  "chg10_raw_pct": -22.4348,
+  "chg10_pct": -22.4348,
+  "chg20_raw_pct": -47.9714,
+  "chg20_pct": -47.9714,
+  "divergence": "None",
+  "true_range": 13.77,
+  "atr14": 16.6474,
+  "atr14_pct_of_close": 12.7147,
+  "range5_low": 93.7065,
+  "range5_high": 168.1535,
+  "macd": -23.4526,
+  "macd_signal": -23.6864,
+  "macd_hist": 0.2338,
+  "macd_note": "",
+  "sma20": 154.965,
+  "momentum_proxy": "bearish",
+  "hh20": 225.68,
+  "ll20": 117.8,
+  "hh60": 301.27,
+  "ll60": 117.8,
+  "hh120": 329.88,
+  "ll120": 117.8,
+  "high52w": 329.88,
+  "high52w_date": "2026-06-18",
+  "low52w": 70.69,
+  "low52w_date": "2026-02-05",
+  "bars_in_52w_window": 251,
+  "from_high52w_pct": -60.3098,
+  "from_low52w_pct": 85.2171,
+  "tenkan": 140.845,
+  "kijun": 185.73,
+  "span_a": 258.1525,
+  "span_b": 250.945,
+  "kumo_top": 258.1525,
+  "kumo_bottom": 250.945,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 301.27,
+  "darvas_ceiling_date": "2026-10-06",
+  "darvas_floor": 265.79,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 36,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-10-14",
+  "darvas_crossing_bars_ago": 30,
+  "darvas_crossing_vol_ratio": 1.3285,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_GSPC": -40.7245,
+  "chg20_GSPC_pct": -7.2469,
+  "GSPC_close_date": "2026-11-25",
+  "rs20_IXIC": -36.8073,
+  "chg20_IXIC_pct": -11.1641,
+  "IXIC_close_date": "2026-11-25",
+  "rs20_DJI": -43.6033,
+  "chg20_DJI_pct": -4.3681,
+  "DJI_close_date": "2026-11-25",
+  "rs20_AVGO": -33.4891,
+  "chg20_AVGO_pct": -14.4822,
+  "AVGO_close_date": "2026-11-25",
+  "rs20_NVDA": -17.2907,
+  "chg20_NVDA_pct": -30.6807,
+  "NVDA_close_date": "2026-11-25",
+  "rs20_main": -40.7245,
+  "rs20_main_label": "lagging",
+  "signal_vwap": -1,
+  "signal_ichimoku": -1,
+  "signal_macd": 1,
+  "signal_cvd": -1,
+  "confluence": "LEAN BEARISH",
+  "bull_signals": 1,
+  "bear_signals": 3,
+  "signals_available": 4,
+  "volume_confirmation": "CONFIRMS",
+  "confluence_final": "LEAN BEARISH",
+  "outlook_d1": 0.5,
+  "outlook_week1_low": 119.1603,
+  "outlook_week1_high": 142.6997,
+  "outlook_d2": 5.5,
+  "outlook_week2_low": 91.892,
+  "outlook_week2_high": 169.968,
+  "nearest_resistance": 140.845,
+  "nearest_support": 117.8
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "Tenkan",
+    "price": 140.845,
+    "dist_pct": 7.5727
+   },
+   {
+    "name": "VWAP10",
+    "price": 141.7947,
+    "dist_pct": 8.2981
+   },
+   {
+    "name": "Kijun",
+    "price": 185.73,
+    "dist_pct": 41.8544
+   }
+  ],
+  "below": [
+   {
+    "name": "20-bar low / 60-bar low / 120-bar low",
+    "price": 117.8,
+    "dist_pct": -10.0283
+   },
+   {
+    "name": "52-week low",
+    "price": 70.69,
+    "dist_pct": -46.0093
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-27",
+  "week1_end": "2026-11-27",
+  "week2_end": "2026-12-04",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [
+   "2026-11-27"
+  ],
+  "d1": 0.5,
+  "d2": 5.5,
+  "sqrt_d1": 0.707,
+  "sqrt_d2": 2.345,
+  "week1_low": 119.1603,
+  "week1_high": 142.6997,
+  "week2_low": 91.892,
+  "week2_high": 169.968
+ },
+ "calibration_past_year": {
+  "5d_inside": "203",
+  "5d_windows": 246,
+  "5d_share_pct": 82.5203,
+  "10d_inside": "186",
+  "10d_windows": 241,
+  "10d_share_pct": 77.1784
+ },
+ "ex_dividends_last_60_days": [
+  {
+   "date": "2026-10-09",
+   "amount": 0.06
+  }
+ ],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "close vs VWAP10 bearish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral"
+  },
+  "momentum": {
+   "label": "MIXED",
+   "bullish": 1,
+   "bearish": 2,
+   "readings": "Ichimoku bearish, MACD bullish, RS20 bearish (-40.72 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -10.0283,
+   "support_dist_atr": 0.7887,
+   "resistance_dist_pct": 7.5727,
+   "resistance_dist_atr": 0.5956
+  },
+  "ratings_14d": {
+   "upgrades": 0,
+   "downgrades": 1,
+   "items": [
+    {
+     "date": "2026-11-14",
+     "title": "The Deal Behind TD Cowen\u2019s Downgrade of Marvell (MRVL)",
+     "source": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/deal-behind-td-cowen-downgrade-213101784.html",
+     "direction": -1,
+     "change": "downgrade"
+    }
+   ]
+  }
+ }
+}

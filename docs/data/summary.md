@@ -5,9 +5,9 @@
 | | Last close | Date | 1 day | 1 year |
 |---|---:|---|---:|---:|
 | Straits Times Index | 4,962.64 | 2026-11-26 | +0.6% | +10.2% |
-| S&P 500 | 7,182.78 | 2026-11-25 | -0.3% | +5.4% |
-| Nasdaq Composite | 23,585.80 | 2026-11-25 | -0.6% | +1.6% |
-| Dow Jones Industrial Average | 50,182.95 | 2026-11-25 | +0.3% | +5.8% |
+| S&P 500 | 7,182.78 | 2026-11-25 | -0.3% | +4.9% |
+| Nasdaq Composite | 23,585.80 | 2026-11-25 | -0.6% | +0.9% |
+| Dow Jones Industrial Average | 50,182.95 | 2026-11-25 | +0.3% | +5.2% |
 
 **Watchlist**
 
@@ -21,10 +21,10 @@
 | Sembcorp Industries | 5.53 SGD | 2026-11-26 | +0.0% | -9.9% |
 | Singtel | 4.25 SGD | 2026-11-26 | +1.0% | -10.7% |
 | SpaceX | 127.44 USD | 2026-11-25 | +1.3% | -20.8% * |
-| Marvell Technology | 130.93 USD | 2026-11-25 | -0.5% | +49.3% |
-| Micron Technology | 601.25 USD | 2026-11-25 | -4.5% | +161.1% |
-| Nvidia | 149.30 USD | 2026-11-25 | -3.9% | -17.2% |
-| Palantir | 163.59 USD | 2026-11-25 | +1.5% | -1.3% |
+| Marvell Technology | 130.93 USD | 2026-11-25 | -0.5% | +46.5% |
+| Micron Technology | 601.25 USD | 2026-11-25 | -4.5% | +154.2% |
+| Nvidia | 149.30 USD | 2026-11-25 | -3.9% | -15.6% |
+| Palantir | 163.59 USD | 2026-11-25 | +1.5% | -2.9% |
 
 \* Less than a year of prices: SpaceX since 2026-06-12.
 
@@ -38,5 +38,5 @@ Prices are each market's latest close. SGX and US dates can differ because of ti
 - OCBC (O39 on SGX, as of 2026-11-26): data only https://fran8c.github.io/stock-data/data/harness/O39.SI_data.txt
 - DBS Group (D05 on SGX, as of 2026-11-26): data only https://fran8c.github.io/stock-data/data/harness/D05.SI_data.txt
 - Keppel Ltd (BN4 on SGX, as of 2026-11-26): data only https://fran8c.github.io/stock-data/data/harness/BN4.SI_data.txt
-- Marvell Technology (MRVL on NASDAQ, as of 2026-11-25): data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt
-- Nvidia (NVDA on NASDAQ, as of 2026-11-25): data only https://fran8c.github.io/stock-data/data/harness/NVDA_data.txt
+- Marvell Technology (MRVL on NASDAQ, as of 2026-11-26): data only https://fran8c.github.io/stock-data/data/harness/MRVL_data.txt
+- Nvidia (NVDA on NASDAQ, as of 2026-11-26): data only https://fran8c.github.io/stock-data/data/harness/NVDA_data.txt

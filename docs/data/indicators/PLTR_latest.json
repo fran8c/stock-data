@@ -1,7 +1,7 @@
 {
  "symbol": "PLTR",
  "market": "US",
- "as_of": "2026-11-26",
+ "as_of": "2026-11-27",
  "expected_session": "2026-11-25",
  "last_bar": "2026-11-25",
  "bars_used": 1255,
@@ -38,25 +38,25 @@
   "high": 164.75,
   "low": 151.51,
   "close": 163.59,
-  "volume": 21407000,
+  "volume": 21486000,
   "dividend": 0.0,
   "chg_raw_pct": 1.4952,
   "chg_pct": 1.4952,
   "gap_pct": -4.3182,
   "clv": 0.8248,
-  "vol_delta": 17655924.4713,
-  "cvd10": -18759288.8609,
-  "vwap10": 158.116,
-  "close_vs_vwap10_pct": 3.462,
+  "vol_delta": 17721081.571,
+  "cvd10": -18694131.7612,
+  "vwap10": 158.1167,
+  "close_vs_vwap10_pct": 3.4615,
   "avg_vol20_prior": 25796020.0,
-  "vol_ratio": 0.8299,
+  "vol_ratio": 0.8329,
   "up_days10": 4,
   "down_days10": 6,
-  "up_vol10": 89104800.0,
+  "up_vol10": 89183800.0,
   "down_vol10": 121023600.0,
-  "udvr10": 0.7363,
+  "udvr10": 0.7369,
   "udvr10_label": "selling-dominated",
-  "vt5_20": 1.097,
+  "vt5_20": 1.0977,
   "vt5_20_label": "normal",
   "chg5_raw_pct": 4.4169,
   "chg5_pct": 4.4169,
@@ -138,7 +138,7 @@
   "outlook_week2_low": 140.8321,
   "outlook_week2_high": 186.3479,
   "nearest_resistance": 172.455,
-  "nearest_support": 158.116
+  "nearest_support": 158.1167
  },
  "reference_levels": {
   "above": [
@@ -161,8 +161,8 @@
   "below": [
    {
     "name": "VWAP10",
-    "price": 158.116,
-    "dist_pct": -3.3461
+    "price": 158.1167,
+    "dist_pct": -3.3457
    },
    {
     "name": "Tenkan",
@@ -221,7 +221,7 @@
   "structure": {
    "darvas_status": "Breakdown Below",
    "darvas_old_box": false,
-   "support_dist_pct": -3.3462,
+   "support_dist_pct": -3.3457,
    "support_dist_atr": 0.564,
    "resistance_dist_pct": 5.419,
    "resistance_dist_atr": 0.9135
