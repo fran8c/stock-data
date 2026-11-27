@@ -1,0 +1,242 @@
+{
+ "symbol": "U11.SI",
+ "market": "SGX",
+ "as_of": "2026-11-27",
+ "expected_session": "2026-11-27",
+ "last_bar": "2026-11-27",
+ "bars_used": 1256,
+ "bars_excluded": [],
+ "currency": "SGD",
+ "tick": 0.01,
+ "main_comparator": "^STI",
+ "comparators": {
+  "^STI": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -6.2832,
+   "chg20_pct": -7.4277,
+   "label": "lagging"
+  },
+  "D05.SI": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -3.345,
+   "chg20_pct": -10.3659,
+   "label": "lagging"
+  },
+  "O39.SI": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -5.0537,
+   "chg20_pct": -8.6571,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-27",
+  "open": 35.59,
+  "high": 35.86,
+  "low": 35.57,
+  "close": 35.81,
+  "volume": 2742590,
+  "dividend": 0.0,
+  "chg_raw_pct": 1.044,
+  "chg_pct": 1.044,
+  "gap_pct": 0.4233,
+  "clv": 0.6552,
+  "vol_delta": 1796869.3103,
+  "cvd10": -5255100.8127,
+  "vwap10": 35.8041,
+  "close_vs_vwap10_pct": 0.0164,
+  "avg_vol20_prior": 4083438.7,
+  "vol_ratio": 0.6716,
+  "up_days10": 4,
+  "down_days10": 6,
+  "up_vol10": 12229290.0,
+  "down_vol10": 21151210.0,
+  "udvr10": 0.5782,
+  "udvr10_label": "selling-dominated",
+  "vt5_20": 0.8728,
+  "vt5_20_label": "quieter than usual",
+  "chg5_raw_pct": 1.1011,
+  "chg5_pct": 1.1011,
+  "chg10_raw_pct": -5.1391,
+  "chg10_pct": -5.1391,
+  "chg20_raw_pct": -13.7108,
+  "chg20_pct": -13.7108,
+  "divergence": "None",
+  "true_range": 0.42,
+  "atr14": 0.7321,
+  "atr14_pct_of_close": 2.0443,
+  "range5_low": 34.1731,
+  "range5_high": 37.4469,
+  "macd": -1.432,
+  "macd_signal": -1.3836,
+  "macd_hist": -0.0485,
+  "macd_note": "",
+  "sma20": 37.237,
+  "momentum_proxy": "bearish",
+  "hh20": 41.76,
+  "ll20": 34.9,
+  "hh60": 43.75,
+  "ll60": 34.9,
+  "hh120": 45.15,
+  "ll120": 34.9,
+  "high52w": 45.15,
+  "high52w_date": "2026-07-15",
+  "low52w": 33.9,
+  "low52w_date": "2025-11-28",
+  "bars_in_52w_window": 251,
+  "from_high52w_pct": -20.6866,
+  "from_low52w_pct": 5.6342,
+  "tenkan": 36.14,
+  "kijun": 38.47,
+  "span_a": 41.205,
+  "span_b": 41.575,
+  "kumo_top": 41.575,
+  "kumo_bottom": 41.205,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 45.15,
+  "darvas_ceiling_date": "2026-07-15",
+  "darvas_floor": 41.84,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 95,
+  "darvas_old_box": true,
+  "darvas_crossing_date": "2026-08-13",
+  "darvas_crossing_bars_ago": 75,
+  "darvas_crossing_vol_ratio": 1.1063,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_STI": -6.2832,
+  "chg20_STI_pct": -7.4277,
+  "STI_close_date": "2026-11-27",
+  "rs20_D05_SI": -3.345,
+  "chg20_D05_SI_pct": -10.3659,
+  "D05_SI_close_date": "2026-11-27",
+  "rs20_O39_SI": -5.0537,
+  "chg20_O39_SI_pct": -8.6571,
+  "O39_SI_close_date": "2026-11-27",
+  "rs20_main": -6.2832,
+  "rs20_main_label": "lagging",
+  "signal_vwap": 1,
+  "signal_ichimoku": -1,
+  "signal_macd": -1,
+  "signal_cvd": -1,
+  "confluence": "LEAN BEARISH",
+  "bull_signals": 1,
+  "bear_signals": 3,
+  "signals_available": 4,
+  "volume_confirmation": "NEUTRAL",
+  "confluence_final": "LEAN BEARISH",
+  "outlook_d1": 5.0,
+  "outlook_week1_low": 34.1731,
+  "outlook_week1_high": 37.4469,
+  "outlook_d2": 10.0,
+  "outlook_week2_low": 33.4952,
+  "outlook_week2_high": 38.1248,
+  "nearest_resistance": 36.14,
+  "nearest_support": 35.8041
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "Tenkan",
+    "price": 36.14,
+    "dist_pct": 0.9215
+   },
+   {
+    "name": "Kijun",
+    "price": 38.47,
+    "dist_pct": 7.4281
+   },
+   {
+    "name": "Kumo bottom",
+    "price": 41.205,
+    "dist_pct": 15.0656
+   }
+  ],
+  "below": [
+   {
+    "name": "VWAP10",
+    "price": 35.8041,
+    "dist_pct": -0.0164
+   },
+   {
+    "name": "20-bar low / 60-bar low / 120-bar low",
+    "price": 34.9,
+    "dist_pct": -2.5412
+   },
+   {
+    "name": "52-week low",
+    "price": 33.9,
+    "dist_pct": -5.3337
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-30",
+  "week1_end": "2026-12-04",
+  "week2_end": "2026-12-11",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [],
+  "d1": 5.0,
+  "d2": 10.0,
+  "sqrt_d1": 2.236,
+  "sqrt_d2": 3.162,
+  "week1_low": 34.1731,
+  "week1_high": 37.4469,
+  "week2_low": 33.4952,
+  "week2_high": 38.1248
+ },
+ "calibration_past_year": {
+  "5d_inside": "197",
+  "5d_windows": 246,
+  "5d_share_pct": 80.0813,
+  "10d_inside": "177",
+  "10d_windows": 241,
+  "10d_share_pct": 73.444
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "MIXED",
+   "bullish": 1,
+   "bearish": 2,
+   "readings": "close vs VWAP10 bullish, CVD10 bearish, UDVR10 bearish, divergence/volume trend neutral"
+  },
+  "momentum": {
+   "label": "BEARISH",
+   "bullish": 0,
+   "bearish": 3,
+   "readings": "Ichimoku bearish, MACD bearish, RS20 bearish (-6.28 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": true,
+   "support_dist_pct": -0.0165,
+   "support_dist_atr": 0.0081,
+   "resistance_dist_pct": 0.9215,
+   "resistance_dist_atr": 0.4508
+  },
+  "ratings_14d": {
+   "upgrades": 0,
+   "downgrades": 1,
+   "items": [
+    {
+     "date": "2026-11-18",
+     "title": "Autonomous Research Downgrades United Overseas Bank to Neutral, Adjusts Price Target to SG$41.50",
+     "source": "marketscreener.com",
+     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPVk0yT29RZDFETHJfSDZpWmVZT01YclNBNVN2VkpudkJoXzJ5cW82M1V5OE1KbVhtamc2RENvUG5uMFZTSkg3VngzWjZLa2QzaW1yZGk4MFlCWTZ1Uk40QU5XWmtSMzFyYVpfWDJZTFZVaVZldW9PMUJWQjZWSzNCNVYya3hILS1hUlhmRWhUWDdHRkpmMHR4TGY0UEJUX1hkdDZUbk9jMDJWZXp5Vm9sVFE1QWExWnFaUzNNZHhwaDdVcWZjN2lUSzEzUzlRMUJ1UDQtS2RLQ1NFSHdqSXJKUjl3?oc=5",
+     "direction": -1,
+     "change": "downgrade"
+    }
+   ]
+  }
+ }
+}
