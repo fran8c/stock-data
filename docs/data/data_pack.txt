@@ -1,8 +1,8 @@
 RUN STATUS: OK with gaps
-Run time: 2026-11-28 10:50 SGT
+Run time: 2026-11-28 11:11 SGT
 Market data from (each market runs about 5 hours after its close):
   - SGX: 2026-11-27 23:00 SGT, latest SGX session expected 2026-11-27
-  - US: 2026-11-28 10:50 SGT, latest US session expected 2026-11-27
+  - US: 2026-11-28 11:11 SGT, latest US session expected 2026-11-27
 
 CRITICAL (0): these gaps break the harnesses
   - none
@@ -45,9 +45,9 @@ GAPS (38): expected, marked NOT RETRIEVED in the files
   - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
   - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
   - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
-  - News: 1628 items have no summary (paywall or site blocks automated visits)
+  - News: 1656 items have no summary (paywall or site blocks automated visits)
 
-DATA PACK - generated 2026-11-28 10:50 SGT
+DATA PACK - generated 2026-11-28 11:11 SGT
 Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
 Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
 SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
@@ -214,9 +214,9 @@ MRVL latest close | 140.5400 USD | Closing price of the latest daily bar (not ad
 MRVL 3-month average daily volume | 24,316,743 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/history/ | 2026-11-27
 MRVL sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/profile/ | retrieved 2026-11-28
 MRVL trailing EPS | 3.0400 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
-MRVL forward EPS | 7.3711 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL forward EPS | 7.3942 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
 MRVL trailing P/E | 46.23 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
-MRVL forward P/E | 19.07 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL forward P/E | 19.01 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
 MRVL 5-year P/E high | 97.03 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
 MRVL 5-year P/E median | 65.37 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
 MRVL 5-year P/E low | 45.78 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
@@ -265,9 +265,9 @@ PLTR latest close | 172.1700 USD | Closing price of the latest daily bar (not ad
 PLTR 3-month average daily volume | 24,361,281 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/history/ | 2026-11-27
 PLTR sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/profile/ | retrieved 2026-11-28
 PLTR trailing EPS | 1.4200 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
-PLTR forward EPS | 2.5449 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR forward EPS | 2.5388 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
 PLTR trailing P/E | 121.25 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
-PLTR forward P/E | 67.65 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR forward P/E | 67.82 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
 PLTR 5-year P/E high | 1053.57 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28
 PLTR 5-year P/E median | 428.15 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28
 PLTR 5-year P/E low | 185.19 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28

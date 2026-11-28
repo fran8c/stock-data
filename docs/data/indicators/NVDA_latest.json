@@ -217,6 +217,16 @@
   "10d_share_pct": 85.0622
  },
  "ex_dividends_last_60_days": [],
+ "overnight": {
+  "price": 149.8,
+  "time_et": "2026-11-27 16:55",
+  "session": "AFTER-HOURS",
+  "volume_since_close": 0,
+  "last_close": 150.49,
+  "last_bar": "2026-11-27",
+  "move_pct": -0.4585,
+  "source": "Yahoo Finance 5-minute bars with extended hours (prepost=True), via the pipeline"
+ },
  "scores": {
   "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
   "microstructure": {
