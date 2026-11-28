@@ -1,0 +1,242 @@
+{
+ "symbol": "PLTR",
+ "market": "US",
+ "as_of": "2026-11-28",
+ "expected_session": "2026-11-27",
+ "last_bar": "2026-11-27",
+ "bars_used": 1255,
+ "bars_excluded": [],
+ "currency": "USD",
+ "tick": 0.01,
+ "main_comparator": "^GSPC",
+ "comparators": {
+  "^GSPC": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -6.8683,
+   "chg20_pct": -5.4777,
+   "label": "lagging"
+  },
+  "^IXIC": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -4.4971,
+   "chg20_pct": -7.8489,
+   "label": "lagging"
+  },
+  "^DJI": {
+   "last_date": "2026-11-27",
+   "sessions_behind_stock": 0,
+   "rs20_pts": -9.3511,
+   "chg20_pct": -2.9949,
+   "label": "lagging"
+  }
+ },
+ "values": {
+  "date": "2026-11-27",
+  "open": 169.89,
+  "high": 173.22,
+  "low": 164.8,
+  "close": 172.17,
+  "volume": 15054500,
+  "dividend": 0.0,
+  "chg_raw_pct": 5.2448,
+  "chg_pct": 5.2448,
+  "gap_pct": 3.8511,
+  "clv": 0.7506,
+  "vol_delta": 11299814.7268,
+  "cvd10": -12214824.9061,
+  "vwap10": 158.2099,
+  "close_vs_vwap10_pct": 8.8238,
+  "avg_vol20_prior": 25829255.0,
+  "vol_ratio": 0.5828,
+  "up_days10": 5,
+  "down_days10": 5,
+  "up_vol10": 104238300.0,
+  "down_vol10": 108565000.0,
+  "udvr10": 0.9601,
+  "udvr10_label": "balanced",
+  "vt5_20": 1.0485,
+  "vt5_20_label": "normal",
+  "chg5_raw_pct": 12.0315,
+  "chg5_pct": 12.0315,
+  "chg10_raw_pct": 0.3439,
+  "chg10_pct": 0.3439,
+  "chg20_raw_pct": -12.346,
+  "chg20_pct": -12.346,
+  "divergence": "Bearish",
+  "true_range": 9.63,
+  "atr14": 9.6995,
+  "atr14_pct_of_close": 5.6337,
+  "range5_low": 150.4819,
+  "range5_high": 193.8581,
+  "macd": -6.2955,
+  "macd_signal": -7.4406,
+  "macd_hist": 1.1451,
+  "macd_note": "",
+  "sma20": 165.1,
+  "momentum_proxy": "bullish",
+  "hh20": 193.92,
+  "ll20": 142.28,
+  "hh60": 212.94,
+  "ll60": 142.28,
+  "hh120": 212.94,
+  "ll120": 106.37,
+  "high52w": 212.94,
+  "high52w_date": "2026-10-12",
+  "low52w": 106.37,
+  "low52w_date": "2026-06-25",
+  "bars_in_52w_window": 251,
+  "from_high52w_pct": -19.1462,
+  "from_low52w_pct": 61.8595,
+  "tenkan": 157.75,
+  "kijun": 172.455,
+  "span_a": 194.8225,
+  "span_b": 188.745,
+  "kumo_top": 194.8225,
+  "kumo_bottom": 188.745,
+  "price_vs_kumo": "Below",
+  "tk_state": "Bearish",
+  "chikou": "Bearish Unobstructed",
+  "ichimoku_score": -3,
+  "ichimoku_regime": "Strong Bearish",
+  "darvas_ceiling": 212.94,
+  "darvas_ceiling_date": "2026-10-12",
+  "darvas_floor": 192.6,
+  "darvas_status": "Breakdown Below",
+  "darvas_age_bars": 33,
+  "darvas_old_box": false,
+  "darvas_crossing_date": "2026-10-16",
+  "darvas_crossing_bars_ago": 29,
+  "darvas_crossing_vol_ratio": 1.4244,
+  "darvas_crossing_volume_label": "inconclusive",
+  "rs20_GSPC": -6.8683,
+  "chg20_GSPC_pct": -5.4777,
+  "GSPC_close_date": "2026-11-27",
+  "rs20_IXIC": -4.4971,
+  "chg20_IXIC_pct": -7.8489,
+  "IXIC_close_date": "2026-11-27",
+  "rs20_DJI": -9.3511,
+  "chg20_DJI_pct": -2.9949,
+  "DJI_close_date": "2026-11-27",
+  "rs20_main": -6.8683,
+  "rs20_main_label": "lagging",
+  "signal_vwap": 1,
+  "signal_ichimoku": -1,
+  "signal_macd": 1,
+  "signal_cvd": -1,
+  "confluence": "CONFLICTING",
+  "bull_signals": 2,
+  "bear_signals": 2,
+  "signals_available": 4,
+  "volume_confirmation": "NOT APPLICABLE",
+  "confluence_final": "CONFLICTING",
+  "outlook_d1": 5.0,
+  "outlook_week1_low": 150.4819,
+  "outlook_week1_high": 193.8581,
+  "outlook_d2": 10.0,
+  "outlook_week2_low": 141.5002,
+  "outlook_week2_high": 202.8398,
+  "nearest_resistance": 172.455,
+  "nearest_support": 158.2099
+ },
+ "reference_levels": {
+  "above": [
+   {
+    "name": "Kijun",
+    "price": 172.455,
+    "dist_pct": 0.1655
+   },
+   {
+    "name": "Kumo bottom",
+    "price": 188.745,
+    "dist_pct": 9.6271
+   },
+   {
+    "name": "Darvas floor",
+    "price": 192.6,
+    "dist_pct": 11.8662
+   }
+  ],
+  "below": [
+   {
+    "name": "VWAP10",
+    "price": 158.2099,
+    "dist_pct": -8.1083
+   },
+   {
+    "name": "Tenkan",
+    "price": 157.75,
+    "dist_pct": -8.3754
+   },
+   {
+    "name": "20-bar low / 60-bar low",
+    "price": 142.28,
+    "dist_pct": -17.3607
+   }
+  ],
+  "notes": []
+ },
+ "outlook": {
+  "start_day": "2026-11-30",
+  "week1_end": "2026-12-04",
+  "week2_end": "2026-12-11",
+  "missing_sessions": [],
+  "closures": [],
+  "early_closes": [],
+  "d1": 5.0,
+  "d2": 10.0,
+  "sqrt_d1": 2.236,
+  "sqrt_d2": 3.162,
+  "week1_low": 150.4819,
+  "week1_high": 193.8581,
+  "week2_low": 141.5002,
+  "week2_high": 202.8398
+ },
+ "calibration_past_year": {
+  "5d_inside": "200",
+  "5d_windows": 246,
+  "5d_share_pct": 81.3008,
+  "10d_inside": "205",
+  "10d_windows": 241,
+  "10d_share_pct": 85.0622
+ },
+ "ex_dividends_last_60_days": [],
+ "scores": {
+  "note": "Statistics only: the readings behind the harness's pillars. Not advice; GitHub sets no entries, stops, targets or trade labels. The AI harness does the trade reasoning.",
+  "microstructure": {
+   "label": "MIXED",
+   "bullish": 1,
+   "bearish": 2,
+   "readings": "close vs VWAP10 bullish, CVD10 bearish, UDVR10 neutral, divergence/volume trend bearish"
+  },
+  "momentum": {
+   "label": "MIXED",
+   "bullish": 1,
+   "bearish": 2,
+   "readings": "Ichimoku bearish, MACD bullish, RS20 bearish (-6.87 pts vs main benchmark)"
+  },
+  "structure": {
+   "darvas_status": "Breakdown Below",
+   "darvas_old_box": false,
+   "support_dist_pct": -8.1083,
+   "support_dist_atr": 1.4393,
+   "resistance_dist_pct": 0.1655,
+   "resistance_dist_atr": 0.0294
+  },
+  "ratings_14d": {
+   "upgrades": 1,
+   "downgrades": 0,
+   "items": [
+    {
+     "date": "2026-11-24",
+     "title": "Palantir: Why I'm Upgrading To Strong Buy After The Selloff",
+     "source": "Seeking Alpha",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNMW9ObTlJbkpuVDZXd3ZWVVZZbEUzZTI1VHIwYVJvVnl3THJ5YVNlMHgwV1ZWYnRXRVVONjFwZkZKNzktSFgwRkxKREpBN3UtOUcwb09Kemg4eENndmlHeFZTMDdGR2xQX3E2Nk04eS1wUGZwRTdqRlZveF9uT1ZuSGJEVWc2aU0zV0E1MnNnQ3pzVUdFYjZJZjBWZFp1b3c?oc=5",
+     "direction": 1,
+     "change": "upgrade"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,278 @@
+RUN STATUS: OK with gaps
+Run time: 2026-11-28 10:50 SGT
+Market data from (each market runs about 5 hours after its close):
+  - SGX: 2026-11-27 23:00 SGT, latest SGX session expected 2026-11-27
+  - US: 2026-11-28 10:50 SGT, latest US session expected 2026-11-27
+
+CRITICAL (0): these gaps break the harnesses
+  - none
+
+GAPS (38): expected, marked NOT RETRIEVED in the files
+  - [SGX] D05.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] O39.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] U11.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] BN4.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] BS6.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] U96.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] Z74.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] C07.SI: Yahoo left out 2026-11-23 - kept the bar(s) saved on an earlier run
+  - [SGX] ^STI: latest bar 2026-11-27 has zero volume - Yahoo may not have finished it
+  - [SGX] D05.SI: P/B range covers only 45 months, not 5 years
+  - [SGX] D05.SI: CET1 and its minimum need the bank's own disclosure
+  - [SGX] O39.SI: P/B range covers only 45 months, not 5 years
+  - [SGX] O39.SI: CET1 and its minimum need the bank's own disclosure
+  - [SGX] O39.SI: next results date not yet announced (last was 2026-11-06)
+  - [SGX] U11.SI: P/B range covers only 45 months, not 5 years
+  - [SGX] U11.SI: CET1 and its minimum need the bank's own disclosure
+  - [SGX] BN4.SI: 5-year P/E range marked UNRELIABLE (high is 10x the low, so earnings or book value changed sharply)
+  - [SGX] BS6.SI: 5-year P/E range - accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed
+  - [SGX] BS6.SI: next results date not available
+  - [SGX] U96.SI: P/E range covers only 45 months, not 5 years
+  - [SGX] U96.SI: next results date not available
+  - [SGX] Z74.SI: 5-year P/E range marked UNRELIABLE (high is 6x the low, so earnings or book value changed sharply)
+  - [SGX] Z74.SI: next results date not yet announced (last was 2026-11-13)
+  - [SGX] Z74.SI: Google News feed failed (HTTPError)
+  - [SGX] No peers in peers.txt for: BS6.SI, U96.SI, Z74.SI - the harness will suggest some
+  - [US] SPCX: only 117 daily bars (less than a year of history)
+  - [US] SPCX: 5-year P/E range marked UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period)
+  - [US] MRVL: 5-year P/E range marked UNRELIABLE (covers only 8 months)
+  - [US] MU: 5-year P/E range marked UNRELIABLE (covers only 26 months; high is 27x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] NVDA: 5-year P/E range marked UNRELIABLE (high is 17x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] NVDA: next results date not yet announced (last was 2026-11-17)
+  - [US] PLTR: 5-year P/E range marked UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period)
+  - [US] No peers in peers.txt for: SPCX, MU, PLTR - the harness will suggest some
+  - US manufacturing PMI (ISM): ISM data is licensed and not on a free feed; add from the ISM release
+  - Singapore MAS core inflation: feed not yet connected; see the MAS core inflation page
+  - Singapore real GDP growth: feed not yet connected; see SingStat GDP releases
+  - Singapore manufacturing PMI (SIPMM): published as a press release, not a data feed
+  - News: 1628 items have no summary (paywall or site blocks automated visits)
+
+DATA PACK - generated 2026-11-28 10:50 SGT
+Format: <figure> | <value> | <definition> | <source> | <URL> | <date>
+Anything marked NOT RETRIEVED could not be fetched on this run; do not fill it in by guessing.
+SGX and US names are collected by separate runs about 5 hours after each market's close; the status above shows when each market was last collected.
+
+# MARKET-WIDE
+
+US 1-year Treasury yield | 4.61% | 1-year par yield (constant maturity), daily Treasury par yield curve | U.S. Department of the Treasury | https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve | 2026-11-27
+Singapore 1-year SGS T-bill yield | 1.92% | Cut-off yield at the latest 1-year T-bill auction (issue BY26103X) | Monetary Authority of Singapore | https://eservices.mas.gov.sg/statistics/api/v1/bondsandbills/m/listbondsandbills | 2026-10-15
+US real GDP growth y/y (latest) | 2.3% | Change from the same quarter a year earlier, Q3 2026; BEA table 1.1.11 | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10111/A191RO-Q | 2026-07-01
+US real GDP growth y/y (prior) | 2.2% | Change from the same quarter a year earlier, Q2 2026; BEA table 1.1.11 | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10111/A191RO-Q | 2026-04-01
+US real GDP growth q/q annualised (latest) | 4.3% | Change from the preceding quarter at an annual rate, seasonally adjusted, Q3 2026; BEA table 1.1.1 (the headline figure) | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10101/A191RL-Q | 2026-07-01
+US real GDP growth q/q annualised (prior) | 2.2% | Change from the preceding quarter at an annual rate, seasonally adjusted, Q2 2026; BEA table 1.1.1 (the headline figure) | U.S. Bureau of Economic Analysis (BEA), via DBnomics | https://db.nomics.world/BEA/NIPA-T10101/A191RL-Q | 2026-04-01
+US headline CPI (latest) | 3.9% | CPI-U all items, year-on-year, Oct 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0 | 2026-10-01
+US headline CPI (prior) | 4.0% | CPI-U all items, year-on-year, Sep 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0 | 2026-09-01
+US core CPI (latest) | 2.8% | CPI-U all items less food and energy, year-on-year, Oct 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0L1E | 2026-10-01
+US core CPI (prior) | 2.8% | CPI-U all items less food and energy, year-on-year, Sep 2026 | U.S. Bureau of Labor Statistics | https://data.bls.gov/timeseries/CUUR0000SA0L1E | 2026-09-01
+US manufacturing PMI (ISM) | NOT RETRIEVED | ISM data is licensed and not on a free feed; add from the ISM release | ISM | https://www.ismworld.org/supply-management-news-and-reports/reports/ism-report-on-business/ | 2026-11-28
+Singapore headline CPI (latest) | 1.9% | Year-on-year change, Oct 2026 | SingStat | https://tablebuilder.singstat.gov.sg/table/TS/M213751 | 2026-10-01
+Singapore headline CPI (prior) | 2.2% | Year-on-year change, Sep 2026 | SingStat | https://tablebuilder.singstat.gov.sg/table/TS/M213751 | 2026-09-01
+Singapore MAS core inflation | NOT RETRIEVED | feed not yet connected; see the MAS core inflation page | MAS | https://www.mas.gov.sg/statistics/mas-core-inflation | 2026-11-28
+Singapore real GDP growth | NOT RETRIEVED | feed not yet connected; see SingStat GDP releases | SingStat / MTI | https://www.singstat.gov.sg/find-data/search-by-theme/economy/national-accounts/latest-data | 2026-11-28
+Singapore manufacturing PMI (SIPMM) | NOT RETRIEVED | published as a press release, not a data feed | SIPMM | https://www.sipmm.org.sg/ | 2026-11-28
+
+## D05.SI - DBS Group (bank)
+D05.SI latest close | 66.1500 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/history/ | 2026-11-27
+D05.SI 3-month average daily volume | 5,120,182 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/history/ | 2026-11-27
+D05.SI sector | Financial Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/profile/ | retrieved 2026-11-27
+D05.SI trailing EPS | 3.8900 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/key-statistics/ | retrieved 2026-11-27
+D05.SI forward EPS | 4.3728 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/key-statistics/ | retrieved 2026-11-27
+D05.SI book value per share | 24.6720 SGD | Shareholders' equity per share, latest reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/key-statistics/ | retrieved 2026-11-27
+D05.SI P/B | 2.68 | Price / book value per share | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/key-statistics/ | retrieved 2026-11-27
+D05.SI 5-year P/B high | 3.19 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/financials/ | retrieved 2026-11-27
+D05.SI 5-year P/B median | 1.85 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/financials/ | retrieved 2026-11-27
+D05.SI 5-year P/B low | 1.37 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/financials/ | retrieved 2026-11-27
+D05.SI dividend per share, trailing 12 months | 3.2400 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/history/?filter=div | 2026-11-27
+D05.SI CET1 ratio | NOT RETRIEVED | Not carried by Yahoo; see the bank's quarterly Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/profile/ | retrieved 2026-11-27
+D05.SI CET1 regulatory minimum | NOT RETRIEVED | Set by the bank's regulator; add from the Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/profile/ | retrieved 2026-11-27
+D05.SI next results date | 2027-02-15 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-27
+D05.SI most recent results date | 2026-11-04 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-27
+D05.SI ex-dividend date | 2026-11-13 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/D05.SI/ | retrieved 2026-11-27
+
+## O39.SI - OCBC (bank)
+O39.SI latest close | 26.8000 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/history/ | 2026-11-27
+O39.SI 3-month average daily volume | 7,218,704 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/history/ | 2026-11-27
+O39.SI sector | Financial Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/profile/ | retrieved 2026-11-27
+O39.SI trailing EPS | 1.7500 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-27
+O39.SI forward EPS | 1.9342 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-27
+O39.SI book value per share | 13.7300 SGD | Shareholders' equity per share, latest reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-27
+O39.SI P/B | 1.95 | Price / book value per share | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/key-statistics/ | retrieved 2026-11-27
+O39.SI 5-year P/B high | 2.81 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/financials/ | retrieved 2026-11-27
+O39.SI 5-year P/B median | 1.43 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/financials/ | retrieved 2026-11-27
+O39.SI 5-year P/B low | 1.08 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/financials/ | retrieved 2026-11-27
+O39.SI dividend per share, trailing 12 months | 1.0500 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/history/?filter=div | 2026-11-27
+O39.SI CET1 ratio | NOT RETRIEVED | Not carried by Yahoo; see the bank's quarterly Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/profile/ | retrieved 2026-11-27
+O39.SI CET1 regulatory minimum | NOT RETRIEVED | Set by the bank's regulator; add from the Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/profile/ | retrieved 2026-11-27
+O39.SI next results date | NOT RETRIEVED | Not yet announced; Yahoo still shows the most recent results date (2026-11-06) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/ | retrieved 2026-11-27
+O39.SI most recent results date | 2026-11-06 | Last earnings release per Yahoo | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/ | retrieved 2026-11-27
+O39.SI ex-dividend date | 2026-08-17 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/O39.SI/ | retrieved 2026-11-27
+
+## U11.SI - UOB (bank)
+U11.SI latest close | 35.8100 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/history/ | 2026-11-27
+U11.SI 3-month average daily volume | 3,722,206 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/history/ | 2026-11-27
+U11.SI sector | Financial Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/profile/ | retrieved 2026-11-27
+U11.SI trailing EPS | 5.6200 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-27
+U11.SI forward EPS | 3.4968 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-27
+U11.SI book value per share | 29.9860 SGD | Shareholders' equity per share, latest reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-27
+U11.SI P/B | 1.19 | Price / book value per share | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/key-statistics/ | retrieved 2026-11-27
+U11.SI 5-year P/B high | 1.40 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/financials/ | retrieved 2026-11-27
+U11.SI 5-year P/B median | 1.16 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/financials/ | retrieved 2026-11-27
+U11.SI 5-year P/B low | 1.01 | Approximate: month-end close / latest annual book value (NAV) per share; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/financials/ | retrieved 2026-11-27
+U11.SI dividend per share, trailing 12 months | 1.5900 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/history/?filter=div | 2026-11-27
+U11.SI CET1 ratio | NOT RETRIEVED | Not carried by Yahoo; see the bank's quarterly Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/profile/ | retrieved 2026-11-27
+U11.SI CET1 regulatory minimum | NOT RETRIEVED | Set by the bank's regulator; add from the Pillar 3 disclosure | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/profile/ | retrieved 2026-11-27
+U11.SI next results date | 2027-02-24 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/ | retrieved 2026-11-27
+U11.SI most recent results date | 2026-11-03 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/ | retrieved 2026-11-27
+U11.SI ex-dividend date | 2026-08-17 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U11.SI/ | retrieved 2026-11-27
+
+## BN4.SI - Keppel Ltd (company)
+BN4.SI latest close | 8.4400 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/history/ | 2026-11-27
+BN4.SI 3-month average daily volume | 4,160,743 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/history/ | 2026-11-27
+BN4.SI sector | Industrials | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/profile/ | retrieved 2026-11-27
+BN4.SI trailing EPS | 0.4400 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/key-statistics/ | retrieved 2026-11-27
+BN4.SI forward EPS | 0.5870 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/key-statistics/ | retrieved 2026-11-27
+BN4.SI trailing P/E | 19.18 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/key-statistics/ | retrieved 2026-11-27
+BN4.SI forward P/E | 14.38 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/key-statistics/ | retrieved 2026-11-27
+BN4.SI 5-year P/E high | 27.31 | UNRELIABLE (high is 10x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/financials/ | retrieved 2026-11-27
+BN4.SI 5-year P/E median | 13.13 | UNRELIABLE (high is 10x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/financials/ | retrieved 2026-11-27
+BN4.SI 5-year P/E low | 2.73 | UNRELIABLE (high is 10x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/financials/ | retrieved 2026-11-27
+BN4.SI dividend per share, trailing 12 months | 0.3600 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/history/?filter=div | 2026-11-27
+BN4.SI net debt/EBITDA | 9.60x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/key-statistics/ | retrieved 2026-11-27
+BN4.SI next results date | 2027-02-04 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/ | retrieved 2026-11-27
+BN4.SI most recent results date | 2022-07-27 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/ | retrieved 2026-11-27
+BN4.SI ex-dividend date | 2026-08-11 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BN4.SI/ | retrieved 2026-11-27
+
+## BS6.SI - Yangzijiang Shipbuilding (company)
+BS6.SI latest close | 4.2400 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/history/ | 2026-11-27
+BS6.SI 3-month average daily volume | 15,292,495 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/history/ | 2026-11-27
+BS6.SI sector | Industrials | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/profile/ | retrieved 2026-11-27
+BS6.SI trailing EPS | 0.4600 (currency: see note) | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/key-statistics/ | retrieved 2026-11-27
+BS6.SI forward EPS | 0.5913 (currency: see note) | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/key-statistics/ | retrieved 2026-11-27
+BS6.SI currency note | accounts in CNY, price in SGD | EPS and book value may be in the accounting currency; check before using ratios | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/financials/ | retrieved 2026-11-27
+BS6.SI trailing P/E | 9.22 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/key-statistics/ | retrieved 2026-11-27
+BS6.SI forward P/E | 7.17 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/key-statistics/ | retrieved 2026-11-27
+BS6.SI 5-year P/E high | NOT RETRIEVED | accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/financials/ | retrieved 2026-11-27
+BS6.SI 5-year P/E median | NOT RETRIEVED | accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/financials/ | retrieved 2026-11-27
+BS6.SI 5-year P/E low | NOT RETRIEVED | accounts are in CNY but the price is in SGD, so the ratio can't be built from this feed | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/financials/ | retrieved 2026-11-27
+BS6.SI dividend per share, trailing 12 months | 0.2000 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/history/?filter=div | 2026-11-27
+BS6.SI net debt/EBITDA | -1.05x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/key-statistics/ | retrieved 2026-11-27
+BS6.SI next results date | NOT RETRIEVED | No earnings date reported by Yahoo | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/ | retrieved 2026-11-27
+BS6.SI ex-dividend date | 2026-05-06 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/BS6.SI/ | retrieved 2026-11-27
+
+## U96.SI - Sembcorp Industries (company)
+U96.SI latest close | 5.5800 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/history/ | 2026-11-27
+U96.SI 3-month average daily volume | 4,463,870 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/history/ | 2026-11-27
+U96.SI sector | Utilities | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/profile/ | retrieved 2026-11-27
+U96.SI trailing EPS | 0.3300 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/key-statistics/ | retrieved 2026-11-27
+U96.SI forward EPS | 0.6160 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/key-statistics/ | retrieved 2026-11-27
+U96.SI trailing P/E | 16.91 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/key-statistics/ | retrieved 2026-11-27
+U96.SI forward P/E | 9.06 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/key-statistics/ | retrieved 2026-11-27
+U96.SI 5-year P/E high | 13.83 | Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/financials/ | retrieved 2026-11-27
+U96.SI 5-year P/E median | 10.80 | Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/financials/ | retrieved 2026-11-27
+U96.SI 5-year P/E low | 9.17 | Approximate: month-end close / latest annual diluted EPS; covers 45 month-ends, 2023-03-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/financials/ | retrieved 2026-11-27
+U96.SI dividend per share, trailing 12 months | 0.2700 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/history/?filter=div | 2026-11-27
+U96.SI net debt/EBITDA | 10.66x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/key-statistics/ | retrieved 2026-11-27
+U96.SI next results date | NOT RETRIEVED | No earnings date reported by Yahoo | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/ | retrieved 2026-11-27
+U96.SI ex-dividend date | 2026-08-21 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/U96.SI/ | retrieved 2026-11-27
+
+## Z74.SI - Singtel (company)
+Z74.SI latest close | 4.3300 SGD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-27
+Z74.SI 3-month average daily volume | 25,116,103 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/ | 2026-11-27
+Z74.SI sector | Communication Services | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/profile/ | retrieved 2026-11-27
+Z74.SI trailing EPS | 0.2300 SGD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-27
+Z74.SI forward EPS | 0.2114 SGD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-27
+Z74.SI trailing P/E | 18.83 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-27
+Z74.SI forward P/E | 20.48 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-27
+Z74.SI 5-year P/E high | 79.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-27
+Z74.SI 5-year P/E median | 18.58 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-27
+Z74.SI 5-year P/E low | 12.28 | UNRELIABLE (high is 6x the low, so earnings or book value changed sharply). Approximate: month-end close / latest annual diluted EPS; covers 43 month-ends, 2023-05-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/financials/ | retrieved 2026-11-27
+Z74.SI dividend per share, trailing 12 months | 0.1030 SGD | Sum of cash dividends with ex-dates since 2025-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/history/?filter=div | 2026-11-27
+Z74.SI net debt/EBITDA | 2.34x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/key-statistics/ | retrieved 2026-11-27
+Z74.SI next results date | NOT RETRIEVED | Not yet announced; Yahoo still shows the most recent results date (2026-11-13) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/ | retrieved 2026-11-27
+Z74.SI most recent results date | 2026-11-13 | Last earnings release per Yahoo | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/ | retrieved 2026-11-27
+Z74.SI ex-dividend date | 2026-11-30 | Ex-dividend date per Yahoo - upcoming | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/Z74.SI/ | retrieved 2026-11-27
+
+## SPCX - SpaceX (company)
+SPCX latest close | 133.5900 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/history/ | 2026-11-27
+SPCX 3-month average daily volume | 99,094,765 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/history/ | 2026-11-27
+SPCX sector | Industrials | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/profile/ | retrieved 2026-11-28
+SPCX trailing EPS | 0.2300 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/key-statistics/ | retrieved 2026-11-28
+SPCX forward EPS | 2.7423 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/key-statistics/ | retrieved 2026-11-28
+SPCX trailing P/E | 580.83 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/key-statistics/ | retrieved 2026-11-28
+SPCX forward P/E | 48.71 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/key-statistics/ | retrieved 2026-11-28
+SPCX 5-year P/E high | 86292.93 | UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 6 month-ends, 2026-06-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/financials/ | retrieved 2026-11-28
+SPCX 5-year P/E median | 70305.56 | UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 6 month-ends, 2026-06-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/financials/ | retrieved 2026-11-28
+SPCX 5-year P/E low | 54732.32 | UNRELIABLE (covers only 6 months; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 6 month-ends, 2026-06-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/financials/ | retrieved 2026-11-28
+SPCX dividend per share, trailing 12 months | 0.0000 USD | Sum of cash dividends with ex-dates since 2025-11-28 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/history/?filter=div | 2026-11-28
+SPCX net debt/EBITDA | -4.31x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/key-statistics/ | retrieved 2026-11-28
+SPCX next results date | 2027-02-09 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/ | retrieved 2026-11-28
+SPCX most recent results date | 2026-10-20 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/ | retrieved 2026-11-28
+SPCX ex-dividend date | NOT RETRIEVED | No ex-dividend date reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/SPCX/ | retrieved 2026-11-28
+
+## MRVL - Marvell Technology (company)
+MRVL latest close | 140.5400 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/history/ | 2026-11-27
+MRVL 3-month average daily volume | 24,316,743 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/history/ | 2026-11-27
+MRVL sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/profile/ | retrieved 2026-11-28
+MRVL trailing EPS | 3.0400 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL forward EPS | 7.3711 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL trailing P/E | 46.23 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL forward P/E | 19.07 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL 5-year P/E high | 97.03 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
+MRVL 5-year P/E median | 65.37 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
+MRVL 5-year P/E low | 45.78 | UNRELIABLE (covers only 8 months). Approximate: month-end close / latest annual diluted EPS; covers 8 month-ends, 2026-04-30 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/financials/ | retrieved 2026-11-28
+MRVL dividend per share, trailing 12 months | 0.2400 USD | Sum of cash dividends with ex-dates since 2025-11-28 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/history/?filter=div | 2026-11-28
+MRVL net debt/EBITDA | 0.47x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/key-statistics/ | retrieved 2026-11-28
+MRVL next results date | 2026-12-01 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-28
+MRVL most recent results date | 2026-08-27 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-28
+MRVL ex-dividend date | 2026-10-09 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MRVL/ | retrieved 2026-11-28
+
+## MU - Micron Technology (company)
+MU latest close | 646.9500 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-27
+MU 3-month average daily volume | 29,523,317 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/ | 2026-11-27
+MU sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/profile/ | retrieved 2026-11-28
+MU trailing EPS | 74.3300 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-28
+MU forward EPS | 204.9897 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-28
+MU trailing P/E | 8.70 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-28
+MU forward P/E | 3.16 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-28
+MU 5-year P/E high | 239.03 | UNRELIABLE (covers only 26 months; high is 27x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-28
+MU 5-year P/E median | 125.22 | UNRELIABLE (covers only 26 months; high is 27x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-28
+MU 5-year P/E low | 8.70 | UNRELIABLE (covers only 26 months; high is 27x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 26 month-ends, 2024-10-31 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/financials/ | retrieved 2026-11-28
+MU dividend per share, trailing 12 months | 0.5650 USD | Sum of cash dividends with ex-dates since 2025-11-28 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/history/?filter=div | 2026-11-28
+MU net debt/EBITDA | -0.35x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/key-statistics/ | retrieved 2026-11-28
+MU next results date | 2026-12-17 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-28
+MU most recent results date | 2026-09-30 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-28
+MU ex-dividend date | 2026-10-14 | Ex-dividend date per Yahoo - most recent (no future date announced yet) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/MU/ | retrieved 2026-11-28
+
+## NVDA - Nvidia (company)
+NVDA latest close | 150.4900 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/history/ | 2026-11-27
+NVDA 3-month average daily volume | 185,815,038 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/history/ | 2026-11-27
+NVDA sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/profile/ | retrieved 2026-11-28
+NVDA trailing EPS | 9.3100 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-28
+NVDA forward EPS | 16.6053 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-28
+NVDA trailing P/E | 16.16 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-28
+NVDA forward P/E | 9.06 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-28
+NVDA 5-year P/E high | 519.29 | UNRELIABLE (high is 17x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 44 month-ends, 2023-04-28 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/financials/ | retrieved 2026-11-28
+NVDA 5-year P/E median | 91.60 | UNRELIABLE (high is 17x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 44 month-ends, 2023-04-28 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/financials/ | retrieved 2026-11-28
+NVDA 5-year P/E low | 30.71 | UNRELIABLE (high is 17x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 44 month-ends, 2023-04-28 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/financials/ | retrieved 2026-11-28
+NVDA dividend per share, trailing 12 months | 0.5200 USD | Sum of cash dividends with ex-dates since 2025-11-28 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/history/?filter=div | 2026-11-28
+NVDA net debt/EBITDA | -0.24x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/key-statistics/ | retrieved 2026-11-28
+NVDA next results date | NOT RETRIEVED | Not yet announced; Yahoo still shows the most recent results date (2026-11-17) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/ | retrieved 2026-11-28
+NVDA most recent results date | 2026-11-17 | Last earnings release per Yahoo | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/ | retrieved 2026-11-28
+NVDA ex-dividend date | 2026-12-02 | Ex-dividend date per Yahoo - upcoming | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/NVDA/ | retrieved 2026-11-28
+
+## PLTR - Palantir (company)
+PLTR latest close | 172.1700 USD | Closing price of the latest daily bar (not adjusted) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/history/ | 2026-11-27
+PLTR 3-month average daily volume | 24,361,281 shares | Mean daily volume over the last 63 trading days, computed from daily bars | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/history/ | 2026-11-27
+PLTR sector | Technology | Yahoo Finance sector classification (close to, but not the same as, GICS) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/profile/ | retrieved 2026-11-28
+PLTR trailing EPS | 1.4200 USD | Earnings per share, last 12 months | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR forward EPS | 2.5449 USD | Analyst consensus EPS for the next fiscal year | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR trailing P/E | 121.25 | Price / trailing 12-month EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR forward P/E | 67.65 | Price / forward EPS | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR 5-year P/E high | 1053.57 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28
+PLTR 5-year P/E median | 428.15 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28
+PLTR 5-year P/E low | 185.19 | UNRELIABLE (covers only 34 months; high is 6x the low, so earnings or book value changed sharply; high above 100 means earnings were near zero in part of the period). Approximate: month-end close / latest annual diluted EPS; covers 34 month-ends, 2024-02-29 to 2026-11-27 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/financials/ | retrieved 2026-11-28
+PLTR dividend per share, trailing 12 months | 0.0000 USD | Sum of cash dividends with ex-dates since 2025-11-28 | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/history/?filter=div | 2026-11-28
+PLTR net debt/EBITDA | -3.08x | (Total debt - cash) / EBITDA, last 12 months; negative = net cash | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/key-statistics/ | retrieved 2026-11-28
+PLTR next results date | 2027-02-01 | Next earnings date per Yahoo (estimated if the company hasn't confirmed) | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-28
+PLTR most recent results date | 2026-11-02 | Last earnings release per Yahoo's earnings calendar | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-28
+PLTR ex-dividend date | NOT RETRIEVED | No ex-dividend date reported | Yahoo Finance via yfinance | https://finance.yahoo.com/quote/PLTR/ | retrieved 2026-11-28
