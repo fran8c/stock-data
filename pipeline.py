@@ -385,10 +385,28 @@ def fetch_history(tk, symbol, tries=3):
     raise RuntimeError(f"no price data from Yahoo after {tries} tries ({last})")
 
 
-def us_session_label(ts_et):
-    """US 23x5 session for a New York timestamp."""
+def us_early_closes(path=HOLIDAYS_FILE):
+    """US half days from holidays.txt (lines marked EARLY CLOSE); the regular session ends 13:00 ET."""
+    out = set()
+    if not path.exists():
+        return out
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        parts = [p.strip() for p in raw.split("|")]
+        if (len(parts) >= 4 and parts[0].upper() == "US" and "EARLY" in parts[3].upper()
+                and re.match(r"^\d{4}-\d{2}-\d{2}$", parts[1])):
+            out.add(parts[1])
+    return out
+
+
+def us_close_hour(day_iso, early=None):
+    """16 on a normal day, 13 on a US half day."""
+    return 13 if day_iso in (us_early_closes() if early is None else early) else 16
+
+
+def us_session_label(ts_et, close_hour=16):
+    """US 23x5 session for a New York timestamp (close_hour 13 on a half day)."""
     hm = ts_et.hour * 60 + ts_et.minute
-    if 16 * 60 <= hm < 20 * 60:
+    if close_hour * 60 <= hm < 20 * 60:
         return "AFTER-HOURS"
     if 20 * 60 <= hm < 21 * 60:
         return "PAUSE"
@@ -401,7 +419,8 @@ def us_session_label(ts_et):
 
 def overnight_snapshot(tk, symbol, last_bar, last_close):
     """
-    Latest extended-hours trade after the last bar's 16:00 ET close, for the
+    Latest extended-hours trade after the last bar's regular close (16:00 ET, or
+    13:00 ET on a half day listed in holidays.txt), for the
     harness's EXTENDED-HOURS CHECK. Context only: never a bar, a Close or an
     indicator input. Returns a dict, or None if Yahoo has no trade after the close.
     """
@@ -411,7 +430,8 @@ def overnight_snapshot(tk, symbol, last_bar, last_close):
         return None
     idx = df.index.tz_convert(ny) if df.index.tz is not None else df.index.tz_localize(ny)
     df = df.set_axis(idx)
-    close_ts = datetime.fromisoformat(last_bar).replace(hour=16, minute=0, tzinfo=ny)
+    ch = us_close_hour(last_bar)   # 13:00 ET on a half day, else 16:00
+    close_ts = datetime.fromisoformat(last_bar).replace(hour=ch, minute=0, tzinfo=ny)
     after = df[(df.index >= close_ts) & df["Close"].notna()]
     if after.empty:
         return None
@@ -419,8 +439,11 @@ def overnight_snapshot(tk, symbol, last_bar, last_close):
     ts = after.index[-1]
     price = float(last["Close"])
     vol = after["Volume"].fillna(0).sum() if "Volume" in after.columns else None
+    if not vol:   # Yahoo often reports 0 volume on extended-hours bars: treat as not available
+        vol = None
     return {"price": round(price, 4), "time_et": ts.strftime("%Y-%m-%d %H:%M"),
-            "session": us_session_label(ts), "volume_since_close": int(vol) if vol is not None else None,
+            "session": us_session_label(ts, ch), "volume_since_close": int(vol) if vol is not None else None,
+            "close_time_et": f"{ch}:00",
             "last_close": float(last_close), "last_bar": last_bar,
             "move_pct": round((price / float(last_close) - 1) * 100, 4),
             "source": "Yahoo Finance 5-minute bars with extended hours (prepost=True), via the pipeline"}

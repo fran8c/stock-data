@@ -141,11 +141,12 @@ def overnight_block(market, on, last_bar):
         return []
     if not on or on.get("last_bar") != last_bar:
         return ["overnight_snapshot: NOT SUPPLIED (Yahoo returned no extended-hours trade after the "
-                f"{last_bar} 16:00 ET close at run time)", ""]
+                f"{last_bar} regular close at run time)", ""]
     vol = f"{on['volume_since_close']:,}" if on.get("volume_since_close") is not None else "not available"
     return ["overnight_snapshot (latest extended-hours trade after the regular-session close; context only, "
             "never a daily bar):",
             f"Price: {on['price']} | Time: {on['time_et']} ET | Session: {on['session']} | "
+            f"Regular close: {on.get('close_time_et', '16:00')} ET{' (half day)' if on.get('close_time_et') == '13:00' else ''} | "
             f"Volume since close: {vol} | Source: {on['source']}", ""]
 
 
