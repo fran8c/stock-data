@@ -84,7 +84,7 @@ Each item shows its trading day's change %, gap % and volume ratio, with **BIG M
 
 For each stock on `report_list.txt`, each run of its market writes two files to `docs/data/harness/`:
 
-- `<SYMBOL>.txt`: the **Individual Stock Harness v3.3** (from `harness/`) followed by today's run inputs. Paste it into any AI chat.
+- `<SYMBOL>.txt`: the **Individual Stock Harness v3.4** (from `harness/`) followed by today's run inputs. Paste it into any AI chat.
 - `<SYMBOL>_data.txt`: the run inputs only, for an AI that already has the harness saved (a Claude Project, a Gemini Gem).
 
 The run inputs are: as of (the exchange's own date), ticker, settings (mode A, STANDARD), the last results date, one year of daily bars, the benchmark and peer closes (last 90 days), dividends, holidays, the official indicator ledger (`github_ledger`), and a news pack in the harness's own format. The news pack holds the company items from `news_pack.txt` plus the harness's fixed sector, country/macro, global and big-move-day searches, run by GitHub through Google News (Bing News if Google fails), with a search log. These are candidates: the AI checks each one, and tops up any scope that comes up short if it can search.
@@ -102,6 +102,10 @@ If publishing the website fails (GitHub sometimes can't find the website package
 Yahoo sometimes publishes a day's bar late. Each run checks every price file against its market's latest session (weekends and the closures in `holidays.txt` are skipped; early-close days still count as sessions). Any file that is behind is re-pulled up to 2 more times, 15 minutes apart. If it is still behind, the job opens an issue titled like **STALE: MRVL, NVDA behind (US run)**, which emails you. The next run of that market closes the issue once the files catch up. No issue means everything is up to date.
 
 Every run rewrites each price file in full, so Yahoo's later corrections to recent bars (e.g. volume) are picked up too.
+
+## US 23x5 trading (from 6 Dec 2026)
+
+US exchanges move to 23-hour trading (21:00 ET Sunday to 20:00 ET Friday, with a 20:00–21:00 ET pause each day). The pipeline keeps daily bars as the **regular session only** (09:30–16:00 ET, `prepost=False`), and leaves out any row Yahoo dates after today in New York (overnight trades from 21:00 ET carry the next day's trade date). For each US stock it also saves an **extended-hours snapshot**: the latest Yahoo 5-minute price after the 16:00 ET close, with its time and session (after-hours, overnight or pre-market). It goes into `<SYMBOL>_latest.json` as `overnight`, the dashboard card ("since close"), and the copy file as `overnight_snapshot`. It is context only: no indicator or reading uses it. The harness (v3.4) flags setups to recheck when the price has moved 1 ATR or more since the close.
 
 **Each year:** add the next year's market holidays to `holidays.txt` (MOM publishes Singapore's in June; NYSE publishes in December). A missing holiday causes a false STALE alert that day.
 

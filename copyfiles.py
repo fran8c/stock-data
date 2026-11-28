@@ -18,8 +18,8 @@ import pandas as pd
 
 import newscontext as C
 
-HARNESS_FILE = "harness/Individual Stock Harness v3.3.txt"
-HARNESS_NAME = "Individual Stock Harness v3.3"
+HARNESS_FILE = "harness/Individual Stock Harness v3.4.txt"
+HARNESS_NAME = "Individual Stock Harness v3.4"
 COMP_ROWS = 90
 MINIMUM = {"COMPANY": 5, "SECTOR": 2, "COUNTRY/MACRO": 3, "GLOBAL/REGIONAL": 2}
 HEADLINE_ONLY = "headline only (no summary in the feed; open the link before relying on it)"
@@ -135,9 +135,24 @@ def news_pack(rep, item, market, as_of, ctx, kept, store, figs, run_stamp, clean
     return "\n".join(L)
 
 
+def overnight_block(market, on, last_bar):
+    """overnight_snapshot lines for a US stock (harness v3.4 EXTENDED-HOURS CHECK); nothing for SGX."""
+    if market != "US":
+        return []
+    if not on or on.get("last_bar") != last_bar:
+        return ["overnight_snapshot: NOT SUPPLIED (Yahoo returned no extended-hours trade after the "
+                f"{last_bar} 16:00 ET close at run time)", ""]
+    vol = f"{on['volume_since_close']:,}" if on.get("volume_since_close") is not None else "not available"
+    return ["overnight_snapshot (latest extended-hours trade after the regular-session close; context only, "
+            "never a daily bar):",
+            f"Price: {on['price']} | Time: {on['time_et']} ET | Session: {on['session']} | "
+            f"Volume since close: {vol} | Source: {on['source']}", ""]
+
+
 def build(rep, item, market, as_of, run_stamp, ledger, prices, comps, divs, holidays, figs, ctx, kept, store, clean,
-          harness_text, bing_q):
-    """Returns (full_text, data_text). prices: stock bars DataFrame; comps: [(label, kind, DataFrame)]."""
+          harness_text, bing_q, overnight=None):
+    """Returns (full_text, data_text). prices: stock bars DataFrame; comps: [(label, kind, DataFrame)].
+    overnight: the extended-hours snapshot dict for a US stock (pipeline.overnight_snapshot), or None."""
     last_bar = prices["Date"].iloc[-1]
     lr = figs.get("most recent results date")
     lr_line = (f"last_results_date: {lr[0]} (source: {lr[2]}, {lr[3]}, {lr[4]})" if lr and lr[0][:4].isdigit()
@@ -158,6 +173,7 @@ def build(rep, item, market, as_of, run_stamp, ledger, prices, comps, divs, holi
              f"holidays ({market} closures and early closes from the last bar to 3 weeks later, from the pipeline's holidays.txt; "
              f"source: {'SGX trading calendar and MOM gazetted public holidays' if market == 'SGX' else 'NYSE holiday calendar'}):",
              "Date,Type,Name", *(holidays or ["none in this period"]), "",
+             *overnight_block(market, overnight, last_bar),
              "github_ledger:", ledger.strip(), "",
              "news_payload:", news_pack(rep, item, market, as_of, ctx, kept, store, figs, run_stamp, clean, bing_q), "",
              "=== END OF RUN INPUTS ==="]

@@ -361,7 +361,8 @@ def fetch_history(tk, symbol, tries=3):
     last = None
     for i in range(tries):
         try:
-            df = tk.history(period="5y", interval="1d", auto_adjust=False, actions=False)
+            # prepost=False: daily bars are the regular session only (US 09:30-16:00 ET).
+            df = tk.history(period="5y", interval="1d", auto_adjust=False, actions=False, prepost=False)
             if df is not None and not df.empty and "Close" in df.columns:
                 # A run started by hand while the market is open would get today's
                 # unfinished bar; leave it out so every saved bar is a full session.
@@ -369,12 +370,60 @@ def fetch_history(tk, symbol, tries=3):
                 if still_open and df.index[-1].strftime("%Y-%m-%d") == local_today:
                     df = df.iloc[:-1]
                     R.good(f"{symbol}: today's unfinished bar left out (market still open)")
+                # US 23x5 (from 6 Dec 2026): trades from 21:00 ET to midnight carry the
+                # next calendar day's trade date, so Yahoo may show a partial row dated
+                # after today (New York). Leave out any row dated after today.
+                while len(df) and df.index[-1].strftime("%Y-%m-%d") > local_today:
+                    R.good(f"{symbol}: unfinished bar {df.index[-1].strftime('%Y-%m-%d')} left out "
+                           "(extended-hours trading only)")
+                    df = df.iloc[:-1]
                 return df
             last = "empty result"
         except Exception as e:  # noqa: BLE001
             last = e
         time.sleep(5 * (i + 1))
     raise RuntimeError(f"no price data from Yahoo after {tries} tries ({last})")
+
+
+def us_session_label(ts_et):
+    """US 23x5 session for a New York timestamp."""
+    hm = ts_et.hour * 60 + ts_et.minute
+    if 16 * 60 <= hm < 20 * 60:
+        return "AFTER-HOURS"
+    if 20 * 60 <= hm < 21 * 60:
+        return "PAUSE"
+    if hm >= 21 * 60 or hm < 4 * 60:
+        return "OVERNIGHT"
+    if 4 * 60 <= hm < 9 * 60 + 30:
+        return "PRE-MARKET"
+    return "REGULAR"
+
+
+def overnight_snapshot(tk, symbol, last_bar, last_close):
+    """
+    Latest extended-hours trade after the last bar's 16:00 ET close, for the
+    harness's EXTENDED-HOURS CHECK. Context only: never a bar, a Close or an
+    indicator input. Returns a dict, or None if Yahoo has no trade after the close.
+    """
+    ny = MARKETS["US"]["tz"]
+    df = tk.history(period="5d", interval="5m", prepost=True, auto_adjust=False, actions=False)
+    if df is None or df.empty or "Close" not in df.columns:
+        return None
+    idx = df.index.tz_convert(ny) if df.index.tz is not None else df.index.tz_localize(ny)
+    df = df.set_axis(idx)
+    close_ts = datetime.fromisoformat(last_bar).replace(hour=16, minute=0, tzinfo=ny)
+    after = df[(df.index >= close_ts) & df["Close"].notna()]
+    if after.empty:
+        return None
+    last = after.iloc[-1]
+    ts = after.index[-1]
+    price = float(last["Close"])
+    vol = after["Volume"].fillna(0).sum() if "Volume" in after.columns else None
+    return {"price": round(price, 4), "time_et": ts.strftime("%Y-%m-%d %H:%M"),
+            "session": us_session_label(ts), "volume_since_close": int(vol) if vol is not None else None,
+            "last_close": float(last_close), "last_bar": last_bar,
+            "move_pct": round((price / float(last_close) - 1) * 100, 4),
+            "source": "Yahoo Finance 5-minute bars with extended hours (prepost=True), via the pipeline"}
 
 
 def write_prices(symbol, hist):
@@ -1462,6 +1511,18 @@ def main():
                 elif (PRICES / f"{safe_name(c_sym)}.csv").exists():
                     comps[c_sym] = pd.read_csv(PRICES / f"{safe_name(c_sym)}.csv")
             d_ind, w_ind, latest = indicators.build(sym, bars_frame(h), divs, comps, bench[0], m, TODAY_S, expected[m])
+            if m == "US":
+                # Extended-hours price since the 16:00 ET close (23x5 trading); context only.
+                try:
+                    lb = latest["last_bar"]
+                    lc = float(bars_frame(h)["Close"].iloc[-1])
+                    latest["overnight"] = overnight_snapshot(tk, sym, lb, lc)
+                    if latest["overnight"]:
+                        o = latest["overnight"]
+                        R.good(f"{sym}: extended hours {o['move_pct']:+.2f}% at {o['price']} ({o['session']} {o['time_et']} ET)")
+                except Exception as e:  # noqa: BLE001
+                    latest["overnight"] = None
+                    R.warn(f"{sym}: extended-hours snapshot unavailable ({e.__class__.__name__}: {e})")
             indicators.write_outputs(sym, d_ind, w_ind, latest)
             indicator_latest[sym] = latest
             indicator_frames[sym] = (item, d_ind, w_ind, m)
@@ -1643,6 +1704,9 @@ def main():
                            "momentum": (sc.get("momentum") or {}).get("label"),
                            "upgrades": (sc.get("ratings_14d") or {}).get("upgrades"),
                            "downgrades": (sc.get("ratings_14d") or {}).get("downgrades")} if sc else None
+            on = lt.get("overnight")
+            if s["scores"] is not None and on:
+                s["scores"]["since_close"] = {k: on.get(k) for k in ("move_pct", "price", "session", "time_et")}
         except Exception:  # noqa: BLE001
             s["scores"] = None
         if s["symbol"] in kept_news:   # the filtered, price-relevant items
@@ -1839,9 +1903,14 @@ def write_copy_files(markets, watch, peers, store, kept_news, blocks):
                 hol = copyfiles.read_holidays(HOLIDAYS_FILE, m, lb,
                                               (datetime.fromisoformat(lb) + timedelta(days=21)).date().isoformat())
                 ledger = (OUT / "indicators" / f"{safe_name(sym)}_ledger.txt").read_text(encoding="utf-8")
+                try:
+                    on = json.loads((OUT / "indicators" / f"{safe_name(sym)}_latest.json")
+                                    .read_text(encoding="utf-8")).get("overnight")
+                except Exception:  # noqa: BLE001
+                    on = None
                 full, data = copyfiles.build(r, item, m, as_of, RUN_STAMP, ledger, prices_df, comps, divs, hol,
                                              copyfiles.pack_figures(blocks.get(sym)), ctx.get(sym), kept_news.get(sym),
-                                             store, clean, harness_text or "", bing_queries(item))
+                                             store, clean, harness_text or "", bing_queries(item), overnight=on)
                 if harness_text:
                     (HARNESS_DIR / f"{safe_name(sym)}.txt").write_text(full, encoding="utf-8")
                 (HARNESS_DIR / f"{safe_name(sym)}_data.txt").write_text(data, encoding="utf-8")
